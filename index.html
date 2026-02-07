@@ -18,9 +18,7 @@
       --rule:rgba(17,18,20,.14);
       --max:980px;
     }
-
     *{ box-sizing:border-box; }
-
     body{
       margin:0;
       background:var(--paper);
@@ -28,58 +26,28 @@
       font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height:1.5;
     }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:48px 20px;
-    }
-
+    .wrap{ max-width:var(--max); margin:0 auto; padding:48px 20px; }
     a{ color:inherit; text-decoration:none; border-bottom:1px solid var(--rule); }
     a:hover{ border-bottom-color:var(--ink); }
-
     .rule{ border-top:1px solid var(--rule); margin:28px 0; }
-
     .small{ color:var(--muted); font-size:14px; }
 
-    /* Canela is a licensed font. Until you self-host it, this is a tasteful fallback stack. */
-    .serif{
-      font-family:"Canela", Georgia, "Times New Roman", serif;
-    }
+    /* Canela is licensed; this keeps the layout ready and falls back gracefully */
+    .serif{ font-family:"Canela", Georgia, "Times New Roman", serif; }
 
     .brandbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:28px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; margin-bottom:28px;
     }
-
-    .wordmark{
-      text-transform:uppercase;
-      letter-spacing:.02em;
-      line-height:1.05;
-    }
-
-    .wordmark .top{
-      font-weight:600;
-      font-size:34px;
-    }
-
+    .wordmark{ text-transform:uppercase; letter-spacing:.02em; line-height:1.05; }
+    .wordmark .top{ font-weight:600; font-size:34px; }
     .wordmark .sub{
-      font-weight:400;
-      font-size:14px;
-      letter-spacing:.28em;
-      margin-top:6px;
-      color:var(--muted);
+      font-weight:400; font-size:14px; letter-spacing:.28em;
+      margin-top:6px; color:var(--muted);
     }
-
     .nav{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      font-size:14px;
-      color:var(--muted);
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px; color:var(--muted);
     }
 
     .hero{
@@ -88,7 +56,6 @@
       gap:26px;
       align-items:start;
     }
-
     .hero h1{
       font-weight:600;
       letter-spacing:.01em;
@@ -96,21 +63,14 @@
       font-size:46px;
       margin:0 0 10px 0;
     }
-
     .hero p{
       margin:0 0 16px 0;
       color:var(--muted);
       font-size:18px;
-      max-width:56ch;
+      max-width:60ch;
     }
 
-    .cta-row{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-
+    .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
     .button{
       display:inline-block;
       padding:10px 14px;
@@ -119,48 +79,18 @@
       background:#fff;
       font-size:14px;
     }
-
-    .button.primary{
-      border-color:var(--ink);
-    }
-
-    .cardgrid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:14px;
-      margin-top:18px;
-    }
-
-    .card{
-      border:1px solid var(--rule);
-      border-radius:16px;
-      padding:16px;
-      background:#fff;
-    }
-
-    .card h3{
-      margin:0 0 8px 0;
-      font-size:16px;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-    }
+    .button.primary{ border-color:var(--ink); }
 
     /* Manifesto (Option 1) */
     .manifesto{
-      margin:44px 0 26px 0;
-      max-width:720px;
+      margin:34px 0 18px 0;
+      max-width:740px;
     }
-
     .manifesto-core{
       font-size:22px;
       line-height:1.35;
-      margin:0 0 16px 0;
+      margin:0 0 14px 0;
     }
-
     .manifesto-list{
       color:var(--muted);
       font-size:16px;
@@ -168,6 +98,24 @@
       margin:0;
     }
 
+    .section-title{ margin:0 0 8px 0; font-size:18px; }
+
+    .cardgrid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    .card{
+      border:1px solid var(--rule);
+      border-radius:16px;
+      padding:16px;
+      background:#fff;
+    }
+    .card h3{ margin:0 0 8px 0; font-size:16px; }
+    .card p{ margin:0; color:var(--muted); font-size:14px; }
+
+    /* Right column (mascot as seal) */
     .aside{
       justify-self:end;
       width:100%;
@@ -177,7 +125,6 @@
       background:#fff;
       padding:14px;
     }
-
     .aside .label{
       font-size:12px;
       letter-spacing:.18em;
@@ -185,19 +132,13 @@
       color:var(--muted);
       margin:0 0 10px 0;
     }
-
-    .aside .box{
-      border:1px dashed var(--rule);
+    .seal{
+      width:100%;
+      height:auto;
       border-radius:14px;
-      padding:12px;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.55;
-    }
-
-    .section-title{
-      margin:0 0 8px 0;
-      font-size:18px;
+      border:1px solid var(--rule);
+      display:block;
+      background:#fff;
     }
 
     .footer{
@@ -222,7 +163,7 @@
 <body>
   <div class="wrap">
 
-    <!-- Header / Wordmark -->
+    <!-- Header -->
     <div class="brandbar">
       <div class="wordmark serif" aria-label="WAP MOP SHOPPE">
         <div class="top">WAP MOP</div>
@@ -242,8 +183,9 @@
         <h1 class="serif">Care, considered.<br>Respect the ritual.</h1>
 
         <p>
-          WAP MOP SHOPPE is a cheeky, practical hub for grooming, cleanliness, and
-          intimacy-enhancing self-care. Not porn. Prep.
+          WAP MOP SHOPPE is a content-first guide to grooming, cleanliness, and intimacy-enhancing self-care.
+          This is not about fixing bodies or performing for someone else. It’s about understanding how bodies work —
+          and showing up with care, curiosity, and respect.
         </p>
 
         <div class="cta-row">
@@ -268,22 +210,22 @@
 
         <div class="rule"></div>
 
-        <!-- Article cards -->
+        <!-- Start here -->
         <section id="articles" aria-label="Featured articles">
           <h2 class="section-title">Start here</h2>
 
           <div class="cardgrid">
             <div class="card">
               <h3>The Pre-Game Ritual</h3>
-              <p>Simple routines for face, skin, breath, and confidence — without the cringe.</p>
+              <p>Simple routines for skin, breath, and comfort — designed to support intimacy, not perform it.</p>
             </div>
             <div class="card">
               <h3>Vaginas as ecosystems</h3>
-              <p>Why “clean” isn’t the goal — balance is. pH, basics, and what to avoid.</p>
+              <p>Why balance matters, what pH actually means, and why less intervention is usually better care.</p>
             </div>
             <div class="card">
               <h3>Aftercare is respect</h3>
-              <p>Comfort, communication, and the quiet practices that keep things good.</p>
+              <p>What happens after intimacy matters too: comfort, communication, and attention.</p>
             </div>
           </div>
         </section>
@@ -293,9 +235,10 @@
         <!-- Shoppe -->
         <section id="shoppe" aria-label="Shoppe section">
           <h2 class="section-title">The Shoppe</h2>
-          <p class="small" style="margin:0 0 14px 0;">
-            Curated essentials are coming next. We’ll start with a short, tight list:
-            pH-friendly care, gentle exfoliation, beard softeners, breath prep, and aftercare.
+          <p class="small" style="margin:0 0 14px 0; max-width:78ch;">
+            The Shoppe will be small by design. A short list of products chosen for gentleness,
+            compatibility, and respect for the systems they interact with. No gimmicks. No “fixes.”
+            Just tools that don’t get in the way.
           </p>
           <div class="cta-row">
             <a class="button" href="#about">What this is</a>
@@ -308,9 +251,10 @@
         <!-- About -->
         <section id="about" aria-label="About section">
           <h2 class="section-title">About</h2>
-          <p class="small" style="margin:0; max-width:72ch;">
-            This is a content-first build. Affiliate links may appear later. The goal now:
-            write helpful, funny, respectful guidance — and build a clean website that works.
+          <p class="small" style="margin:0; max-width:84ch;">
+            WAP MOP SHOPPE is an experiment in tone, care, and clarity. It’s built slowly, written carefully,
+            and shaped around the idea that intimacy improves when people understand bodies as systems —
+            not problems to solve.
           </p>
         </section>
 
@@ -326,16 +270,15 @@
 
       </div>
 
-      <!-- Right column / mascot placeholder -->
+      <!-- Mascot as seal (Option A) -->
       <aside class="aside" aria-label="Brand mark">
-  <p class="label">Official mark</p>
-  <img
-    src="assets/images/wap-mop-meister.png"
-    alt="WAP MOP SHOPPE mark"
-    style="width:100%; height:auto; border-radius:14px; border:1px solid var(--rule);"
-  />
-</aside>
-
+        <p class="label">Official mark</p>
+        <img class="seal" src="assets/images/wap-mop-meister.png" alt="WAP MOP SHOPPE mark">
+        <div class="rule" style="margin:18px 0;"></div>
+        <p class="small" style="margin:0;">
+          Note: Canela is a licensed font. We’ll self-host it later so the wordmark matches the brand spec.
+        </p>
+      </aside>
     </section>
 
     <!-- Footer -->
