@@ -5,43 +5,245 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WAP MOP SHOPPE</title>
 
-  <!-- Inter (body) -->
+  <!-- Inter (body/UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- NOTE: Canela is a paid font; we’ll swap this placeholder once you have it licensed. -->
   <style>
-    /* Temporary Canela-like fallback stack */
-    @font-face { font-family: "Canela"; src: local("Canela"); }
-  </style>
+    :root{
+      --paper:#fffdf8;
+      --ink:#111214;
+      --muted:#5d6166;
+      --rule:rgba(17,18,20,.14);
+      --max:980px;
+    }
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.5;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:48px 20px;
+    }
+
+    a{ color:inherit; text-decoration:none; border-bottom:1px solid var(--rule); }
+    a:hover{ border-bottom-color:var(--ink); }
+
+    .rule{ border-top:1px solid var(--rule); margin:28px 0; }
+
+    .small{ color:var(--muted); font-size:14px; }
+
+    /* Canela is a licensed font. Until you self-host it, this is a tasteful fallback stack. */
+    .serif{
+      font-family:"Canela", Georgia, "Times New Roman", serif;
+    }
+
+    .brandbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+
+    .wordmark{
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      line-height:1.05;
+    }
+
+    .wordmark .top{
+      font-weight:600;
+      font-size:34px;
+    }
+
+    .wordmark .sub{
+      font-weight:400;
+      font-size:14px;
+      letter-spacing:.28em;
+      margin-top:6px;
+      color:var(--muted);
+    }
+
+    .nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:26px;
+      align-items:start;
+    }
+
+    .hero h1{
+      font-weight:600;
+      letter-spacing:.01em;
+      line-height:1.05;
+      font-size:46px;
+      margin:0 0 10px 0;
+    }
+
+    .hero p{
+      margin:0 0 16px 0;
+      color:var(--muted);
+      font-size:18px;
+      max-width:56ch;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .button{
+      display:inline-block;
+      padding:10px 14px;
+      border:1px solid var(--rule);
+      border-radius:999px;
+      background:#fff;
+      font-size:14px;
+    }
+
+    .button.primary{
+      border-color:var(--ink);
+    }
+
+    .cardgrid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .card{
+      border:1px solid var(--rule);
+      border-radius:16px;
+      padding:16px;
+      background:#fff;
+    }
+
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:16px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* Manifesto (Option 1) */
+    .manifesto{
+      margin:44px 0 26px 0;
+      max-width:720px;
+    }
+
+    .manifesto-core{
+      font-size:22px;
+      line-height:1.35;
+      margin:0 0 16px 0;
+    }
+
+    .manifesto-list{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.65;
+      margin:0;
+    }
+
+    .aside{
+      justify-self:end;
+      width:100%;
+      max-width:320px;
+      border-radius:18px;
+      border:1px solid var(--rule);
+      background:#fff;
+      padding:14px;
+    }
+
+    .aside .label{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin:0 0 10px 0;
+    }
+
+    .aside .box{
+      border:1px dashed var(--rule);
+      border-radius:14px;
+      padding:12px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .section-title{
+      margin:0 0 8px 0;
+      font-size:18px;
+    }
+
+    .footer{
+      margin-top:34px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (max-width:860px){
+      .hero{ grid-template-columns:1fr; }
+      .aside{ justify-self:start; max-width:520px; }
+      .hero h1{ font-size:40px; }
+      .cardgrid{ grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 
 <body>
   <div class="wrap">
 
+    <!-- Header / Wordmark -->
     <div class="brandbar">
-      <div class="wordmark" aria-label="WAP MOP SHOPPE">
+      <div class="wordmark serif" aria-label="WAP MOP SHOPPE">
         <div class="top">WAP MOP</div>
         <div class="sub">SHOPPE</div>
       </div>
 
-      <div class="nav">
+      <nav class="nav" aria-label="Primary navigation">
         <a href="#articles">Articles</a>
         <a href="#shoppe">Shoppe</a>
         <a href="#about">About</a>
-      </div>
+      </nav>
     </div>
 
-    <div class="hero">
+    <!-- Hero -->
+    <section class="hero" aria-label="Homepage hero">
       <div>
-        <h1>Care, considered.<br>Respect the ritual.</h1>
+        <h1 class="serif">Care, considered.<br>Respect the ritual.</h1>
+
         <p>
-          WAP MOP SHOPPE is the personal care department of Hump City Social Club —
-          a cheeky, practical hub for grooming, cleanliness, and intimacy-enhancing self-care.
-          Not porn. Prep.
+          WAP MOP SHOPPE is a cheeky, practical hub for grooming, cleanliness, and
+          intimacy-enhancing self-care. Not porn. Prep.
         </p>
 
         <div class="cta-row">
@@ -49,27 +251,48 @@
           <a class="button" href="#shoppe">Browse the Shoppe</a>
         </div>
 
-        <div class="rule"></div>
+        <!-- Manifesto (Option 1) -->
+        <section class="manifesto" aria-label="Brand manifesto">
+          <p class="manifesto-core serif">
+            <strong>Care is not about correcting bodies.</strong><br>
+            <strong>It’s about understanding systems and behaving with respect inside them.</strong>
+          </p>
 
-        <div class="cardgrid" id="articles">
-          <div class="card">
-            <h3>The Pre-Game Ritual</h3>
-            <p>Simple routines for face, skin, breath, and confidence — without the cringe.</p>
-          </div>
-          <div class="card">
-            <h3>pH, politely</h3>
-            <p>Feminine care basics explained like an adult wrote them.</p>
-          </div>
-          <div class="card">
-            <h3>Beard &amp; boundaries</h3>
-            <p>Grooming tips that respect comfort, consent, and sensitive skin.</p>
-          </div>
-        </div>
+          <p class="manifesto-list">
+            Skin as a system.<br>
+            Mouths as systems.<br>
+            Vaginas as ecosystems.<br>
+            Relationships as systems.
+          </p>
+        </section>
 
         <div class="rule"></div>
 
-        <div id="shoppe">
-          <h2 style="margin:0 0 8px 0;">The Shoppe</h2>
+        <!-- Article cards -->
+        <section id="articles" aria-label="Featured articles">
+          <h2 class="section-title">Start here</h2>
+
+          <div class="cardgrid">
+            <div class="card">
+              <h3>The Pre-Game Ritual</h3>
+              <p>Simple routines for face, skin, breath, and confidence — without the cringe.</p>
+            </div>
+            <div class="card">
+              <h3>Vaginas as ecosystems</h3>
+              <p>Why “clean” isn’t the goal — balance is. pH, basics, and what to avoid.</p>
+            </div>
+            <div class="card">
+              <h3>Aftercare is respect</h3>
+              <p>Comfort, communication, and the quiet practices that keep things good.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="rule"></div>
+
+        <!-- Shoppe -->
+        <section id="shoppe" aria-label="Shoppe section">
+          <h2 class="section-title">The Shoppe</h2>
           <p class="small" style="margin:0 0 14px 0;">
             Curated essentials are coming next. We’ll start with a short, tight list:
             pH-friendly care, gentle exfoliation, beard softeners, breath prep, and aftercare.
@@ -78,31 +301,50 @@
             <a class="button" href="#about">What this is</a>
             <a class="button" href="#newsletter">Get updates</a>
           </div>
-        </div>
+        </section>
 
         <div class="rule"></div>
 
-        <div id="about">
-          <h2 style="margin:0 0 8px 0;">About</h2>
-          <p class="small" style="margin:0;">
+        <!-- About -->
+        <section id="about" aria-label="About section">
+          <h2 class="section-title">About</h2>
+          <p class="small" style="margin:0; max-width:72ch;">
             This is a content-first build. Affiliate links may appear later. The goal now:
-            write helpful, funny, respectful guidance — and build a clean little website that works.
+            write helpful, funny, respectful guidance — and build a clean website that works.
           </p>
+        </section>
+
+        <div class="rule"></div>
+
+        <!-- Newsletter placeholder -->
+        <section id="newsletter" aria-label="Newsletter section">
+          <h2 class="section-title">Get updates</h2>
+          <p class="small" style="margin:0;">
+            Newsletter signup coming soon. For now: bookmark the site and check back.
+          </p>
+        </section>
+
+      </div>
+
+      <!-- Right column / mascot placeholder -->
+      <aside class="aside" aria-label="Brand mark">
+        <p class="label">Official mark</p>
+        <div class="box">
+          Add your mascot image to <code>assets/images/</code> and we’ll wire it here.<br><br>
+          Recommended filename: <code>wap-mop-meister.png</code>
         </div>
+        <div class="rule" style="margin:18px 0;"></div>
+        <p class="small" style="margin:0;">
+          Note: Canela is a licensed font. We’ll self-host it later so the wordmark matches the brand spec.
+        </p>
+      </aside>
+    </section>
 
-      </div>
-
-      <!-- Mascot image: we’ll add your file next -->
-      <div class="mascot">
-        <div class="small" style="margin-bottom:10px;">Official Mark (placeholder)</div>
-        <div class="small">Add the mascot image to <code>assets/images/</code> and we’ll wire it here.</div>
-      </div>
-    </div>
-
-    <div class="footer">
+    <!-- Footer -->
+    <footer class="footer" aria-label="Footer">
       <div>© <span id="y"></span> WAP MOP SHOPPE</div>
-      <div class="small">A Hump City Social Club property (soon).</div>
-    </div>
+      <div>A Hump City Social Club property (soon).</div>
+    </footer>
 
   </div>
 
