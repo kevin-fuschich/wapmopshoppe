@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles – WAP MOP SHOPPE</title>
+
+  <!-- Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --paper:#fffdf8;
+      --ink:#111214;
+      --muted:#4a4e53;
+      --rule:rgba(17,18,20,.16);
+      --max:760px;
+    }
+
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Inter, sans-serif;
+      line-height:1.65;
+      font-size:18px;
+    }
+
+    header, footer{ padding:24px 20px; max-width:var(--max); margin:0 auto; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:20px; }
+
+    .wordmark{ font-family:"Cormorant Garamond", serif; text-transform:uppercase; }
+    .wordmark .top{ font-size:30px; font-weight:600; }
+    .wordmark .sub{ font-size:13px; letter-spacing:.25em; color:var(--muted); }
+
+    nav a{ margin-right:14px; color:var(--muted); border-bottom:1px solid var(--rule); }
+
+    h1{ font-family:"Cormorant Garamond"; font-size:40px; margin-bottom:16px; }
+
+    .article-list{ margin-top:20px; }
+    .article-list a{ display:block; margin-bottom:12px; font-size:18px; }
+
+    .footer-text{ font-size:14px; color:var(--muted); }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="wordmark"><div class="top">WAP MOP</div><div class="sub">SHOPPE</div></div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Articles</a>
+      <a href="../index.html#shoppe">Shoppe</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    <h1>Articles</h1>
+
+    <div class="article-list">
+      <a href="vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
+      <a href="mouths-as-systems.html">Mouths as systems</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-text">© <span id="y"></span> WAP MOP SHOPPE</div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
