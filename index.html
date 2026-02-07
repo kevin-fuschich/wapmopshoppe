@@ -17,8 +17,8 @@
     :root{
       --paper:#fffdf8;
       --ink:#111214;
-      --muted:#5d6166;
-      --rule:rgba(17,18,20,.14);
+      --muted:#4a4e53; /* darkened for WCAG AA contrast compliance */
+      --rule:rgba(17,18,20,.16);
       --max:980px;
     }
 
@@ -29,7 +29,22 @@
       background:var(--paper);
       color:var(--ink);
       font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.5;
+      line-height:1.6;
+      font-size:16px;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid var(--rule);
+      padding:2px 0;
+    }
+    a:hover{
+      border-bottom-color:var(--ink);
+    }
+    a:focus{
+      outline:2px solid var(--ink);
+      outline-offset:3px;
     }
 
     .wrap{
@@ -38,21 +53,15 @@
       padding:48px 20px;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
-      border-bottom:1px solid var(--rule);
-    }
-    a:hover{ border-bottom-color:var(--ink); }
-
     .rule{
       border-top:1px solid var(--rule);
-      margin:28px 0;
+      margin:32px 0;
     }
 
     .small{
       color:var(--muted);
-      font-size:14px;
+      font-size:15px;
+      line-height:1.55;
     }
 
     .serif{
@@ -60,287 +69,9 @@
     }
 
     /* Header */
+    header{
+      margin-bottom:32px;
+    }
+
     .brandbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:28px;
-    }
-
-    .wordmark{
-      text-transform:uppercase;
-      letter-spacing:.02em;
-      line-height:1.05;
-    }
-
-    .wordmark .top{
-      font-weight:600;
-      font-size:34px;
-    }
-
-    .wordmark .sub{
-      font-weight:500;
-      font-size:14px;
-      letter-spacing:.28em;
-      margin-top:6px;
-      color:var(--muted);
-    }
-
-    .nav{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      font-size:14px;
-      color:var(--muted);
-    }
-
-    /* Hero */
-    .hero{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:26px;
-      align-items:start;
-    }
-
-    .hero h1{
-      font-weight:600;
-      letter-spacing:.01em;
-      line-height:1.05;
-      font-size:46px;
-      margin:0 0 10px 0;
-    }
-
-    .hero p{
-      margin:0 0 16px 0;
-      color:var(--muted);
-      font-size:18px;
-      max-width:60ch;
-    }
-
-    .cta-row{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
-
-    .button{
-      display:inline-block;
-      padding:10px 14px;
-      border:1px solid var(--rule);
-      border-radius:999px;
-      background:#fff;
-      font-size:14px;
-    }
-
-    .button.primary{
-      border-color:var(--ink);
-    }
-
-    /* Manifesto */
-    .manifesto{
-      margin:34px 0 18px 0;
-      max-width:740px;
-    }
-
-    .manifesto-core{
-      font-size:22px;
-      line-height:1.35;
-      margin:0 0 14px 0;
-    }
-
-    .manifesto-list{
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.65;
-      margin:0;
-    }
-
-    /* Sections */
-    .section-title{
-      margin:0 0 8px 0;
-      font-size:18px;
-    }
-
-    .cardgrid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:14px;
-      margin-top:18px;
-    }
-
-    .card{
-      border:1px solid var(--rule);
-      border-radius:16px;
-      padding:16px;
-      background:#fff;
-    }
-
-    .card h3{
-      margin:0 0 8px 0;
-      font-size:16px;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    /* Seal */
-    .aside{
-      justify-self:end;
-      width:100%;
-      max-width:320px;
-      border-radius:18px;
-      border:1px solid var(--rule);
-      background:#fff;
-      padding:14px;
-    }
-
-    .seal{
-      width:100%;
-      height:auto;
-      border-radius:14px;
-      border:1px solid var(--rule);
-      display:block;
-      background:#fff;
-    }
-
-    /* Footer */
-    .footer{
-      margin-top:34px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    @media (max-width:860px){
-      .hero{ grid-template-columns:1fr; }
-      .aside{ justify-self:start; max-width:520px; }
-      .hero h1{ font-size:40px; }
-      .cardgrid{ grid-template-columns:1fr; }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-
-    <!-- Header -->
-    <div class="brandbar">
-      <div class="wordmark serif">
-        <div class="top">WAP MOP</div>
-        <div class="sub">SHOPPE</div>
-      </div>
-
-      <nav class="nav">
-        <a href="#articles">Articles</a>
-        <a href="#shoppe">Shoppe</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
-
-    <!-- Hero -->
-    <section class="hero">
-      <div>
-        <h1 class="serif">Care, considered.<br>Respect the ritual.</h1>
-
-        <p>
-          WAP MOP SHOPPE is a content-first guide to grooming, cleanliness, and
-          intimacy-enhancing self-care. This is not about fixing bodies or
-          performing for someone else. It’s about understanding how bodies work —
-          and showing up with care, curiosity, and respect.
-        </p>
-
-        <div class="cta-row">
-          <a class="button primary" href="#articles">Read the Guides</a>
-          <a class="button" href="#shoppe">Browse the Shoppe</a>
-        </div>
-
-        <!-- Manifesto -->
-        <section class="manifesto">
-          <p class="manifesto-core serif">
-            <strong>Care is not about correcting bodies.</strong><br>
-            <strong>It’s about understanding systems and behaving with respect inside them.</strong>
-          </p>
-
-          <p class="manifesto-list">
-            Skin as a system.<br>
-            Mouths as systems.<br>
-            Vaginas as ecosystems.<br>
-            Relationships as systems.
-          </p>
-        </section>
-
-        <div class="rule"></div>
-
-        <!-- Articles -->
-        <section id="articles">
-          <h2 class="section-title">Start here</h2>
-
-          <div class="cardgrid">
-            <div class="card">
-              <h3>The Pre-Game Ritual</h3>
-              <p>Simple routines for skin, breath, and comfort — designed to support intimacy, not perform it.</p>
-            </div>
-            <div class="card">
-              <h3>Vaginas as ecosystems</h3>
-              <p>Why balance matters, what pH actually means, and why less intervention is usually better care.</p>
-            </div>
-            <div class="card">
-              <h3>Aftercare is respect</h3>
-              <p>What happens after intimacy matters too: comfort, communication, and attention.</p>
-            </div>
-          </div>
-        </section>
-
-        <div class="rule"></div>
-
-        <!-- Shoppe -->
-        <section id="shoppe">
-          <h2 class="section-title">The Shoppe</h2>
-          <p class="small" style="max-width:78ch;">
-            The Shoppe will be small by design. A short list of products chosen for
-            gentleness, compatibility, and respect for the systems they interact with.
-            No gimmicks. No “fixes.” Just tools that don’t get in the way.
-          </p>
-        </section>
-
-        <div class="rule"></div>
-
-        <!-- About -->
-        <section id="about">
-          <h2 class="section-title">About</h2>
-          <p class="small" style="max-width:84ch;">
-            WAP MOP SHOPPE is an experiment in tone, care, and clarity. It’s built
-            slowly, written carefully, and shaped around the idea that intimacy
-            improves when people understand bodies as systems — not problems to solve.
-          </p>
-        </section>
-      </div>
-
-      <!-- Seal -->
-      <aside class="aside">
-        <img class="seal" src="assets/images/wap-mop-meister.png" alt="WAP MOP SHOPPE">
-      </aside>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div>© <span id="y"></span> WAP MOP SHOPPE</div>
-      <div>A Hump City Social Club property (soon).</div>
-    </footer>
-
-  </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
-
+      display:fle
