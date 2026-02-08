@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="WAP MOP SHOPPE stamp mark">
+  <defs>
+    <style>
+      .a{fill:none;stroke:var(--accent, #C04832);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .b{fill:var(--accent, #C04832);opacity:.10}
+      .t{fill:var(--accent, #C04832);font:700 22px system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;letter-spacing:.12em}
+      .s{fill:var(--accent, #C04832);font:700 14px system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;letter-spacing:.18em;opacity:.9}
+    </style>
+  </defs>
+
+  <!-- wax -->
+  <circle cx="120" cy="120" r="92" class="b"/>
+  <circle cx="120" cy="120" r="92" class="a"/>
+
+  <!-- simple “mop / mustache” hint (abstract) -->
+  <path class="a" d="M72 132c18 18 78 18 96 0"/>
+  <path class="a" d="M90 118c8-10 22-16 30-16s22 6 30 16"/>
+
+  <!-- text -->
+  <text x="120" y="70" text-anchor="middle" class="s">WAP MOP</text>
+  <text x="120" y="176" text-anchor="middle" class="t">SHOPPE</text>
+</svg>
