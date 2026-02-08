@@ -36,6 +36,58 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/visuals.css">
+
+  <style>
+    /* Articles index thumbnails (kept local to this page) */
+    .cards{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-top:18px;
+    }
+    .card{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      padding:14px;
+      border:1px solid rgba(17,18,20,.14);
+      border-radius:16px;
+      background:#fffdf8;
+      text-decoration:none;
+      color:inherit;
+    }
+    .thumb{
+      width:120px;
+      flex:0 0 120px;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid rgba(17,18,20,.10);
+      padding:8px;
+    }
+    .thumb img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .card h2{
+      margin:0 0 6px 0;
+      font-size:22px;
+      line-height:1.15;
+    }
+    .card p{
+      margin:0;
+      opacity:.82;
+      line-height:1.35;
+    }
+    .card:hover{
+      border-color: rgba(17,18,20,.28);
+    }
+    @media (max-width: 620px){
+      .card{flex-direction:column;}
+      .thumb{width:100%; flex:1 1 auto;}
+    }
+  </style>
 </head>
 
 <body class="articles-index">
@@ -49,6 +101,7 @@
 
     <nav aria-label="Primary navigation">
       <a href="../index.html">Home</a>
+      <a href="../start/index.html">Start</a>
       <a href="../shoppe/index.html">Shoppe</a>
       <a href="../about/index.html">About</a>
       <a href="../disclosure/index.html">Disclosure</a>
@@ -73,14 +126,68 @@
 
   <div class="rule"></div>
 
-  <div class="article-list">
-    <a href="vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
-    <a href="mouths-as-systems.html">Mouths as systems</a>
-    <a href="skin-as-a-system.html">Skin as a system</a>
-    <a href="aftercare-is-respect.html">Aftercare is respect</a>
+  <div class="cards" aria-label="Article list">
 
-    <a href="external-means-external.html">External means external</a>
-    <a href="after-doesnt-mean-absent.html">After doesn’t mean absent</a>
+    <a class="card" href="vaginas-as-ecosystems.html">
+      <div class="thumb" aria-hidden="true">
+        <img src="../assets/figures/ph-scale.svg" alt="">
+      </div>
+      <div>
+        <h2>Vaginas as ecosystems</h2>
+        <p>Balance, pH, and why most “fixes” accidentally disrupt the system.</p>
+      </div>
+    </a>
+
+    <a class="card" href="mouths-as-systems.html">
+      <div class="thumb" aria-hidden="true">
+        <img src="../assets/figures/mouth-system.svg" alt="">
+      </div>
+      <div>
+        <h2>Mouths as systems</h2>
+        <p>Timing, moisture, and gentleness — the quiet rules that matter.</p>
+      </div>
+    </a>
+
+    <a class="card" href="skin-as-a-system.html">
+      <div class="thumb" aria-hidden="true">
+        <img src="../assets/figures/skin-barrier.svg" alt="">
+      </div>
+      <div>
+        <h2>Skin as a system</h2>
+        <p>Barrier-first care: cleanse, protect, then let time reset.</p>
+      </div>
+    </a>
+
+    <a class="card" href="external-means-external.html">
+      <div class="thumb" aria-hidden="true">
+        <img src="../assets/figures/external-boundary.svg" alt="">
+      </div>
+      <div>
+        <h2>External means external</h2>
+        <p>A boundary that protects internal systems — and breaks the “freshness” myth.</p>
+      </div>
+    </a>
+
+    <a class="card" href="after-doesnt-mean-absent.html">
+      <div class="thumb" aria-hidden="true">
+        <img src="../assets/figures/closing-ritual.svg" alt="">
+      </div>
+      <div>
+        <h2>After doesn’t mean absent</h2>
+        <p>Presence after intimacy is part of care — endings shape trust.</p>
+      </div>
+    </a>
+
+    <a class="card" href="aftercare-is-respect.html">
+      <div class="thumb" aria-hidden="true">
+        <img src="../assets/figures/systems-triad.svg" alt="">
+      </div>
+      <div>
+        <h2>Aftercare is respect</h2>
+        <p>The practical version: small signals that close the moment well.</p>
+      </div>
+    </a>
+
   </div>
 </main>
 
