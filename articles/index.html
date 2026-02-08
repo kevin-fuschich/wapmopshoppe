@@ -5,107 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Articles – WAP MOP SHOPPE</title>
 
-  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- Cormorant Garamond -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --paper:#fffdf8;
-      --ink:#111214;
-      --muted:#4a4e53;
-      --rule:rgba(17,18,20,.16);
-      --max:760px;
-    }
-
-    body{
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.65;
-      font-size:18px;
-    }
-
-    header, footer{
-      padding:24px 20px;
-      max-width:var(--max);
-      margin:0 auto;
-    }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:20px;
-    }
-
-    .wordmark{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      text-transform:uppercase;
-      letter-spacing:.02em;
-    }
-
-    .wordmark .top{
-      font-size:30px;
-      font-weight:600;
-    }
-
-    .wordmark .sub{
-      font-size:13px;
-      letter-spacing:.25em;
-      color:var(--muted);
-    }
-
-    nav a{
-      margin-right:16px;
-      font-size:16px;
-      color:var(--muted);
-      text-decoration:none;
-      border-bottom:1px solid var(--rule);
-    }
-
-    h1{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:40px;
-      margin-bottom:18px;
-    }
-
-    .article-list a{
-      display:block;
-      margin-bottom:14px;
-      font-size:20px;
-      text-decoration:none;
-      border-bottom:1px solid var(--rule);
-      padding-bottom:4px;
-    }
-
-    .footer-text{
-      font-size:14px;
-      color:var(--muted);
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body>
+<body class="articles-index">
 
 <header>
-  <div class="wordmark">
-    <div class="top">WAP MOP</div>
-    <div class="sub">SHOPPE</div>
-  </div>
+  <div class="container narrow">
+    <div class="wordmark">
+      <div class="top">WAP MOP</div>
+      <div class="sub">SHOPPE</div>
+    </div>
 
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="index.html">Articles</a>
-    <a href="../index.html#shoppe">Shoppe</a>
-  </nav>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../shoppe/index.html">Shoppe</a>
+      <a href="../about/index.html">About</a>
+      <a href="../disclosure/index.html">Disclosure</a>
+    </nav>
+  </div>
 </header>
 
-<div class="wrap">
+<main class="container narrow">
   <h1>Articles</h1>
 
   <div class="article-list">
@@ -114,10 +39,10 @@
     <a href="skin-as-a-system.html">Skin as a system</a>
     <a href="aftercare-is-respect.html">Aftercare is respect</a>
   </div>
-</div>
+</main>
 
 <footer>
-  <div class="footer-text">© <span id="y"></span> WAP MOP SHOPPE</div>
+  <div class="container narrow footer-text">© <span id="y"></span> WAP MOP SHOPPE</div>
 </footer>
 
 <script>
