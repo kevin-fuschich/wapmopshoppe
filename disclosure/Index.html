@@ -1,1 +1,110 @@
-j
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclosure – WAP MOP SHOPPE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/styles.css">
+
+  <style>
+    .page h1{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:46px;
+      line-height:1.15;
+      margin:0 0 12px 0;
+    }
+    .lede{
+      margin:0 0 22px 0;
+      color:var(--muted);
+      max-width:78ch;
+    }
+    .page p{ margin:0 0 22px 0; }
+    .callout{
+      border:1px solid var(--rule);
+      border-radius:18px;
+      background:#fff;
+      padding:16px;
+      color:var(--muted);
+      font-size:16px;
+      max-width:84ch;
+    }
+  </style>
+</head>
+
+<body class="page">
+
+<header>
+  <div class="container wide">
+    <div class="wordmark">
+      <div class="top">WAP MOP</div>
+      <div class="sub">SHOPPE</div>
+    </div>
+
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../shoppe/index.html">Shoppe</a>
+      <a href="../about/index.html">About</a>
+      <a href="../disclosure/index.html">Disclosure</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container narrow">
+
+  <h1>Disclosure</h1>
+  <p class="lede">
+    WAP MOP SHOPPE may use affiliate links. This page explains what that means, in plain English.
+  </p>
+
+  <div class="callout">
+    <strong>Short version:</strong> If you click a link and buy something, we may earn a small commission at no extra cost to you.
+    We don’t take payment for placement. We pick products based on compatibility, gentleness, and standards.
+  </div>
+
+  <div class="rule"></div>
+
+  <h2 class="section-title">Affiliate links</h2>
+  <p>
+    Some product links on this site are affiliate links. If you click and make a purchase,
+    the retailer may pay us a commission. The price you pay does not increase because of this.
+  </p>
+
+  <h2 class="section-title">Editorial independence</h2>
+  <p>
+    We do not accept payment to recommend products. If something is listed in The Shoppe,
+    it’s there because it fits the philosophy: gentle, compatible, low-friction, and respectful of the systems involved.
+  </p>
+
+  <h2 class="section-title">Medical disclaimer</h2>
+  <p>
+    Content on this site is for informational purposes only and is not medical advice.
+    If you have symptoms or concerns, consult a qualified healthcare professional.
+  </p>
+
+  <h2 class="section-title">Contact</h2>
+  <p>
+    If you want to flag an error, suggest a product, or ask a question,
+    you can create a GitHub issue in the repository (for now), or we’ll add a contact method later.
+  </p>
+
+</main>
+
+<footer>
+  <div class="container wide">
+    <div>© <span id="y"></span> WAP MOP SHOPPE</div>
+    <div>Transparency beats hype.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
