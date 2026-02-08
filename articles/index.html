@@ -26,7 +26,7 @@
       margin:0;
       background:var(--paper);
       color:var(--ink);
-      font-family:Inter, sans-serif;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height:1.65;
       font-size:18px;
     }
@@ -44,7 +44,7 @@
     }
 
     .wordmark{
-      font-family:"Cormorant Garamond", serif;
+      font-family:"Cormorant Garamond", Georgia, serif;
       text-transform:uppercase;
       letter-spacing:.02em;
     }
@@ -61,14 +61,15 @@
     }
 
     nav a{
-      margin-right:14px;
+      margin-right:16px;
+      font-size:16px;
       color:var(--muted);
-      border-bottom:1px solid var(--rule);
       text-decoration:none;
+      border-bottom:1px solid var(--rule);
     }
 
     h1{
-      font-family:"Cormorant Garamond", serif;
+      font-family:"Cormorant Garamond", Georgia, serif;
       font-size:40px;
       margin-bottom:18px;
     }
@@ -91,35 +92,37 @@
 
 <body>
 
-  <header>
-    <div class="wordmark">
-      <div class="top">WAP MOP</div>
-      <div class="sub">SHOPPE</div>
-    </div>
-
-    <nav>
-      <a href="../index.html">Home</a>
-      <a href="index.html">Articles</a>
-      <a href="../index.html#shoppe">Shoppe</a>
-    </nav>
-  </header>
-
-  <div class="wrap">
-    <h1>Articles</h1>
-
-    <div class="article-list">
-      <a href="vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
-      <a href="mouths-as-systems.html">Mouths as systems</a>
-      <a href="skin-as-a-system.html">Skin as a system</a>
-    </div>
+<header>
+  <div class="wordmark">
+    <div class="top">WAP MOP</div>
+    <div class="sub">SHOPPE</div>
   </div>
 
-  <footer>
-    <div class="footer-text">© <span id="y"></span> WAP MOP SHOPPE</div>
-  </footer>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="index.html">Articles</a>
+    <a href="../index.html#shoppe">Shoppe</a>
+  </nav>
+</header>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<div class="wrap">
+  <h1>Articles</h1>
+
+  <div class="article-list">
+    <a href="vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
+    <a href="mouths-as-systems.html">Mouths as systems</a>
+    <a href="skin-as-a-system.html">Skin as a system</a>
+    <a href="aftercare-is-respect.html">Aftercare is respect</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-text">© <span id="y"></span> WAP MOP SHOPPE</div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
