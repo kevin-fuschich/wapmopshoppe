@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="Diagram showing skin barrier as a system: cleanse, protect, time, with barrier integrity in the center">
+  <defs>
+    <style>
+      .ink{fill:#111214}
+      .stroke{stroke:#111214;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .label{font:600 22px system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+      .serif{font:600 28px "Cormorant Garamond",Georgia,serif}
+      .muted{fill:#111214;opacity:.72}
+      .small{font:600 18px system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12" fill="#111214"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="44" class="serif ink">Skin as a system</text>
+  <text x="24" y="78" class="label muted">Cleanse • Protect • Time</text>
+
+  <!-- center -->
+  <rect x="330" y="108" width="240" height="88" rx="22" class="stroke"/>
+  <text x="450" y="150" class="label ink" text-anchor="middle">Barrier</text>
+  <text x="450" y="176" class="small muted" text-anchor="middle">integrity</text>
+
+  <!-- left input -->
+  <rect x="70" y="120" width="200" height="64" rx="18" class="stroke"/>
+  <text x="170" y="160" class="label ink" text-anchor="middle" font-size="20">Cleanse</text>
+
+  <!-- right input -->
+  <rect x="630" y="120" width="200" height="64" rx="18" class="stroke"/>
+  <text x="730" y="160" class="label ink" text-anchor="middle" font-size="20">Protect</text>
+
+  <!-- arrows -->
+  <path class="stroke" marker-end="url(#arrow)" d="M270 152H330"/>
+  <path class="stroke" marker-end="url(#arrow)" d="M570 152H630"/>
+
+  <!-- time underneath -->
+  <path class="stroke" d="M220 206H680"/>
+  <text x="450" y="226" class="small muted" text-anchor="middle">Time (reset) does the rest</text>
+</svg>
