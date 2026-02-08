@@ -6,40 +6,33 @@
 
   <title>WAP MOP SHOPPE</title>
 
-  <!-- Primary Meta -->
   <meta name="description" content="A calm, cheeky field guide to care: skin as a system, mouths as systems, vaginas as ecosystems — and intimacy built on respect." />
   <link rel="canonical" href="https://kevin-fuschich.github.io/wapmopshoppe/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="WAP MOP SHOPPE" />
   <meta property="og:description" content="Care as systems. Respect as practice. A field guide for romantic closeness." />
   <meta property="og:url" content="https://kevin-fuschich.github.io/wapmopshoppe/" />
   <meta property="og:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="WAP MOP SHOPPE" />
   <meta name="twitter:description" content="Care as systems. Respect as practice." />
   <meta name="twitter:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
 
-  <!-- Favicon & App Icons -->
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/wapmopshoppe/assets/favicon.svg">
   <link rel="manifest" href="/wapmopshoppe/assets/site.webmanifest">
   <meta name="theme-color" content="#fffdf8">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/visuals.css">
 
   <style>
-    /* Home: systems strip (kept local to homepage) */
     .systems-strip{
       margin: 22px 0 26px 0;
       display: grid;
@@ -52,11 +45,7 @@
       background:#fffdf8;
       padding:10px;
     }
-    .mini img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
+    .mini img{ width:100%; height:auto; display:block; }
     .mini .cap{
       margin-top:8px;
       font-size:13px;
@@ -67,15 +56,9 @@
       .systems-strip{ grid-template-columns: 1fr; }
     }
 
-    .hero{
-      margin-top: 10px;
-    }
-    .hero h1{
-      margin-bottom: 10px;
-    }
-    .hero p{
-      margin-top: 0;
-    }
+    .hero{ margin-top: 10px; }
+    .hero h1{ margin-bottom: 10px; }
+    .hero p{ margin-top: 0; }
     .cta-row{
       display:flex;
       gap:12px;
@@ -91,12 +74,9 @@
       background:#fffdf8;
       color:inherit;
     }
-    .cta-row a.primary{
-      border-color: rgba(17,18,20,.34);
-    }
-    .cta-row a:hover{
-      border-color: rgba(17,18,20,.42);
-    }
+    .cta-row a.primary{ border-color: var(--accent-line); }
+    .cta-row a:hover{ border-color: rgba(17,18,20,.42); }
+    .cta-row a.primary:hover{ border-color: var(--accent); }
   </style>
 </head>
 
@@ -122,6 +102,11 @@
 <main class="container narrow">
 
   <section class="hero">
+    <div class="stamp-row">
+      <img class="stamp" src="assets/figures/meister-stamp.svg" alt="WAP MOP SHOPPE stamp">
+      <div class="muted">A field guide for romantic closeness.</div>
+    </div>
+
     <h1>Care is built in the details.</h1>
     <p class="lede">
       Not with shame. Not with perfume. Not with “fixes.”
