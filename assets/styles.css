@@ -355,7 +355,57 @@ footer{
   opacity: 0.78;
   line-height: 1.35;
 }
+/* --- WAP MOP Accent System (Option 1) --- */
+:root{
+  --accent:#C04832; /* wax-seal red */
+  --accent-soft: rgba(192,72,50,.12);
+  --accent-line: rgba(192,72,50,.32);
+}
 
+/* Links */
+a{
+  text-decoration-thickness: .08em;
+  text-underline-offset: .14em;
+}
+a:hover, a:focus{
+  color: var(--accent);
+}
+
+/* Rules/dividers (subtle) */
+.rule{
+  border-top-color: var(--accent-line);
+}
+
+/* Notes get a whisper of brand */
+.note{
+  border-color: var(--accent-line);
+  background: linear-gradient(0deg, var(--accent-soft), var(--accent-soft));
+}
+
+/* Buttons/CTAs if present */
+a.button, .cta-row a.primary{
+  border-color: var(--accent-line);
+}
+a.button:hover, .cta-row a.primary:hover{
+  border-color: var(--accent);
+}
+
+/* Stamp utility */
+.stamp{
+  width: 92px;
+  height: auto;
+  display: block;
+}
+.stamp.small{ width: 72px; }
+.stamp-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin: 18px 0 10px 0;
+}
+.stamp-row .muted{
+  opacity:.78;
+}
 /* optional: gentle page texture */
 body {
   background-image: radial-gradient(#11121410 1px, transparent 1px);
