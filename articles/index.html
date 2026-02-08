@@ -31,28 +31,72 @@
       font-size:18px;
     }
 
-    header, footer{ padding:24px 20px; max-width:var(--max); margin:0 auto; }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:20px; }
+    header, footer{
+      padding:24px 20px;
+      max-width:var(--max);
+      margin:0 auto;
+    }
 
-    .wordmark{ font-family:"Cormorant Garamond", serif; text-transform:uppercase; }
-    .wordmark .top{ font-size:30px; font-weight:600; }
-    .wordmark .sub{ font-size:13px; letter-spacing:.25em; color:var(--muted); }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:20px;
+    }
 
-    nav a{ margin-right:14px; color:var(--muted); border-bottom:1px solid var(--rule); }
+    .wordmark{
+      font-family:"Cormorant Garamond", serif;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+    }
 
-    h1{ font-family:"Cormorant Garamond"; font-size:40px; margin-bottom:16px; }
+    .wordmark .top{
+      font-size:30px;
+      font-weight:600;
+    }
 
-    .article-list{ margin-top:20px; }
-    .article-list a{ display:block; margin-bottom:12px; font-size:18px; }
+    .wordmark .sub{
+      font-size:13px;
+      letter-spacing:.25em;
+      color:var(--muted);
+    }
 
-    .footer-text{ font-size:14px; color:var(--muted); }
+    nav a{
+      margin-right:14px;
+      color:var(--muted);
+      border-bottom:1px solid var(--rule);
+      text-decoration:none;
+    }
+
+    h1{
+      font-family:"Cormorant Garamond", serif;
+      font-size:40px;
+      margin-bottom:18px;
+    }
+
+    .article-list a{
+      display:block;
+      margin-bottom:14px;
+      font-size:20px;
+      text-decoration:none;
+      border-bottom:1px solid var(--rule);
+      padding-bottom:4px;
+    }
+
+    .footer-text{
+      font-size:14px;
+      color:var(--muted);
+    }
   </style>
 </head>
 
 <body>
 
   <header>
-    <div class="wordmark"><div class="top">WAP MOP</div><div class="sub">SHOPPE</div></div>
+    <div class="wordmark">
+      <div class="top">WAP MOP</div>
+      <div class="sub">SHOPPE</div>
+    </div>
+
     <nav>
       <a href="../index.html">Home</a>
       <a href="index.html">Articles</a>
@@ -66,6 +110,7 @@
     <div class="article-list">
       <a href="vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
       <a href="mouths-as-systems.html">Mouths as systems</a>
+      <a href="skin-as-a-system.html">Skin as a system</a>
     </div>
   </div>
 
@@ -73,6 +118,8 @@
     <div class="footer-text">© <span id="y"></span> WAP MOP SHOPPE</div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
