@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – WAP MOP SHOPPE</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/styles.css">
+
+  <style>
+    /* page-specific, minimal */
+    .page h1{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:46px;
+      line-height:1.15;
+      margin:0 0 12px 0;
+    }
+    .lede{
+      margin:0 0 22px 0;
+      color:var(--muted);
+      max-width:78ch;
+    }
+    .page p{ margin:0 0 22px 0; }
+    .page ul{ margin:0 0 22px 0; padding-left:20px; }
+    .callout{
+      border:1px solid var(--rule);
+      border-radius:18px;
+      background:#fff;
+      padding:16px;
+      color:var(--muted);
+      font-size:16px;
+      max-width:84ch;
+    }
+  </style>
+</head>
+
+<body class="page">
+
+<header>
+  <div class="container wide">
+    <div class="wordmark">
+      <div class="top">WAP MOP</div>
+      <div class="sub">SHOPPE</div>
+    </div>
+
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../articles/index.html">Articles</a>
+      <a href="../shoppe/index.html">Shoppe</a>
+      <a href="../about/index.html">About</a>
+      <a href="../disclosure/index.html">Disclosure</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container narrow">
+
+  <h1>About</h1>
+  <p class="lede">
+    WAP MOP SHOPPE is a content-first guide to grooming, cleanliness, and intimacy-enhancing self-care —
+    written with respect for bodies as systems. Not “fixes.” Not shame. Not locker-room energy.
+  </p>
+
+  <div class="callout">
+    <strong>Core idea:</strong> Care is not about correcting bodies. It’s about understanding systems and behaving with respect inside them.
+  </div>
+
+  <div class="rule"></div>
+
+  <h2 class="section-title">What this site is</h2>
+  <p>
+    It’s a small publication with a point of view:
+    that better intimacy is often the result of better care, better habits, and better attention.
+  </p>
+  <p>
+    You’ll see a lot of “systems” language here because it keeps things grounded:
+    <em>skin as a system, mouths as systems, vaginas as ecosystems, relationships as systems.</em>
+  </p>
+
+  <h2 class="section-title">What this site is not</h2>
+  <ul>
+    <li>Not a “how to get laid” manual.</li>
+    <li>Not a “fix your partner” project.</li>
+    <li>Not medical advice.</li>
+    <li>Not a place for shame, deodorizing myths, or “performance” panic.</li>
+  </ul>
+
+  <h2 class="section-title">Who it’s for</h2>
+  <p>
+    People who want to show respect with their behavior. People who want practical guidance
+    that doesn’t sound like a middle-school health video or a dude podcast.
+  </p>
+
+  <h2 class="section-title">A note on tone</h2>
+  <p>
+    The name is cheeky on purpose. The writing is serious on purpose.
+    This is a place where humor can exist without turning bodies into jokes.
+  </p>
+
+  <h2 class="section-title">Health + safety</h2>
+  <p>
+    If you have pain, recurring irritation, unusual discharge, fever, sores, or symptoms that don’t resolve:
+    see a qualified clinician. The internet is not the place to “tough it out.”
+  </p>
+
+  <div class="rule"></div>
+
+  <p>
+    Start with the guides:
+    <a href="../articles/index.html">Articles</a>
+    — or browse the shortlist:
+    <a href="../shoppe/index.html">The Shoppe</a>.
+  </p>
+
+</main>
+
+<footer>
+  <div class="container wide">
+    <div>© <span id="y"></span> WAP MOP SHOPPE</div>
+    <div>Respect the ritual.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
