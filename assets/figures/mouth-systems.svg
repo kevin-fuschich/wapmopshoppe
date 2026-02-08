@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-label="Diagram showing mouth care as a system of timing, moisture, and gentleness">
+  <defs>
+    <style>
+      .ink{fill:#111214}
+      .stroke{stroke:#111214;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .label{font:600 22px system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+      .serif{font:600 28px "Cormorant Garamond",Georgia,serif}
+      .muted{fill:#111214;opacity:.72}
+    </style>
+  </defs>
+
+  <text x="24" y="44" class="serif ink">Mouth as a system</text>
+  <text x="24" y="78" class="label muted">Timing • Moisture • Gentleness</text>
+
+  <!-- system frame -->
+  <rect x="40" y="100" width="820" height="90" rx="22" class="stroke"/>
+
+  <!-- nodes -->
+  <circle cx="260" cy="145" r="34" class="stroke"/>
+  <text x="260" y="152" class="label ink" text-anchor="middle" font-size="18">Timing</text>
+
+  <circle cx="450" cy="145" r="34" class="stroke"/>
+  <text x="450" y="152" class="label ink" text-anchor="middle" font-size="18">Moisture</text>
+
+  <circle cx="640" cy="145" r="34" class="stroke"/>
+  <text x="640" y="152" class="label ink" text-anchor="middle" font-size="18">Gentleness</text>
+
+  <!-- connectors -->
+  <path class="stroke" d="M294 145H416"/>
+  <path class="stroke" d="M484 145H606"/>
+</svg>
