@@ -18,13 +18,14 @@
 
   <!-- nodes -->
   <circle cx="250" cy="180" r="44" class="stroke"/>
-  <text x="224" y="188" class="label ink">Skin</text>
+  <text x="250" y="188" class="label ink" text-anchor="middle">Skin</text>
 
   <circle cx="450" cy="180" r="44" class="stroke"/>
-  <text x="424" y="188" class="label ink">Mouth</text>
+  <text x="450" y="188" class="label ink" text-anchor="middle">Mouth</text>
 
   <circle cx="650" cy="180" r="44" class="stroke"/>
-  <text x="602" y="188" class="label ink">Ecosystem</text>
+  <!-- slightly smaller label so it fits cleanly -->
+  <text x="650" y="188" class="label ink" text-anchor="middle" font-size="20">Ecosystem</text>
 
   <!-- connectors -->
   <path class="stroke" d="M294 180H406"/>
