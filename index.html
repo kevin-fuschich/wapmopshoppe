@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <head>
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <!-- Favicon & App Icons -->
-<link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/wapmopshoppe/assets/favicon.svg">
-<link rel="manifest" href="/wapmopshoppe/assets/site.webmanifest">
-<meta name="theme-color" content="#fffdf8">
 
-  <title>WAP MOP SHOPPE — Care, considered. Respect the ritual.</title>
+  <title>WAP MOP SHOPPE</title>
 
   <!-- Primary Meta -->
-  <meta name="description" content="A content-first guide to grooming, cleanliness, and intimacy-enhancing self-care. Not about fixing bodies. About understanding systems — and behaving with respect inside them." />
+  <meta name="description" content="A calm, cheeky field guide to care: skin as a system, mouths as systems, vaginas as ecosystems — and intimacy built on respect." />
   <link rel="canonical" href="https://kevin-fuschich.github.io/wapmopshoppe/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="WAP MOP SHOPPE — Care, considered." />
-  <meta property="og:description" content="Respect the ritual. Thoughtful guides on skin, mouths, vaginas, and care as systems." />
+  <meta property="og:title" content="WAP MOP SHOPPE" />
+  <meta property="og:description" content="Care as systems. Respect as practice. A field guide for romantic closeness." />
   <meta property="og:url" content="https://kevin-fuschich.github.io/wapmopshoppe/" />
   <meta property="og:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="WAP MOP SHOPPE — Care, considered." />
-  <meta name="twitter:description" content="A respectful guide to grooming, cleanliness, and intimacy-enhancing self-care." />
+  <meta name="twitter:title" content="WAP MOP SHOPPE" />
+  <meta name="twitter:description" content="Care as systems. Respect as practice." />
   <meta name="twitter:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/wapmopshoppe/assets/favicon.svg">
+  <link rel="manifest" href="/wapmopshoppe/assets/site.webmanifest">
+  <meta name="theme-color" content="#fffdf8">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,19 +36,81 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/styles.css">
-</head>
+  <link rel="stylesheet" href="assets/visuals.css">
+
+  <style>
+    /* Home: systems strip (kept local to homepage) */
+    .systems-strip{
+      margin: 22px 0 26px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .mini{
+      border:1px solid rgba(17,18,20,.14);
+      border-radius:16px;
+      background:#fffdf8;
+      padding:10px;
+    }
+    .mini img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    .mini .cap{
+      margin-top:8px;
+      font-size:13px;
+      line-height:1.25;
+      opacity:.78;
+    }
+    @media (max-width: 720px){
+      .systems-strip{ grid-template-columns: 1fr; }
+    }
+
+    .hero{
+      margin-top: 10px;
+    }
+    .hero h1{
+      margin-bottom: 10px;
+    }
+    .hero p{
+      margin-top: 0;
+    }
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+    .cta-row a{
+      display:inline-block;
+      padding:12px 14px;
+      border-radius:14px;
+      text-decoration:none;
+      border:1px solid rgba(17,18,20,.18);
+      background:#fffdf8;
+      color:inherit;
+    }
+    .cta-row a.primary{
+      border-color: rgba(17,18,20,.34);
+    }
+    .cta-row a:hover{
+      border-color: rgba(17,18,20,.42);
+    }
+  </style>
 </head>
 
 <body class="home">
 
 <header>
-  <div class="container wide">
+  <div class="container narrow">
     <div class="wordmark">
       <div class="top">WAP MOP</div>
       <div class="sub">SHOPPE</div>
     </div>
 
     <nav aria-label="Primary navigation">
+      <a href="start/index.html">Start</a>
       <a href="articles/index.html">Articles</a>
       <a href="shoppe/index.html">Shoppe</a>
       <a href="about/index.html">About</a>
@@ -58,78 +119,63 @@
   </div>
 </header>
 
-<main class="container wide">
+<main class="container narrow">
 
   <section class="hero">
-    <div>
-      <h1 class="serif">Care, considered.<br>Respect the ritual.</h1>
+    <h1>Culture is built in the margins.</h1>
+    <p><em>(Wrong site.)</em></p>
 
-      <p>
-        WAP MOP SHOPPE is a content-first guide to grooming, cleanliness, and
-        intimacy-enhancing self-care. Not about fixing bodies. About understanding
-        systems — and behaving with respect inside them.
-      </p>
+    <div class="rule"></div>
 
-      <div class="cta-row">
-  <a class="button primary" href="start/index.html">Start Here</a>
-  <a class="button" href="articles/index.html">Read the Guides</a>
-  <a class="button" href="shoppe/index.html">Browse the Shoppe</a>
-</div>
+    <h1>Care is built in the details.</h1>
+    <p class="lede">
+      Not with shame. Not with perfume. Not with “fixes.”
+      But with systems-thinking, restraint, and respect.
+    </p>
 
-      <section class="manifesto">
-        <p class="manifesto-core">
-          <strong>Care is not about correcting bodies.</strong><br>
-          <strong>It’s about understanding systems and behaving with respect inside them.</strong>
-        </p>
+    <div class="cta-row">
+      <a class="primary" href="start/index.html">Start here</a>
+      <a href="articles/index.html">Read the field guide</a>
+      <a href="shoppe/index.html">Browse the Shoppe</a>
+    </div>
+  </section>
 
-        <p class="manifesto-list">
-          Skin as a system.<br>
-          Mouths as systems.<br>
-          Vaginas as ecosystems.<br>
-          Relationships as systems.
-        </p>
-      </section>
-
-      <div class="rule"></div>
-
-      <section id="articles">
-        <h2 class="section-title">Start here</h2>
-
-        <div class="cardgrid">
-          <div class="card">
-            <a href="articles/vaginas-as-ecosystems.html"><h3>Vaginas as ecosystems</h3></a>
-            <p>Why balance matters, what pH actually means, and why less intervention is usually better care.</p>
-          </div>
-
-          <div class="card">
-            <a href="articles/mouths-as-systems.html"><h3>Mouths as systems</h3></a>
-            <p>The chemistry of confidence — and how the mouth supports comfort.</p>
-          </div>
-
-          <div class="card">
-            <a href="articles/skin-as-a-system.html"><h3>Skin as a system</h3></a>
-            <p>Why gentle care works better than aggressive routines.</p>
-          </div>
-
-          <div class="card">
-            <a href="articles/aftercare-is-respect.html"><h3>Aftercare is respect</h3></a>
-            <p>What happens after intimacy matters as much as what happens during.</p>
-          </div>
-        </div>
-      </section>
+  <div class="systems-strip" aria-label="Systems strip">
+    <div class="mini">
+      <img src="assets/figures/ph-scale.svg" alt="">
+      <div class="cap">Vaginas as ecosystems: pH and balance.</div>
     </div>
 
-    <aside class="aside">
-      <img class="seal" src="assets/images/wap-mop-meister.png" alt="WAP MOP SHOPPE alpine emblem">
-    </aside>
-  </section>
+    <div class="mini">
+      <img src="assets/figures/mouth-system.svg" alt="">
+      <div class="cap">Mouths as systems: timing, moisture, gentleness.</div>
+    </div>
+
+    <div class="mini">
+      <img src="assets/figures/skin-barrier.svg" alt="">
+      <div class="cap">Skin as a system: cleanse, protect, time.</div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Care is not about correcting bodies.</strong><br>
+    It’s about understanding systems and behaving with respect inside them.
+  </div>
+
+  <div class="rule"></div>
+
+  <h2 class="section-title">Recommended reading path</h2>
+  <p>
+    Start with <a href="articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>,
+    then <a href="articles/external-means-external.html">External means external</a>,
+    then <a href="articles/after-doesnt-mean-absent.html">After doesn’t mean absent</a>.
+  </p>
 
 </main>
 
 <footer>
-  <div class="container wide">
-    <div>© <span id="y"></span> WAP MOP SHOPPE</div>
-    <div>Respect the ritual.</div>
+  <div class="container narrow footer-text">
+    © <span id="y"></span> WAP MOP SHOPPE
   </div>
 </footer>
 
