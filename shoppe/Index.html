@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Shoppe – WAP MOP SHOPPE</title>
+
+  <!-- Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --paper:#fffdf8;
+      --ink:#111214;
+      --muted:#4a4e53;
+      --rule:rgba(17,18,20,.16);
+      --max:980px;
+      --card:#ffffff;
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.65;
+      font-size:18px;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid var(--rule);
+      padding:2px 0;
+    }
+    a:hover{ border-bottom-color:var(--ink); }
+    a:focus{ outline:2px solid var(--ink); outline-offset:3px; }
+
+    header, footer{
+      padding:32px 20px;
+      max-width:var(--max);
+      margin:0 auto;
+    }
+
+    main{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:20px;
+    }
+
+    .wordmark{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      line-height:1.05;
+    }
+    .wordmark .top{ font-size:36px; font-weight:600; }
+    .wordmark .sub{ font-size:14px; letter-spacing:.25em; color:var(--muted); margin-top:4px; }
+
+    nav a{
+      margin-right:18px;
+      font-size:16px;
+      color:var(--muted);
+    }
+
+    h1{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:46px;
+      line-height:1.15;
+      margin:0 0 12px 0;
+    }
+
+    .lede{
+      margin:0 0 22px 0;
+      color:var(--muted);
+      max-width:70ch;
+    }
+
+    .note{
+      border:1px solid var(--rule);
+      border-radius:18px;
+      padding:16px;
+      background:#fff;
+      color:var(--muted);
+      font-size:16px;
+      max-width:80ch;
+    }
+
+    .rule{ border-top:1px solid var(--rule); margin:30px 0; }
+
+    .section-title{
+      font-family:"Cormorant Garamond", Georgia, serif;
+      font-size:24px;
+      margin:0 0 12px 0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--rule);
+      border-radius:20px;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height:220px;
+    }
+
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .card h3{
+      margin:0;
+      font-size:20px;
+      line-height:1.25;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.55;
+    }
+
+    .meta{
+      margin-top:auto;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .pill{
+      display:inline-block;
+      padding:8px 12px;
+      border:1px solid var(--rule);
+      border-radius:999px;
+      background:#fff;
+      font-size:14px;
+      min-width:44px;
+      min-height:44px;
+      line-height:26px;
+    }
+
+    .pill.primary{ border-color:var(--ink); color:var(--ink); }
+
+    footer{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:15px;
+      margin-top:40px;
+    }
+
+    @media (max-width:900px){
+      .grid{ grid-template-columns:1fr; }
+      h1{ font-size:40px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wordmark">
+    <div class="top">WAP MOP</div>
+    <div class="sub">SHOPPE</div>
+  </div>
+
+  <nav aria-label="Primary navigation">
+    <a href="../index.html">Home</a>
+    <a href="../articles/index.html">Articles</a>
+    <a href="index.html">Shoppe</a>
+  </nav>
+</header>
+
+<main>
+
+  <h1>The Shoppe</h1>
+  <p class="lede">
+    A deliberately small shortlist. Products chosen for gentleness, compatibility, and respect for the systems they touch.
+    No gimmicks. No “fixes.” Tools that don’t get in the way.
+  </p>
+
+  <div class="note">
+    <strong>How this works:</strong> Some links may be affiliate links. That means WAP MOP SHOPPE may earn a small commission at no extra cost to you.
+    We don’t take payment for placement. The goal is compatibility and care — not hype.
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- CATEGORY 1 -->
+  <section aria-label="External care">
+    <h2 class="section-title">External care (gentle, unscented)</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Gentle, fragrance-free cleanser</h3>
+        <p>External-only cleansing should be mild. Avoid “deodorizing” language and anything heavily scented.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for cleanser">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Barrier-supporting moisturizer</h3>
+        <p>Simple formulas. No sting. No perfume. Useful for skin that’s dry, reactive, or easily irritated.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for moisturizer">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Breathable basics</h3>
+        <p>Comfort matters. Breathable fabrics support the system; overly tight, non-breathable materials don’t.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for breathable basics">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- CATEGORY 2 -->
+  <section aria-label="Mouth and oral prep">
+    <h2 class="section-title">Mouths as systems (oral prep)</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Alcohol-free mouth rinse</h3>
+        <p>Oral comfort isn’t about harshness. A gentle rinse helps reset without burning tissue.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for mouth rinse">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Soft-bristle toothbrush</h3>
+        <p>Brush earlier, not immediately before. Soft bristles reduce irritation and keep gums calmer.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for toothbrush">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Hydration support</h3>
+        <p>Dry mouth changes the equation. Hydration is the simplest “prep” that isn’t performative.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for hydration support">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- CATEGORY 3 -->
+  <section aria-label="Skin and grooming">
+    <h2 class="section-title">Skin & grooming (clean, calm, low-friction)</h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Unscented body wash</h3>
+        <p>Clean without lingering fragrance. Especially helpful when skin-to-skin contact is the point.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for body wash">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Beard/face cleanser (non-stripping)</h3>
+        <p>Beards hold scent and residue. A mild cleanser keeps skin calm and contact comfortable.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for beard cleanser">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Category</span>
+        <h3>Simple shave/trim tool</h3>
+        <p>Less irritation means less friction. Comfort is not a cosmetic outcome — it’s a tactile one.</p>
+        <div class="meta">
+          <a class="pill primary" href="#" aria-label="Placeholder affiliate link for grooming tool">Link</a>
+          <span>Placeholder</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>© <span id="y"></span> WAP MOP SHOPPE</div>
+  <div>Small list. High standards.</div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
