@@ -5,236 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WAP MOP SHOPPE</title>
 
-  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- Cormorant Garamond -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --paper:#fffdf8;
-      --ink:#111214;
-      --muted:#4a4e53;
-      --rule:rgba(17,18,20,.16);
-      --max:980px;
-    }
-
-    *{ box-sizing:border-box; }
-
-    body{
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.65;
-      font-size:18px;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-      border-bottom:1px solid var(--rule);
-      padding:2px 0;
-    }
-    a:hover{ border-bottom-color:var(--ink); }
-    a:focus{ outline:2px solid var(--ink); outline-offset:3px; }
-
-    header, footer{
-      padding:32px 20px;
-      max-width:var(--max);
-      margin:0 auto;
-    }
-
-    main{ display:block; }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:20px;
-    }
-
-    /* Header */
-    .wordmark{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      text-transform:uppercase;
-      letter-spacing:.02em;
-      line-height:1.05;
-    }
-    .wordmark .top{
-      font-size:36px;
-      font-weight:600;
-    }
-    .wordmark .sub{
-      font-size:14px;
-      font-weight:500;
-      letter-spacing:.25em;
-      color:var(--muted);
-      margin-top:4px;
-    }
-
-    nav a{
-      margin-right:18px;
-      font-size:16px;
-      color:var(--muted);
-    }
-
-    /* Hero */
-    .hero{
-      display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:32px;
-      align-items:start;
-    }
-
-    h1.serif{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:48px;
-      line-height:1.15;
-      margin:0 0 16px 0;
-    }
-
-    .hero p{
-      margin:0 0 20px 0;
-      color:var(--muted);
-      max-width:62ch;
-    }
-
-    .cta-row{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    .button{
-      display:inline-block;
-      padding:12px 18px;
-      border:1px solid var(--rule);
-      border-radius:999px;
-      background:#fff;
-      font-size:15px;
-      min-width:44px;
-      min-height:44px;
-    }
-
-    .button.primary{
-      border-color:var(--ink);
-    }
-
-    /* Manifesto */
-    .manifesto{
-      margin:40px 0 20px 0;
-      max-width:740px;
-    }
-
-    .manifesto-core{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:24px;
-      line-height:1.35;
-      margin:0 0 14px 0;
-    }
-
-    .manifesto-list{
-      color:var(--muted);
-      font-size:18px;
-      line-height:1.65;
-      margin:0;
-    }
-
-    .rule{
-      border-top:1px solid var(--rule);
-      margin:36px 0;
-    }
-
-    /* Sections */
-    .section-title{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      font-size:22px;
-      margin:0 0 16px 0;
-    }
-
-    .cardgrid{
-      display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:20px;
-    }
-
-    .card{
-      border:1px solid var(--rule);
-      border-radius:20px;
-      padding:18px;
-      background:#fff;
-    }
-
-    .card h3{
-      margin:0 0 10px 0;
-      font-size:20px;
-      font-weight:600;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.55;
-    }
-
-    /* Seal */
-    .aside{
-      justify-self:end;
-      width:100%;
-      max-width:340px;
-      border-radius:20px;
-      border:1px solid var(--rule);
-      background:#fff;
-      padding:16px;
-    }
-
-    .seal{
-      width:100%;
-      height:auto;
-      border-radius:16px;
-      border:1px solid var(--rule);
-      display:block;
-    }
-
-    footer{
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      color:var(--muted);
-      font-size:15px;
-      margin-top:48px;
-    }
-
-    @media (max-width:900px){
-      .hero{ grid-template-columns:1fr; }
-      .aside{ justify-self:start; max-width:520px; margin-top:24px; }
-      h1.serif{ font-size:40px; }
-      .cardgrid{ grid-template-columns:1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 
-<body>
+<body class="home">
 
 <header>
-  <div class="wordmark">
-    <div class="top">WAP MOP</div>
-    <div class="sub">SHOPPE</div>
-  </div>
+  <div class="container wide">
+    <div class="wordmark">
+      <div class="top">WAP MOP</div>
+      <div class="sub">SHOPPE</div>
+    </div>
 
-  <nav aria-label="Primary navigation">
-    <a href="articles/index.html">Articles</a>
-    <a href="shoppe/index.html">Shoppe</a>
-    <a href="#about">About</a>
-  </nav>
+    <nav aria-label="Primary navigation">
+      <a href="articles/index.html">Articles</a>
+      <a href="shoppe/index.html">Shoppe</a>
+      <a href="about/index.html">About</a>
+      <a href="disclosure/index.html">Disclosure</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
+<main class="container wide">
 
   <section class="hero">
     <div>
@@ -271,73 +67,41 @@
         <h2 class="section-title">Start here</h2>
 
         <div class="cardgrid">
-
           <div class="card">
-            <a href="articles/vaginas-as-ecosystems.html">
-              <h3>Vaginas as ecosystems</h3>
-            </a>
+            <a href="articles/vaginas-as-ecosystems.html"><h3>Vaginas as ecosystems</h3></a>
             <p>Why balance matters, what pH actually means, and why less intervention is usually better care.</p>
           </div>
 
           <div class="card">
-            <a href="articles/mouths-as-systems.html">
-              <h3>Mouths as systems</h3>
-            </a>
+            <a href="articles/mouths-as-systems.html"><h3>Mouths as systems</h3></a>
             <p>The chemistry of confidence — and how the mouth supports comfort.</p>
           </div>
 
           <div class="card">
-            <a href="articles/skin-as-a-system.html">
-              <h3>Skin as a system</h3>
-            </a>
-            <p>Why gentle care works better than aggressive routines, especially where touch matters.</p>
+            <a href="articles/skin-as-a-system.html"><h3>Skin as a system</h3></a>
+            <p>Why gentle care works better than aggressive routines.</p>
           </div>
 
           <div class="card">
-            <a href="articles/aftercare-is-respect.html">
-              <h3>Aftercare is respect</h3>
-            </a>
+            <a href="articles/aftercare-is-respect.html"><h3>Aftercare is respect</h3></a>
             <p>What happens after intimacy matters as much as what happens during.</p>
           </div>
-
         </div>
-      </section>
-
-      <div class="rule"></div>
-
-      <section id="shoppe">
-        <h2 class="section-title">The Shoppe</h2>
-        <p style="max-width:78ch; color:var(--muted);">
-          The Shoppe will be intentionally small — a shortlist of products chosen
-          for gentleness, compatibility, and respect for the systems they interact with.
-        </p>
-      </section>
-
-      <div class="rule"></div>
-
-      <section id="about">
-        <h2 class="section-title">About</h2>
-        <p style="max-width:84ch; color:var(--muted);">
-          WAP MOP SHOPPE is an experiment in tone, care, and clarity.
-          Writing that treats people like adults. Guidance that respects bodies
-          as systems, not projects.
-        </p>
       </section>
     </div>
 
     <aside class="aside">
-      <img
-        class="seal"
-        src="assets/images/wap-mop-meister.png"
-        alt="WAP MOP SHOPPE alpine emblem">
+      <img class="seal" src="assets/images/wap-mop-meister.png" alt="WAP MOP SHOPPE alpine emblem">
     </aside>
   </section>
 
 </main>
 
 <footer>
-  <div>© <span id="y"></span> WAP MOP SHOPPE</div>
-  <div>A Hump City Social Club property (soon).</div>
+  <div class="container wide">
+    <div>© <span id="y"></span> WAP MOP SHOPPE</div>
+    <div>Respect the ritual.</div>
+  </div>
 </footer>
 
 <script>
