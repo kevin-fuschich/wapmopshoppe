@@ -1,0 +1,29 @@
+/* WAP MOP — Visual system (diagrams + figure blocks) */
+
+.figure{
+  margin:22px 0 28px 0;
+  padding:14px 14px 10px 14px;
+  border:1px solid rgba(17,18,20,.14);
+  border-radius:16px;
+  background:#fffdf8;
+}
+
+.figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.figure figcaption{
+  margin-top:10px;
+  font-size:14px;
+  line-height:1.35;
+  opacity:.78;
+}
+
+/* optional: subtle “field manual” texture — very light */
+body{
+  background-image: radial-gradient(rgba(17,18,20,.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0;
+}
