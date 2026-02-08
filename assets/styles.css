@@ -333,3 +333,32 @@ footer{
   .shoppe h1{ font-size:38px; }
   body{ font-size:17px; }
 }
+/* --- WAP MOP Visual System (diagrams + figure blocks) --- */
+
+.figure {
+  margin: 22px 0 26px 0;
+  padding: 14px 14px 8px 14px;
+  border: 1px solid #1112141f;
+  border-radius: 16px;
+  background: #fffdf8;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.figure figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.78;
+  line-height: 1.35;
+}
+
+/* optional: gentle page texture */
+body {
+  background-image: radial-gradient(#11121410 1px, transparent 1px);
+  background-size: 26px 26px;
+  background-position: 0 0;
+}
