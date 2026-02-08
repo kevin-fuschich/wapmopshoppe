@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-label="pH scale showing acidic to alkaline with a highlighted vaginal range around 3.8 to 4.5">
+  <defs>
+    <style>
+      .ink{fill:#111214}
+      .stroke{stroke:#111214;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .muted{fill:#111214;opacity:.7}
+      .tiny{font:600 18px system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+      .small{font:500 20px system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+      .serif{font:600 28px "Cormorant Garamond",Georgia,serif}
+    </style>
+  </defs>
+
+  <text x="24" y="44" class="serif ink">pH as a system</text>
+  <text x="24" y="78" class="small muted">Acidic ← — — — — — — — — — — — — — — — — — → Alkaline</text>
+
+  <!-- bar -->
+  <path class="stroke" d="M24 130H876"/>
+  <!-- ticks + labels -->
+  <g class="muted tiny">
+    <g>
+      <path class="stroke" d="M80 120V140"/><text x="72" y="170">0</text>
+      <path class="stroke" d="M190 120V140"/><text x="178" y="170">3</text>
+      <path class="stroke" d="M300 120V140"/><text x="288" y="170">6</text>
+      <path class="stroke" d="M410 120V140"/><text x="398" y="170">7</text>
+      <path class="stroke" d="M520 120V140"/><text x="508" y="170">8</text>
+      <path class="stroke" d="M630 120V140"/><text x="618" y="170">11</text>
+      <path class="stroke" d="M740 120V140"/><text x="728" y="170">14</text>
+    </g>
+  </g>
+
+  <!-- highlight range ~3.8–4.5 (approx position between 3 and 6 ticks) -->
+  <rect x="205" y="114" width="55" height="32" rx="16" fill="#111214" opacity=".08"/>
+  <path class="stroke" d="M205 130H260"/>
+  <text x="205" y="208" class="small ink">Typical vaginal range ~3.8–4.5</text>
+</svg>
