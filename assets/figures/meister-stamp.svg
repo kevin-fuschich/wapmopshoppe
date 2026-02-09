@@ -1,42 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="WAP MOP SHOPPE guild seal">
   <defs>
     <style>
-      .ink { fill:#2f4f2f; }
-      .paper { fill:#fbf3e6; }
-      .ring { fill:none; stroke:#2f4f2f; stroke-width:7; }
-      .text {
-        font-family: Georgia, "Times New Roman", serif;
-        font-weight: 800;
-        letter-spacing: 2.5px;
-        fill:#2f4f2f;
-        text-anchor: middle;
+      :root{
+        --ink:#2f4f2f;      /* alpine green */
+        --paper:#fbf3e6;    /* warm cream */
+      }
+      .paper{ fill:var(--paper); }
+      .ring1{ fill:none; stroke:var(--ink); stroke-width:10; }
+      .ring2{ fill:none; stroke:var(--ink); stroke-width:2.5; opacity:.85; }
+      .mark{ fill:var(--ink); }
+      .type{
+        fill:var(--ink);
+        font-family: "Cormorant Garamond","Garamond","Times New Roman",serif;
+        font-weight: 700;
+        letter-spacing: .22em;
+      }
+      .smallcaps{
+        font-variant: small-caps;
+        letter-spacing: .26em;
       }
     </style>
+
+    <!-- Circular text paths -->
+    <path id="topArc" d="M160,160 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
+    <!-- bottomArc is same circle but we’ll reverse direction via startOffset -->
+    <path id="bottomArc" d="M160,160 m-120,0 a120,120 0 1,0 240,0 a120,120 0 1,0 -240,0" />
   </defs>
 
-  <!-- background -->
-  <circle cx="130" cy="130" r="122" class="paper"/>
-  <circle cx="130" cy="130" r="114" class="ring"/>
+  <!-- Seal base -->
+  <circle cx="160" cy="160" r="150" class="paper"/>
+  <circle cx="160" cy="160" r="142" class="ring1"/>
+  <circle cx="160" cy="160" r="118" class="ring2"/>
 
-  <!-- top text (moved DOWN) -->
-  <text x="130" y="78" class="text" font-size="26">
-    WAP MOP
+  <!-- Curved top text -->
+  <text class="type smallcaps" font-size="20">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      WAP  MOP
+    </textPath>
   </text>
 
-  <!-- mustache (slightly higher) -->
-  <path class="ink" d="
-    M42 132
-    C58 104, 98 104, 130 126
-    C162 104, 202 104, 218 132
-    C200 154, 168 156, 138 140
-    C134 138, 126 138, 122 140
-    C92 156, 60 154, 42 132
+  <!-- Curved bottom text -->
+  <text class="type smallcaps" font-size="18">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      SHOPPE
+    </textPath>
+  </text>
+
+  <!-- Center mark (mustache) -->
+  <!-- Built as an intentional “badge” silhouette: thick, friendly, not clip-art -->
+  <path class="mark" d="
+    M70 175
+    C82 142, 118 132, 150 150
+    C156 153, 160 156, 160 156
+    C160 156, 164 153, 170 150
+    C202 132, 238 142, 250 175
+    C233 202, 195 205, 172 190
+    C166 186, 160 184, 160 184
+    C160 184, 154 186, 148 190
+    C125 205, 87 202, 70 175
     Z
   "/>
 
-  <!-- bottom text (moved UP) -->
-  <text x="130" y="190" class="text" font-size="22">
-    SHOPPE
-  </text>
-
+  <!-- Small divider dots (classic seal detail) -->
+  <circle cx="64" cy="160" r="4" class="mark" opacity=".85"/>
+  <circle cx="256" cy="160" r="4" class="mark" opacity=".85"/>
 </svg>
