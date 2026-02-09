@@ -6,21 +6,140 @@
   <title>Mouths as systems — WAP MOP SHOPPE</title>
 
   <meta name="description" content="Mouths are systems. Timing, moisture, and gentleness matter more than tricks." />
-  <link rel="canonical" href="https://kevin-fuschich.github.io/wapmopshoppe/articles/mouths-as-systems.html" />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
   <link rel="stylesheet" href="/wapmopshoppe/assets/visuals.css">
+
+  <style>
+    header, nav, main, footer, section, article { display:block; }
+    nav a, .wordmark, h1, h2, p, ul, li, figure, figcaption { visibility:visible; opacity:1; }
+
+    :root{
+      --ink:#111214;
+      --paper:#fffdf8;
+      --rule: rgba(17,18,20,.14);
+    }
+
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#f4f4f4;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.55;
+    }
+
+    .container{
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    .narrow{ max-width: 900px; }
+
+    .site-header{
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding: 18px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand-stamp img{ width:64px; height:auto; display:block; }
+
+    .wordmark{
+      text-decoration:none;
+      color:inherit;
+      font-weight:800;
+      letter-spacing:.06em;
+      white-space:nowrap;
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      color:inherit;
+      text-decoration:none;
+      padding:6px 8px;
+      border-radius:10px;
+    }
+    nav a:hover{ text-decoration:underline; }
+
+    main{
+      background: var(--paper);
+      padding: 26px 0 34px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .muted{ opacity:.75; }
+    .muted a{ color:inherit; }
+
+    h1{ margin: 10px 0 10px 0; font-size: 34px; line-height:1.1; }
+    .lede{ font-size: 18px; opacity:.92; margin: 0 0 18px 0; }
+
+    h2{ margin: 22px 0 8px 0; font-size: 20px; line-height:1.2; }
+
+    ul{ padding-left: 18px; }
+    li{ margin: 6px 0; }
+
+    .note{
+      border:1px solid var(--rule);
+      border-radius:14px;
+      background:#fff;
+      padding:14px;
+      margin: 14px 0;
+    }
+
+    .figure-card{
+      margin: 18px 0 8px 0;
+      border:1px solid var(--rule);
+      border-radius:16px;
+      background:#fff;
+      padding:12px;
+    }
+
+    .figure-card img{ width:100%; height:auto; display:block; }
+    figcaption{ margin-top:10px; font-size: 13px; opacity:.78; }
+
+    .rule{ height:1px; background: var(--rule); margin: 18px 0; }
+
+    footer{ background: var(--paper); padding: 16px 0; }
+    .footer-text{ opacity:.85; font-size: 13px; }
+    .footer-text a{ color:inherit; text-decoration:none; border-bottom:1px solid rgba(17,18,20,.25); }
+    .footer-text a:hover{ border-bottom-color: rgba(17,18,20,.55); }
+
+    @media (max-width: 720px){
+      .header-inner{ align-items:flex-start; flex-direction:column; }
+      nav{ justify-content:flex-start; }
+    }
+  </style>
 </head>
 
 <body>
 <header class="site-header">
   <div class="container narrow header-inner">
-    <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
-      <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
-    </a>
-
-    <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">WAP MOP SHOPPE</a>
+    <div class="brand">
+      <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
+      </a>
+      <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">WAP MOP SHOPPE</a>
+    </div>
 
     <nav aria-label="Primary navigation">
       <a href="/wapmopshoppe/articles/index.html">Articles</a>
@@ -30,56 +149,46 @@
   </div>
 </header>
 
-<main class="container narrow article">
-  <p class="muted"><a href="/wapmopshoppe/articles/index.html">← Back to Articles</a></p>
+<main>
+  <div class="container narrow">
+    <p class="muted"><a href="/wapmopshoppe/articles/index.html">← Back to Articles</a></p>
 
-  <h1>Mouths as systems</h1>
+    <h1>Mouths as systems</h1>
 
-  <p class="lede">
-    A mouth isn’t a tool. It’s a living system — temperature, moisture, pressure, and time.
-    The best outcomes come from restraint and responsiveness.
-  </p>
+    <p class="lede">
+      A mouth isn’t a tool. It’s a living system — temperature, moisture, pressure, and time.
+      The best outcomes come from restraint and responsiveness.
+    </p>
 
-  <figure class="figure-card">
-    <img src="/wapmopshoppe/assets/figures/mouth-system.svg" alt="Diagram showing mouths as systems: timing, moisture, gentleness">
-    <figcaption>Timing → moisture → gentleness. (In that order.)</figcaption>
-  </figure>
+    <figure class="figure-card">
+      <img src="/wapmopshoppe/assets/figures/mouth-system.svg" alt="Diagram showing mouths as systems: timing, moisture, gentleness">
+      <figcaption>Timing → moisture → gentleness. (In that order.)</figcaption>
+    </figure>
 
-  <h2>The quiet rules</h2>
-  <ul>
-    <li><strong>Moisture:</strong> dryness creates friction; friction creates irritation.</li>
-    <li><strong>Pressure:</strong> consistent and gentle beats aggressive and inconsistent.</li>
-    <li><strong>Time:</strong> rushed technique reads as performance, not care.</li>
-  </ul>
+    <h2>The quiet rules</h2>
+    <ul>
+      <li><strong>Moisture:</strong> dryness creates friction; friction creates irritation.</li>
+      <li><strong>Pressure:</strong> consistent and gentle beats aggressive and inconsistent.</li>
+      <li><strong>Time:</strong> rushed technique reads as performance, not care.</li>
+    </ul>
 
-  <h2>Before you start</h2>
-  <p>
-    Keep it simple. Avoid products that sting, tingle, numb, or “heat.”
-    If it feels like a novelty, it often behaves like a novelty.
-  </p>
+    <h2>What to avoid</h2>
+    <ul>
+      <li>Alcohol-heavy mouthwash right before (drying/irritation).</li>
+      <li>Strong mint “burn” products (they don’t stay in the mouth).</li>
+      <li>Over-brushing hard right before (micro-irritation).</li>
+    </ul>
 
-  <h2>What to avoid</h2>
-  <ul>
-    <li>Alcohol-heavy mouthwash right before (drying/irritation).</li>
-    <li>Strong mint “burn” products (they don’t stay in the mouth).</li>
-    <li>Over-brushing or flossing hard right before (micro-irritation).</li>
-  </ul>
+    <div class="note">
+      This isn’t a trick list. It’s systems etiquette.
+    </div>
 
-  <div class="note">
-    This isn’t a trick list. It’s systems etiquette.
+    <div class="rule"></div>
+
+    <p class="muted">
+      Previous: <a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
+    </p>
   </div>
-
-  <h2>Tongue in cheek</h2>
-  <p>
-    The tone can be playful. The behavior should be respectful.
-    When someone trusts you with their body, you don’t improvise like it’s stand-up.
-  </p>
-
-  <div class="rule"></div>
-
-  <p class="muted">
-    Previous: <a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
-  </p>
 </main>
 
 <footer>
