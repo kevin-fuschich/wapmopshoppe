@@ -1,24 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Article Title — WAP MOP SHOPPE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Title] — WAP MOP SHOPPE</title>
+
+  <meta name="description" content="[One sentence summary]" />
+  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+  <link rel="stylesheet" href="/wapmopshoppe/assets/visuals.css">
 </head>
 
 <body>
-
 <header class="site-header">
   <div class="container narrow header-inner">
-    <a class="brand-stamp" href="/wapmopshoppe/">
-      <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="">
+    <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
+      <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
     </a>
 
-    <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
+    <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">WAP MOP SHOPPE</a>
 
-    <nav>
+    <nav aria-label="Primary navigation">
       <a href="/wapmopshoppe/articles/index.html">Articles</a>
       <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
       <a href="/wapmopshoppe/about/index.html">About</a>
@@ -27,20 +30,42 @@
 </header>
 
 <main class="container narrow article">
+  <p class="muted"><a href="/wapmopshoppe/articles/index.html">← Back to Articles</a></p>
 
-  <h1>Article Title</h1>
+  <h1>[Title]</h1>
+  <p class="lede">[2–3 sentence lede. Calm. Direct. Systems-first.]</p>
 
-  <p class="lede">Opening paragraph that sets tone.</p>
+  <figure class="figure-card">
+    <img src="/wapmopshoppe/assets/figures/[diagram].svg" alt="[Diagram alt text]">
+    <figcaption>[Diagram caption]</figcaption>
+  </figure>
 
-  <p>Article content goes here.</p>
+  <h2>[Section heading]</h2>
+  <p>[Paragraph]</p>
 
+  <h2>[Section heading]</h2>
+  <ul>
+    <li>[Bullet]</li>
+    <li>[Bullet]</li>
+  </ul>
+
+  <div class="rule"></div>
+
+  <p class="muted">
+    Previous: <a href="/wapmopshoppe/articles/[prev].html">[Prev Title]</a> ·
+    Next: <a href="/wapmopshoppe/articles/[next].html">[Next Title]</a>
+  </p>
 </main>
 
 <footer>
   <div class="container narrow footer-text">
+    © <span id="y"></span> WAP MOP SHOPPE ·
     <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
   </div>
 </footer>
 
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
