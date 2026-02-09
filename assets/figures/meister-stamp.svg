@@ -1,13 +1,13 @@
-<svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220">
   <defs>
     <style>
       .ink { fill:#2f4f2f; }
       .paper { fill:#fbf3e6; }
       .ring { fill:none; stroke:#2f4f2f; stroke-width:6; }
       .text {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        font-weight:600;
-        letter-spacing:2px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        letter-spacing: 2px;
         fill:#2f4f2f;
       }
     </style>
@@ -18,14 +18,10 @@
   <circle cx="110" cy="110" r="98" class="ring"/>
 
   <!-- top text -->
-  <text x="110" y="48" text-anchor="middle" class="text" font-size="18">
-    WAP&nbsp;MOP
-  </text>
+  <text x="110" y="52" text-anchor="middle" class="text" font-size="18">WAP MOP</text>
 
   <!-- bottom text -->
-  <text x="110" y="192" text-anchor="middle" class="text" font-size="18">
-    SHOPPE
-  </text>
+  <text x="110" y="194" text-anchor="middle" class="text" font-size="18">SHOPPE</text>
 
   <!-- mustache -->
   <path class="ink" d="
