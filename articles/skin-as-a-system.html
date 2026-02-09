@@ -1,161 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skin as a system — WAP MOP SHOPPE</title>
 
-  <title>Skin as a System — WAP MOP SHOPPE</title>
-
-  <!-- Primary Meta -->
-  <meta name="description" content="Skin is a barrier system. Most irritation is a signal to reduce inputs, protect the barrier, and let time do its work." />
-  <link rel="canonical" href="https://kevin-fuschich.github.io/wapmopshoppe/articles/skin-as-a-system.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Skin as a system" />
-  <meta property="og:description" content="Cleanse, protect, then get out of the way." />
-  <meta property="og:url" content="https://kevin-fuschich.github.io/wapmopshoppe/articles/skin-as-a-system.html" />
-  <meta property="og:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Skin as a system" />
-  <meta name="twitter:description" content="Barrier-first care. Fewer inputs. Better outcomes." />
-  <meta name="twitter:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
-
-  <!-- Favicon & App Icons -->
+  <meta name="description" content="Skin is a barrier system. Cleanse, protect, and stop interfering." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/wapmopshoppe/assets/favicon.svg">
-  <link rel="manifest" href="/wapmopshoppe/assets/site.webmanifest">
-  <meta name="theme-color" content="#fffdf8">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+  <link rel="stylesheet" href="/wapmopshoppe/assets/visuals.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../assets/styles.css">
-  <link rel="stylesheet" href="../assets/visuals.css">
+  <style>
+    header, nav, main, footer, section, article { display:block; }
+    nav a, .wordmark, h1, h2, p, ul, li, figure, figcaption { visibility:visible; opacity:1; }
+
+    :root{
+      --ink:#111214;
+      --paper:#fffdf8;
+      --rule: rgba(17,18,20,.14);
+    }
+
+    body{
+      margin:0;
+      color:var(--ink);
+      background:#f4f4f4;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.55;
+    }
+
+    .container{ max-width: 880px; margin: 0 auto; padding: 0 18px; }
+    .narrow{ max-width: 900px; }
+
+    .site-header{ background: var(--paper); border-bottom: 1px solid var(--rule); }
+    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 18px 0; }
+    .brand{ display:flex; align-items:center; gap:12px; min-width:0; }
+    .brand-stamp img{ width:64px; height:auto; display:block; }
+    .wordmark{ text-decoration:none; color:inherit; font-weight:800; letter-spacing:.06em; white-space:nowrap; }
+
+    nav{ display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end; }
+    nav a{ color:inherit; text-decoration:none; padding:6px 8px; border-radius:10px; }
+    nav a:hover{ text-decoration:underline; }
+
+    main{ background: var(--paper); padding: 26px 0 34px; border-bottom: 1px solid var(--rule); }
+
+    .muted{ opacity:.75; }
+    .muted a{ color:inherit; }
+
+    h1{ margin: 10px 0 10px 0; font-size: 34px; line-height:1.1; }
+    .lede{ font-size: 18px; opacity:.92; margin: 0 0 18px 0; }
+    h2{ margin: 22px 0 8px 0; font-size: 20px; line-height:1.2; }
+
+    ul{ padding-left: 18px; }
+    li{ margin: 6px 0; }
+
+    .note{ border:1px solid var(--rule); border-radius:14px; background:#fff; padding:14px; margin: 14px 0; }
+
+    .figure-card{ margin: 18px 0 8px 0; border:1px solid var(--rule); border-radius:16px; background:#fff; padding:12px; }
+    .figure-card img{ width:100%; height:auto; display:block; }
+    figcaption{ margin-top:10px; font-size: 13px; opacity:.78; }
+
+    .rule{ height:1px; background: var(--rule); margin: 18px 0; }
+
+    footer{ background: var(--paper); padding: 16px 0; }
+    .footer-text{ opacity:.85; font-size: 13px; }
+    .footer-text a{ color:inherit; text-decoration:none; border-bottom:1px solid rgba(17,18,20,.25); }
+    .footer-text a:hover{ border-bottom-color: rgba(17,18,20,.55); }
+
+    @media (max-width: 720px){
+      .header-inner{ align-items:flex-start; flex-direction:column; }
+      nav{ justify-content:flex-start; }
+    }
+  </style>
 </head>
 
-<body class="article">
-
-<header>
-  <div class="container narrow">
-    <div class="wordmark">
-      <div class="top">WAP MOP</div>
-      <div class="sub">SHOPPE</div>
+<body>
+<header class="site-header">
+  <div class="container narrow header-inner">
+    <div class="brand">
+      <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
+      </a>
+      <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">WAP MOP SHOPPE</a>
     </div>
 
     <nav aria-label="Primary navigation">
-      <a href="../index.html">Home</a>
-      <a href="../articles/index.html">Articles</a>
-      <a href="../shoppe/index.html">Shoppe</a>
-      <a href="../about/index.html">About</a>
-      <a href="../disclosure/index.html">Disclosure</a>
+      <a href="/wapmopshoppe/articles/index.html">Articles</a>
+      <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
+      <a href="/wapmopshoppe/about/index.html">About</a>
     </nav>
   </div>
 </header>
 
-<main class="container narrow">
-  <div class="breadcrumb">
-    <a href="index.html">← Back to Articles</a>
-  </div>
+<main>
+  <div class="container narrow">
+    <p class="muted"><a href="/wapmopshoppe/articles/index.html">← Back to Articles</a></p>
 
-  <h1>Skin as a system</h1>
-  <p><em>Barrier-first care: fewer inputs, better outcomes</em></p>
+    <h1>Skin as a system</h1>
 
-  <figure class="figure">
-    <img src="../assets/figures/skin-barrier.svg" alt="Diagram showing skin barrier as a system: cleanse, protect, and time, with barrier integrity at the center">
-    <figcaption>Most “skin problems” are barrier problems. Reduce inputs, protect the surface, let time reset.</figcaption>
-  </figure>
+    <p class="lede">
+      Skin is not a surface you conquer. It’s a barrier system. Most irritation is just the system reacting to too much input.
+    </p>
 
-  <p>
-    Skin isn’t just a surface. It’s a barrier system.
-    Its job is to keep the right things in (moisture, balance) and the wrong things out (irritants, pathogens).
-  </p>
+    <figure class="figure-card">
+      <img src="/wapmopshoppe/assets/figures/skin-barrier.svg" alt="Diagram suggesting a simple skin barrier concept: cleanse, protect, wait">
+      <figcaption>Cleanse → protect → wait. The boring routine wins.</figcaption>
+    </figure>
 
-  <p>
-    When skin feels “off,” the instinct is often to add more: more scrubbing, more actives, more products.
-    But systems rarely respond well to more inputs.
-  </p>
-
-  <h2>What the barrier actually wants</h2>
-
-  <p>
-    The barrier wants consistency. It wants gentleness. It wants time.
-    Most effective skin care can be summarized as:
-    <strong>cleanse, protect, then get out of the way.</strong>
-  </p>
-
-  <h2>Cleanse without stripping</h2>
-
-  <p>
-    Cleansing should remove sweat, oils, and residue — not erase the skin’s ability to function.
-    If your skin feels tight, squeaky, or “too clean,” that’s usually stripping.
-  </p>
-
-  <p>
-    Gentle cleansing is especially important when intimacy is on the table.
-    Over-cleansed skin can sting, flare, or feel raw with friction.
-  </p>
-
-  <h2>Protect with boring products</h2>
-
-  <p>
-    Barrier support is where boring wins.
-    Fragrance-free moisturizers and simple formulas do more than “miracle” products when the goal is calm.
-  </p>
-
-  <p>
-    If something tingles, burns, or perfumes the room, it’s probably not helping the system.
-  </p>
-
-  <h2>Time is a treatment</h2>
-
-  <p>
-    A disrupted barrier often needs less intervention, not more.
-    If you reduce irritants and keep the surface supported, the system usually returns to baseline.
-  </p>
-
-  <p>
-    Time doesn’t look like progress. That’s why people interrupt it.
-  </p>
-
-  <h2>What this means for romantic closeness</h2>
-
-  <p>
-    Skin shows up in intimacy everywhere: faces, hands, inner thighs, bodies in contact.
-    When the barrier is stable, everything feels better.
-  </p>
-
-  <p>
-    Comfort is chemistry plus mechanics.
-    Barrier-first care improves both.
-  </p>
-
-  <div class="rule"></div>
-
-  <div class="note" aria-label="Related reading">
-    <strong>Related reading:</strong>
+    <h2>The three-step truth</h2>
     <ul>
-      <li><a href="external-means-external.html">External means external</a> — boundaries that protect systems.</li>
-      <li><a href="vaginas-as-ecosystems.html">Vaginas as ecosystems</a> — balance works best when it’s supported, not disrupted.</li>
+      <li><strong>Cleanse:</strong> remove what doesn’t belong — gently.</li>
+      <li><strong>Protect:</strong> restore the barrier with simple, boring hydration.</li>
+      <li><strong>Wait:</strong> stop changing products every three days.</li>
     </ul>
-  </div>
 
+    <h2>What breaks the system</h2>
+    <ul>
+      <li>Too many actives at once.</li>
+      <li>Fragrance, scrubs, and “tingle” sensations.</li>
+      <li>Over-washing and “squeaky clean” goals.</li>
+    </ul>
+
+    <div class="note">
+      The best skin routines feel almost underwhelming. That’s the point.
+    </div>
+
+    <div class="rule"></div>
+
+    <p class="muted">
+      Previous: <a href="/wapmopshoppe/articles/mouths-as-systems.html">Mouths as systems</a> ·
+      Next: <a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
+    </p>
+  </div>
 </main>
 
 <footer>
   <div class="container narrow footer-text">
-    © <span id="y"></span> WAP MOP SHOPPE
+    © <span id="y"></span> WAP MOP SHOPPE ·
+    <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
   </div>
 </footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
