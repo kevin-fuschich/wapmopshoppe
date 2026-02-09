@@ -9,6 +9,8 @@
         font-weight: 800;
         letter-spacing: 2.5px;
         fill:#2f4f2f;
+        text-anchor: middle;
+        dominant-baseline: middle;
       }
     </style>
   </defs>
@@ -18,23 +20,24 @@
   <circle cx="130" cy="130" r="114" class="ring"/>
 
   <!-- top text -->
-  <text x="130" y="64" text-anchor="middle" class="text" font-size="26">
+  <text x="130" y="60" class="text" font-size="26">
     WAP MOP
   </text>
 
+  <!-- mustache -->
+  <path class="ink" d="
+    M42 138
+    C58 110, 98 110, 130 132
+    C162 110, 202 110, 218 138
+    C200 160, 168 162, 138 146
+    C134 144, 126 144, 122 146
+    C92 162, 60 160, 42 138
+    Z
+  "/>
+
   <!-- bottom text -->
-  <text x="130" y="222" text-anchor="middle" class="text" font-size="22">
+  <text x="130" y="206" class="text" font-size="22">
     SHOPPE
   </text>
 
-  <!-- mustache (thicker, flatter, friendlier) -->
-  <path class="ink" d="
-    M42 140
-    C58 112, 98 112, 130 134
-    C162 112, 202 112, 218 140
-    C200 162, 168 164, 138 148
-    C134 146, 126 146, 122 148
-    C92 164, 60 162, 42 140
-    Z
-  "/>
 </svg>
