@@ -1,51 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="WAP MOP SHOPPE guild seal">
   <defs>
     <style>
-      :root{
-        --ink:#2f4f2f;
-        --paper:#fbf3e6;
-      }
-      .paper{ fill:var(--paper); }
-      .ring{ fill:none; stroke:var(--ink); stroke-width:8; }
-      .mark{ fill:var(--ink); }
+      .paper { fill:#fbf3e6; }
+      .ink { fill:#2f4f2f; }
+      .ring { fill:none; stroke:#2f4f2f; stroke-width:8; }
+
       .type{
-        fill:var(--ink);
+        fill:#2f4f2f;
         font-family: "Cormorant Garamond","Garamond","Times New Roman",serif;
         font-weight: 700;
-        letter-spacing: .18em;
+        letter-spacing: .16em;
       }
     </style>
 
-    <!-- arcs pulled inward so top text is NOT too high -->
-    <path id="arcTop" d="M 78 160 A 82 82 0 0 1 242 160" />
-    <path id="arcBottom" d="M 78 160 A 82 82 0 0 0 242 160" />
+    <!-- identical-radius arcs, centered around the mustache -->
+    <path id="arcTop" d="M 80 160 A 80 80 0 0 1 240 160" />
+    <path id="arcBottom" d="M 80 160 A 80 80 0 0 0 240 160" />
   </defs>
 
   <!-- base -->
   <circle cx="160" cy="160" r="148" class="paper"/>
   <circle cx="160" cy="160" r="140" class="ring"/>
 
-  <!-- top text (bigger) -->
-  <text class="type" font-size="28">
-    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">WAP MOP</textPath>
+  <!-- TOP TEXT -->
+  <text class="type" font-size="30">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">
+      WAP MOP
+    </textPath>
   </text>
 
-  <!-- bottom text (supporting, still readable) -->
-  <text class="type" font-size="22">
-    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">SHOPPE</textPath>
+  <!-- BOTTOM TEXT -->
+  <text class="type" font-size="26">
+    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">
+      SHOPPE
+    </textPath>
   </text>
 
-  <!-- mustache (simple, bold) -->
-  <path class="mark" d="
-    M78 178
-    C92 148, 122 142, 150 158
-    C156 161, 160 164, 160 164
-    C160 164, 164 161, 170 158
-    C198 142, 228 148, 242 178
-    C225 202, 195 206, 172 190
-    C166 186, 160 184, 160 184
-    C160 184, 154 186, 148 190
-    C125 206, 95 202, 78 178
+  <!-- MUSTACHE — vertically centered -->
+  <path class="ink" d="
+    M78 170
+    C92 140, 122 134, 150 150
+    C156 153, 160 156, 160 156
+    C160 156, 164 153, 170 150
+    C198 134, 228 140, 242 170
+    C225 198, 195 202, 172 186
+    C166 182, 160 180, 160 180
+    C160 180, 154 182, 148 186
+    C125 202, 95 198, 78 170
     Z
   "/>
 </svg>
