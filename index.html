@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WAP MOP SHOPPE</title>
 
-  <meta name="description" content="A calm, adult field guide to care: skin as a system, mouths as systems, vaginas as ecosystems." />
+  <meta name="description" content="A calm, adult field guide to care: skin as a system, mouths as systems, vaginas as ecosystems — and intimacy built on respect." />
   <link rel="canonical" href="https://kevin-fuschich.github.io/wapmopshoppe/" />
 
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
@@ -16,51 +16,142 @@
 
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/visuals.css">
+
+  <style>
+    .hero { margin-top: 16px; }
+
+    .stamp-row{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .stamp{ width:44px; height:auto; }
+
+    .systems-strip{
+      margin: 28px 0;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .system-card{
+      border:1px solid rgba(17,18,20,.14);
+      border-radius:16px;
+      padding:12px;
+      background:#fffdf8;
+    }
+    .system-card img{ width:100%; height:auto; display:block; }
+    .system-card p{
+      margin:8px 0 0;
+      font-size:14px;
+      line-height:1.3;
+      opacity:.8;
+    }
+    @media (max-width: 720px){
+      .systems-strip{ grid-template-columns: 1fr; }
+    }
+
+    footer .footer-text a{
+      text-decoration: none;
+      border-bottom: 1px solid rgba(17,18,20,.28);
+      padding-bottom: 1px;
+    }
+    footer .footer-text a:hover{
+      border-bottom-color: var(--accent, #C04832);
+      color: var(--accent, #C04832);
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <div class="container narrow">
-    <a class="wordmark" href="/wapmopshoppe/">
+    <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">
       <div class="top">WAP MOP</div>
       <div class="sub">SHOPPE</div>
     </a>
 
-    <nav>
+    <nav aria-label="Primary navigation">
       <a href="/wapmopshoppe/articles/index.html">Articles</a>
       <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
       <a href="/wapmopshoppe/about/index.html">About</a>
-      <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
     </nav>
   </div>
 </header>
 
 <main class="container narrow">
 
-  <h1>Care is built in the details.</h1>
+  <section class="hero">
 
-  <p>
-    Not with shame. Not with perfume. Not with fixes.
-    But with systems-thinking, restraint, and respect.
-  </p>
+    <div class="stamp-row">
+      <img class="stamp" src="assets/figures/meister-stamp.svg" alt="WAP MOP SHOPPE stamp">
+      <span class="muted">A field guide for romantic closeness.</span>
+    </div>
 
-  <p>
-    This is a field guide to bodies as systems — and intimacy
-    that doesn’t interfere with them.
-  </p>
+    <h1>Care is built in the details.</h1>
 
+    <p class="lede">
+      Not with shame. Not with perfume. Not with fixes.
+      But with systems-thinking, restraint, and respect.
+    </p>
+
+    <p>
+      WAP MOP SHOPPE is a reference for bodies as systems —
+      and intimacy that doesn’t interfere with them.
+    </p>
+
+    <p>
+      <a href="/wapmopshoppe/articles/index.html">Read the field guide</a>
+    </p>
+
+  </section>
+
+  <div class="systems-strip" aria-label="Systems overview">
+
+    <div class="system-card">
+      <img src="assets/figures/ph-scale.svg" alt="pH balance diagram">
+      <p>Vaginas as ecosystems: balance, pH, restraint.</p>
+    </div>
+
+    <div class="system-card">
+      <img src="assets/figures/mouth-system.svg" alt="Mouth care system diagram">
+      <p>Mouths as systems: timing, moisture, gentleness.</p>
+    </div>
+
+    <div class="system-card">
+      <img src="assets/figures/skin-barrier.svg" alt="Skin barrier diagram">
+      <p>Skin as a system: cleanse, protect, then wait.</p>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <strong>Care is not about correcting bodies.</strong><br>
+    It’s about understanding systems and behaving with respect inside them.
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>Recommended reading path</h2>
   <p>
-    <a href="/wapmopshoppe/articles/index.html">Read the articles</a>
+    Start with <a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>,
+    then <a href="/wapmopshoppe/articles/external-means-external.html">External means external</a>,
+    then <a href="/wapmopshoppe/articles/after-doesnt-mean-absent.html">After doesn’t mean absent</a>.
   </p>
 
 </main>
 
 <footer>
-  <div class="container narrow">
-    © WAP MOP SHOPPE
+  <div class="container narrow footer-text">
+    © <span id="y"></span> WAP MOP SHOPPE ·
+    <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
   </div>
 </footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
