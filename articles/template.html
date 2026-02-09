@@ -1,78 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Favicon & App Icons -->
-<link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/wapmopshoppe/assets/favicon.svg">
-<link rel="manifest" href="/wapmopshoppe/assets/site.webmanifest">
-<meta name="theme-color" content="#fffdf8">
-  <title>{{TITLE}} — WAP MOP SHOPPE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article Title — WAP MOP SHOPPE</title>
 
-  <!-- Primary Meta -->
-  <meta name="description" content="{{DESCRIPTION}}" />
-  <link rel="canonical" href="{{CANONICAL_URL}}" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{TITLE}}" />
-  <meta property="og:description" content="{{DESCRIPTION}}" />
-  <meta property="og:url" content="{{CANONICAL_URL}}" />
-  <meta property="og:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{{TITLE}}" />
-  <meta name="twitter:description" content="{{DESCRIPTION}}" />
-  <meta name="twitter:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="../assets/styles.css">
-</head>
+  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 </head>
 
-<body class="article">
+<body>
 
-<header>
-  <div class="container narrow">
-    <div class="wordmark">
-      <div class="top">WAP MOP</div>
-      <div class="sub">SHOPPE</div>
-    </div>
+<header class="site-header">
+  <div class="container narrow header-inner">
+    <a class="brand-stamp" href="/wapmopshoppe/">
+      <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="">
+    </a>
 
-    <nav aria-label="Primary navigation">
-      <a href="../index.html">Home</a>
-      <a href="../articles/index.html">Articles</a>
-      <a href="../shoppe/index.html">Shoppe</a>
-      <a href="../about/index.html">About</a>
-      <a href="../disclosure/index.html">Disclosure</a>
+    <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
+
+    <nav>
+      <a href="/wapmopshoppe/articles/index.html">Articles</a>
+      <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
+      <a href="/wapmopshoppe/about/index.html">About</a>
     </nav>
   </div>
 </header>
 
-<main class="container narrow">
-  <div class="breadcrumb"><a href="index.html">← Back to Articles</a></div>
+<main class="container narrow article">
 
-  <h1>{{TITLE}}</h1>
-  <p><em>{{SUBHEAD}}</em></p>
+  <h1>Article Title</h1>
 
-  {{CONTENT}}
+  <p class="lede">Opening paragraph that sets tone.</p>
+
+  <p>Article content goes here.</p>
+
 </main>
 
 <footer>
-  <div class="container narrow footer-text">© <span id="y"></span> WAP MOP SHOPPE</div>
+  <div class="container narrow footer-text">
+    <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
+  </div>
 </footer>
-
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
