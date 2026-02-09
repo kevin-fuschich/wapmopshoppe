@@ -2,8 +2,8 @@
   <defs>
     <style>
       :root{
-        --ink:#2f4f2f;      /* alpine green */
-        --paper:#fbf3e6;    /* warm cream */
+        --ink:#2f4f2f;
+        --paper:#fbf3e6;
       }
       .paper{ fill:var(--paper); }
       .ring1{ fill:none; stroke:var(--ink); stroke-width:10; }
@@ -15,16 +15,13 @@
         font-weight: 700;
         letter-spacing: .22em;
       }
-      .smallcaps{
-        font-variant: small-caps;
-        letter-spacing: .26em;
-      }
     </style>
 
-    <!-- Circular text paths -->
-    <path id="topArc" d="M160,160 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
-    <!-- bottomArc is same circle but we’ll reverse direction via startOffset -->
-    <path id="bottomArc" d="M160,160 m-120,0 a120,120 0 1,0 240,0 a120,120 0 1,0 -240,0" />
+    <!-- Explicit TOP arc: left -> right across the top -->
+    <path id="arcTop" d="M 50 160 A 110 110 0 0 1 270 160" />
+
+    <!-- Explicit BOTTOM arc: left -> right across the bottom -->
+    <path id="arcBottom" d="M 50 160 A 110 110 0 0 0 270 160" />
   </defs>
 
   <!-- Seal base -->
@@ -32,22 +29,21 @@
   <circle cx="160" cy="160" r="142" class="ring1"/>
   <circle cx="160" cy="160" r="118" class="ring2"/>
 
-  <!-- Curved top text -->
-  <text class="type smallcaps" font-size="20">
-    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+  <!-- Curved top text (upright, centered) -->
+  <text class="type" font-size="20">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">
       WAP  MOP
     </textPath>
   </text>
 
-  <!-- Curved bottom text -->
-  <text class="type smallcaps" font-size="18">
-    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+  <!-- Curved bottom text (upright, centered) -->
+  <text class="type" font-size="18">
+    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">
       SHOPPE
     </textPath>
   </text>
 
-  <!-- Center mark (mustache) -->
-  <!-- Built as an intentional “badge” silhouette: thick, friendly, not clip-art -->
+  <!-- Center mustache -->
   <path class="mark" d="
     M70 175
     C82 142, 118 132, 150 150
@@ -61,7 +57,7 @@
     Z
   "/>
 
-  <!-- Small divider dots (classic seal detail) -->
+  <!-- Divider dots -->
   <circle cx="64" cy="160" r="4" class="mark" opacity=".85"/>
   <circle cx="256" cy="160" r="4" class="mark" opacity=".85"/>
 </svg>
