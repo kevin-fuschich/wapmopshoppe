@@ -19,30 +19,40 @@
 
   <style>
     .hero{
-      margin-top: 18px;
+      margin-top: 20px;
       display: grid;
       grid-template-columns: 1.25fr .75fr;
-      gap: 18px;
+      gap: 20px;
       align-items: start;
     }
     @media (max-width: 860px){
       .hero{ grid-template-columns: 1fr; }
     }
 
+    /* STAMP — corrected */
     .stamp-row{
       display:flex;
       align-items:center;
-      gap:12px;
-      margin: 0 0 10px 0;
+      gap:14px;
+      margin: 0 0 14px 0;
     }
-    .stamp{ width:44px; height:auto; }
-    .muted{ opacity:.75; }
+    .stamp{
+      width:64px;               /* bigger */
+      height:auto;
+      transform: none;          /* explicitly upright */
+      display:block;
+    }
+    .stamp-row .muted{
+      font-size: 14px;
+      line-height: 1.3;
+      opacity: .75;
+    }
 
     .hero-figure{
       border: 1px solid rgba(17,18,20,.14);
       border-radius: 18px;
       background: #fffdf8;
-      padding: 12px;
+      padding: 14px;
     }
     .hero-figure img{
       width: 100%;
@@ -58,7 +68,7 @@
     }
 
     .systems-strip{
-      margin: 26px 0 28px 0;
+      margin: 30px 0 30px 0;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
@@ -111,7 +121,7 @@
 
 <main class="container narrow">
 
-  <section class="hero" aria-label="Homepage introduction">
+  <section class="hero">
 
     <div>
       <div class="stamp-row">
@@ -145,7 +155,7 @@
 
   </section>
 
-  <div class="systems-strip" aria-label="Systems overview">
+  <div class="systems-strip">
 
     <div class="system-card">
       <img src="assets/figures/ph-scale.svg" alt="pH balance diagram">
