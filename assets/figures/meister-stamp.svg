@@ -10,7 +10,6 @@
         letter-spacing: 2.5px;
         fill:#2f4f2f;
         text-anchor: middle;
-        dominant-baseline: middle;
       }
     </style>
   </defs>
@@ -19,24 +18,24 @@
   <circle cx="130" cy="130" r="122" class="paper"/>
   <circle cx="130" cy="130" r="114" class="ring"/>
 
-  <!-- top text -->
-  <text x="130" y="60" class="text" font-size="26">
+  <!-- top text (moved DOWN) -->
+  <text x="130" y="78" class="text" font-size="26">
     WAP MOP
   </text>
 
-  <!-- mustache -->
+  <!-- mustache (slightly higher) -->
   <path class="ink" d="
-    M42 138
-    C58 110, 98 110, 130 132
-    C162 110, 202 110, 218 138
-    C200 160, 168 162, 138 146
-    C134 144, 126 144, 122 146
-    C92 162, 60 160, 42 138
+    M42 132
+    C58 104, 98 104, 130 126
+    C162 104, 202 104, 218 132
+    C200 154, 168 156, 138 140
+    C134 138, 126 138, 122 140
+    C92 156, 60 154, 42 132
     Z
   "/>
 
-  <!-- bottom text -->
-  <text x="130" y="206" class="text" font-size="22">
+  <!-- bottom text (moved UP) -->
+  <text x="130" y="190" class="text" font-size="22">
     SHOPPE
   </text>
 
