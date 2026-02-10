@@ -90,7 +90,7 @@
     .lede{
       font-size:20px;
       opacity:.9;
-      margin:0 0 28px 0;
+      margin:0 0 18px 0; /* tightened a bit because tags follow */
     }
 
     p{
@@ -188,6 +188,14 @@
         It’s a self-regulating ecosystem.
       </p>
 
+      <!-- Visual accents (kept INSIDE the article + main) -->
+      <hr class="accent-rule">
+      <ul class="tags" aria-label="Tags">
+        <li class="tag">Ecosystems</li>
+        <li class="tag">pH</li>
+        <li class="tag">External-only</li>
+      </ul>
+
       <p>
         Most “freshness” problems are not cleanliness problems.
         They’re interference problems — caused by too much product,
@@ -263,12 +271,7 @@
     </article>
   </div>
 </main>
-<hr class="accent-rule">
-<ul class="tags" aria-label="Tags">
-  <li class="tag">Ecosystems</li>
-  <li class="tag">pH</li>
-  <li class="tag">External-only</li>
-</ul>
+
 <footer>
   <div class="container">
     © <span id="y"></span> WAP MOP SHOPPE ·
