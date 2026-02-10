@@ -5,43 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vaginas as ecosystems — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="The vagina is an ecosystem. pH, microbiome balance, and external-only care matter most." />
+  <meta name="description" content="The vagina isn’t something to fix or deodorize. It’s a self-regulating ecosystem that responds best to restraint." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/visuals.css">
 
   <style>
-    /* Hard-stop against external CSS hiding content */
-    header, nav, main, footer, section, article { display:block; }
-    nav a, .wordmark, h1, h2, p, ul, li, figure, figcaption { visibility:visible; opacity:1; }
-
-    :root{
-      --ink:#111214;
-      --paper:#fffdf8;
-      --rule: rgba(17,18,20,.14);
-    }
+    header, nav, main, footer, article, section { display:block; }
+    * { visibility:visible; opacity:1; }
 
     body{
       margin:0;
-      color:var(--ink);
       background:#f4f4f4;
+      color:#111;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height:1.55;
+      line-height:1.6;
     }
 
     .container{
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 0 18px;
+      max-width:780px;
+      margin:0 auto;
+      padding:0 20px;
     }
-
-    .narrow{ max-width: 900px; }
 
     /* Header */
     .site-header{
-      background: var(--paper);
-      border-bottom: 1px solid var(--rule);
+      background:#fffdf8;
+      border-bottom:1px solid rgba(0,0,0,.12);
     }
 
     .header-inner{
@@ -49,212 +38,242 @@
       align-items:center;
       justify-content:space-between;
       gap:16px;
-      padding: 18px 0;
+      padding:18px 0;
     }
 
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
-      min-width:0;
     }
 
-    .brand-stamp img{
-      width:64px;
+    .brand img{
+      width:56px;
       height:auto;
       display:block;
     }
 
     .wordmark{
-      text-decoration:none;
-      color:inherit;
       font-weight:800;
       letter-spacing:.06em;
+      text-decoration:none;
+      color:#111;
       white-space:nowrap;
     }
 
     nav{
       display:flex;
-      gap:14px;
+      gap:16px;
       flex-wrap:wrap;
-      justify-content:flex-end;
     }
 
     nav a{
-      color:inherit;
       text-decoration:none;
-      padding:6px 8px;
-      border-radius:10px;
+      color:#111;
+      font-weight:500;
     }
-
-    nav a:hover{ text-decoration:underline; }
 
     /* Main */
     main{
-      background: var(--paper);
-      padding: 26px 0 34px;
-      border-bottom: 1px solid var(--rule);
+      background:#fffdf8;
+      padding:56px 0;
+      border-bottom:1px solid rgba(0,0,0,.12);
     }
 
-    .muted{ opacity:.75; }
-    .muted a{ color:inherit; }
-
-    h1{
-      margin: 10px 0 10px 0;
-      font-size: 34px;
-      line-height:1.1;
+    article h1{
+      font-size:36px;
+      line-height:1.15;
+      margin:0 0 18px 0;
+      font-weight:800;
     }
 
     .lede{
-      font-size: 18px;
-      opacity:.92;
-      margin: 0 0 18px 0;
+      font-size:20px;
+      opacity:.9;
+      margin:0 0 28px 0;
+    }
+
+    p{
+      margin:0 0 18px 0;
+      font-size:16px;
     }
 
     h2{
-      margin: 22px 0 8px 0;
-      font-size: 20px;
-      line-height:1.2;
+      margin:36px 0 12px 0;
+      font-size:20px;
+      font-weight:800;
+    }
+
+    ul{
+      margin:0 0 18px 18px;
+    }
+
+    li{
+      margin:6px 0;
     }
 
     .rule{
       height:1px;
-      background: var(--rule);
-      margin: 18px 0;
+      background:rgba(0,0,0,.12);
+      margin:36px 0;
     }
 
-    ul{ padding-left: 18px; }
-    li{ margin: 6px 0; }
-
-    .note{
-      border:1px solid var(--rule);
-      border-radius:14px;
-      background:#fff;
-      padding:14px;
-      margin: 14px 0;
-    }
-
-    .figure-card{
-      margin: 18px 0 8px 0;
-      border:1px solid var(--rule);
+    .callout{
+      border:1px solid rgba(0,0,0,.12);
       border-radius:16px;
+      padding:18px;
       background:#fff;
-      padding:12px;
+      margin:28px 0;
     }
 
-    .figure-card img{
-      width:100%;
-      height:auto;
-      display:block;
+    .callout p{
+      margin:0;
+      font-size:16px;
+      opacity:.9;
     }
 
-    figcaption{
-      margin-top:10px;
-      font-size: 13px;
-      opacity:.78;
+    .meta{
+      font-size:13px;
+      opacity:.7;
+      margin-top:32px;
     }
 
-    /* Footer */
     footer{
-      background: var(--paper);
-      padding: 16px 0;
+      background:#fffdf8;
+      padding:18px 0;
+      font-size:13px;
+      opacity:.85;
     }
-    .footer-text{ opacity:.85; font-size: 13px; }
-    .footer-text a{ color:inherit; text-decoration:none; border-bottom:1px solid rgba(17,18,20,.25); }
-    .footer-text a:hover{ border-bottom-color: rgba(17,18,20,.55); }
 
-    @media (max-width: 720px){
-      .header-inner{ align-items:flex-start; flex-direction:column; }
-      nav{ justify-content:flex-start; }
+    footer a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+    }
+
+    @media (max-width:820px){
+      article h1{ font-size:30px; }
+      .lede{ font-size:18px; }
     }
   </style>
 </head>
 
 <body>
+
 <header class="site-header">
-  <div class="container narrow header-inner">
+  <div class="container header-inner">
     <div class="brand">
-      <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
+      <a href="/wapmopshoppe/">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
       </a>
-      <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">WAP MOP SHOPPE</a>
+      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
 
     <nav aria-label="Primary navigation">
-      <a href="/wapmopshoppe/articles/index.html">Articles</a>
-      <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
-      <a href="/wapmopshoppe/about/index.html">About</a>
+      <a href="/wapmopshoppe/articles/">Articles</a>
+      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
+      <a href="/wapmopshoppe/about/">About</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="container narrow">
-    <p class="muted"><a href="/wapmopshoppe/articles/index.html">← Back to Articles</a></p>
+  <div class="container">
+    <article>
 
-    <h1>Vaginas as ecosystems</h1>
+      <h1>Vaginas as ecosystems</h1>
 
-    <p class="lede">
-      The vagina isn’t a room that needs air freshener. It’s a self-regulating ecosystem.
-      Most “freshness” problems are actually interference problems.
-    </p>
+      <p class="lede">
+        The vagina isn’t a room that needs air freshener.
+        It’s a self-regulating ecosystem.
+      </p>
 
-    <figure class="figure-card">
-      <img src="/wapmopshoppe/assets/figures/ph-scale.svg" alt="A simple pH diagram illustrating balance as a range">
-      <figcaption>Balance is a range, not a target.</figcaption>
-    </figure>
+      <p>
+        Most “freshness” problems are not cleanliness problems.
+        They’re interference problems — caused by too much product,
+        too much friction, or too much belief that something is wrong.
+      </p>
 
-    <h2>The baseline principle</h2>
-    <div class="note">
-      <strong>External care can be supportive.</strong><br>
-      <strong>Internal “cleaning” is usually disruption.</strong>
-    </div>
+      <h2>Balance is a range, not a target</h2>
 
-    <h2>What “ecosystem” means here</h2>
-    <p>
-      An ecosystem stays stable through a mix of conditions and living parts. In this case:
-      moisture, pH, and a microbiome that tends to prefer “don’t bother me.”
-    </p>
+      <p>
+        Healthy ecosystems aren’t static. They fluctuate.
+        pH shifts. Moisture changes. The microbiome adapts.
+        None of that means something needs fixing.
+      </p>
 
-    <h2>What tends to help</h2>
-    <ul>
-      <li><strong>External-only washing:</strong> warm water or gentle, fragrance-free cleanser (no scrubbing).</li>
-      <li><strong>Less friction:</strong> when irritated, reduce pressure and frequency.</li>
-      <li><strong>Time:</strong> many minor issues improve when interference stops.</li>
-    </ul>
+      <p>
+        Trouble often starts when care becomes correction —
+        when washing turns into scrubbing, or “hygiene” turns into
+        an attempt to control normal biology.
+      </p>
 
-    <h2>What tends to hurt</h2>
-    <ul>
-      <li><strong>Douching / internal washes:</strong> disrupt balance and can worsen symptoms.</li>
-      <li><strong>Fragrance “fresheners”:</strong> irritation loops dressed up as hygiene.</li>
-      <li><strong>Over-cleansing:</strong> harsh surfactants and aggressive scrubbing create damage.</li>
-    </ul>
+      <h2>What “ecosystem” means here</h2>
 
-    <div class="rule"></div>
+      <p>
+        An ecosystem stays stable through a mix of conditions and living parts.
+        In this case: moisture, acidity, and a microbiome that generally prefers
+        not to be bothered.
+      </p>
 
-    <p class="muted">
-      Next: <a href="/wapmopshoppe/articles/mouths-as-systems.html">Mouths as systems</a>
-    </p>
+      <p>
+        When those conditions are left alone, most minor issues resolve on their own.
+        When they’re constantly disrupted, irritation becomes chronic.
+      </p>
+
+      <h2>What tends to help</h2>
+
+      <ul>
+        <li>External-only washing with warm water or a gentle, fragrance-free cleanser</li>
+        <li>Less friction when irritation shows up</li>
+        <li>Time — many symptoms improve when interference stops</li>
+      </ul>
+
+      <h2>What tends to hurt</h2>
+
+      <ul>
+        <li>Douching or internal washes</li>
+        <li>Fragrance marketed as hygiene</li>
+        <li>Over-cleansing and aggressive scrubbing</li>
+      </ul>
+
+      <div class="callout">
+        <p>
+          Care isn’t about doing more.
+          It’s about knowing when to stop.
+        </p>
+      </div>
+
+      <!-- SOFT SHOPPE CROSS-LINK -->
+      <section class="callout" aria-label="Related shoppe link">
+        <p>
+          If this article was useful, you may want to look at how we approach
+          <a href="/wapmopshoppe/shoppe/external-care.html"
+             style="color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25);">
+            external care in the Shoppe
+          </a>.
+        </p>
+      </section>
+
+      <p class="meta">
+        Not medical advice. Persistent odor, pain, itching, or unusual discharge
+        should be evaluated by a clinician.
+      </p>
+
+    </article>
   </div>
 </main>
-<section class="callout" aria-label="Related shoppe link" style="margin-top:40px;">
-  <p style="margin:0; font-size:16px; opacity:.9;">
-    If this article was useful, you may want to look at how we approach
-    <a href="/wapmopshoppe/shoppe/external-care.html"
-       style="color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25);">
-      external care in the Shoppe
-    </a>.
-  </p>
-</section>
+
 <footer>
-  <div class="container narrow footer-text">
+  <div class="container">
     © <span id="y"></span> WAP MOP SHOPPE ·
-    <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
+    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
