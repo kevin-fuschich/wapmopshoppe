@@ -5,72 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skin as a system — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Skin is a barrier system. Cleanse, protect, and stop interfering." />
+  <meta name="description" content="Skin is a barrier system. Most irritation comes from too much input, not neglect." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/visuals.css">
 
   <style>
-    header, nav, main, footer, section, article { display:block; }
-    nav a, .wordmark, h1, h2, p, ul, li, figure, figcaption { visibility:visible; opacity:1; }
-
-    :root{
-      --ink:#111214;
-      --paper:#fffdf8;
-      --rule: rgba(17,18,20,.14);
-    }
+    header, nav, main, footer { display:block; }
+    * { visibility:visible; opacity:1; }
 
     body{
       margin:0;
-      color:var(--ink);
       background:#f4f4f4;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       line-height:1.55;
     }
 
-    .container{ max-width: 880px; margin: 0 auto; padding: 0 18px; }
-    .narrow{ max-width: 900px; }
+    .container{ max-width:880px; margin:0 auto; padding:0 18px; }
+    .narrow{ max-width:900px; }
 
-    .site-header{ background: var(--paper); border-bottom: 1px solid var(--rule); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 18px 0; }
-    .brand{ display:flex; align-items:center; gap:12px; min-width:0; }
-    .brand-stamp img{ width:64px; height:auto; display:block; }
-    .wordmark{ text-decoration:none; color:inherit; font-weight:800; letter-spacing:.06em; white-space:nowrap; }
-
-    nav{ display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end; }
-    nav a{ color:inherit; text-decoration:none; padding:6px 8px; border-radius:10px; }
-    nav a:hover{ text-decoration:underline; }
-
-    main{ background: var(--paper); padding: 26px 0 34px; border-bottom: 1px solid var(--rule); }
-
-    .muted{ opacity:.75; }
-    .muted a{ color:inherit; }
-
-    h1{ margin: 10px 0 10px 0; font-size: 34px; line-height:1.1; }
-    .lede{ font-size: 18px; opacity:.92; margin: 0 0 18px 0; }
-    h2{ margin: 22px 0 8px 0; font-size: 20px; line-height:1.2; }
-
-    ul{ padding-left: 18px; }
-    li{ margin: 6px 0; }
-
-    .note{ border:1px solid var(--rule); border-radius:14px; background:#fff; padding:14px; margin: 14px 0; }
-
-    .figure-card{ margin: 18px 0 8px 0; border:1px solid var(--rule); border-radius:16px; background:#fff; padding:12px; }
-    .figure-card img{ width:100%; height:auto; display:block; }
-    figcaption{ margin-top:10px; font-size: 13px; opacity:.78; }
-
-    .rule{ height:1px; background: var(--rule); margin: 18px 0; }
-
-    footer{ background: var(--paper); padding: 16px 0; }
-    .footer-text{ opacity:.85; font-size: 13px; }
-    .footer-text a{ color:inherit; text-decoration:none; border-bottom:1px solid rgba(17,18,20,.25); }
-    .footer-text a:hover{ border-bottom-color: rgba(17,18,20,.55); }
-
-    @media (max-width: 720px){
-      .header-inner{ align-items:flex-start; flex-direction:column; }
-      nav{ justify-content:flex-start; }
+    .site-header{
+      background:#fffdf8;
+      border-bottom:1px solid rgba(0,0,0,.12);
     }
+    .header-inner{
+      display:flex; justify-content:space-between; align-items:center; gap:16px;
+      padding:18px 0;
+    }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .brand-stamp img{ width:64px; }
+    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; }
+
+    nav{ display:flex; gap:14px; }
+    nav a{ text-decoration:none; color:#111; }
+
+    main{ background:#fffdf8; padding:28px 0; }
+    h1{ font-size:34px; margin:0 0 10px; }
+    .lede{ font-size:18px; opacity:.9; margin-bottom:18px; }
+    h2{ margin-top:22px; }
+
+    .note{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:14px;
+      padding:14px;
+      background:#fff;
+      margin:18px 0;
+    }
+
+    footer{
+      background:#fffdf8;
+      padding:16px 0;
+      font-size:13px;
+      opacity:.85;
+    }
+    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
   </style>
 </head>
 
@@ -78,71 +66,62 @@
 <header class="site-header">
   <div class="container narrow header-inner">
     <div class="brand">
-      <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
+      <a href="/wapmopshoppe/">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="">
       </a>
-      <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">WAP MOP SHOPPE</a>
+      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
-
-    <nav aria-label="Primary navigation">
-      <a href="/wapmopshoppe/articles/index.html">Articles</a>
-      <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
-      <a href="/wapmopshoppe/about/index.html">About</a>
+    <nav>
+      <a href="/wapmopshoppe/articles/">Articles</a>
+      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
+      <a href="/wapmopshoppe/about/">About</a>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="container narrow">
-    <p class="muted"><a href="/wapmopshoppe/articles/index.html">← Back to Articles</a></p>
+    <p><a href="/wapmopshoppe/articles/">← Back to Articles</a></p>
 
     <h1>Skin as a system</h1>
 
     <p class="lede">
-      Skin is not a surface you conquer. It’s a barrier system. Most irritation is just the system reacting to too much input.
+      Skin isn’t a surface you dominate. It’s a barrier system.
+      Most irritation comes from too much input — not neglect.
     </p>
 
-    <figure class="figure-card">
-      <img src="/wapmopshoppe/assets/figures/skin-barrier.svg" alt="Diagram suggesting a simple skin barrier concept: cleanse, protect, wait">
-      <figcaption>Cleanse → protect → wait. The boring routine wins.</figcaption>
-    </figure>
+    <h2>The basic truth</h2>
+    <p>
+      Skin wants stability. It does not want novelty, punishment, or daily experiments.
+    </p>
 
-    <h2>The three-step truth</h2>
+    <h2>What helps the system</h2>
     <ul>
-      <li><strong>Cleanse:</strong> remove what doesn’t belong — gently.</li>
-      <li><strong>Protect:</strong> restore the barrier with simple, boring hydration.</li>
-      <li><strong>Wait:</strong> stop changing products every three days.</li>
+      <li>Gentle cleansing — not “squeaky clean.”</li>
+      <li>Simple moisture — boring beats clever.</li>
+      <li>Time — the system needs consistency.</li>
     </ul>
 
-    <h2>What breaks the system</h2>
+    <h2>What disrupts it</h2>
     <ul>
-      <li>Too many actives at once.</li>
-      <li>Fragrance, scrubs, and “tingle” sensations.</li>
-      <li>Over-washing and “squeaky clean” goals.</li>
+      <li>Fragrance, scrubs, and tingling sensations.</li>
+      <li>Layering too many “actives.”</li>
+      <li>Changing routines every few days.</li>
     </ul>
 
     <div class="note">
-      The best skin routines feel almost underwhelming. That’s the point.
+      If your routine feels exciting, it’s probably too much.
     </div>
-
-    <div class="rule"></div>
-
-    <p class="muted">
-      Previous: <a href="/wapmopshoppe/articles/mouths-as-systems.html">Mouths as systems</a> ·
-      Next: <a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
-    </p>
   </div>
 </main>
 
 <footer>
-  <div class="container narrow footer-text">
+  <div class="container narrow">
     © <span id="y"></span> WAP MOP SHOPPE ·
-    <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
+    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
