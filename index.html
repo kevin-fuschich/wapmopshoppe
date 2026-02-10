@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Care that understands bodies, boundaries, and how to be well together." />
+  <meta name="description" content="Care that understands where it belongs — and how bodies stay well together." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
   <style>
     /* Defensive reset */
-    header, nav, main, footer, section { display:block; }
+    header, nav, main, footer, section, figure { display:block; }
     * { visibility:visible; opacity:1; }
 
     body{
@@ -20,11 +20,11 @@
       background:#f4f4f4;
       color:#111;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height:1.5;
+      line-height:1.55;
     }
 
     .container{
-      max-width:960px;
+      max-width:1000px;
       margin:0 auto;
       padding:0 20px;
     }
@@ -81,7 +81,10 @@
     }
 
     .hero{
-      max-width:760px;
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap:48px;
+      align-items:center;
     }
 
     .hero h1{
@@ -91,14 +94,27 @@
       font-weight:800;
     }
 
-    .hero p{
-      font-size:22px;
-      margin:0;
-      opacity:.9;
+    .hero h1 span{
+      display:block;
     }
 
-    .hero .line{
-      display:block;
+    .hero p{
+      font-size:20px;
+      margin:0 0 14px 0;
+      opacity:.9;
+      max-width:560px;
+    }
+
+    .hero figure{
+      margin:0;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero figure img{
+      max-width:320px;
+      width:100%;
+      height:auto;
     }
 
     /* Footer */
@@ -116,10 +132,14 @@
       border-bottom:1px solid rgba(0,0,0,.25);
     }
 
-    @media (max-width:720px){
-      .header-inner{
-        flex-direction:column;
-        align-items:flex-start;
+    @media (max-width:820px){
+      .hero{
+        grid-template-columns: 1fr;
+        gap:32px;
+      }
+
+      .hero figure{
+        order:-1;
       }
 
       .hero h1{
@@ -127,7 +147,7 @@
       }
 
       .hero p{
-        font-size:19px;
+        font-size:18px;
       }
     }
   </style>
@@ -155,11 +175,31 @@
 <main>
   <div class="container">
     <section class="hero">
-      <h1>
-        Care works when you know  
-        what belongs, where —
-        <span class="line">and how bodies stay well together.</span>
-      </h1>
+
+      <div class="hero-copy">
+        <h1>
+          Care works when you know  
+          what belongs, where —
+          <span>and how bodies stay well together.</span>
+        </h1>
+
+        <p>
+          WAP MOP SHOPPE is about caring for bodies with attention, boundaries,
+          and a working understanding of how systems behave — especially when
+          more than one body is involved.
+        </p>
+
+        <p>
+          It’s practical guidance. It’s not precious.
+          And it favors respect over interference.
+        </p>
+      </div>
+
+      <figure>
+        <img src="/wapmopshoppe/assets/figures/meister-character.png"
+             alt="The WAP MOP SHOPPE Meister character">
+      </figure>
+
     </section>
   </div>
 </main>
