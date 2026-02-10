@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Articles — WAP MOP SHOPPE</title>
+  <title>WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Articles on intimate care — oral, external, and after. Thoughtful guidance on what helps, what interferes, and when to stop." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+  <meta name="description" content="Thoughtful guidance on caring for bodies you’re close to — what helps, what interferes, and when to stop." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
-    header, nav, main, footer, section, article { display:block; }
+    header, nav, main, footer, section, article, aside { display:block; }
     body{
       margin:0;
       background:#f4f4f4;
@@ -20,328 +20,194 @@
     }
     .container{ max-width:960px; margin:0 auto; padding:0 20px; }
 
-    /* Header */
     .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
     .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:18px 0;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:18px 0;
     }
     .brand{ display:flex; align-items:center; gap:12px; }
     .brand img{ width:56px; height:auto; display:block; }
     .wordmark{
-      font-weight:800;
-      letter-spacing:.06em;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
+      font-weight:900; letter-spacing:.06em;
+      text-decoration:none; color:#111; white-space:nowrap;
     }
     nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
+    nav a{ text-decoration:none; color:#111; font-weight:600; }
 
-    /* Main */
-    main{
-      background:#fffdf8;
-      padding:56px 0;
-      border-bottom:1px solid rgba(0,0,0,.12);
+    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:28px;
+      align-items:start;
     }
     h1{
-      font-size:42px;
       margin:0 0 14px 0;
-      font-weight:900;
-      letter-spacing:-.01em;
-      line-height:1.05;
+      font-size:44px; line-height:1.03;
+      font-weight:950; letter-spacing:-.015em;
     }
     .lede{
-      font-size:20px;
-      opacity:.9;
-      max-width:860px;
       margin:0 0 18px 0;
+      font-size:20px; opacity:.9;
+      max-width:740px;
+    }
+    .cta-row{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.18);
+      background:#fff;
+      color:#111;
+      text-decoration:none;
+      font-weight:900;
+      font-size:14px;
+    }
+    .btn.primary{
+      border-color:rgba(0,0,0,.2);
+      background: rgba(192,68,44,.10);
     }
 
     .accent-rule{
-      height:2px;
-      border:0;
+      height:2px; border:0;
       background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 18px 0 22px;
+      margin: 22px 0 18px;
     }
 
-    /* Filters (lightweight, not interactive yet) */
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin: 0 0 18px 0;
-      padding:0;
-      list-style:none;
-    }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 12px;
-      border-radius:999px;
+    .card{
       border:1px solid rgba(0,0,0,.12);
-      background:#fff;
-      font-size:13px;
-      opacity:.9;
-    }
-    .chip::before{
-      content:"";
-      width:8px; height:8px;
-      border-radius:999px;
-      background: rgba(192,68,44,1);
-      opacity:.75;
-    }
-
-    /* Cards */
-    .articles{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:16px;
-    }
-    .entry{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
+      border-radius:18px;
       background:#fff;
       padding:18px;
-      position:relative;
-      overflow:hidden;
-    }
-    .entry::after{
-      content:"";
-      position:absolute;
-      top:-44px; right:-44px;
-      width:130px; height:130px;
-      background: rgba(192,68,44,.10);
-      transform: rotate(35deg);
     }
 
-    .title-row{
+    .meister-wrap{
       display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
+      justify-content:flex-end;
+      gap:12px;
     }
-    .entry h2{
-      margin:0;
-      font-size:22px;
-      font-weight:900;
-      line-height:1.2;
+    .meister{
+      width: 280px;
+      max-width: 100%;
+      height:auto;
+      display:block;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.08));
     }
-    .entry h2 a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
+    .stamp-mini{
+      width:80px; height:auto; display:block; opacity:.95;
     }
 
-    .new-tag{
-      font-size:11px;
-      font-weight:900;
-      letter-spacing:.08em;
-      padding:4px 8px;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,.25);
-      background:#fff;
-      opacity:.9;
-    }
-
-    .dek{
-      margin:8px 0 10px 0;
-      font-size:15px;
-      opacity:.9;
-      max-width:820px;
-      position:relative;
-      z-index:1;
-    }
-
-    .meta{
-      font-size:13px;
-      opacity:.7;
-      position:relative;
-      z-index:1;
-    }
-
-    .links{
-      margin-top:10px;
-      display:flex;
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
       gap:14px;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
+      margin-top:18px;
     }
-    .links a{
+    .tile h2{
+      margin:0 0 6px 0;
+      font-size:16px;
+      font-weight:950;
+    }
+    .tile p{
+      margin:0;
+      font-size:14px;
+      opacity:.88;
+    }
+    .tile a{
       color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
       font-weight:900;
-      font-size:13px;
     }
 
-    footer{
-      background:#fffdf8;
-      padding:18px 0;
-      font-size:13px;
-      opacity:.85;
-    }
-    footer a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-    }
+    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
+    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
 
-    @media (max-width:820px){
-      h1{ font-size:34px; }
-      .lede{ font-size:18px; }
-      .entry h2{ font-size:20px; }
+    @media (max-width:920px){
+      .hero{ grid-template-columns: 1fr; }
+      .meister-wrap{ justify-content:flex-start; }
+      h1{ font-size:38px; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
-
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/wapmopshoppe/">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+      <a href="/" aria-label="Home">
+        <img src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
       </a>
-      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
+      <a class="wordmark" href="/">WAP MOP SHOPPE</a>
     </div>
 
     <nav aria-label="Primary navigation">
-      <a href="/wapmopshoppe/articles/">Articles</a>
-      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
-      <a href="/wapmopshoppe/about/">About</a>
+      <a href="/articles/">Articles</a>
+      <a href="/shoppe/">Shoppe</a>
+      <a href="/about/">About</a>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <h1>Articles</h1>
-    <p class="lede">
-      Thoughtful guidance on caring for bodies you’re close to —
-      what helps, what interferes, and when to stop.
-    </p>
+    <section class="hero" aria-label="Intro">
+      <div>
+        <h1>Tongue in cheek.<br>Care in full.</h1>
+        <p class="lede">
+          Thoughtful guidance on caring for bodies you’re close to —
+          what helps, what interferes, and when to stop.
+        </p>
 
-    <hr class="accent-rule">
+        <hr class="accent-rule">
 
-    <ul class="chips" aria-label="Topics">
-      <li class="chip">External care</li>
-      <li class="chip">Oral care</li>
-      <li class="chip">Aftercare</li>
-      <li class="chip">Ecosystems</li>
-    </ul>
+        <div class="cta-row" aria-label="Primary actions">
+          <a class="btn primary" href="/articles/">Read the field guide</a>
+          <a class="btn" href="/shoppe/">Browse the Shoppe</a>
+        </div>
 
-    <section class="articles" aria-label="Article list">
+        <div class="grid" aria-label="Start here">
+          <div class="card tile">
+            <h2><a href="/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a></h2>
+            <p>Balance is a range. Most “freshness” problems are interference problems.</p>
+          </div>
+          <div class="card tile">
+            <h2><a href="/articles/mouths-as-systems.html">Mouths as systems</a></h2>
+            <p>Gentle beats harsh. Comfort-first oral care that doesn’t overcorrect.</p>
+          </div>
+          <div class="card tile">
+            <h2><a href="/articles/the-best-wipes.html">The best wipes</a></h2>
+            <p>Boring on purpose. External-only cleanup without irritation loops.</p>
+          </div>
+        </div>
+      </div>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/the-best-wipes.html">The best wipes</a></h2>
-          <span class="new-tag">NEW</span>
+      <aside class="card" aria-label="Mascot">
+        <div class="meister-wrap">
+          <img class="stamp-mini" src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+          <img class="meister" src="/assets/images/wap-mop-meister.png" alt="The WAP MOP SHOPPE mascot, arms folded, alpine apothecary style.">
         </div>
-        <p class="dek">Good wipes are boring on purpose. How to choose wipes that clean externally without disrupting comfort.</p>
-        <p class="meta">External care · Aftercare</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/external-care.html">Related: External care</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a></h2>
-        </div>
-        <p class="dek">Balance is a range, not a target. Most “freshness” problems are interference problems.</p>
-        <p class="meta">Ecosystems · pH · External-only</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/external-care.html">Related: External care</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/external-means-external.html">External means external</a></h2>
-        </div>
-        <p class="dek">Most problems start when care crosses a boundary it was never meant to cross.</p>
-        <p class="meta">External care · Boundaries</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/external-care.html">Related: External care</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/mouths-as-systems.html">Mouths as systems</a></h2>
-        </div>
-        <p class="dek">Oral care without burn, domination, or performance theater — gentleness wins long-term.</p>
-        <p class="meta">Oral care · Comfort</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/oral-care.html">Related: Oral care</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/aftercare-is-respect.html">Aftercare is respect</a></h2>
-        </div>
-        <p class="dek">Aftercare isn’t a genre. It’s how you close the loop — physically and emotionally.</p>
-        <p class="meta">Aftercare · Respect</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/after-doesnt-mean-absent.html">After doesn’t mean absent</a></h2>
-        </div>
-        <p class="dek">Aftercare can be quiet and still deeply present — a check-in, a pause, a way of closing the loop.</p>
-        <p class="meta">Aftercare · Presence</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/friction-is-information.html">Friction is information</a></h2>
-        </div>
-        <p class="dek">Discomfort isn’t something to push through. Friction tells you pressure, pace, and timing need to change.</p>
-        <p class="meta">Friction · Comfort · Pace</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/skin-as-a-system.html">Skin as a system</a></h2>
-        </div>
-        <p class="dek">Skin responds to pressure, moisture, and disturbance. Comfort is the baseline signal.</p>
-        <p class="meta">Skin · Friction · Aftercare</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
-
+        <p style="margin:14px 0 0 0; font-size:14px; opacity:.88;">
+          No shame. No perfume theater. Just practical care that respects the body’s boundaries.
+        </p>
+      </aside>
     </section>
   </div>
 </main>
 
 <footer>
   <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure/">Disclosure</a>
   </div>
 </footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
