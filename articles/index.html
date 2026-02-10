@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Articles — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Articles on intimate care — oral, external, and after. Practical guidance with restraint, respect, and fewer products." />
+  <meta name="description" content="Articles on intimate care — oral, external, and after. Thoughtful guidance on what helps, what interferes, and when to stop." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
@@ -58,22 +58,50 @@
       font-size:20px;
       opacity:.9;
       max-width:860px;
-      margin:0 0 26px 0;
+      margin:0 0 18px 0;
     }
 
     .accent-rule{
-      height: 2px;
+      height:2px;
       border:0;
       background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
       margin: 18px 0 22px;
     }
 
+    /* Filters (lightweight, not interactive yet) */
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 0 0 18px 0;
+      padding:0;
+      list-style:none;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      font-size:13px;
+      opacity:.9;
+    }
+    .chip::before{
+      content:"";
+      width:8px; height:8px;
+      border-radius:999px;
+      background: rgba(192,68,44,1);
+      opacity:.75;
+    }
+
+    /* Cards */
     .articles{
       display:grid;
       grid-template-columns:1fr;
       gap:16px;
     }
-
     .entry{
       border:1px solid rgba(0,0,0,.12);
       border-radius:16px;
@@ -99,7 +127,6 @@
       position:relative;
       z-index:1;
     }
-
     .entry h2{
       margin:0;
       font-size:22px;
@@ -151,7 +178,7 @@
       color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
-      font-weight:800;
+      font-weight:900;
       font-size:13px;
     }
 
@@ -198,11 +225,18 @@
   <div class="container">
     <h1>Articles</h1>
     <p class="lede">
-      A field guide to intimate care — oral, external, and after.
-      Thoughtful guidance on what helps, what interferes, and when to stop.
+      Thoughtful guidance on caring for bodies you’re close to —
+      what helps, what interferes, and when to stop.
     </p>
 
     <hr class="accent-rule">
+
+    <ul class="chips" aria-label="Topics">
+      <li class="chip">External care</li>
+      <li class="chip">Oral care</li>
+      <li class="chip">Aftercare</li>
+      <li class="chip">Ecosystems</li>
+    </ul>
 
     <section class="articles" aria-label="Article list">
 
@@ -211,8 +245,8 @@
           <h2><a href="/wapmopshoppe/articles/the-best-wipes.html">The best wipes</a></h2>
           <span class="new-tag">NEW</span>
         </div>
-        <p class="dek">Good wipes are boring on purpose. How to choose wipes that support bodies instead of interfering with them.</p>
-        <p class="meta">External care · Aftercare · Convenience</p>
+        <p class="dek">Good wipes are boring on purpose. How to choose wipes that clean externally without disrupting comfort.</p>
+        <p class="meta">External care · Aftercare</p>
         <div class="links">
           <a href="/wapmopshoppe/shoppe/external-care.html">Related: External care</a>
         </div>
@@ -231,32 +265,10 @@
 
       <article class="entry">
         <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/mouths-as-systems.html">Mouths as systems</a></h2>
-        </div>
-        <p class="dek">Oral care without burn, domination, or performance theater.</p>
-        <p class="meta">Oral care · Comfort · Hydration</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/oral-care.html">Related: Oral care</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/after-doesnt-mean-absent.html">After doesn’t mean absent</a></h2>
-        </div>
-        <p class="dek">Aftercare as respect — for bodies, feelings, and the space intimacy creates.</p>
-        <p class="meta">Aftercare · Recovery · Attention</p>
-        <div class="links">
-          <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
-
-      <article class="entry">
-        <div class="title-row">
           <h2><a href="/wapmopshoppe/articles/external-means-external.html">External means external</a></h2>
         </div>
-        <p class="dek">Why internal “cleaning” backfires — and where care actually belongs.</p>
-        <p class="meta">Boundaries · Hygiene myths · Restraint</p>
+        <p class="dek">Most problems start when care crosses a boundary it was never meant to cross.</p>
+        <p class="meta">External care · Boundaries</p>
         <div class="links">
           <a href="/wapmopshoppe/shoppe/external-care.html">Related: External care</a>
         </div>
@@ -264,12 +276,12 @@
 
       <article class="entry">
         <div class="title-row">
-          <h2><a href="/wapmopshoppe/articles/skin-as-a-system.html">Skin as a system</a></h2>
+          <h2><a href="/wapmopshoppe/articles/mouths-as-systems.html">Mouths as systems</a></h2>
         </div>
-        <p class="dek">Skin isn’t a surface to punish. It’s a living barrier with rules — and it responds to how you treat it.</p>
-        <p class="meta">Barrier · Friction · Repair</p>
+        <p class="dek">Oral care without burn, domination, or performance theater — gentleness wins long-term.</p>
+        <p class="meta">Oral care · Comfort</p>
         <div class="links">
-          <a href="/wapmopshoppe/shoppe/external-care.html">Related: External care</a>
+          <a href="/wapmopshoppe/shoppe/oral-care.html">Related: Oral care</a>
         </div>
       </article>
 
@@ -278,7 +290,18 @@
           <h2><a href="/wapmopshoppe/articles/aftercare-is-respect.html">Aftercare is respect</a></h2>
         </div>
         <p class="dek">Aftercare isn’t a genre. It’s how you close the loop — physically and emotionally.</p>
-        <p class="meta">Aftercare · Consent · Closure</p>
+        <p class="meta">Aftercare · Respect</p>
+        <div class="links">
+          <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="title-row">
+          <h2><a href="/wapmopshoppe/articles/after-doesnt-mean-absent.html">After doesn’t mean absent</a></h2>
+        </div>
+        <p class="dek">Aftercare can be quiet and still deeply present — a check-in, a pause, a way of closing the loop.</p>
+        <p class="meta">Aftercare · Presence</p>
         <div class="links">
           <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
         </div>
@@ -288,8 +311,19 @@
         <div class="title-row">
           <h2><a href="/wapmopshoppe/articles/friction-is-information.html">Friction is information</a></h2>
         </div>
-        <p class="dek">Discomfort isn’t something to power through. It’s feedback — and it’s usually telling the truth.</p>
-        <p class="meta">Friction · Communication · Comfort</p>
+        <p class="dek">Discomfort isn’t something to push through. Friction tells you pressure, pace, and timing need to change.</p>
+        <p class="meta">Friction · Comfort · Pace</p>
+        <div class="links">
+          <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="title-row">
+          <h2><a href="/wapmopshoppe/articles/skin-as-a-system.html">Skin as a system</a></h2>
+        </div>
+        <p class="dek">Skin responds to pressure, moisture, and disturbance. Comfort is the baseline signal.</p>
+        <p class="meta">Skin · Friction · Aftercare</p>
         <div class="links">
           <a href="/wapmopshoppe/shoppe/aftercare.html">Related: Aftercare</a>
         </div>
