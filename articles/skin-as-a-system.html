@@ -5,73 +5,173 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skin as a system — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Skin is a barrier system. Most irritation comes from too much input, not neglect." />
+  <meta name="description" content="Skin isn’t a problem to solve. It’s a living system that signals comfort or distress based on friction, moisture, and how often it’s interfered with." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
   <style>
-    header, nav, main, footer { display:block; }
-    * { visibility:visible; opacity:1; }
-
+    header, nav, main, footer, section, article, aside { display:block; }
     body{
       margin:0;
       background:#f4f4f4;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height:1.55;
+      color:#111;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;
     }
+    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
+    .content{ max-width:780px; margin:0 auto; }
 
-    .container{ max-width:880px; margin:0 auto; padding:0 18px; }
-    .narrow{ max-width:900px; }
-
-    .site-header{
-      background:#fffdf8;
-      border-bottom:1px solid rgba(0,0,0,.12);
-    }
+    /* Header */
+    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
     .header-inner{
-      display:flex; justify-content:space-between; align-items:center; gap:16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
       padding:18px 0;
     }
     .brand{ display:flex; align-items:center; gap:12px; }
-    .brand-stamp img{ width:64px; }
-    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; }
+    .brand img{ width:56px; height:auto; display:block; }
+    .wordmark{
+      font-weight:800;
+      letter-spacing:.06em;
+      text-decoration:none;
+      color:#111;
+      white-space:nowrap;
+    }
+    nav{ display:flex; gap:16px; flex-wrap:wrap; }
+    nav a{ text-decoration:none; color:#111; font-weight:500; }
 
-    nav{ display:flex; gap:14px; }
-    nav a{ text-decoration:none; color:#111; }
+    /* Main */
+    main{
+      background:#fffdf8;
+      padding:56px 0;
+      border-bottom:1px solid rgba(0,0,0,.12);
+    }
 
-    main{ background:#fffdf8; padding:28px 0; }
-    h1{ font-size:34px; margin:0 0 10px; }
-    .lede{ font-size:18px; opacity:.9; margin-bottom:18px; }
-    h2{ margin-top:22px; }
+    article h1{
+      font-size:36px;
+      line-height:1.15;
+      margin:0 0 18px 0;
+      font-weight:900;
+      letter-spacing:-.01em;
+    }
+    .lede{
+      font-size:20px;
+      opacity:.92;
+      margin:0 0 22px 0;
+    }
 
-    .note{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:14px;
-      padding:14px;
+    .accent-rule{
+      height:2px;
+      border:0;
+      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
+      margin: 20px 0 18px;
+    }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 0 0 18px 0;
+      padding:0;
+      list-style:none;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.12);
       background:#fff;
-      margin:18px 0;
+      font-size: 13px;
+      color:#111;
+    }
+    .tag::before{
+      content:"";
+      width:8px; height:8px;
+      border-radius:999px;
+      background: rgba(192,68,44,1);
+      opacity:.85;
+    }
+
+    p{ margin:0 0 18px 0; font-size:16px; }
+    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
+
+    .callout{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      padding:18px;
+      background:#fff;
+      margin:28px 0;
+    }
+    .callout p{ margin:0; font-size:15px; opacity:.92; }
+
+    /* Standard related block */
+    .related{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      background:#fff;
+      padding:18px;
+      margin:28px 0 0;
+    }
+    .related .kicker{
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      opacity:.75;
+      margin-bottom:8px;
+      font-weight:900;
+    }
+    .related p{
+      margin:0 0 10px 0;
+      font-size:15px;
+      opacity:.92;
+    }
+    .related a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+      font-weight:900;
+    }
+
+    .meta{
+      font-size:13px;
+      opacity:.72;
+      margin-top:22px;
     }
 
     footer{
       background:#fffdf8;
-      padding:16px 0;
+      padding:18px 0;
       font-size:13px;
       opacity:.85;
     }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+    footer a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+    }
+
+    @media (max-width:820px){
+      article h1{ font-size:30px; }
+      .lede{ font-size:18px; }
+    }
   </style>
 </head>
 
 <body>
+
 <header class="site-header">
-  <div class="container narrow header-inner">
+  <div class="container header-inner">
     <div class="brand">
       <a href="/wapmopshoppe/">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
       </a>
       <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
-    <nav>
+
+    <nav aria-label="Primary navigation">
       <a href="/wapmopshoppe/articles/">Articles</a>
       <a href="/wapmopshoppe/shoppe/">Shoppe</a>
       <a href="/wapmopshoppe/about/">About</a>
@@ -80,56 +180,101 @@
 </header>
 
 <main>
-  <div class="container narrow">
-    <p><a href="/wapmopshoppe/articles/">← Back to Articles</a></p>
+  <div class="container">
+    <div class="content">
+      <article>
 
-    <h1>Skin as a system</h1>
+        <h1>Skin as a system</h1>
 
-    <p class="lede">
-      Skin isn’t a surface you dominate. It’s a barrier system.
-      Most irritation comes from too much input — not neglect.
-    </p>
+        <p class="lede">
+          Skin isn’t a surface to perfect.
+          It’s a system that responds to pressure, moisture, and how often it’s disturbed.
+        </p>
 
-    <h2>The basic truth</h2>
-    <p>
-      Skin wants stability. It does not want novelty, punishment, or daily experiments.
-    </p>
+        <hr class="accent-rule">
+        <ul class="tags" aria-label="Tags">
+          <li class="tag">Skin</li>
+          <li class="tag">Friction</li>
+          <li class="tag">Aftercare</li>
+        </ul>
 
-    <h2>What helps the system</h2>
-    <ul>
-      <li>Gentle cleansing — not “squeaky clean.”</li>
-      <li>Simple moisture — boring beats clever.</li>
-      <li>Time — the system needs consistency.</li>
-    </ul>
+        <p>
+          Skin does a lot of quiet work: regulating temperature, holding moisture,
+          protecting nerve endings, and signaling when something is off.
+          When it’s irritated, the message is usually simple — something changed.
+        </p>
 
-    <h2>What disrupts it</h2>
-    <ul>
-      <li>Fragrance, scrubs, and tingling sensations.</li>
-      <li>Layering too many “actives.”</li>
-      <li>Changing routines every few days.</li>
-    </ul>
+        <h2>Friction is information</h2>
 
-    <div class="note">
-      If your routine feels exciting, it’s probably too much.
+        <p>
+          Redness, tenderness, or that raw feeling after contact aren’t moral failures
+          or hygiene issues. They’re feedback. Skin is telling you how it experienced
+          pressure, pace, and duration.
+        </p>
+
+        <p>
+          Responding well means adjusting behavior, not adding products.
+        </p>
+
+        <h2>More product is rarely the answer</h2>
+
+        <p>
+          Over-washing, heavy fragrance, and constant “repair” products can
+          interrupt the skin’s ability to settle on its own. In many cases,
+          leaving skin alone — or switching to something gentler — improves comfort.
+        </p>
+
+        <h2>What tends to help</h2>
+
+        <ul>
+          <li>Warm water and minimal, fragrance-free cleansing</li>
+          <li>Time between contact and re-contact</li>
+          <li>Soft fabrics and reduced pressure</li>
+        </ul>
+
+        <h2>What tends to interfere</h2>
+
+        <ul>
+          <li>Abrasive scrubbing or exfoliation</li>
+          <li>Fragrance used to mask discomfort</li>
+          <li>Ignoring early signals and pushing through</li>
+        </ul>
+
+        <section class="callout" aria-label="Key idea">
+          <p>
+            Comfort isn’t a bonus.
+            It’s the baseline signal that things are going well.
+          </p>
+        </section>
+
+        <!-- STANDARD RELATED CARE BLOCK -->
+        <aside class="related" aria-label="Related care">
+          <div class="kicker">Related care</div>
+          <p>
+            Curious how we approach comfort-first choices after contact?
+            See our thoughts on <a href="/wapmopshoppe/shoppe/aftercare.html">aftercare</a> in the Shoppe.
+          </p>
+        </aside>
+
+        <p class="meta">
+          Not medical advice. Persistent rash, pain, cracking, or signs of infection
+          should be evaluated by a clinician.
+        </p>
+
+      </article>
     </div>
   </div>
 </main>
-<section class="callout" aria-label="Related shoppe link" style="margin-top:40px;">
-  <p style="margin:0; font-size:16px; opacity:.9;">
-    If this article was useful, you may want to look at how we approach
-    <a href="/wapmopshoppe/shoppe/external-care.html"
-       style="color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25);">
-      external care in the Shoppe
-    </a>.
-  </p>
-</section>
+
 <footer>
-  <div class="container narrow">
-    © <span id="y"></span> WAP MOP SHOPPE ·
-    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+  <div class="container">
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
