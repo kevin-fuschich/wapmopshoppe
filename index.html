@@ -5,185 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WAP MOP SHOPPE</title>
 
-  <meta name="description" content="A calm, adult field guide to care: skin as a system, mouths as systems, vaginas as ecosystems — and intimacy built on respect." />
-  <link rel="canonical" href="https://kevin-fuschich.github.io/wapmopshoppe/" />
-
+  <meta name="description" content="Care that understands bodies, boundaries, and how to be well together." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/visuals.css">
 
   <style>
-    .skip-link{
-      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
-    }
-    .skip-link:focus{
-      left:16px; top:16px; width:auto; height:auto; padding:10px 12px;
-      background:#fffdf8; border:1px solid rgba(17,18,20,.25); border-radius:10px;
-      z-index:9999;
+    /* Defensive reset */
+    header, nav, main, footer, section { display:block; }
+    * { visibility:visible; opacity:1; }
+
+    body{
+      margin:0;
+      background:#f4f4f4;
+      color:#111;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.5;
     }
 
-    header .brand-row{
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
-    }
-    header .brand{
-      display:flex; align-items:center; gap:12px; min-width:0;
-    }
-    .brand-stamp img{
-      width:72px; height:auto; display:block;
-    }
-    body.home .brand-stamp img{ width:92px; }
-
-    .wordmark{ text-decoration:none; color:inherit; line-height:1; }
-    .wordmark .top{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      font-weight:700; letter-spacing:.08em; font-size:22px;
-    }
-    .wordmark .sub{
-      font-family:"Cormorant Garamond", Georgia, serif;
-      font-weight:600; letter-spacing:.22em; font-size:16px; opacity:.85;
-      margin-top:4px;
+    .container{
+      max-width:960px;
+      margin:0 auto;
+      padding:0 20px;
     }
 
-    nav.primary{
-      display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;
+    /* Header */
+    .site-header{
+      background:#fffdf8;
+      border-bottom:1px solid rgba(0,0,0,.12);
     }
-    nav.primary a{ text-decoration:none; }
-    nav.primary a:hover{ text-decoration:underline; }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand img{
+      width:64px;
+      height:auto;
+    }
+
+    .wordmark{
+      font-weight:800;
+      letter-spacing:.06em;
+      text-decoration:none;
+      color:#111;
+      white-space:nowrap;
+    }
+
+    nav{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#111;
+      font-weight:500;
+    }
+
+    /* Hero */
+    main{
+      background:#fffdf8;
+      padding:72px 0 64px;
+    }
 
     .hero{
-      margin-top:22px;
-      display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:start;
+      max-width:760px;
     }
-    @media (max-width: 900px){ .hero{ grid-template-columns:1fr; } }
 
-    .hero-figure{
-      border:1px solid rgba(17,18,20,.14);
+    .hero h1{
+      font-size:42px;
+      line-height:1.1;
+      margin:0 0 18px 0;
+      font-weight:800;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin:0;
+      opacity:.9;
+    }
+
+    .hero .line{
+      display:block;
+    }
+
+    /* Footer */
+    footer{
       background:#fffdf8;
-      border-radius:18px;
-      padding:14px;
+      border-top:1px solid rgba(0,0,0,.12);
+      padding:18px 0;
+      font-size:13px;
+      opacity:.85;
     }
-    .hero-figure img{ width:100%; height:auto; display:block; border-radius:14px; }
-    .hero-figure figcaption{ margin-top:10px; font-size:13px; opacity:.78; line-height:1.25; }
 
-    .systems-strip{
-      margin: 28px 0 26px 0;
-      display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;
+    footer a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
     }
-    @media (max-width: 720px){ .systems-strip{ grid-template-columns:1fr; } }
 
-    .system-card{
-      border:1px solid rgba(17,18,20,.14);
-      border-radius:16px;
-      background:#fffdf8;
-      padding:12px;
+    @media (max-width:720px){
+      .header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:19px;
+      }
     }
-    .system-card img{ width:100%; height:auto; display:block; }
-    .system-card p{ margin:8px 0 0; font-size:14px; opacity:.82; line-height:1.3; }
-
-    footer .footer-links a{ text-decoration:none; border-bottom:1px solid rgba(17,18,20,.25); }
-    footer .footer-links a:hover{ border-bottom-color: rgba(17,18,20,.6); }
   </style>
 </head>
 
-<body class="home">
-<a class="skip-link" href="#main">Skip to content</a>
+<body>
 
-<header>
-  <div class="container narrow">
-    <div class="brand-row">
-      <div class="brand">
-        <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
-          <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
-        </a>
-
-        <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">
-          <div class="top">WAP MOP</div>
-          <div class="sub">SHOPPE</div>
-        </a>
-      </div>
-
-      <nav class="primary" aria-label="Primary navigation">
-        <a href="/wapmopshoppe/articles/index.html">Articles</a>
-        <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
-        <a href="/wapmopshoppe/about/index.html">About</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="/wapmopshoppe/">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+      </a>
+      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
+
+    <nav aria-label="Primary navigation">
+      <a href="/wapmopshoppe/articles/">Articles</a>
+      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
+      <a href="/wapmopshoppe/about/">About</a>
+    </nav>
   </div>
 </header>
 
-<main id="main" class="container narrow">
-  <section class="hero" aria-label="Homepage introduction">
-    <div>
-      <h1>Care is built in the details.</h1>
-
-      <p class="lede">
-        Not with shame. Not with perfume. Not with fixes.
-        But with systems-thinking, restraint, and respect.
-      </p>
-
-      <p>
-        WAP MOP SHOPPE is a field guide for bodies as systems —
-        and intimacy that doesn’t interfere with them.
-      </p>
-
-      <p>
-        <a href="/wapmopshoppe/articles/index.html">Read the field guide</a>
-      </p>
-
-      <div class="note">
-        <strong>Care is not about correcting bodies.</strong><br>
-        It’s about understanding systems and behaving with respect inside them.
-      </div>
-    </div>
-
-    <figure class="hero-figure">
-      <img src="/wapmopshoppe/assets/images/wap-mop-meister.png" alt="The WAP MOP SHOPPE Meister character">
-      <figcaption>
-        The Meister. Present, polite, and not in the way.
-      </figcaption>
-    </figure>
-  </section>
-
-  <div class="systems-strip" aria-label="Systems overview">
-    <div class="system-card">
-      <img src="/wapmopshoppe/assets/figures/ph-scale.svg" alt="pH balance diagram">
-      <p>Vaginas as ecosystems: balance, pH, restraint.</p>
-    </div>
-
-    <div class="system-card">
-      <img src="/wapmopshoppe/assets/figures/mouth-system.svg" alt="Mouth care system diagram">
-      <p>Mouths as systems: timing, moisture, gentleness.</p>
-    </div>
-
-    <div class="system-card">
-      <img src="/wapmopshoppe/assets/figures/skin-barrier.svg" alt="Skin barrier diagram">
-      <p>Skin as a system: cleanse, protect, then wait.</p>
-    </div>
+<main>
+  <div class="container">
+    <section class="hero">
+      <h1>
+        Care works when you know  
+        what belongs, where —
+        <span class="line">and how bodies stay well together.</span>
+      </h1>
+    </section>
   </div>
-
-  <div class="rule"></div>
-
-  <h2>Recommended reading path</h2>
-  <p>
-    Start with <a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>,
-    then <a href="/wapmopshoppe/articles/mouths-as-systems.html">Mouths as systems</a>.
-  </p>
 </main>
 
 <footer>
-  <div class="container narrow footer-text">
-    © <span id="y"></span> WAP MOP SHOPPE
-    <span class="footer-links"> · <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a></span>
+  <div class="container">
+    © <span id="y"></span> WAP MOP SHOPPE ·
+    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
