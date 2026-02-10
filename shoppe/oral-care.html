@@ -3,87 +3,241 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oral care — The Shoppe — WAP MOP SHOPPE</title>
+  <title>Oral care — Shoppe — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Oral care chosen for comfort and ecosystem support—without burn, bravado, or dryness." />
+  <meta name="description" content="Oral care picks: mouth-safe, fragrance-free, and chosen to support comfort without irritation or performance theater." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
   <style>
     header, nav, main, footer, section, article { display:block; }
-    * { visibility:visible; opacity:1; }
-
     body{
-      margin:0; background:#f4f4f4; color:#111;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.55;
+      margin:0;
+      background:#f4f4f4;
+      color:#111;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;
     }
-    .container{ max-width:980px; margin:0 auto; padding:0 20px; }
+    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
 
+    /* Header */
     .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+    }
     .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:64px; height:auto; display:block; }
-    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; white-space:nowrap; }
+    .brand img{ width:56px; height:auto; display:block; }
+    .wordmark{
+      font-weight:800;
+      letter-spacing:.06em;
+      text-decoration:none;
+      color:#111;
+      white-space:nowrap;
+    }
     nav{ display:flex; gap:16px; flex-wrap:wrap; }
     nav a{ text-decoration:none; color:#111; font-weight:500; }
 
-    main{ background:#fffdf8; padding:54px 0 52px; border-bottom:1px solid rgba(0,0,0,.12); }
-    h1{ font-size:38px; line-height:1.1; margin:0 0 10px 0; font-weight:800; }
-    .lede{ font-size:19px; opacity:.9; margin:0 0 18px 0; max-width:860px; }
-    .back a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
-
-    .rule{ height:1px; background:rgba(0,0,0,.12); margin:22px 0; }
-
-    .note{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px; background:#fff; padding:16px 18px; opacity:.92; margin:14px 0;
+    /* Main */
+    main{
+      background:#fffdf8;
+      padding:56px 0 64px;
+      border-bottom:1px solid rgba(0,0,0,.12);
     }
 
-    .products{
-      display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:12px;
+    .crumbs{
+      font-size:13px;
+      opacity:.75;
+      margin:0 0 10px 0;
     }
+    .crumbs a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.2);
+    }
+
+    h1{
+      font-size:38px;
+      line-height:1.1;
+      margin:0 0 14px 0;
+      font-weight:900;
+      letter-spacing:-.01em;
+    }
+    .lede{
+      font-size:18px;
+      opacity:.9;
+      max-width:820px;
+      margin:0 0 18px 0;
+    }
+
+    /* Pills / accent */
+    .accent-rule{
+      height: 2px;
+      border:0;
+      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
+      margin: 20px 0 20px;
+    }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 0 0 18px 0;
+      padding:0;
+      list-style:none;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.12);
+      background:#fff;
+      font-size: 13px;
+      color:#111;
+    }
+    .tag::before{
+      content:"";
+      width:8px; height:8px;
+      border-radius:999px;
+      background: rgba(192,68,44,1);
+      opacity:.85;
+    }
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:18px;
+    }
+
     .card{
       border:1px solid rgba(0,0,0,.12);
-      border-radius:16px; background:#fff; padding:16px;
-      display:flex; flex-direction:column; gap:10px; min-height:255px;
+      border-radius:16px;
+      background:#fff;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height: 170px;
+      position:relative;
+      overflow:hidden;
     }
-    .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.7; }
-    .title{ font-size:16px; font-weight:800; line-height:1.2; margin:0; }
-    .title a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
-    .why{ margin:0; opacity:.9; font-size:14px; }
-    .bullets{ margin:0; padding-left:18px; opacity:.9; font-size:14px; }
-    .bullets li{ margin:6px 0; }
+    .card::after{
+      content:"";
+      position:absolute;
+      top:-44px; right:-44px;
+      width:130px; height:130px;
+      background: rgba(192,68,44,.10);
+      transform: rotate(35deg);
+    }
 
-    .actions{ margin-top:auto; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .kicker{
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      opacity:.75;
+      position:relative;
+      z-index:1;
+    }
+    .card h2{
+      margin:0;
+      font-size:18px;
+      font-weight:900;
+      line-height:1.2;
+      position:relative;
+      z-index:1;
+    }
+    .card p{
+      margin:0;
+      font-size:14px;
+      opacity:.9;
+      max-width: 520px;
+      position:relative;
+      z-index:1;
+    }
+
+    .card .note{
+      font-size:13px;
+      opacity:.75;
+      margin-top:2px;
+      position:relative;
+      z-index:1;
+    }
+
+    .actions{
+      margin-top:auto;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:1;
+    }
+
     .btn{
-      display:inline-block; padding:10px 14px; border-radius:999px;
-      background:#111; color:#fff; text-decoration:none;
-      font-weight:700; font-size:13px; letter-spacing:.02em;
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.02em;
     }
     .btn:hover{ background:#000; }
 
-    .disclosure{
-      font-size:13px; opacity:.78; margin-top:18px; max-width:860px;
+    .link{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+      font-weight:700;
+      font-size:13px;
+      width: fit-content;
+      align-self:center;
     }
 
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+    /* Bottom helpers */
+    .callout{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      background:#fff;
+      padding:18px;
+      margin-top:22px;
+    }
+    .callout p{ margin:0; font-size:14px; opacity:.9; }
 
-    @media (max-width:920px){
-      .products{ grid-template-columns:1fr; }
-      .header-inner{ flex-direction:column; align-items:flex-start; }
+    footer{
+      background:#fffdf8;
+      padding:18px 0;
+      font-size:13px;
+      opacity:.85;
+    }
+    footer a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+    }
+
+    @media (max-width:900px){
       h1{ font-size:32px; }
-      .lede{ font-size:18px; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/wapmopshoppe/"><img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp"></a>
+      <a href="/wapmopshoppe/">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+      </a>
       <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
 
@@ -97,91 +251,88 @@
 
 <main>
   <div class="container">
-    <p class="back"><a href="/wapmopshoppe/shoppe/">← Back to The Shoppe</a></p>
+
+    <p class="crumbs">
+      <a href="/wapmopshoppe/shoppe/">Shoppe</a> / Oral care
+    </p>
 
     <h1>Oral care</h1>
     <p class="lede">
-      Mouths are ecosystems. This list favors comfort and hydration support—without the “sting = effective” myth.
-      If your routine leaves you chronically dry, it’s too aggressive.
+      Mouth-safe picks that support comfort and taste like nothing.
+      No burn. No “mint shock.” No performance theater.
     </p>
 
-    <div class="note">
-      <strong>House rule:</strong> fresh breath is great. Nuking your mouth isn’t.
-    </div>
+    <hr class="accent-rule">
+    <ul class="tags" aria-label="Category tags">
+      <li class="tag">No burn</li>
+      <li class="tag">Neutral taste</li>
+      <li class="tag">Comfort-first</li>
+    </ul>
 
-    <div class="rule"></div>
+    <section class="grid" aria-label="Oral care picks">
 
-    <section class="products" aria-label="Curated products">
-
-      <!-- Item 1 -->
       <article class="card">
-        <div class="kicker">DRY MOUTH</div>
-        <h2 class="title">
-          <a href="https://www.biotene.com/dry-mouth-products/mouthwash/" target="_blank" rel="noopener">
-            Biotène Dry Mouth Oral Rinse
-          </a>
-        </h2>
-        <p class="why">
-          A good option when dryness is the enemy. Comfort-forward, not punishment-forward.
+        <div class="kicker">Core pick</div>
+        <h2>Plain, gentle mouth rinse</h2>
+        <p>
+          If you use rinse at all, choose something that doesn’t sting.
+          Strong mint and alcohol are not “clean.” They’re sensations.
         </p>
-        <ul class="bullets">
-          <li>Useful if meds, stress, or mouth-breathing dry you out</li>
-          <li>Good “pre-date” tool when hydration matters</li>
-          <li>Pairs well with water + gentle brushing</li>
-        </ul>
+        <p class="note">If it burns, don’t use it.</p>
         <div class="actions">
-          <a class="btn" href="https://www.biotene.com/dry-mouth-products/mouthwash/" target="_blank" rel="noopener">View</a>
+          <a class="link" href="/wapmopshoppe/articles/mouths-as-systems.html">Read: Mouths as systems</a>
         </div>
       </article>
 
-      <!-- Item 2 -->
       <article class="card">
-        <div class="kicker">BREATH</div>
-        <h2 class="title">
-          <a href="https://www.therabreath.com/products/fresh-breath-oral-rinse-icy-mint" target="_blank" rel="noopener">
-            TheraBreath Fresh Breath Oral Rinse
-          </a>
-        </h2>
-        <p class="why">
-          Breath support without the “alcohol burn” identity. Quiet, functional, not macho.
+        <div class="kicker">Before</div>
+        <h2>Soft toothbrush + boring toothpaste</h2>
+        <p>
+          Abrasion and harsh flavoring don’t help. A soft brush and a basic paste
+          are usually better than “extreme” anything.
         </p>
-        <ul class="bullets">
-          <li>Useful when you want clean breath without dryness fallout</li>
-          <li>Better vibes than “mint flamethrower” mouthwash</li>
-          <li>Works best with tongue scraping + water</li>
-        </ul>
+        <p class="note">Comfort beats intensity.</p>
         <div class="actions">
-          <a class="btn" href="https://www.therabreath.com/products/fresh-breath-oral-rinse-icy-mint" target="_blank" rel="noopener">View</a>
+          <a class="link" href="/wapmopshoppe/articles/mouths-as-systems.html">Read: Mouths as systems</a>
         </div>
       </article>
 
-      <!-- Item 3 -->
       <article class="card">
-        <div class="kicker">OVERNIGHT</div>
-        <h2 class="title">
-          <a href="https://www.oralscience.com/en/products/xylimelts/" target="_blank" rel="noopener">
-            XyliMelts (OraCoat)
-          </a>
-        </h2>
-        <p class="why">
-          For people whose dryness shows up at night. Slow support, low drama.
+        <div class="kicker">During</div>
+        <h2>Hydration (yes, really)</h2>
+        <p>
+          Dry mouth is friction. Water is not a vibe-killer; it’s maintenance.
+          Keep it nearby and treat it as normal.
         </p>
-        <ul class="bullets">
-          <li>Helpful if you wake up with cotton-mouth</li>
-          <li>Discreet—doesn’t require a whole routine</li>
-          <li>Pairs well with humidifier season</li>
-        </ul>
+        <p class="note">Friction is information.</p>
         <div class="actions">
-          <a class="btn" href="https://www.oralscience.com/en/products/xylimelts/" target="_blank" rel="noopener">View</a>
+          <a class="link" href="/wapmopshoppe/articles/friction-is-information.html">Read: Friction is information</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="kicker">After</div>
+        <h2>Gentle cleanup + pause</h2>
+        <p>
+          Rinse, hydrate, and stop doing things for a bit.
+          Aftercare is also about your mouth.
+        </p>
+        <p class="note">If soreness shows up: reduce pressure next time.</p>
+        <div class="actions">
+          <a class="link" href="/wapmopshoppe/articles/after-doesnt-mean-absent.html">Read: After doesn’t mean absent</a>
         </div>
       </article>
 
     </section>
 
-    <p class="disclosure">
-      Some links on this page may be affiliate links. The bar stays the bar.
-      <br>Not medical advice; persistent mouth pain, sores, bleeding gums, or worsening dryness deserves a dental/medical check-in.
-    </p>
+    <section class="callout" aria-label="Oral care guidance">
+      <p>
+        Oral care isn’t about making your mouth “strong.”
+        It’s about keeping soft tissue comfortable and functional.
+        If a product relies on shock (burn, sting, numb), it’s usually doing too much.
+      </p>
+    </section>
+
   </div>
 </main>
 
@@ -191,6 +342,9 @@
   </div>
 </footer>
 
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
