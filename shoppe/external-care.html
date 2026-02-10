@@ -1,44 +1,195 @@
-<section class="panel">
-  <h2>Selected items</h2>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>External care — The Shoppe — WAP MOP SHOPPE</title>
 
-  <article class="panel">
-    <h3>Gentle, unscented external cleanser</h3>
-    <p>
-      A fragrance-free cleanser designed for skin — not deodorizing,
-      not numbing, and not trying to “correct” anything.
-    </p>
-    <p>
-      Chosen because it cleans comfortably, stays external,
-      and doesn’t create irritation loops.
-    </p>
-    <p class="muted">
-      Not for internal use. Not marketed as freshness.
-    </p>
-  </article>
+  <meta name="description" content="External-only care chosen to support delicate ecosystems—without interference, fragrance, or performance theater." />
+  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
-  <article class="panel">
-    <h3>Soft reusable cloths</h3>
-    <p>
-      Plain cotton or bamboo cloths that let you control pressure,
-      moisture, and friction — without chemicals.
-    </p>
-    <p>
-      Chosen because hands and water do most of the work.
-      Cloths just help with gentleness.
-    </p>
-    <p class="muted">
-      Not scented wipes. Not disposable irritation.
-    </p>
-  </article>
+  <style>
+    header, nav, main, footer, section, article { display:block; }
+    * { visibility:visible; opacity:1; }
 
-  <article class="panel">
-    <h3>Simple, neutral moisturizer</h3>
-    <p>
-      A basic moisturizer for external skin comfort after washing
-      or friction — no actives, no fragrance, no sensation.
+    body{
+      margin:0; background:#f4f4f4; color:#111;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55;
+    }
+    .container{ max-width:980px; margin:0 auto; padding:0 20px; }
+
+    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
+    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .brand img{ width:64px; height:auto; display:block; }
+    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; white-space:nowrap; }
+    nav{ display:flex; gap:16px; flex-wrap:wrap; }
+    nav a{ text-decoration:none; color:#111; font-weight:500; }
+
+    main{ background:#fffdf8; padding:54px 0 52px; border-bottom:1px solid rgba(0,0,0,.12); }
+    h1{ font-size:38px; line-height:1.1; margin:0 0 10px 0; font-weight:800; }
+    .lede{ font-size:19px; opacity:.9; margin:0 0 18px 0; max-width:860px; }
+    .back a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+
+    .rule{ height:1px; background:rgba(0,0,0,.12); margin:22px 0; }
+
+    .note{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px; background:#fff; padding:16px 18px; opacity:.92; margin:14px 0;
+    }
+
+    .products{
+      display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:12px;
+    }
+    .card{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px; background:#fff; padding:16px;
+      display:flex; flex-direction:column; gap:10px; min-height:250px;
+    }
+    .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.7; }
+    .title{ font-size:16px; font-weight:800; line-height:1.2; margin:0; }
+    .title a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+    .why{ margin:0; opacity:.9; font-size:14px; }
+    .bullets{ margin:0; padding-left:18px; opacity:.9; font-size:14px; }
+    .bullets li{ margin:6px 0; }
+
+    .actions{ margin-top:auto; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:999px;
+      background:#111; color:#fff; text-decoration:none;
+      font-weight:700; font-size:13px; letter-spacing:.02em;
+    }
+    .btn:hover{ background:#000; }
+
+    .disclosure{
+      font-size:13px; opacity:.78; margin-top:18px; max-width:860px;
+    }
+
+    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
+    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+
+    @media (max-width:920px){
+      .products{ grid-template-columns:1fr; }
+      .header-inner{ flex-direction:column; align-items:flex-start; }
+      h1{ font-size:32px; }
+      .lede{ font-size:18px; }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="/wapmopshoppe/"><img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp"></a>
+      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="/wapmopshoppe/articles/">Articles</a>
+      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
+      <a href="/wapmopshoppe/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <p class="back"><a href="/wapmopshoppe/shoppe/">← Back to The Shoppe</a></p>
+
+    <h1>External care</h1>
+    <p class="lede">
+      External means external. The goal is clean and comfortable—without “freshness theater,” harsh surfactants,
+      or anything that trains you to overcorrect a healthy ecosystem.
     </p>
-    <p>
-      Chosen because calm skin heals faster than “treated” skin.
+
+    <div class="note">
+      <strong>House rule:</strong> if a product implies internal use, it doesn’t belong here.
+    </div>
+
+    <div class="rule"></div>
+
+    <section class="products" aria-label="Curated products">
+
+      <!-- Item 1 -->
+      <article class="card">
+        <div class="kicker">CLEANSE</div>
+        <h2 class="title">
+          <a href="https://www.vanicream.com/product/vanicream-body-wash" target="_blank" rel="noopener">
+            Vanicream Gentle Body Wash
+          </a>
+        </h2>
+        <p class="why">
+          A boring winner for sensitive skin: fragrance-free, soap-free, and uninterested in drama.
+        </p>
+        <ul class="bullets">
+          <li>Comfortable for daily, external-only washing</li>
+          <li>Less sting, less fallout when skin is irritated</li>
+          <li>Pairs well with warm water and restraint</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.vanicream.com/product/vanicream-body-wash" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="card">
+        <div class="kicker">BAR</div>
+        <h2 class="title">
+          <a href="https://www.dove.com/us/en/p/sensitive-skin-beauty-bar.html/00011111613782" target="_blank" rel="noopener">
+            Dove Sensitive Skin Beauty Bar
+          </a>
+        </h2>
+        <p class="why">
+          Fragrance-free and straightforward—useful when you want simple cleansing without stripping.
+        </p>
+        <ul class="bullets">
+          <li>Solid option for minimal routines or travel</li>
+          <li>Skip “extra scrubbing” energy</li>
+          <li>Rinse thoroughly; keep it external</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.dove.com/us/en/p/sensitive-skin-beauty-bar.html/00011111613782" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="card">
+        <div class="kicker">RESET</div>
+        <h2 class="title">
+          <a href="https://www.waterwipes.com/products/newborn/waterwipes-original-baby-wipes" target="_blank" rel="noopener">
+            WaterWipes Original
+          </a>
+        </h2>
+        <p class="why">
+          For “I need to clean up” moments when fragrance-free matters more than fancy.
+        </p>
+        <ul class="bullets">
+          <li>Useful for external cleanup on-the-go</li>
+          <li>Avoids perfumed wipe regret</li>
+          <li>Not a substitute for gentle showering—just a tool</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.waterwipes.com/products/newborn/waterwipes-original-baby-wipes" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="disclosure">
+      Some links on this page may be affiliate links. The criteria don’t change—only what keeps the lights on.
+      <br>Not medical advice; persistent pain, odor, itching, or unusual discharge deserves a check-in.
     </p>
-  </article>
-</section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
