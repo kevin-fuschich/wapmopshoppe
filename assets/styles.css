@@ -412,3 +412,78 @@ body {
   background-size: 26px 26px;
   background-position: 0 0;
 }
+/* === WAP MOP SHOPPE: visual accents === */
+:root{
+  --paper: #fffdf8;
+  --ink: #111111;
+  --muted: rgba(0,0,0,.72);
+  --border: rgba(0,0,0,.12);
+  --accent: #C0442C;          /* warm red-brown (fits stamp) */
+  --accent-soft: rgba(192,68,44,.12);
+}
+
+/* subtle accent rule */
+.accent-rule{
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border: 0;
+  margin: 22px 0 28px;
+}
+
+/* tag pills */
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style:none;
+}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 13px;
+  color: var(--ink);
+}
+.tag::before{
+  content:"";
+  width:8px; height:8px;
+  border-radius:999px;
+  background: var(--accent);
+  opacity:.85;
+}
+
+/* diagram / figure card */
+.figure-card{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  padding: 16px;
+  margin: 20px 0 26px;
+}
+.figure-card .figure-title{
+  margin: 0 0 10px;
+  font-size: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* small “accent corner” for cards */
+.accent-corner{
+  position: relative;
+  overflow: hidden;
+}
+.accent-corner::after{
+  content:"";
+  position:absolute;
+  top:-40px; right:-40px;
+  width:120px; height:120px;
+  background: var(--accent-soft);
+  transform: rotate(35deg);
+}
