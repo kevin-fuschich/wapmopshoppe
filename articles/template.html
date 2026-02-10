@@ -10,18 +10,18 @@
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
   <style>
+    header, nav, main, footer, section, article { display:block; }
     body{
       margin:0;
       background:#f4f4f4;
       color:#111;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       line-height:1.6;
     }
+    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
+    .content{ max-width:780px; margin:0 auto; }
 
-    .site-header{
-      background:#fffdf8;
-      border-bottom:1px solid rgba(0,0,0,.12);
-    }
+    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
     .header-inner{
       display:flex;
       align-items:center;
@@ -29,11 +29,7 @@
       gap:16px;
       padding:18px 0;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+    .brand{ display:flex; align-items:center; gap:12px; }
     .brand img{ width:56px; height:auto; display:block; }
     .wordmark{
       font-weight:800;
@@ -42,16 +38,8 @@
       color:#111;
       white-space:nowrap;
     }
-    nav{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-    nav a{
-      text-decoration:none;
-      color:#111;
-      font-weight:500;
-    }
+    nav{ display:flex; gap:16px; flex-wrap:wrap; }
+    nav a{ text-decoration:none; color:#111; font-weight:500; }
 
     main{
       background:#fffdf8;
@@ -63,27 +51,82 @@
       font-size:36px;
       line-height:1.15;
       margin:0 0 18px 0;
-      font-weight:800;
+      font-weight:900;
+      letter-spacing:-.01em;
     }
     .lede{
       font-size:20px;
       opacity:.9;
-      margin:0 0 18px 0;
+      margin:0 0 22px 0;
     }
     p{ margin:0 0 18px 0; font-size:16px; }
-    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:800; }
+    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
 
-    .callout{
+    .accent-rule{
+      height: 2px;
+      border:0;
+      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
+      margin: 20px 0 18px;
+    }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 0 0 18px 0;
+      padding:0;
+      list-style:none;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,.12);
+      background:#fff;
+      font-size: 13px;
+      color:#111;
+    }
+    .tag::before{
+      content:"";
+      width:8px; height:8px;
+      border-radius:999px;
+      background: rgba(192,68,44,1);
+      opacity:.85;
+    }
+
+    /* Standard “Related care” block (the key addition) */
+    .related{
       border:1px solid rgba(0,0,0,.12);
       border-radius:16px;
-      padding:18px;
       background:#fff;
-      margin:28px 0;
+      padding:18px;
+      margin:28px 0 0;
     }
+    .related .kicker{
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      opacity:.75;
+      margin-bottom:8px;
+      font-weight:900;
+    }
+    .related p{
+      margin:0 0 10px 0;
+      font-size:15px;
+      opacity:.92;
+    }
+    .related a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+      font-weight:900;
+    }
+
     .meta{
       font-size:13px;
       opacity:.7;
-      margin-top:32px;
+      margin-top:22px;
     }
 
     footer{
@@ -128,6 +171,7 @@
   <div class="container">
     <div class="content">
       <article>
+
         <h1>Article title</h1>
         <p class="lede">Your lede goes here.</p>
 
@@ -140,11 +184,17 @@
 
         <p>Body copy…</p>
 
-        <section class="callout">
-          <p>Callout…</p>
-        </section>
+        <!-- STANDARD RELATED CARE BLOCK -->
+        <aside class="related" aria-label="Related care">
+          <div class="kicker">Related care</div>
+          <p>
+            Looking for practical options that match this approach?
+            Visit the <a href="/wapmopshoppe/shoppe/">Shoppe</a> for intentionally short, comfort-first lists.
+          </p>
+        </aside>
 
-        <p class="meta">Not medical advice…</p>
+        <p class="meta">Not medical advice.</p>
+
       </article>
     </div>
   </div>
