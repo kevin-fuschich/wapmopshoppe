@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
-    header, nav, main, footer, section, article { display:block; }
+    header, nav, main, footer, section, article, aside { display:block; }
     body{
       margin:0;
       background:#f4f4f4;
@@ -19,6 +19,7 @@
       line-height:1.6;
     }
     .container{ max-width:960px; margin:0 auto; padding:0 20px; }
+
     .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
     .header-inner{
       display:flex; align-items:center; justify-content:space-between;
@@ -27,92 +28,110 @@
     .brand{ display:flex; align-items:center; gap:12px; }
     .brand img{ width:56px; height:auto; display:block; }
     .wordmark{
-      font-weight:800; letter-spacing:.06em;
+      font-weight:900; letter-spacing:.06em;
       text-decoration:none; color:#111; white-space:nowrap;
     }
     nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
+    nav a{ text-decoration:none; color:#111; font-weight:600; }
 
     main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
+
     .hero{
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:24px;
-      align-items:center;
+      grid-template-columns: 1.25fr .75fr;
+      gap:28px;
+      align-items:start;
     }
     h1{
-      font-size:46px; line-height:1.05; margin:0 0 14px 0;
-      font-weight:900; letter-spacing:-.01em;
+      margin:0 0 14px 0;
+      font-size:44px; line-height:1.03;
+      font-weight:950; letter-spacing:-.015em;
     }
-    .lede{ font-size:20px; opacity:.9; margin:0 0 18px 0; max-width:56ch; }
-    .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .lede{
+      margin:0 0 18px 0;
+      font-size:20px; opacity:.9;
+      max-width:740px;
+    }
+    .cta-row{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top:18px;
+    }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px; border-radius:12px;
-      text-decoration:none; font-weight:900;
+      padding:12px 14px;
+      border-radius:999px;
       border:1px solid rgba(0,0,0,.18);
-      background:#fff; color:#111;
+      background:#fff;
+      color:#111;
+      text-decoration:none;
+      font-weight:900;
+      font-size:14px;
     }
     .btn.primary{
-      background: rgba(192,68,44,1);
-      border-color: rgba(192,68,44,1);
-      color:#fff;
-    }
-
-    .visual{
-      display:flex; flex-direction:column; gap:14px; align-items:flex-end;
-    }
-    .stamp{
-      width:140px; height:auto; display:block;
-      border-radius:16px;
-      background:#fff;
-      border:1px solid rgba(0,0,0,.12);
-      padding:10px;
-    }
-    .meister{
-      width:min(320px, 100%);
-      height:auto;
-      display:block;
-      border-radius:18px;
-      border:1px solid rgba(0,0,0,.12);
-      background:#fff;
-      padding:12px;
+      border-color:rgba(0,0,0,.2);
+      background: rgba(192,68,44,.10);
     }
 
     .accent-rule{
       height:2px; border:0;
       background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 24px 0 18px;
+      margin: 22px 0 18px;
+    }
+
+    .card{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:18px;
+      background:#fff;
+      padding:18px;
+    }
+
+    .meister-wrap{
+      display:flex;
+      justify-content:flex-end;
+      gap:12px;
+    }
+    .meister{
+      width: 280px;
+      max-width: 100%;
+      height:auto;
+      display:block;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.08));
+    }
+    .stamp-mini{
+      width:80px; height:auto; display:block; opacity:.95;
     }
 
     .grid{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       gap:14px;
-      margin-top:22px;
+      margin-top:18px;
     }
-    .card{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:16px;
+    .tile h2{
+      margin:0 0 6px 0;
+      font-size:16px;
+      font-weight:950;
     }
-    .card h2{ margin:0 0 8px 0; font-size:18px; font-weight:900; }
-    .card p{ margin:0 0 10px 0; font-size:14px; opacity:.9; }
-    .card a{
-      color:#111; text-decoration:none;
+    .tile p{
+      margin:0;
+      font-size:14px;
+      opacity:.88;
+    }
+    .tile a{
+      color:#111;
+      text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
-      font-weight:900; font-size:13px;
+      font-weight:900;
     }
 
     footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
     footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
 
-    @media (max-width:900px){
+    @media (max-width:920px){
       .hero{ grid-template-columns: 1fr; }
-      .visual{ align-items:flex-start; }
+      .meister-wrap{ justify-content:flex-start; }
       h1{ font-size:38px; }
-      .grid{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -121,7 +140,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/">
+      <a href="/" aria-label="Home">
         <img src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
       </a>
       <a class="wordmark" href="/">WAP MOP SHOPPE</a>
@@ -137,9 +156,9 @@
 
 <main>
   <div class="container">
-    <section class="hero" aria-label="Homepage intro">
+    <section class="hero" aria-label="Intro">
       <div>
-        <h1>Tongue in cheek.<br>Care in earnest.</h1>
+        <h1>Tongue in cheek.<br>Care in full.</h1>
         <p class="lede">
           Thoughtful guidance on caring for bodies you’re close to —
           what helps, what interferes, and when to stop.
@@ -147,34 +166,36 @@
 
         <hr class="accent-rule">
 
-        <div class="cta-row">
-          <a class="btn primary" href="/shoppe/">Browse the Shoppe</a>
-          <a class="btn" href="/articles/">Read Articles</a>
+        <div class="cta-row" aria-label="Primary actions">
+          <a class="btn primary" href="/articles/">Read the field guide</a>
+          <a class="btn" href="/shoppe/">Browse the Shoppe</a>
+        </div>
+
+        <div class="grid" aria-label="Start here">
+          <div class="card tile">
+            <h2><a href="/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a></h2>
+            <p>Balance is a range. Most “freshness” problems are interference problems.</p>
+          </div>
+          <div class="card tile">
+            <h2><a href="/articles/mouths-as-systems.html">Mouths as systems</a></h2>
+            <p>Gentle beats harsh. Comfort-first oral care that doesn’t overcorrect.</p>
+          </div>
+          <div class="card tile">
+            <h2><a href="/articles/the-best-wipes.html">The best wipes</a></h2>
+            <p>Boring on purpose. External-only cleanup without irritation loops.</p>
+          </div>
         </div>
       </div>
 
-      <div class="visual" aria-label="Brand visuals">
-        <img class="stamp" src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp mark">
-        <img class="meister" src="/assets/images/wap-mop-meister.png" alt="WAP MOP SHOPPE mascot illustration">
-      </div>
-    </section>
-
-    <section class="grid" aria-label="Start here">
-      <div class="card">
-        <h2>External care</h2>
-        <p>Keep it outside. Keep it gentle. Neutral is the goal.</p>
-        <a href="/shoppe/external-care.html">Go to External care</a>
-      </div>
-      <div class="card">
-        <h2>Oral care</h2>
-        <p>Less burn, more balance. Comfort-first choices.</p>
-        <a href="/shoppe/oral-care.html">Go to Oral care</a>
-      </div>
-      <div class="card">
-        <h2>Aftercare</h2>
-        <p>Close the loop. Physically and emotionally.</p>
-        <a href="/shoppe/aftercare.html">Go to Aftercare</a>
-      </div>
+      <aside class="card" aria-label="Mascot">
+        <div class="meister-wrap">
+          <img class="stamp-mini" src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+          <img class="meister" src="/assets/images/wap-mop-meister.png" alt="The WAP MOP SHOPPE mascot, arms folded, alpine apothecary style.">
+        </div>
+        <p style="margin:14px 0 0 0; font-size:14px; opacity:.88;">
+          No shame. No perfume theater. Just practical care that respects the body’s boundaries.
+        </p>
+      </aside>
     </section>
   </div>
 </main>
