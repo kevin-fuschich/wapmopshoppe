@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oral care — The Shoppe — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Oral care chosen for comfort, cleanliness, and respect — not harshness or performance." />
+  <meta name="description" content="Oral care chosen for comfort and ecosystem support—without burn, bravado, or dryness." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
@@ -13,7 +13,11 @@
     header, nav, main, footer, section, article { display:block; }
     * { visibility:visible; opacity:1; }
 
-    body{ margin:0; background:#f4f4f4; color:#111; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.55; }
+    body{
+      margin:0; background:#f4f4f4; color:#111;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55;
+    }
     .container{ max-width:980px; margin:0 auto; padding:0 20px; }
 
     .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
@@ -26,35 +30,48 @@
 
     main{ background:#fffdf8; padding:54px 0 52px; border-bottom:1px solid rgba(0,0,0,.12); }
     h1{ font-size:38px; line-height:1.1; margin:0 0 10px 0; font-weight:800; }
-    .lede{ font-size:19px; opacity:.9; margin:0 0 18px 0; max-width:820px; }
+    .lede{ font-size:19px; opacity:.9; margin:0 0 18px 0; max-width:860px; }
     .back a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
 
     .rule{ height:1px; background:rgba(0,0,0,.12); margin:22px 0; }
 
-    .panel{
+    .note{
       border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:18px;
-      margin:14px 0;
+      border-radius:16px; background:#fff; padding:16px 18px; opacity:.92; margin:14px 0;
     }
-    .panel h2{ margin:0 0 10px 0; font-size:18px; }
-    .panel ul{ margin:0; padding-left:18px; }
-    .panel li{ margin:6px 0; opacity:.92; }
 
-    .placeholder{
-      border:1px dashed rgba(0,0,0,.28);
-      border-radius:16px;
-      background:#fff;
-      padding:18px;
-      margin-top:18px;
+    .products{
+      display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:12px;
     }
-    .placeholder p{ margin:0; opacity:.9; }
+    .card{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px; background:#fff; padding:16px;
+      display:flex; flex-direction:column; gap:10px; min-height:255px;
+    }
+    .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.7; }
+    .title{ font-size:16px; font-weight:800; line-height:1.2; margin:0; }
+    .title a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+    .why{ margin:0; opacity:.9; font-size:14px; }
+    .bullets{ margin:0; padding-left:18px; opacity:.9; font-size:14px; }
+    .bullets li{ margin:6px 0; }
+
+    .actions{ margin-top:auto; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:999px;
+      background:#111; color:#fff; text-decoration:none;
+      font-weight:700; font-size:13px; letter-spacing:.02em;
+    }
+    .btn:hover{ background:#000; }
+
+    .disclosure{
+      font-size:13px; opacity:.78; margin-top:18px; max-width:860px;
+    }
 
     footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
     footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
 
-    @media (max-width:820px){
+    @media (max-width:920px){
+      .products{ grid-template-columns:1fr; }
       .header-inner{ flex-direction:column; align-items:flex-start; }
       h1{ font-size:32px; }
       .lede{ font-size:18px; }
@@ -66,9 +83,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/wapmopshoppe/">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
-      </a>
+      <a href="/wapmopshoppe/"><img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp"></a>
       <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
 
@@ -86,44 +101,93 @@
 
     <h1>Oral care</h1>
     <p class="lede">
-      Mouths are ecosystems too. This collection favors gentle maintenance, hydration, and comfort —
-      not harshness, “burn,” or chemical bravado.
+      Mouths are ecosystems. This list favors comfort and hydration support—without the “sting = effective” myth.
+      If your routine leaves you chronically dry, it’s too aggressive.
     </p>
+
+    <div class="note">
+      <strong>House rule:</strong> fresh breath is great. Nuking your mouth isn’t.
+    </div>
 
     <div class="rule"></div>
 
-    <section class="panel">
-      <h2>What we’re selecting for</h2>
-      <ul>
-        <li>Gentle, daily-use basics</li>
-        <li>Hydration support (especially for dryness)</li>
-        <li>Non-irritating ingredients and clear intent</li>
-        <li>Clean breath without turning your mouth into a desert</li>
-      </ul>
+    <section class="products" aria-label="Curated products">
+
+      <!-- Item 1 -->
+      <article class="card">
+        <div class="kicker">DRY MOUTH</div>
+        <h2 class="title">
+          <a href="https://www.biotene.com/dry-mouth-products/mouthwash/" target="_blank" rel="noopener">
+            Biotène Dry Mouth Oral Rinse
+          </a>
+        </h2>
+        <p class="why">
+          A good option when dryness is the enemy. Comfort-forward, not punishment-forward.
+        </p>
+        <ul class="bullets">
+          <li>Useful if meds, stress, or mouth-breathing dry you out</li>
+          <li>Good “pre-date” tool when hydration matters</li>
+          <li>Pairs well with water + gentle brushing</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.biotene.com/dry-mouth-products/mouthwash/" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="card">
+        <div class="kicker">BREATH</div>
+        <h2 class="title">
+          <a href="https://www.therabreath.com/products/fresh-breath-oral-rinse-icy-mint" target="_blank" rel="noopener">
+            TheraBreath Fresh Breath Oral Rinse
+          </a>
+        </h2>
+        <p class="why">
+          Breath support without the “alcohol burn” identity. Quiet, functional, not macho.
+        </p>
+        <ul class="bullets">
+          <li>Useful when you want clean breath without dryness fallout</li>
+          <li>Better vibes than “mint flamethrower” mouthwash</li>
+          <li>Works best with tongue scraping + water</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.therabreath.com/products/fresh-breath-oral-rinse-icy-mint" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="card">
+        <div class="kicker">OVERNIGHT</div>
+        <h2 class="title">
+          <a href="https://www.oralscience.com/en/products/xylimelts/" target="_blank" rel="noopener">
+            XyliMelts (OraCoat)
+          </a>
+        </h2>
+        <p class="why">
+          For people whose dryness shows up at night. Slow support, low drama.
+        </p>
+        <ul class="bullets">
+          <li>Helpful if you wake up with cotton-mouth</li>
+          <li>Discreet—doesn’t require a whole routine</li>
+          <li>Pairs well with humidifier season</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.oralscience.com/en/products/xylimelts/" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
     </section>
 
-    <section class="panel">
-      <h2>What we’re excluding</h2>
-      <ul>
-        <li>Products that rely on “sting” or “burn” to feel effective</li>
-        <li>Overly strong whitening routines as a default</li>
-        <li>Anything that leaves the mouth chronically dry</li>
-      </ul>
-    </section>
-
-    <section class="placeholder" aria-label="Product placeholders">
-      <p>
-        Recommendations will live here. We’ll add a short list of the basics first —
-        then only expand if it’s truly necessary.
-      </p>
-    </section>
+    <p class="disclosure">
+      Some links on this page may be affiliate links. The bar stays the bar.
+      <br>Not medical advice; persistent mouth pain, sores, bleeding gums, or worsening dryness deserves a dental/medical check-in.
+    </p>
   </div>
 </main>
 
 <footer>
   <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE ·
-    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
