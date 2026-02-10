@@ -5,214 +5,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Articles — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Short, respectful guides on mouths, skin, and vaginas as systems." />
+  <meta name="description" content="Systems-first writing about care, intimacy, and respect. No shame. No gimmicks." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
 
-  <!-- Keep your global CSS, but don’t rely on it for the header layout -->
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/visuals.css">
 
   <style>
-    /* --- Hard-stop: make sure nothing critical is hidden by external CSS --- */
     header, nav, main, footer { display:block; }
-    nav a, .wordmark, h1, p, ul, li { visibility:visible; opacity:1; }
-
-    /* --- Basic page layout (self-contained) --- */
-    :root{
-      --ink:#111214;
-      --paper:#fffdf8;
-      --rule: rgba(17,18,20,.14);
-    }
+    * { visibility:visible; opacity:1; }
 
     body{
       margin:0;
-      color:var(--ink);
-      background: #f4f4f4;
+      background:#f4f4f4;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height:1.45;
+      line-height:1.55;
+      color:#111;
     }
 
-    .container{
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
+    .container{ max-width:900px; margin:0 auto; padding:0 18px; }
 
-    .narrow{ max-width: 900px; }
-
-    /* --- Header (stamp + wordmark + nav) --- */
+    /* Header */
     .site-header{
-      background: var(--paper);
-      border-bottom: 1px solid var(--rule);
+      background:#fffdf8;
+      border-bottom:1px solid rgba(0,0,0,.12);
     }
-
     .header-inner{
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:16px;
-      padding: 18px 0;
+      padding:18px 0;
     }
-
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
-      min-width:0;
     }
-
-    .brand-stamp img{
-      width:64px;
-      height:auto;
-      display:block;
-    }
-
+    .brand img{ width:64px; height:auto; }
     .wordmark{
-      text-decoration:none;
-      color:inherit;
       font-weight:800;
       letter-spacing:.06em;
+      text-decoration:none;
+      color:#111;
       white-space:nowrap;
     }
-
     nav{
       display:flex;
       gap:14px;
       flex-wrap:wrap;
-      justify-content:flex-end;
     }
-
     nav a{
-      color:inherit;
       text-decoration:none;
-      padding:6px 8px;
-      border-radius:10px;
+      color:#111;
     }
-
-    nav a:hover{
+    nav a[aria-current="page"]{
+      font-weight:700;
       text-decoration:underline;
     }
 
-    nav a[aria-current="page"]{
-      outline: 1px solid var(--rule);
-      background: rgba(255,255,255,.6);
-    }
-
-    /* --- Main --- */
+    /* Main */
     main{
-      background: var(--paper);
-      padding: 26px 0 34px;
-      border-bottom: 1px solid var(--rule);
+      background:#fffdf8;
+      padding:32px 0 40px;
+    }
+    h1{
+      font-size:36px;
+      margin:0 0 10px 0;
+    }
+    .lede{
+      font-size:18px;
+      opacity:.9;
+      margin-bottom:26px;
     }
 
-    h1{ margin:0 0 10px 0; font-size: 34px; line-height:1.1; }
-    .lede{ font-size: 18px; opacity:.9; margin:0 0 18px 0; }
-
-    .rule{
-      height:1px;
-      background: var(--rule);
-      margin: 18px 0;
-    }
-
-    .cards{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
+    .article-list{
+      list-style:none;
       padding:0;
       margin:0;
-      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
     }
 
-    .card{
-      display:block;
-      text-decoration:none;
-      color:inherit;
-      border:1px solid var(--rule);
-      border-radius:14px;
+    .article-item{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      padding:16px;
       background:#fff;
-      padding:14px 14px;
     }
 
-    .card:hover{ border-color: rgba(17,18,20,.28); }
+    .article-item a{
+      text-decoration:none;
+      color:#111;
+      display:block;
+    }
 
-    .card-title{
+    .article-title{
+      font-size:20px;
+      font-weight:800;
       margin:0 0 6px 0;
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing:.02em;
     }
 
-    .card-desc{
+    .article-desc{
       margin:0;
-      opacity:.82;
+      opacity:.85;
     }
 
-    /* --- Footer --- */
+    .article-item:hover{
+      border-color: rgba(0,0,0,.35);
+    }
+
+    /* Footer */
     footer{
-      background: var(--paper);
-      padding: 16px 0;
+      background:#fffdf8;
+      padding:18px 0;
+      font-size:13px;
+      opacity:.85;
+      border-top:1px solid rgba(0,0,0,.12);
     }
-    .footer-text{ opacity:.85; font-size: 13px; }
-    .footer-text a{ color:inherit; text-decoration:none; border-bottom:1px solid rgba(17,18,20,.25); }
-    .footer-text a:hover{ border-bottom-color: rgba(17,18,20,.55); }
+    footer a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+    }
 
-    @media (max-width: 720px){
-      .header-inner{ align-items:flex-start; flex-direction:column; }
-      nav{ justify-content:flex-start; }
+    @media (max-width:700px){
+      .header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
     }
   </style>
 </head>
 
 <body>
 <header class="site-header">
-  <div class="container narrow header-inner">
+  <div class="container header-inner">
     <div class="brand">
-      <a class="brand-stamp" href="/wapmopshoppe/" aria-label="Home">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE guild seal">
+      <a href="/wapmopshoppe/">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
       </a>
-
-      <a class="wordmark" href="/wapmopshoppe/" aria-label="WAP MOP SHOPPE home">
-        WAP MOP SHOPPE
-      </a>
+      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
 
     <nav aria-label="Primary navigation">
-      <a href="/wapmopshoppe/articles/index.html" aria-current="page">Articles</a>
-      <a href="/wapmopshoppe/shoppe/index.html">Shoppe</a>
-      <a href="/wapmopshoppe/about/index.html">About</a>
+      <a href="/wapmopshoppe/articles/" aria-current="page">Articles</a>
+      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
+      <a href="/wapmopshoppe/about/">About</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="container narrow">
+  <div class="container">
     <h1>Articles</h1>
-    <p class="lede">Systems-first writing. No shame. No gimmicks. No “freshness myths.”</p>
+    <p class="lede">
+      Care is not about correcting bodies.  
+      It’s about understanding systems and behaving with respect inside them.
+    </p>
 
-    <div class="rule"></div>
+    <ul class="article-list">
 
-    <ul class="cards" aria-label="Article list">
-      <li>
-        <a class="card" href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">
-          <p class="card-title">Vaginas as ecosystems</p>
-          <p class="card-desc">Balance, pH, and why restraint is often the best “product.”</p>
+      <li class="article-item">
+        <a href="/wapmopshoppe/articles/vaginas-as-ecosystems.html">
+          <p class="article-title">Vaginas as ecosystems</p>
+          <p class="article-desc">pH, balance, and why restraint is usually the right move.</p>
         </a>
       </li>
 
-      <li>
-        <a class="card" href="/wapmopshoppe/articles/mouths-as-systems.html">
-          <p class="card-title">Mouths as systems</p>
-          <p class="card-desc">Timing, moisture, and gentleness. (In that order.)</p>
+      <li class="article-item">
+        <a href="/wapmopshoppe/articles/mouths-as-systems.html">
+          <p class="article-title">Mouths as systems</p>
+          <p class="article-desc">Timing, moisture, pressure — and why gentleness wins.</p>
         </a>
       </li>
+
+      <li class="article-item">
+        <a href="/wapmopshoppe/articles/skin-as-a-system.html">
+          <p class="article-title">Skin as a system</p>
+          <p class="article-desc">Barrier care, simplicity, and stopping the experiment cycle.</p>
+        </a>
+      </li>
+
+      <li class="article-item">
+        <a href="/wapmopshoppe/articles/external-means-external.html">
+          <p class="article-title">External means external</p>
+          <p class="article-desc">The simplest rule with the highest payoff.</p>
+        </a>
+      </li>
+
+      <li class="article-item">
+        <a href="/wapmopshoppe/articles/aftercare-is-respect.html">
+          <p class="article-title">Aftercare is respect</p>
+          <p class="article-desc">After doesn’t mean absent.</p>
+        </a>
+      </li>
+
     </ul>
   </div>
 </main>
 
 <footer>
-  <div class="container narrow footer-text">
+  <div class="container">
     © <span id="y"></span> WAP MOP SHOPPE ·
-    <a href="/wapmopshoppe/disclosure/index.html">Disclosure</a>
+    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
