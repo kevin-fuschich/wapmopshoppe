@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skin — The Shoppe — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Skin care chosen to support the barrier and avoid irritation loops." />
+  <meta name="description" content="Skin picks that support the barrier—simple, calm, and not theatrical." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
   <style>
     header, nav, main, footer, section, article { display:block; }
     * { visibility:visible; opacity:1; }
-    body{ margin:0; background:#f4f4f4; color:#111; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.55; }
+
+    body{
+      margin:0; background:#f4f4f4; color:#111;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55;
+    }
     .container{ max-width:980px; margin:0 auto; padding:0 20px; }
 
     .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
@@ -25,23 +30,48 @@
 
     main{ background:#fffdf8; padding:54px 0 52px; border-bottom:1px solid rgba(0,0,0,.12); }
     h1{ font-size:38px; line-height:1.1; margin:0 0 10px 0; font-weight:800; }
-    .lede{ font-size:19px; opacity:.9; margin:0 0 18px 0; max-width:820px; }
+    .lede{ font-size:19px; opacity:.9; margin:0 0 18px 0; max-width:860px; }
     .back a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
 
     .rule{ height:1px; background:rgba(0,0,0,.12); margin:22px 0; }
 
-    .panel{ border:1px solid rgba(0,0,0,.12); border-radius:16px; background:#fff; padding:18px; margin:14px 0; }
-    .panel h2{ margin:0 0 10px 0; font-size:18px; }
-    .panel ul{ margin:0; padding-left:18px; }
-    .panel li{ margin:6px 0; opacity:.92; }
+    .note{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px; background:#fff; padding:16px 18px; opacity:.92; margin:14px 0;
+    }
 
-    .placeholder{ border:1px dashed rgba(0,0,0,.28); border-radius:16px; background:#fff; padding:18px; margin-top:18px; }
-    .placeholder p{ margin:0; opacity:.9; }
+    .products{
+      display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:12px;
+    }
+    .card{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px; background:#fff; padding:16px;
+      display:flex; flex-direction:column; gap:10px; min-height:255px;
+    }
+    .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.7; }
+    .title{ font-size:16px; font-weight:800; line-height:1.2; margin:0; }
+    .title a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+    .why{ margin:0; opacity:.9; font-size:14px; }
+    .bullets{ margin:0; padding-left:18px; opacity:.9; font-size:14px; }
+    .bullets li{ margin:6px 0; }
+
+    .actions{ margin-top:auto; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:999px;
+      background:#111; color:#fff; text-decoration:none;
+      font-weight:700; font-size:13px; letter-spacing:.02em;
+    }
+    .btn:hover{ background:#000; }
+
+    .disclosure{
+      font-size:13px; opacity:.78; margin-top:18px; max-width:860px;
+    }
 
     footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
     footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
 
-    @media (max-width:820px){
+    @media (max-width:920px){
+      .products{ grid-template-columns:1fr; }
       .header-inner{ flex-direction:column; align-items:flex-start; }
       h1{ font-size:32px; }
       .lede{ font-size:18px; }
@@ -53,9 +83,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/wapmopshoppe/">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
-      </a>
+      <a href="/wapmopshoppe/"><img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp"></a>
       <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
 
@@ -73,44 +101,93 @@
 
     <h1>Skin</h1>
     <p class="lede">
-      Skin is a barrier and an ecosystem. This collection favors calm routines that support the barrier —
-      without chasing sensation, novelty, or overcorrection.
+      Skin is your barrier. The goal is to support it—clean gently, moisturize consistently, wear sunscreen.
+      Anything “extra” has to earn its place without starting a fight.
     </p>
+
+    <div class="note">
+      <strong>House rule:</strong> if a product needs burning, tingling, or peeling to feel “effective,” it’s not welcome here.
+    </div>
 
     <div class="rule"></div>
 
-    <section class="panel">
-      <h2>What we’re selecting for</h2>
-      <ul>
-        <li>Gentle cleanser + simple moisturizer first</li>
-        <li>Fragrance-free or low-fragrance options</li>
-        <li>Products that don’t make you “feel” them working</li>
-        <li>Barrier-supporting basics that tolerate daily use</li>
-      </ul>
+    <section class="products" aria-label="Curated products">
+
+      <!-- Item 1 -->
+      <article class="card">
+        <div class="kicker">CLEANSE</div>
+        <h2 class="title">
+          <a href="https://www.vanicream.com/product/vanicream-facial-cleanser" target="_blank" rel="noopener">
+            Vanicream Gentle Facial Cleanser
+          </a>
+        </h2>
+        <p class="why">
+          A calm, fragrance-free cleanser that doesn’t try to be a personality.
+        </p>
+        <ul class="bullets">
+          <li>Good for reactive or easily-irritated skin</li>
+          <li>Plays well with minimalist routines</li>
+          <li>A true “reset” product when everything else is too much</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.vanicream.com/product/vanicream-facial-cleanser" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="card">
+        <div class="kicker">MOISTURIZE</div>
+        <h2 class="title">
+          <a href="https://www.cerave.com/skincare/moisturizers/moisturizing-cream" target="_blank" rel="noopener">
+            CeraVe Moisturizing Cream
+          </a>
+        </h2>
+        <p class="why">
+          Reliable barrier support. Face or body. Unsexy in the best way.
+        </p>
+        <ul class="bullets">
+          <li>Useful after showering or when skin is tight/dry</li>
+          <li>Helps reduce “chasing fixes” energy</li>
+          <li>Good baseline before you add anything else</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://www.cerave.com/skincare/moisturizers/moisturizing-cream" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="card">
+        <div class="kicker">SUNSCREEN</div>
+        <h2 class="title">
+          <a href="https://eltamd.com/products/uv-clear-broad-spectrum-spf-46" target="_blank" rel="noopener">
+            EltaMD UV Clear SPF 46
+          </a>
+        </h2>
+        <p class="why">
+          A daily SPF that people actually wear—lightweight, not heavy, not greasy.
+        </p>
+        <ul class="bullets">
+          <li>Works well for many acne-prone or sensitive routines</li>
+          <li>Easy to keep in rotation without “SPF fatigue”</li>
+          <li>The most boring skincare advice is also the best one</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="https://eltamd.com/products/uv-clear-broad-spectrum-spf-46" target="_blank" rel="noopener">View</a>
+        </div>
+      </article>
+
     </section>
 
-    <section class="panel">
-      <h2>What we’re excluding</h2>
-      <ul>
-        <li>Aggressive scrubs and harsh surfactants</li>
-        <li>Irritation-as-feedback (“tingle” culture)</li>
-        <li>Over-layering actives as the default plan</li>
-      </ul>
-    </section>
-
-    <section class="placeholder" aria-label="Product placeholders">
-      <p>
-        This will become a short list of boring winners. Cleanser. Moisturizer. Sunscreen.
-        Anything else has to earn its way in.
-      </p>
-    </section>
+    <p class="disclosure">
+      Some links on this page may be affiliate links. The list stays short either way.
+      <br>Not medical advice; persistent rash, swelling, pain, or severe acne deserves a clinician.
+    </p>
   </div>
 </main>
 
 <footer>
   <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE ·
-    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
