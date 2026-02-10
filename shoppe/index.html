@@ -1,208 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Shoppe — WAP MOP SHOPPE</title>
 
-  <!-- Primary Meta -->
-  <meta name="description" content="A deliberately small shortlist: gentle, compatible products chosen to respect skin, mouths, and intimate ecosystems. No gimmicks. No shame." />
-  <link rel="canonical" href="https://kevin-fuschich.github.io/wapmopshoppe/shoppe/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Shoppe — WAP MOP SHOPPE" />
-  <meta property="og:description" content="A small shortlist. High standards. Products chosen for gentleness, compatibility, and respect for systems." />
-  <meta property="og:url" content="https://kevin-fuschich.github.io/wapmopshoppe/shoppe/" />
-  <meta property="og:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Shoppe — WAP MOP SHOPPE" />
-  <meta name="twitter:description" content="A deliberately small shortlist for gentle, compatible care." />
-  <meta name="twitter:image" content="https://kevin-fuschich.github.io/wapmopshoppe/assets/images/wap-mop-meister.png" />
-
-  <!-- Favicon & App Icons -->
+  <meta name="description" content="A small, curated collection chosen to support delicate ecosystems — without interference or performance theater." />
   <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/wapmopshoppe/assets/favicon.svg">
-  <link rel="manifest" href="/wapmopshoppe/assets/site.webmanifest">
-  <meta name="theme-color" content="#fffdf8">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    /* Defensive reset */
+    header, nav, main, footer, section, figure, article { display:block; }
+    * { visibility:visible; opacity:1; }
+
+    body{
+      margin:0;
+      background:#f4f4f4;
+      color:#111;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.55;
+    }
+
+    .container{
+      max-width:980px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* Header */
+    .site-header{
+      background:#fffdf8;
+      border-bottom:1px solid rgba(0,0,0,.12);
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand img{
+      width:64px;
+      height:auto;
+      display:block;
+    }
+
+    .wordmark{
+      font-weight:800;
+      letter-spacing:.06em;
+      text-decoration:none;
+      color:#111;
+      white-space:nowrap;
+    }
+
+    nav{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#111;
+      font-weight:500;
+    }
+
+    nav a[aria-current="page"]{
+      font-weight:700;
+      text-decoration:underline;
+    }
+
+    /* Main */
+    main{
+      background:#fffdf8;
+      padding:56px 0 52px;
+      border-bottom:1px solid rgba(0,0,0,.12);
+    }
+
+    .page-title{
+      font-size:42px;
+      line-height:1.1;
+      margin:0 0 10px 0;
+      font-weight:800;
+    }
+
+    .lede{
+      font-size:20px;
+      opacity:.9;
+      margin:0 0 26px 0;
+      max-width:780px;
+    }
+
+    .rule{
+      height:1px;
+      background:rgba(0,0,0,.12);
+      margin:26px 0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      margin-top:8px;
+    }
+
+    .card{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      padding:18px;
+      background:#fff;
+    }
+
+    .card h2{
+      margin:0 0 10px 0;
+      font-size:18px;
+      line-height:1.2;
+    }
+
+    .card ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .card li{
+      margin:6px 0;
+      opacity:.92;
+    }
+
+    .callout{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      padding:18px;
+      background:#fff;
+      margin-top:18px;
+    }
+
+    .callout p{
+      margin:0;
+      opacity:.9;
+      font-size:16px;
+    }
+
+    .collections{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .pill{
+      display:block;
+      padding:14px 16px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.18);
+      background:#fff;
+      text-decoration:none;
+      color:#111;
+      font-weight:600;
+    }
+
+    .pill:hover{
+      border-color: rgba(0,0,0,.38);
+    }
+
+    .muted{
+      opacity:.78;
+      font-size:13px;
+      margin-top:18px;
+      max-width:820px;
+    }
+
+    /* Footer */
+    footer{
+      background:#fffdf8;
+      padding:18px 0;
+      font-size:13px;
+      opacity:.85;
+    }
+
+    footer a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+    }
+
+    @media (max-width:820px){
+      .page-title{ font-size:34px; }
+      .lede{ font-size:18px; }
+      .grid{ grid-template-columns:1fr; }
+      .collections{ grid-template-columns:1fr; }
+      .header-inner{ flex-direction:column; align-items:flex-start; }
+    }
+  </style>
 </head>
 
-<body class="shoppe">
+<body>
 
-<header>
-  <div class="container wide">
-    <div class="wordmark">
-      <div class="top">WAP MOP</div>
-      <div class="sub">SHOPPE</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="/wapmopshoppe/">
+        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+      </a>
+      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
     </div>
 
     <nav aria-label="Primary navigation">
-      <a href="../index.html">Home</a>
-      <a href="../articles/index.html">Articles</a>
-      <a href="../about/index.html">About</a>
-      <a href="../disclosure/index.html">Disclosure</a>
+      <a href="/wapmopshoppe/articles/">Articles</a>
+      <a href="/wapmopshoppe/shoppe/" aria-current="page">Shoppe</a>
+      <a href="/wapmopshoppe/about/">About</a>
     </nav>
   </div>
 </header>
 
-<main class="container wide">
+<main>
+  <div class="container">
 
-  <h1>The Shoppe</h1>
-  <p class="lede">
-    A deliberately small shortlist. Products chosen for gentleness, compatibility,
-    and respect for the systems they touch. No hype. No fixing. Just tools that behave well.
-  </p>
+    <h1 class="page-title">The Shoppe</h1>
+    <p class="lede">
+      Bodies aren’t machines. They’re ecosystems — shaped by moisture, contact, time, and restraint.
+      The Shoppe is a short list of things chosen to support those ecosystems without overwhelming them.
+    </p>
 
-  <div class="note">
-    <strong>How this works:</strong> Some links may eventually be affiliate links.
-    Placement is editorial. We choose for compatibility first, always.
+    <p class="lede" style="font-size:18px; margin-top:-8px;">
+      We choose slowly. We choose carefully. And we leave most things out on purpose.
+    </p>
+
+    <div class="rule"></div>
+
+    <section class="grid" aria-label="Shoppe criteria">
+      <article class="card">
+        <h2>What earns a place here</h2>
+        <ul>
+          <li>Designed for external care, when care is needed</li>
+          <li>Minimal fragrance, minimal interference</li>
+          <li>Supports natural balance rather than “correcting” it</li>
+          <li>Clear ingredients and honest intent</li>
+          <li>Comfortable being one part of care — not the whole thing</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>What doesn’t</h2>
+        <ul>
+          <li>Products that promise control, “freshness,” or dominance</li>
+          <li>Anything meant to override natural balance</li>
+          <li>Internal “cleaning” framed as hygiene</li>
+          <li>Products that rely on irritation, numbing, or shock</li>
+          <li>Performance theater disguised as wellness</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="callout" aria-label="Disclosure note">
+      <p>
+        Some links here may be affiliate links. That doesn’t change the ecosystem — it just keeps the lights on.
+      </p>
+    </section>
+
+    <div class="rule"></div>
+
+    <section aria-label="Collections">
+      <h2 style="margin:0 0 10px 0; font-size:18px;">Start here</h2>
+
+      <div class="collections">
+        <a class="pill" href="/wapmopshoppe/shoppe/external-care.html">External care</a>
+        <a class="pill" href="/wapmopshoppe/shoppe/oral-care.html">Oral care</a>
+        <a class="pill" href="/wapmopshoppe/shoppe/skin.html">Skin</a>
+        <a class="pill" href="/wapmopshoppe/shoppe/aftercare.html">Aftercare</a>
+      </div>
+
+      <p class="muted">
+        These collection pages can start as placeholders and evolve into curated lists. Add slowly. Keep the bar high.
+      </p>
+    </section>
+
   </div>
-
-  <div class="rule"></div>
-
-  <!-- EXTERNAL CARE -->
-  <section aria-label="External care">
-    <h2 class="section-title">External care (gentle, unscented)</h2>
-
-    <div class="grid">
-
-      <article class="card">
-        <span class="tag">Cleanser</span>
-        <h3>Vanicream Gentle Body Wash</h3>
-        <p>Extremely mild, dermatologist-favored, and intentionally boring. Cleans without disrupting the skin barrier.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://www.vanicream.com/product/gentle-body-wash" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: sensitive skin</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <span class="tag">Moisturizer</span>
-        <h3>CeraVe Moisturizing Cream</h3>
-        <p>Barrier-supporting ceramides. No fragrance, no sting, no performative freshness.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://www.cerave.com/skincare/moisturizers/moisturizing-cream" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: dry or reactive skin</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <span class="tag">Fabric</span>
-        <h3>100% Cotton Underwear</h3>
-        <p>Fabric matters more than branding. Breathable, forgiving, and ecosystem-friendly.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://www.healthline.com/health/womens-health/best-underwear-for-vaginal-health" target="_blank" rel="noopener noreferrer">View criteria</a>
-          <span>Best for: airflow & comfort</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div class="rule"></div>
-
-  <!-- MOUTHS -->
-  <section aria-label="Mouth and oral prep">
-    <h2 class="section-title">Mouths as systems (oral prep)</h2>
-
-    <div class="grid">
-
-      <article class="card">
-        <span class="tag">Rinse</span>
-        <h3>TheraBreath Fresh Breath Oral Rinse</h3>
-        <p>Alcohol-free, non-burning. Fresh without stripping tissue or overpowering chemistry.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://www.therabreath.com/products/fresh-breath-oral-rinse-mild-mint" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: gentle reset</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <span class="tag">Toothbrush</span>
-        <h3>Oral-B Sensi-Soft Toothbrush</h3>
-        <p>Extra-soft bristles reduce irritation. Brush earlier — not immediately before intimacy.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://oralb.com/en-us/products/toothbrushes/manual/advanced-sensitive" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: gum kindness</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <span class="tag">Hydration</span>
-        <h3>XyliMelts Dry Mouth Melts</h3>
-        <p>For dry mouth support. More moisture = better comfort and chemistry.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://xylimelts.com" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: dryness support</span>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <div class="rule"></div>
-
-  <!-- SKIN & GROOMING -->
-  <section aria-label="Skin and grooming">
-    <h2 class="section-title">Skin & grooming (clean, calm, low-friction)</h2>
-
-    <div class="grid">
-
-      <article class="card">
-        <span class="tag">Cleanser</span>
-        <h3>Dove Sensitive Skin Beauty Bar</h3>
-        <p>pH-balanced and extremely gentle. Cleans without residue or scent hangover.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://www.dove.com/us/en/p/sensitive-skin-beauty-bar.html" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: face + body</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <span class="tag">Face & beard</span>
-        <h3>Vanicream Gentle Facial Cleanser</h3>
-        <p>Non-foaming, non-stripping, beard-safe. Keeps skin calm before close contact.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://www.vanicream.com/product/gentle-facial-cleanser" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: irritation prevention</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <span class="tag">Trim</span>
-        <h3>Philips OneBlade (trim-only framing)</h3>
-        <p>Reduces razor burn and micro-cuts. Comfort beats closeness.</p>
-        <div class="meta">
-          <a class="pill primary" href="https://www.usa.philips.com/c-m-pe/oneblade-trim-edge-and-shave" target="_blank" rel="noopener noreferrer">View</a>
-          <span>Best for: low-friction grooming</span>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="note" style="margin-top:18px;">
-      <strong>Framing note:</strong> Grooming here is about comfort and compatibility —
-      not hairlessness, not aesthetics, not performance.
-    </div>
-  </section>
-
 </main>
 
 <footer>
-  <div class="container wide">
-    <div>© <span id="y"></span> WAP MOP SHOPPE</div>
-    <div>Small list. High standards.</div>
+  <div class="container">
+    © <span id="y"></span> WAP MOP SHOPPE ·
+    <a href="/wapmopshoppe/disclosure/">Disclosure</a>
   </div>
 </footer>
 
