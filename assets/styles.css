@@ -487,3 +487,15 @@ body {
   background: var(--accent-soft);
   transform: rotate(35deg);
 }
+/* === Layout widths (unify site) === */
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Use inside pages when you want a narrower reading column */
+.content{
+  max-width: 780px;
+  margin: 0 auto;
+}
