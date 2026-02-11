@@ -234,6 +234,9 @@
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
-
+/* Force About header to use the shared/global header spacing */
+.site-header .header-inner{ padding: var(--header-pad) 0 !important; }
+.site-header .brand img{ width:56px !important; height:56px !important; }
+.container{ max-width: var(--container) !important; padding: 0 var(--gutter) !important; }
 </body>
 </html>
