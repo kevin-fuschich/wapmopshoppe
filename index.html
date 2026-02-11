@@ -19,7 +19,6 @@
       line-height:1.6;
     }
     .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-    .content{ max-width:860px; margin:0 auto; }
 
     .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
     .header-inner{
@@ -29,147 +28,117 @@
     .brand{ display:flex; align-items:center; gap:12px; }
     .brand img{ width:56px; height:auto; display:block; }
     .wordmark{
-      font-weight:800; letter-spacing:.06em; text-decoration:none;
-      color:#111; white-space:nowrap;
+      font-weight:900; letter-spacing:.06em;
+      text-decoration:none; color:#111; white-space:nowrap;
     }
     nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
+    nav a{ text-decoration:none; color:#111; font-weight:600; }
 
-    main{
-      background:#fffdf8;
-      padding:56px 0 44px;
-      border-bottom:1px solid rgba(0,0,0,.12);
-    }
+    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
 
     .hero{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:24px;
+      grid-template-columns: 1.25fr .75fr;
+      gap:28px;
       align-items:start;
     }
-
     h1{
-      font-size:44px;
-      line-height:1.04;
-      margin:0 0 12px 0;
-      font-weight:900;
-      letter-spacing:-.01em;
+      margin:0 0 14px 0;
+      font-size:44px; line-height:1.03;
+      font-weight:950; letter-spacing:-.015em;
     }
     .lede{
-      font-size:20px;
-      opacity:.9;
       margin:0 0 18px 0;
+      font-size:20px; opacity:.9;
+      max-width:740px;
     }
-
-    .cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .cta-row{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top:18px;
+    }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:12px 14px;
       border-radius:999px;
-      border:1px solid rgba(0,0,0,.2);
+      border:1px solid rgba(0,0,0,.18);
       background:#fff;
       color:#111;
       text-decoration:none;
       font-weight:900;
-      font-size:13px;
-      letter-spacing:.02em;
+      font-size:14px;
     }
     .btn.primary{
-      border-color:rgba(0,0,0,.35);
-      box-shadow: 0 1px 0 rgba(0,0,0,.08);
+      border-color:rgba(0,0,0,.2);
+      background: rgba(192,68,44,.10);
     }
 
-    .stamp-card{
+    .accent-rule{
+      height:2px; border:0;
+      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
+      margin: 22px 0 18px;
+    }
+
+    .card{
       border:1px solid rgba(0,0,0,.12);
       border-radius:18px;
       background:#fff;
       padding:18px;
     }
-    .stamp-card .k{
-      font-size:12px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      opacity:.75;
-      font-weight:900;
-      margin-bottom:10px;
-    }
-    .stamp-wrap{
+
+    .meister-wrap{
       display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:16px;
+      justify-content:flex-end;
+      gap:12px;
+      align-items:flex-start;
     }
-    .stamp-wrap img{
-      max-width:100%;
+    .meister{
+      width: 280px;
+      max-width: 100%;
       height:auto;
       display:block;
-    }
-
-    .section{
-      padding:30px 0 0;
-    }
-    .accent-rule{
-      height:2px; border:0;
-      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 18px 0 18px;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.08));
     }
 
     .grid{
       display:grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap:14px;
+      margin-top:18px;
     }
-    .card{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:16px;
+    .tile h2{
+      margin:0 0 6px 0;
+      font-size:16px;
+      font-weight:950;
     }
-    .card h2{
-      margin:0 0 8px 0;
-      font-size:18px;
-      font-weight:900;
-    }
-    .card p{
-      margin:0 0 10px 0;
+    .tile p{
+      margin:0;
       font-size:14px;
-      opacity:.9;
+      opacity:.88;
     }
-    .card a{
+    .tile a{
       color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
       font-weight:900;
-      font-size:13px;
     }
 
-    footer{
-      background:#fffdf8;
-      padding:18px 0;
-      font-size:13px;
-      opacity:.85;
-    }
-    footer a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-    }
+    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
+    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
 
-    @media (max-width:900px){
+    @media (max-width:920px){
       .hero{ grid-template-columns: 1fr; }
-      h1{ font-size:36px; }
-      .lede{ font-size:18px; }
+      .meister-wrap{ justify-content:flex-start; }
+      h1{ font-size:38px; }
       .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 
 <body>
-
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/">
+      <a href="/" aria-label="Home">
         <img src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
       </a>
       <a class="wordmark" href="/">WAP MOP SHOPPE</a>
@@ -184,48 +153,46 @@
 </header>
 
 <main>
-  <div class="container content">
-    <section class="hero" aria-label="Home hero">
+  <div class="container">
+    <section class="hero" aria-label="Intro">
       <div>
-        <h1>Tongue in cheek. Care in full.</h1>
+        <h1>Tongue in cheek.<br>Care in full.</h1>
         <p class="lede">
           Thoughtful guidance on caring for bodies you’re close to —
           what helps, what interferes, and when to stop.
         </p>
 
-        <div class="cta-row">
-          <a class="btn primary" href="/shoppe/">Browse the Shoppe</a>
-          <a class="btn" href="/articles/">Read Articles</a>
+        <hr class="accent-rule">
+
+        <div class="cta-row" aria-label="Primary actions">
+          <a class="btn primary" href="/articles/">Read the field guide</a>
+          <a class="btn" href="/shoppe/">Browse the Shoppe</a>
+        </div>
+
+        <div class="grid" aria-label="Start here">
+          <div class="card tile">
+            <h2><a href="/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a></h2>
+            <p>Balance is a range. Most “freshness” problems are interference problems.</p>
+          </div>
+          <div class="card tile">
+            <h2><a href="/articles/mouths-as-systems.html">Mouths as systems</a></h2>
+            <p>Gentle beats harsh. Comfort-first oral care that doesn’t overcorrect.</p>
+          </div>
+          <div class="card tile">
+            <h2><a href="/articles/the-best-wipes.html">The best wipes</a></h2>
+            <p>Boring on purpose. External-only cleanup without irritation loops.</p>
+          </div>
         </div>
       </div>
 
-      <aside class="stamp-card" aria-label="Brand mark">
-        <div class="k">Official-ish stamp</div>
-        <div class="stamp-wrap">
-          <img src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp mark">
+      <aside class="card" aria-label="Mascot">
+        <div class="meister-wrap">
+          <img class="meister" src="/assets/images/wap-mop-meister.png" alt="The WAP MOP SHOPPE mascot, arms folded, alpine apothecary style.">
         </div>
+        <p style="margin:14px 0 0 0; font-size:14px; opacity:.88;">
+          No shame. No perfume theater. Just practical care that respects the body’s boundaries.
+        </p>
       </aside>
-    </section>
-
-    <section class="section" aria-label="Quick paths">
-      <hr class="accent-rule">
-      <div class="grid">
-        <div class="card">
-          <h2>External care</h2>
-          <p>Gentle, boring-on-purpose options that don’t start new problems.</p>
-          <a href="/shoppe/external-care.html">Go to External care</a>
-        </div>
-        <div class="card">
-          <h2>Oral care</h2>
-          <p>Comfort-first picks for mouths that are doing real work.</p>
-          <a href="/shoppe/oral-care.html">Go to Oral care</a>
-        </div>
-        <div class="card">
-          <h2>Aftercare</h2>
-          <p>The “after” matters. Keep it simple. Keep it kind.</p>
-          <a href="/shoppe/aftercare.html">Go to Aftercare</a>
-        </div>
-      </div>
     </section>
   </div>
 </main>
@@ -239,6 +206,5 @@
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
