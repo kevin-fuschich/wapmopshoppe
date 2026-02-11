@@ -4,7 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WAP MOP SHOPPE</title>
+/* Global layout container (used by header + page content) */
+:root{
+  --container: 960px;
+  --gutter: 20px;
+}
 
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Header layout is consistent everywhere */
+.site-header .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 0;
+}
+.site-header .brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.site-header .brand a{ display:inline-flex; align-items:center; }
+.site-header .brand img{
+  width:56px;
+  height:56px;
+  display:block;
+  object-fit:contain;
+}
+.site-header nav{ display:flex; gap:16px; flex-wrap:wrap; }
   <!-- Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
