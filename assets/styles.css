@@ -23,7 +23,126 @@
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
+/* -------------------------------- */
+/* TYPE SCALE + HIERARCHY */
+/* -------------------------------- */
 
+:root{
+  /* Base scale */
+  --text: 16px;
+  --small: 13px;
+  --h1: 44px;
+  --h2: 22px;
+  --h3: 18px;
+
+  /* Leading (readability) */
+  --lh: 1.72;
+
+  /* Weights */
+  --w-regular: 450;
+  --w-medium: 600;
+  --w-bold: 800;
+  --w-black: 900;
+
+  /* Spacing rhythm */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 18px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+}
+
+/* Base text */
+body{
+  font-size: var(--text);
+  line-height: var(--lh);
+  letter-spacing: 0;
+}
+
+/* Headings */
+h1{
+  font-size: var(--h1);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  font-weight: var(--w-black);
+  margin: 0 0 var(--space-3) 0;
+}
+
+h2{
+  font-size: var(--h2);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  font-weight: var(--w-black);
+  margin: 0 0 var(--space-2) 0;
+}
+
+h3{
+  font-size: var(--h3);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  font-weight: var(--w-black);
+  margin: var(--space-5) 0 var(--space-2) 0;
+}
+
+/* Paragraph rhythm */
+p{
+  margin: 0 0 var(--space-3) 0;
+  max-width: 72ch;
+}
+
+/* Lede / subhead patterns you already use */
+.lede,
+.sub{
+  font-size: 20px;
+  line-height: 1.55;
+  opacity: .92;
+  max-width: 80ch;
+  margin: 0 0 var(--space-4) 0;
+}
+
+/* Small meta text */
+.meta,
+.kicker,
+.crumbs,
+footer{
+  font-size: var(--small);
+  line-height: 1.5;
+}
+
+/* Links: keep your underline style but make it more consistent */
+.entry h2 a,
+.links a,
+footer a,
+.kicker a,
+.crumbs a{
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.25);
+}
+
+/* Improve longform (articles/about) readability if you use .prose wrapper */
+.prose{
+  max-width: 860px;
+}
+.prose p{
+  max-width: 72ch;
+}
+.prose p + p{
+  margin-top: 0; /* keep consistent single-margin rhythm */
+}
+
+/* Responsive scale */
+@media (max-width: 820px){
+  :root{
+    --h1: 34px;
+    --h2: 20px;
+    --h3: 17px;
+  }
+  .lede,
+  .sub{
+    font-size: 18px;
+  }
+}
 /* Header spacing is identical everywhere */
 .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
 .site-header .header-inner{
