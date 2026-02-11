@@ -488,7 +488,104 @@ body {
   background: var(--accent);
   opacity:.85;
 }
+/* -------------------------------- */
+/* TYPOGRAPHY REFINEMENT */
+/* -------------------------------- */
 
+body{
+  line-height: 1.72;            /* Slightly airier */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  letter-spacing: -0.02em;      /* More intentional weight */
+}
+
+h2{
+  letter-spacing: -0.01em;
+}
+
+p{
+  line-height: 1.72;
+}
+
+/* Improve reading rhythm */
+.prose p + p{
+  margin-top: 20px;
+}
+
+/* -------------------------------- */
+/* NAV POLISH */
+/* -------------------------------- */
+
+.site-header nav a{
+  position: relative;
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.site-header nav a:hover{
+  opacity: .65;
+  transform: translateY(-1px);
+}
+
+.site-header nav a[aria-current="page"]{
+  border-bottom: 2px solid rgba(192,68,44,1);
+}
+
+/* -------------------------------- */
+/* LINK POLISH */
+/* -------------------------------- */
+
+a{
+  transition: opacity .18s ease;
+}
+
+a:hover{
+  opacity: .7;
+}
+
+/* -------------------------------- */
+/* CARD ELEVATION (very subtle) */
+/* -------------------------------- */
+
+.entry,
+.card,
+.block{
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.entry:hover,
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+}
+
+/* -------------------------------- */
+/* VERTICAL RHYTHM CONSISTENCY */
+/* -------------------------------- */
+
+main{
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.accent-rule{
+  margin: 24px 0 28px;
+}
+
+/* -------------------------------- */
+/* QUIET PAGE FADE */
+/* -------------------------------- */
+
+body{
+  animation: fadeIn .25s ease-out;
+}
+
+@keyframes fadeIn{
+  from{ opacity:0; }
+  to{ opacity:1; }
+}
 /* diagram / figure card */
 .figure-card{
   border: 1px solid var(--border);
