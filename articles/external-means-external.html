@@ -5,140 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>External means external — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="External means external. Most problems start when care crosses a boundary it was never meant to cross." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+  <meta name="description" content="Most problems start when care crosses a boundary it was never meant to cross. External means external." />
+
+  <!-- Live-domain-safe paths -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
-    header, nav, main, footer, section, article, aside { display:block; }
+    header, nav, main, footer, section, article { display:block; }
     body{
       margin:0;
       background:#f4f4f4;
       color:#111;
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
+      line-height:1.65;
     }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-    .content{ max-width:780px; margin:0 auto; }
 
-    /* Header */
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:18px 0;
-    }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{
-      font-weight:800;
-      letter-spacing:.06em;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
-    }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
+    /* IMPORTANT: do not redefine .container here.
+       Header alignment comes from /assets/styles.css */
 
-    /* Main */
     main{
       background:#fffdf8;
       padding:56px 0;
       border-bottom:1px solid rgba(0,0,0,.12);
     }
 
-    article h1{
-      font-size:36px;
-      line-height:1.15;
-      margin:0 0 18px 0;
+    .prose{ max-width: 860px; }
+
+    .kicker{
+      font-size:13px;
+      opacity:.75;
+      margin: 0 0 8px 0;
+    }
+    .kicker a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+      font-weight:700;
+    }
+
+    h1{
+      font-size:42px;
+      margin:0 0 12px 0;
       font-weight:900;
       letter-spacing:-.01em;
+      line-height:1.05;
     }
-    .lede{
-      font-size:20px;
-      opacity:.92;
-      margin:0 0 22px 0;
+    .sub{
+      font-size:18px;
+      opacity:.9;
+      margin:0 0 18px 0;
+      max-width: 72ch;
     }
 
     .accent-rule{
       height:2px;
       border:0;
       background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 20px 0 18px;
-    }
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin: 0 0 18px 0;
-      padding:0;
-      list-style:none;
-    }
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.12);
-      background:#fff;
-      font-size: 13px;
-      color:#111;
-    }
-    .tag::before{
-      content:"";
-      width:8px; height:8px;
-      border-radius:999px;
-      background: rgba(192,68,44,1);
-      opacity:.85;
+      margin: 18px 0 22px;
     }
 
-    p{ margin:0 0 18px 0; font-size:16px; }
-    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
+    article p{
+      margin:0 0 18px 0;
+      font-size:16px;
+      max-width: 72ch;
+    }
 
     .callout{
+      margin: 26px 0 0 0;
+      padding:18px;
       border:1px solid rgba(0,0,0,.12);
       border-radius:16px;
-      padding:18px;
       background:#fff;
-      margin:28px 0;
+      position:relative;
+      overflow:hidden;
     }
-    .callout p{ margin:0; font-size:15px; opacity:.92; }
+    .callout::after{
+      content:"";
+      position:absolute;
+      top:-44px; right:-44px;
+      width:130px; height:130px;
+      background: rgba(192,68,44,.10);
+      transform: rotate(35deg);
+    }
+    .callout p{
+      margin:0;
+      position:relative;
+      z-index:1;
+      opacity:.95;
+    }
 
-    /* Standard related block */
-    .related{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:18px;
-      margin:28px 0 0;
+    .links{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
     }
-    .related .kicker{
-      font-size:12px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      opacity:.75;
-      margin-bottom:8px;
-      font-weight:900;
-    }
-    .related p{
-      margin:0 0 10px 0;
-      font-size:15px;
-      opacity:.92;
-    }
-    .related a{
+    .links a{
       color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
       font-weight:900;
-    }
-
-    .meta{
       font-size:13px;
-      opacity:.72;
-      margin-top:22px;
     }
 
     footer{
@@ -154,113 +122,92 @@
     }
 
     @media (max-width:820px){
-      article h1{ font-size:30px; }
-      .lede{ font-size:18px; }
+      h1{ font-size:34px; }
+      .sub{ font-size:17px; }
+      .prose{ max-width:100%; }
     }
   </style>
 </head>
 
 <body>
 
+<!-- Uses your global header styles in /assets/styles.css -->
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/wapmopshoppe/">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+      <!-- FIX: home is "/" -->
+      <a href="/">
+        <img
+          src="/assets/figures/meister-stamp.png"
+          alt="WAP MOP SHOPPE stamp"
+          width="56"
+          height="56"
+          loading="eager"
+          decoding="async"
+        >
       </a>
-      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
+      <a class="wordmark" href="/">WAP MOP SHOPPE</a>
     </div>
 
     <nav aria-label="Primary navigation">
-      <a href="/wapmopshoppe/articles/">Articles</a>
-      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
-      <a href="/wapmopshoppe/about/">About</a>
+      <!-- FIX: root-relative nav -->
+      <a href="/articles/" aria-current="page">Articles</a>
+      <a href="/shoppe/">Shoppe</a>
+      <a href="/about/">About</a>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="container">
-    <div class="content">
-      <article>
+    <div class="prose">
 
-        <h1>External means external</h1>
+      <p class="kicker">
+        <a href="/articles/">Articles</a> · External care
+      </p>
 
-        <p class="lede">
-          Most care mistakes come from crossing a line that doesn’t need crossing.
-          External means external.
+      <h1>External means external</h1>
+      <p class="sub">
+        Most problems start when care crosses a boundary it was never meant to cross.
+      </p>
+
+      <hr class="accent-rule">
+
+      <!-- ARTICLE CONTENT (replace/expand as needed) -->
+      <article aria-label="Article">
+        <p>
+          “External” is not a vibe. It’s a rule. Products built for skin are built for skin.
+          When care crosses the boundary into places it wasn’t designed for, irritation and imbalance follow.
         </p>
-
-        <hr class="accent-rule">
-        <ul class="tags" aria-label="Tags">
-          <li class="tag">External care</li>
-          <li class="tag">Boundaries</li>
-          <li class="tag">Hygiene</li>
-        </ul>
 
         <p>
-          Bodies already manage their internal environments.
-          They regulate moisture, pH, bacteria, and balance without instruction.
-          Problems usually start when products or practices interfere with that work.
+          If something burns, tingles, dries, or makes you feel worse, it isn’t “working.”
+          It’s interfering. Comfort is the baseline signal.
         </p>
-
-        <h2>Why “internal cleaning” backfires</h2>
 
         <p>
-          Douching, internal washes, and “deep cleaning” promise control,
-          but often create irritation, imbalance, and recurring symptoms.
-          The body responds by working harder — not by getting “cleaner.”
+          The boring routine is usually the winning routine: gentle wash where appropriate, rinse well, dry softly,
+          and don’t chase scent or sterility.
         </p>
 
-        <h2>What external care actually means</h2>
+        <div class="callout">
+          <p><strong>Rule:</strong> If it hurts, burns, or escalates — stop. External means external.</p>
+        </div>
 
-        <ul>
-          <li>Warm water or gentle cleanser on external skin only</li>
-          <li>Light wiping — no scrubbing</li>
-          <li>Stopping once skin feels neutral</li>
-        </ul>
-
-        <p>
-          Neutral is the goal. Not scented. Not tingling. Not “extra fresh.”
-        </p>
-
-        <h2>Signs you’ve crossed the line</h2>
-
-        <ul>
-          <li>Burning or stinging after cleaning</li>
-          <li>Tightness or dryness</li>
-          <li>Needing more product to feel “okay”</li>
-        </ul>
-
-        <section class="callout" aria-label="Key idea">
-          <p>
-            If care creates a new problem,
-            it wasn’t care — it was interference.
-          </p>
-        </section>
-
-        <!-- STANDARD RELATED CARE BLOCK -->
-        <aside class="related" aria-label="Related care">
-          <div class="kicker">Related care</div>
-          <p>
-            Looking for products that respect this boundary?
-            See our short list for <a href="/wapmopshoppe/shoppe/external-care.html">external care</a> in the Shoppe.
-          </p>
-        </aside>
-
-        <p class="meta">
-          Not medical advice. Persistent symptoms, pain, or unusual discharge
-          should be evaluated by a clinician.
-        </p>
-
+        <div class="links" aria-label="Related links">
+          <!-- FIX: root-relative internal links -->
+          <a href="/shoppe/external-care.html">Related: External care</a>
+          <a href="/articles/vaginas-as-ecosystems.html">Next: Vaginas as ecosystems</a>
+        </div>
       </article>
+
     </div>
   </div>
 </main>
 
 <footer>
   <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure/">Disclosure</a>
   </div>
 </footer>
 
