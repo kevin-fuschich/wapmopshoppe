@@ -5,72 +5,195 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shoppe — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Curated picks for external care, oral care, and aftercare — intentionally short lists, chosen to support comfort and balance." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+  <meta name="description" content="Curated products for external care, oral care, and aftercare — chosen for comfort, gentleness, and respect." />
+
+  <!-- IMPORTANT: root-relative paths for your live domain (wapmopshoppe.com) -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
+    header, nav, main, footer, section, article { display:block; }
     body{
       margin:0;
       background:#f4f4f4;
       color:#111;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       line-height:1.6;
     }
+    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
 
+    /* Header */
     .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+    }
     .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; white-space:nowrap; }
+    .brand a{ display:inline-flex; align-items:center; }
+    .brand img{
+      width:56px;
+      height:56px;
+      display:block;
+      object-fit:contain;
+      flex:0 0 auto;
+    }
+    .wordmark{
+      font-weight:800;
+      letter-spacing:.06em;
+      text-decoration:none;
+      color:#111;
+      white-space:nowrap;
+    }
     nav{ display:flex; gap:16px; flex-wrap:wrap; }
     nav a{ text-decoration:none; color:#111; font-weight:500; }
+    nav a[aria-current="page"]{
+      font-weight:900;
+      border-bottom:2px solid rgba(192,68,44,1);
+      padding-bottom:2px;
+    }
 
-    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
+    /* Main */
+    main{
+      background:#fffdf8;
+      padding:56px 0;
+      border-bottom:1px solid rgba(0,0,0,.12);
+    }
+    h1{
+      font-size:42px;
+      margin:0 0 14px 0;
+      font-weight:900;
+      letter-spacing:-.01em;
+      line-height:1.05;
+    }
+    .lede{
+      font-size:20px;
+      opacity:.9;
+      max-width:860px;
+      margin:0 0 18px 0;
+    }
+    .accent-rule{
+      height:2px;
+      border:0;
+      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
+      margin: 18px 0 22px;
+    }
 
-    h1{ font-size:38px; line-height:1.1; margin:0 0 14px 0; font-weight:900; }
-    .lede{ font-size:18px; opacity:.9; max-width:760px; margin:0 0 18px 0; }
-
+    /* Category cards */
     .grid{
       display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:14px;
-      margin-top:22px;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top: 10px;
     }
     .card{
       border:1px solid rgba(0,0,0,.12);
       border-radius:16px;
       background:#fff;
-      padding:16px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      min-height:160px;
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      transition: transform .12s ease, box-shadow .12s ease;
+      text-decoration:none;
+      color:#111;
+      display:block;
+      min-height: 160px;
     }
-    .kicker{
-      font-size:12px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+    .card::after{
+      content:"";
+      position:absolute;
+      top:-44px; right:-44px;
+      width:130px; height:130px;
+      background: rgba(192,68,44,.10);
+      transform: rotate(35deg);
+    }
+    .card:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+    .card h2{
+      margin:0 0 8px 0;
+      font-size:22px;
+      font-weight:900;
+      line-height:1.2;
+      position:relative;
+      z-index:1;
+      display:inline-block;
+      border-bottom:1px solid rgba(0,0,0,.25);
+      text-decoration:none;
+    }
+    .card p{
+      margin:0 0 12px 0;
+      font-size:15px;
+      opacity:.9;
+      max-width: 46ch;
+      position:relative;
+      z-index:1;
+    }
+    .card .meta{
+      font-size:13px;
       opacity:.7;
+      position:relative;
+      z-index:1;
     }
-    .card h2{ margin:0; font-size:16px; font-weight:900; line-height:1.2; }
-    .card p{ margin:0; font-size:14px; opacity:.9; }
-    .card a{
-      margin-top:auto;
+    .cta{
+      margin-top:10px;
+      display:inline-block;
+      font-weight:900;
+      font-size:13px;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+      position:relative;
+      z-index:1;
+    }
+
+    /* Simple list section */
+    .section-title{
+      margin: 34px 0 10px 0;
+      font-size:18px;
+      font-weight:900;
+      letter-spacing:.02em;
+    }
+    .note{
+      margin:0 0 10px 0;
+      font-size:14px;
+      opacity:.8;
+      max-width: 80ch;
+    }
+    .list{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      background:#fff;
+      padding:16px 18px;
+    }
+    .list a{
       color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
-      font-weight:700;
-      font-size:13px;
-      width:fit-content;
+      font-weight:900;
     }
 
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+    footer{
+      background:#fffdf8;
+      padding:18px 0;
+      font-size:13px;
+      opacity:.85;
+    }
+    footer a{
+      color:#111;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+    }
 
     @media (max-width:900px){
       .grid{ grid-template-columns:1fr; }
-      h1{ font-size:32px; }
+    }
+    @media (max-width:820px){
+      h1{ font-size:34px; }
+      .lede{ font-size:18px; }
+      .card h2{ font-size:20px; }
     }
   </style>
 </head>
@@ -80,16 +203,25 @@
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
-      <a href="/wapmopshoppe/">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
+      <!-- FIX: home should be "/" on your live domain -->
+      <a href="/">
+        <img
+          src="/assets/figures/meister-stamp.png"
+          alt="WAP MOP SHOPPE stamp"
+          width="56"
+          height="56"
+          loading="eager"
+          decoding="async"
+        >
       </a>
-      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
+      <a class="wordmark" href="/">WAP MOP SHOPPE</a>
     </div>
 
     <nav aria-label="Primary navigation">
-      <a href="/wapmopshoppe/articles/">Articles</a>
-      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
-      <a href="/wapmopshoppe/about/">About</a>
+      <!-- FIX: links should be root-relative -->
+      <a href="/articles/">Articles</a>
+      <a href="/shoppe/" aria-current="page">Shoppe</a>
+      <a href="/about/">About</a>
     </nav>
   </div>
 </header>
@@ -98,45 +230,67 @@
   <div class="container">
     <h1>Shoppe</h1>
     <p class="lede">
-      Intentionally short lists. Boring-in-a-good-way picks.
-      External care, oral care, and aftercare — chosen to support comfort and balance.
+      Curated picks for external care, oral care, and aftercare — chosen for comfort, gentleness, and respect.
     </p>
 
     <hr class="accent-rule">
-    <ul class="tags" aria-label="Shoppe sections">
-      <li class="tag">External care</li>
-      <li class="tag">Oral care</li>
-      <li class="tag">Aftercare</li>
-    </ul>
 
-    <section class="grid" aria-label="Shoppe categories">
-      <article class="card">
-        <div class="kicker">External</div>
-        <h2>External care</h2>
-        <p>Gentle, fragrance-free, and designed to not start irritation loops.</p>
-        <a href="/wapmopshoppe/shoppe/external-care.html">Open</a>
-      </article>
+    <section aria-label="Shop categories">
+      <div class="grid">
 
-      <article class="card">
-        <div class="kicker">Oral</div>
-        <h2>Oral care</h2>
-        <p>Mouth-friendly care that supports comfort before and after.</p>
-        <a href="/wapmopshoppe/shoppe/oral-care.html">Open</a>
-      </article>
+        <a class="card" href="/shoppe/external-care.html" aria-label="External care">
+          <h2>External care</h2>
+          <p>Wipes, washes, and routines that respect boundaries and avoid unnecessary interference.</p>
+          <div class="meta">Gentle • fragrance-aware • external-only</div>
+          <span class="cta">Browse external care →</span>
+        </a>
 
-      <article class="card">
-        <div class="kicker">After</div>
-        <h2>Aftercare</h2>
-        <p>Simple cleanup + comfort tools that don’t overcorrect.</p>
-        <a href="/wapmopshoppe/shoppe/aftercare.html">Open</a>
-      </article>
+        <a class="card" href="/shoppe/oral-care.html" aria-label="Oral care">
+          <h2>Oral care</h2>
+          <p>Comfort-forward options for mouths as systems — no burn, no performance theater.</p>
+          <div class="meta">Comfort • saliva-friendly • irritation-aware</div>
+          <span class="cta">Browse oral care →</span>
+        </a>
+
+        <a class="card" href="/shoppe/aftercare.html" aria-label="Aftercare">
+          <h2>Aftercare</h2>
+          <p>Clean up, calm down, close the loop — physically and emotionally.</p>
+          <div class="meta">Soothing • friction-aware • respectful</div>
+          <span class="cta">Browse aftercare →</span>
+        </a>
+
+        <a class="card" href="/shoppe/ecosystems.html" aria-label="Ecosystems">
+          <h2>Ecosystems</h2>
+          <p>Support the system. Don’t fight it. Picks that avoid the “freshness industrial complex.”</p>
+          <div class="meta">pH-conscious • minimal • interference-reducing</div>
+          <span class="cta">Browse ecosystems →</span>
+        </a>
+
+      </div>
     </section>
+
+    <h3 class="section-title">Start here</h3>
+    <p class="note">
+      If you’re unsure, start with the basics and read the guidance first. Most “problems” are product mismatch or overdoing it.
+      The site’s rule of thumb: <strong>external means external</strong>.
+    </p>
+
+    <div class="list">
+      <p style="margin:0;">
+        Read: <a href="/articles/external-means-external.html">External means external</a>
+        &nbsp;·&nbsp;
+        Read: <a href="/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
+        &nbsp;·&nbsp;
+        Read: <a href="/articles/mouths-as-systems.html">Mouths as systems</a>
+      </p>
+    </div>
+
   </div>
 </main>
 
 <footer>
   <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure/">Disclosure</a>
   </div>
 </footer>
 
