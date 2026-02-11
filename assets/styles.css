@@ -11,7 +11,38 @@
   --radius-lg:20px;
   --radius-md:16px;
 }
+:root{
+  --container: 960px;
+  --gutter: 20px;
+  --header-pad: 18px;
+}
 
+/* One container rule used everywhere */
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Header spacing is identical everywhere */
+.site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
+.site-header .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding: var(--header-pad) 0;
+}
+.site-header .brand{ display:flex; align-items:center; gap:12px; }
+.site-header .brand a{ display:inline-flex; align-items:center; }
+.site-header .brand img{ width:56px; height:56px; display:block; object-fit:contain; }
+.site-header nav{ display:flex; gap:16px; flex-wrap:wrap; }
+.site-header nav a{ text-decoration:none; color:#111; font-weight:500; }
+.site-header nav a[aria-current="page"]{
+  font-weight:900;
+  border-bottom:2px solid rgba(192,68,44,1);
+  padding-bottom:2px;
+}
 *{ box-sizing:border-box; }
 
 body{
