@@ -231,31 +231,14 @@
 
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <a href="../">
-        <img
-          id="stamp"
-          src="../assets/figures/meister-stamp.png"
-          alt="WAP MOP SHOPPE stamp"
-          width="56"
-          height="56"
-          loading="eager"
-          decoding="async"
-        >
-        <span class="stamp-fallback" id="stampFallback" aria-hidden="true">Stamp<br>missing</span>
-      </a>
-      <a class="wordmark" href="../">WAP MOP SHOPPE</a>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      <a href="./" aria-current="page">Articles</a>
-      <a href="../shoppe/">Shoppe</a>
-      <a href="../about/">About</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
+<script>
+  fetch("/partials/header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+    });
+</script>
 
 <main>
   <div class="container">
