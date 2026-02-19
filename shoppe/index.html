@@ -200,31 +200,14 @@
 
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <!-- FIX: home should be "/" on your live domain -->
-      <a href="/">
-        <img
-          src="/assets/figures/meister-stamp.png"
-          alt="WAP MOP SHOPPE stamp"
-          width="56"
-          height="56"
-          loading="eager"
-          decoding="async"
-        >
-      </a>
-      <a class="wordmark" href="/">WAP MOP SHOPPE</a>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      <!-- FIX: links should be root-relative -->
-      <a href="/articles/">Articles</a>
-      <a href="/shoppe/" aria-current="page">Shoppe</a>
-      <a href="/about/">About</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
+<script>
+  fetch("/partials/header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+    });
+</script>
 
 <main>
   <div class="container">
