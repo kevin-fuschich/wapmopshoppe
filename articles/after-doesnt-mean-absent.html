@@ -162,23 +162,14 @@
 
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <a href="/wapmopshoppe/">
-        <img src="/wapmopshoppe/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
-      </a>
-      <a class="wordmark" href="/wapmopshoppe/">WAP MOP SHOPPE</a>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      <a href="/wapmopshoppe/articles/">Articles</a>
-      <a href="/wapmopshoppe/shoppe/">Shoppe</a>
-      <a href="/wapmopshoppe/about/">About</a>
-    </nav>
-  </div>
-</header>
-
+<div id="site-header"></div>
+<script>
+  fetch("/assets/partials/header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+    });
+</script>
 <main>
   <div class="container">
     <div class="content">
