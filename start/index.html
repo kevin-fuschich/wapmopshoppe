@@ -41,22 +41,14 @@
 
 <body class="page start">
 
-<header>
-  <div class="container wide">
-    <div class="wordmark">
-      <div class="top">WAP MOP</div>
-      <div class="sub">SHOPPE</div>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      <a href="../index.html">Home</a>
-      <a href="../articles/index.html">Articles</a>
-      <a href="../shoppe/index.html">Shoppe</a>
-      <a href="../about/index.html">About</a>
-      <a href="../disclosure/index.html">Disclosure</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
+<script>
+  fetch("/partials/header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+    });
+</script>
 
 <main class="container narrow">
 
