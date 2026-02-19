@@ -135,23 +135,14 @@
 </head>
 
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <a href="/" aria-label="Home">
-        <img src="/assets/figures/meister-stamp.png" alt="WAP MOP SHOPPE stamp">
-      </a>
-      <a class="wordmark" href="/">WAP MOP SHOPPE</a>
-    </div>
-
-    <nav aria-label="Primary navigation">
-      <a href="/articles/">Articles</a>
-      <a href="/shoppe/">Shoppe</a>
-      <a href="/philosophy.html">Philosophy</a>
-      <a href="/about/">About</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
+<script>
+  fetch("/assets/partials/header.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("site-header").innerHTML = html;
+    });
+</script>
 
 <main>
   <div class="container">
