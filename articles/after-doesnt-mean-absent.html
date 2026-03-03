@@ -14,28 +14,13 @@
   <meta property="og:description" content="Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
   <meta property="og:url" content="https://wapmopshoppe.com/articles/after-doesnt-mean-absent.html" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="After Doesn’t Mean Absent" />
-  <meta name="twitter:description" content="Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
 
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="icon" href="/assets/figures/meister-stamp.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/figures/meister-stamp.png">
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"After Doesn’t Mean Absent",
-    "description":"Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop.",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://wapmopshoppe.com/articles/after-doesnt-mean-absent.html"},
-    "publisher":{"@type":"Organization","name":"WAP MOP SHOPPE","url":"https://wapmopshoppe.com"},
-    "author":{"@type":"Organization","name":"WAP MOP SHOPPE"},
-    "datePublished":"2026-03-02",
-    "dateModified":"2026-03-02"
-  }
-  </script>
+  <link rel="stylesheet" href="/assets/styles.css">
 
   <style>
-    header, nav, main, footer, section, article, aside { display:block; }
     body{
       margin:0;
       background:#f4f4f4;
@@ -43,11 +28,14 @@
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       line-height:1.6;
     }
+
     .container{ max-width:960px; margin:0 auto; padding:0 20px; }
     .content{ max-width:780px; margin:0 auto; }
 
-    /* Header */
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
+    header{
+      background:#fffdf8;
+      border-bottom:1px solid rgba(0,0,0,.12);
+    }
     .header-inner{
       display:flex;
       align-items:center;
@@ -62,18 +50,19 @@
       gap:12px;
       text-decoration:none;
       color:#111;
-    }
-    .brand img{ width:42px; height:auto; display:block; }
-    .wordmark{
       font-weight:800;
       letter-spacing:.06em;
-      white-space:nowrap;
     }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:600; opacity:.92; }
-    nav a:hover{ opacity:1; }
+    .brand img{ width:42px; height:auto; }
 
-    /* Main */
+    nav{ display:flex; gap:16px; flex-wrap:wrap; }
+    nav a{
+      text-decoration:none;
+      color:#111;
+      font-weight:600;
+      opacity:.92;
+    }
+
     main{
       background:#fffdf8;
       padding:56px 0;
@@ -83,16 +72,16 @@
     .crumbs{
       font-size:13px;
       opacity:.72;
-      margin:0 0 14px 0;
+      margin-bottom:14px;
     }
     .crumbs a{
-      color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
       font-weight:700;
+      color:#111;
     }
 
-    article h1{
+    h1{
       font-size:36px;
       line-height:1.15;
       margin:0 0 10px 0;
@@ -103,22 +92,16 @@
     .meta{
       font-size:13px;
       opacity:.72;
-      margin:0 0 22px 0;
+      margin-bottom:22px;
       display:flex;
-      flex-wrap:wrap;
       gap:12px;
-    }
-    .dot{
-      width:4px;height:4px;border-radius:50%;
-      background:rgba(0,0,0,.18);
-      display:inline-block;
-      margin:0 6px 2px 0;
+      flex-wrap:wrap;
     }
 
     .lede{
       font-size:20px;
       opacity:.92;
-      margin:0 0 22px 0;
+      margin-bottom:22px;
     }
 
     .accent-rule{
@@ -127,38 +110,27 @@
       background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
       margin: 20px 0 18px;
     }
+
     .tags{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin: 0 0 18px 0;
-      padding:0;
       list-style:none;
+      padding:0;
+      margin-bottom:18px;
     }
     .tag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.12);
-      background:#fff;
-      font-size: 13px;
-      color:#111;
-    }
-    .tag::before{
-      content:"";
-      width:8px; height:8px;
+      padding:8px 12px;
       border-radius:999px;
-      background: rgba(192,68,44,1);
-      opacity:.85;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      font-size:13px;
     }
 
-    p{ margin:0 0 18px 0; font-size:16px; }
+    p{ margin-bottom:18px; }
     h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
 
-    ul{ margin:0 0 18px 18px; padding:0; }
-    li{ margin:8px 0; }
+    ul{ margin-left:18px; }
 
     .callout{
       border:1px solid rgba(0,0,0,.12);
@@ -167,7 +139,6 @@
       background:#fff;
       margin:28px 0;
     }
-    .callout p{ margin:0; font-size:15px; opacity:.92; }
 
     .related, .capsule{
       border:1px solid rgba(0,0,0,.12);
@@ -176,6 +147,7 @@
       padding:18px;
       margin:28px 0 0;
     }
+
     .kicker{
       font-size:12px;
       letter-spacing:.08em;
@@ -184,11 +156,7 @@
       margin-bottom:8px;
       font-weight:900;
     }
-    .related p, .capsule p{
-      margin:0 0 10px 0;
-      font-size:15px;
-      opacity:.92;
-    }
+
     .related a, .capsule a{
       color:#111;
       text-decoration:none;
@@ -202,26 +170,21 @@
       margin-top:10px;
     }
 
-    .disclaimer{
-      font-size:13px;
-      opacity:.72;
-      margin-top:22px;
-    }
-
     footer{
       background:#fffdf8;
       padding:18px 0;
       font-size:13px;
       opacity:.85;
     }
+
     footer a{
-      color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
+      color:#111;
     }
 
     @media (max-width:820px){
-      article h1{ font-size:30px; }
+      h1{ font-size:30px; }
       .lede{ font-size:18px; }
     }
   </style>
@@ -229,14 +192,14 @@
 
 <body>
 
-<header class="site-header">
+<header>
   <div class="container">
     <div class="header-inner">
-      <a class="brand" href="/" aria-label="WAP MOP SHOPPE Home">
-        <img src="/assets/favicon.svg" alt="" aria-hidden="true" />
-        <span class="wordmark">WAP MOP SHOPPE</span>
+      <a class="brand" href="/">
+        <img src="/assets/figures/meister-stamp.png" alt="">
+        WAP MOP SHOPPE
       </a>
-      <nav aria-label="Primary">
+      <nav>
         <a href="/articles.html">Articles</a>
         <a href="/shoppe.html">Shoppe</a>
         <a href="/about.html">About</a>
@@ -252,15 +215,13 @@
       <article>
 
         <div class="crumbs">
-          <a href="/articles.html">Articles</a> &nbsp;›&nbsp; Aftercare
+          <a href="/articles.html">Articles</a> › Aftercare
         </div>
 
         <h1>After doesn’t mean absent</h1>
 
-        <div class="meta" aria-label="Article details">
-          <span><span class="dot" aria-hidden="true"></span> Updated Mar 2, 2026</span>
-          <span><span class="dot" aria-hidden="true"></span> 3–4 min read</span>
-          <span><span class="dot" aria-hidden="true"></span> Comfort-first, not performative</span>
+        <div class="meta">
+          Updated Mar 2, 2026 · 3–4 min read · Comfort-first
         </div>
 
         <p class="lede">
@@ -268,8 +229,9 @@
           After can be quiet — and still deeply present.
         </p>
 
-        <hr class="accent-rule" />
-        <ul class="tags" aria-label="Tags">
+        <hr class="accent-rule">
+
+        <ul class="tags">
           <li class="tag">Aftercare</li>
           <li class="tag">Presence</li>
           <li class="tag">Closure</li>
@@ -282,17 +244,20 @@
         </p>
 
         <h2>Presence is a behavior</h2>
+
         <p>
           Being present after intimacy can look like:
           water within reach, a towel, a wipe, a hand on a shoulder,
           a question asked gently and received without argument.
         </p>
+
         <p>
           It can also look like space — if space is what’s wanted.
-          The key is that space is offered with care, not taken as a disappearance.
+          The key is that space is offered with care, not taken as disappearance.
         </p>
 
         <h2>Small questions that close the loop</h2>
+
         <ul>
           <li>“How’s your body?”</li>
           <li>“Anything feel sore or off?”</li>
@@ -300,32 +265,30 @@
         </ul>
 
         <h2>What absence feels like</h2>
+
         <p>
           Absence isn’t leaving the room.
           It’s leaving emotionally — turning the moment into a transaction,
-          acting like the “after” is inconvenient, or treating discomfort as an overreaction.
+          acting like the “after” is inconvenient.
         </p>
 
-        <section class="callout" aria-label="Key idea">
-          <p>
-            Aftercare isn’t a performance.
-            It’s a signal: “I’m still here with you.”
-          </p>
-        </section>
+        <div class="callout">
+          Aftercare isn’t a performance.
+          It’s a signal: “I’m still here with you.”
+        </div>
 
-        <aside class="related" aria-label="Related care">
+        <aside class="related">
           <div class="kicker">Related care</div>
           <p>
-            Want an intentionally simple “after” setup — physically and emotionally?
-            See our <a href="/shoppe/aftercare.html">aftercare</a> picks in the Shoppe.
+            Want an intentionally simple “after” setup?
+            See our <a href="/shoppe/aftercare.html">aftercare</a> picks.
           </p>
         </aside>
 
-        <aside class="capsule" aria-label="Comfort capsule">
+        <aside class="capsule">
           <div class="kicker">Comfort capsule · Meister approved</div>
           <p>
-            If you want a simple, low-friction “after” setup, these are practical basics.
-            Nothing performative — just comfortable.
+            A simple, low-friction “after” setup.
           </p>
 
           <ul>
@@ -333,31 +296,27 @@
               <a href="https://www.amazon.com/dp/B0CSG7FJ87/?tag=wapmopshoppe-20" target="_blank" rel="nofollow sponsored">
                 Feminine cleansing wipes (external use)
               </a>
-              — a gentle reset when you want to feel fresh without doing the most.
             </li>
             <li>
               <a href="https://www.amazon.com/dp/B0DRVL73RD/?tag=wapmopshoppe-20" target="_blank" rel="nofollow sponsored">
                 Cotton washcloth set
               </a>
-              — soft, reusable, and quietly ideal for a simple cleanup ritual.
             </li>
             <li>
               <a href="https://www.amazon.com/dp/B07NDLGK9W/?tag=wapmopshoppe-20" target="_blank" rel="nofollow sponsored">
                 Bedside glass water carafe
               </a>
-              — hydration within reach is a small act of presence.
             </li>
           </ul>
 
           <p class="note">
-            As an Amazon Associate, WAP MOP SHOPPE may earn from qualifying purchases. See
-            <a href="/disclosure.html">Disclosure</a>.
+            As an Amazon Associate, WAP MOP SHOPPE may earn from qualifying purchases.
+            See <a href="/disclosure.html">Disclosure</a>.
           </p>
         </aside>
 
-        <p class="disclaimer">
-          Not medical advice. If pain or irritation persists, get evaluated —
-          and treat discomfort as information, not an inconvenience.
+        <p class="note">
+          Not medical advice. If pain or irritation persists, get evaluated.
         </p>
 
       </article>
