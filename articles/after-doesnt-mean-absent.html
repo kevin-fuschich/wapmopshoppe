@@ -3,59 +3,136 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>After doesn’t mean absent — WAP MOP SHOPPE</title>
 
+  <!-- Primary SEO -->
+  <title>After Doesn’t Mean Absent | WAP MOP SHOPPE</title>
   <meta name="description" content="After doesn’t mean absent. Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+  <link rel="canonical" href="https://wapmopshoppe.com/after-doesnt-mean-absent.html" />
+
+  <!-- Social (no image set yet; add later if you want) -->
+  <meta property="og:site_name" content="WAP MOP SHOPPE" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="After Doesn’t Mean Absent" />
+  <meta property="og:description" content="Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
+  <meta property="og:url" content="https://wapmopshoppe.com/after-doesnt-mean-absent.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="After Doesn’t Mean Absent" />
+  <meta name="twitter:description" content="Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
+
+  <!-- Root-path assets (GitHub Pages custom domain friendly) -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <!-- Article structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"After Doesn’t Mean Absent",
+    "description":"Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop.",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://wapmopshoppe.com/after-doesnt-mean-absent.html"},
+    "publisher":{"@type":"Organization","name":"WAP MOP SHOPPE","url":"https://wapmopshoppe.com"},
+    "author":{"@type":"Organization","name":"WAP MOP SHOPPE"},
+    "datePublished":"2026-03-02",
+    "dateModified":"2026-03-02"
+  }
+  </script>
 
   <style>
-    header, nav, main, footer, section, article, aside { display:block; }
+    :root{
+      --paper:#fffdf8;
+      --bg:#f4f4f4;
+      --ink:#111;
+      --muted:rgba(0,0,0,.72);
+      --line:rgba(0,0,0,.12);
+      --accent:rgba(192,68,44,1);
+      --card:#fff;
+      --radius:16px;
+      --sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
+
     body{
       margin:0;
-      background:#f4f4f4;
-      color:#111;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
       line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
+
     .container{ max-width:960px; margin:0 auto; padding:0 20px; }
     .content{ max-width:780px; margin:0 auto; }
 
-    /* Header */
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:18px 0;
+    /* Skip link (a11y) */
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
     }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{
-      font-weight:800;
-      letter-spacing:.06em;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
+    .skip-link:focus{
+      position:static;
+      width:auto;
+      height:auto;
+      display:inline-block;
+      margin:10px;
+      padding:10px 12px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:999px;
+      z-index:9999;
     }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
 
     /* Main */
     main{
-      background:#fffdf8;
+      background:var(--paper);
       padding:56px 0;
-      border-bottom:1px solid rgba(0,0,0,.12);
+      border-bottom:1px solid var(--line);
     }
+
+    .crumbs{
+      font-size:13px;
+      color:var(--muted);
+      margin:0 0 14px 0;
+    }
+    .crumbs a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,.25);
+    }
+    .crumbs a:hover{ border-bottom-color: rgba(0,0,0,.5); }
 
     article h1{
       font-size:36px;
       line-height:1.15;
-      margin:0 0 18px 0;
+      margin:0 0 10px 0;
       font-weight:900;
       letter-spacing:-.01em;
     }
+
+    .meta{
+      font-size:13px;
+      color:var(--muted);
+      margin:0 0 22px 0;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .meta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .dot{
+      width:4px; height:4px;
+      border-radius:50%;
+      background:var(--line);
+      display:inline-block;
+    }
+
     .lede{
       font-size:20px;
       opacity:.92;
@@ -65,9 +142,10 @@
     .accent-rule{
       height:2px;
       border:0;
-      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
+      background: linear-gradient(90deg, var(--accent), transparent);
       margin: 20px 0 18px;
     }
+
     .tags{
       display:flex;
       flex-wrap:wrap;
@@ -82,36 +160,42 @@
       gap:8px;
       padding: 8px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.12);
-      background:#fff;
+      border: 1px solid var(--line);
+      background:var(--card);
       font-size: 13px;
-      color:#111;
+      color:var(--ink);
     }
     .tag::before{
       content:"";
       width:8px; height:8px;
       border-radius:999px;
-      background: rgba(192,68,44,1);
+      background: var(--accent);
       opacity:.85;
     }
 
     p{ margin:0 0 18px 0; font-size:16px; }
     h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
 
+    ul{
+      margin:0 0 18px 18px;
+      padding:0;
+    }
+    li{ margin:8px 0; }
+
     .callout{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
       padding:18px;
-      background:#fff;
+      background:var(--card);
       margin:28px 0;
     }
     .callout p{ margin:0; font-size:15px; opacity:.92; }
 
     /* Standard related block */
     .related{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
       padding:18px;
       margin:28px 0 0;
     }
@@ -129,29 +213,31 @@
       opacity:.92;
     }
     .related a{
-      color:#111;
+      color:var(--ink);
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
       font-weight:900;
     }
+    .related a:hover{ border-bottom-color: rgba(0,0,0,.5); }
 
-    .meta{
+    .disclaimer{
       font-size:13px;
-      opacity:.72;
+      color:var(--muted);
       margin-top:22px;
     }
 
     footer{
-      background:#fffdf8;
+      background:var(--paper);
       padding:18px 0;
       font-size:13px;
-      opacity:.85;
+      opacity:.88;
     }
     footer a{
-      color:#111;
+      color:var(--ink);
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
     }
+    footer a:hover{ border-bottom-color: rgba(0,0,0,.5); }
 
     @media (max-width:820px){
       article h1{ font-size:30px; }
@@ -161,28 +247,56 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
+<!-- Header partial injection -->
 <div id="site-header"></div>
+<noscript>
+  <!-- Minimal fallback navigation if JS is disabled -->
+  <header style="background:#fffdf8;border-bottom:1px solid rgba(0,0,0,.12);">
+    <div class="container" style="padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+      <a href="/" style="font-weight:800;letter-spacing:.06em;text-decoration:none;color:#111;white-space:nowrap;">WAP MOP SHOPPE</a>
+      <nav aria-label="Primary" style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="/articles.html" style="text-decoration:none;color:#111;font-weight:500;">Articles</a>
+        <a href="/shoppe.html" style="text-decoration:none;color:#111;font-weight:500;">Shoppe</a>
+        <a href="/about.html" style="text-decoration:none;color:#111;font-weight:500;">About</a>
+        <a href="/disclosure.html" style="text-decoration:none;color:#111;font-weight:500;">Disclosure</a>
+      </nav>
+    </div>
+  </header>
+</noscript>
+
 <script>
   fetch("/assets/partials/header.html")
     .then(r => r.text())
-    .then(html => {
-      document.getElementById("site-header").innerHTML = html;
-    });
+    .then(html => { document.getElementById("site-header").innerHTML = html; })
+    .catch(() => { /* silent fail; noscript fallback covers JS-disabled only */ });
 </script>
-<main>
+
+<main id="main">
   <div class="container">
     <div class="content">
       <article>
 
+        <div class="crumbs">
+          <a href="/articles.html">Articles</a> &nbsp;›&nbsp; Aftercare
+        </div>
+
         <h1>After doesn’t mean absent</h1>
+
+        <div class="meta" aria-label="Article details">
+          <span><span class="dot" aria-hidden="true"></span> Updated Mar 2, 2026</span>
+          <span><span class="dot" aria-hidden="true"></span> 3–4 min read</span>
+          <span><span class="dot" aria-hidden="true"></span> Comfort-first, not performative</span>
+        </div>
 
         <p class="lede">
           Aftercare doesn’t have to be loud to be real.
           After can be quiet — and still deeply present.
         </p>
 
-        <hr class="accent-rule">
+        <hr class="accent-rule" />
+
         <ul class="tags" aria-label="Tags">
           <li class="tag">Aftercare</li>
           <li class="tag">Presence</li>
@@ -236,11 +350,11 @@
           <div class="kicker">Related care</div>
           <p>
             Want an intentionally simple “after” setup — physically and emotionally?
-            See our <a href="/wapmopshoppe/shoppe/aftercare.html">aftercare</a> picks in the Shoppe.
+            See our <a href="/shoppe/aftercare.html">aftercare</a> picks in the Shoppe.
           </p>
         </aside>
 
-        <p class="meta">
+        <p class="disclaimer">
           Not medical advice. If pain or irritation persists, get evaluated —
           and treat discomfort as information, not an inconvenience.
         </p>
@@ -252,12 +366,12 @@
 
 <footer>
   <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
+    © <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure.html">Disclosure</a>
   </div>
 </footer>
 
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
+  document.getElementById("y").textContent = new Date().getFullYear();
 </script>
 
 </body>
