@@ -9,7 +9,7 @@
   <meta name="description" content="After doesn’t mean absent. Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
   <link rel="canonical" href="https://wapmopshoppe.com/after-doesnt-mean-absent.html" />
 
-  <!-- Social (no image set yet; add later if you want) -->
+  <!-- Social -->
   <meta property="og:site_name" content="WAP MOP SHOPPE" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="After Doesn’t Mean Absent" />
@@ -19,11 +19,11 @@
   <meta name="twitter:title" content="After Doesn’t Mean Absent" />
   <meta name="twitter:description" content="Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
 
-  <!-- Root-path assets (GitHub Pages custom domain friendly) -->
+  <!-- Root assets (no /wapmopshoppe/ pathing) -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/assets/styles.css" />
 
-  <!-- Article structured data -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -49,6 +49,7 @@
       --card:#fff;
       --radius:16px;
       --sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
 
     body{
@@ -66,17 +67,12 @@
 
     /* Skip link (a11y) */
     .skip-link{
-      position:absolute;
-      left:-999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
+      position:absolute; left:-999px; top:auto;
+      width:1px; height:1px; overflow:hidden;
     }
     .skip-link:focus{
       position:static;
-      width:auto;
-      height:auto;
+      width:auto; height:auto;
       display:inline-block;
       margin:10px;
       padding:10px 12px;
@@ -86,7 +82,6 @@
       z-index:9999;
     }
 
-    /* Main */
     main{
       background:var(--paper);
       padding:56px 0;
@@ -220,6 +215,51 @@
     }
     .related a:hover{ border-bottom-color: rgba(0,0,0,.5); }
 
+    /* Comfort capsule */
+    .capsule{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      padding:18px;
+      margin:16px 0 0;
+    }
+    .capsule .kicker{
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      opacity:.75;
+      margin-bottom:8px;
+      font-weight:900;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .capsule .kicker .chip{
+      font-family:var(--mono);
+      font-size:11px;
+      padding:3px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fffdf8;
+      opacity:.9;
+    }
+    .capsule p{
+      margin:0 0 10px 0;
+      font-size:15px;
+      opacity:.92;
+    }
+    .capsule ul{
+      margin:0 0 10px 18px;
+    }
+    .capsule li{
+      margin:10px 0;
+    }
+    .capsule .note{
+      font-size:13px;
+      color:var(--muted);
+      margin:10px 0 0;
+    }
+
     .disclaimer{
       font-size:13px;
       color:var(--muted);
@@ -252,7 +292,6 @@
 <!-- Header partial injection -->
 <div id="site-header"></div>
 <noscript>
-  <!-- Minimal fallback navigation if JS is disabled -->
   <header style="background:#fffdf8;border-bottom:1px solid rgba(0,0,0,.12);">
     <div class="container" style="padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
       <a href="/" style="font-weight:800;letter-spacing:.06em;text-decoration:none;color:#111;white-space:nowrap;">WAP MOP SHOPPE</a>
@@ -270,7 +309,7 @@
   fetch("/assets/partials/header.html")
     .then(r => r.text())
     .then(html => { document.getElementById("site-header").innerHTML = html; })
-    .catch(() => { /* silent fail; noscript fallback covers JS-disabled only */ });
+    .catch(() => {});
 </script>
 
 <main id="main">
@@ -351,6 +390,41 @@
           <p>
             Want an intentionally simple “after” setup — physically and emotionally?
             See our <a href="/shoppe/aftercare.html">aftercare</a> picks in the Shoppe.
+          </p>
+        </aside>
+
+        <!-- STANDARD COMFORT CAPSULE (3 items max) -->
+        <aside class="capsule" aria-label="Comfort capsule">
+          <div class="kicker">Comfort capsule <span class="chip">Meister approved</span></div>
+          <p>
+            If you want a simple, low-friction “after” setup, these are practical basics.
+            Nothing performative — just comfortable.
+          </p>
+
+          <ul>
+            <li>
+              <a href="https://www.amazon.com/dp/B0CSG7FJ87/?tag=wapmopshoppe-20" target="_blank" rel="nofollow sponsored">
+                Feminine cleansing wipes (external use)
+              </a>
+              — a gentle reset when you want to feel fresh without doing the most.
+            </li>
+            <li>
+              <a href="https://www.amazon.com/dp/B0DRVL73RD/?tag=wapmopshoppe-20" target="_blank" rel="nofollow sponsored">
+                Cotton washcloth set
+              </a>
+              — soft, reusable, and quietly ideal for a simple cleanup ritual.
+            </li>
+            <li>
+              <a href="https://www.amazon.com/dp/B07NDLGK9W/?tag=wapmopshoppe-20" target="_blank" rel="nofollow sponsored">
+                Bedside glass water carafe
+              </a>
+              — hydration within reach is a small act of presence.
+            </li>
+          </ul>
+
+          <p class="note">
+            As an Amazon Associate, WAP MOP SHOPPE may earn from qualifying purchases. See
+            <a href="/disclosure.html">Disclosure</a>.
           </p>
         </aside>
 
