@@ -4,12 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Primary SEO -->
   <title>After Doesn’t Mean Absent | WAP MOP SHOPPE</title>
   <meta name="description" content="After doesn’t mean absent. Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
   <link rel="canonical" href="https://wapmopshoppe.com/articles/after-doesnt-mean-absent.html" />
 
-  <!-- Social -->
   <meta property="og:site_name" content="WAP MOP SHOPPE" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="After Doesn’t Mean Absent" />
@@ -19,11 +17,9 @@
   <meta name="twitter:title" content="After Doesn’t Mean Absent" />
   <meta name="twitter:description" content="Aftercare can be quiet, simple, and still deeply present — a check-in, a pause, a way of closing the loop." />
 
-  <!-- Root assets -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/assets/styles.css" />
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -39,66 +35,62 @@
   </script>
 
   <style>
-    :root{
-      --paper:#fffdf8;
-      --bg:#f4f4f4;
-      --ink:#111;
-      --muted:rgba(0,0,0,.72);
-      --line:rgba(0,0,0,.12);
-      --accent:rgba(192,68,44,1);
-      --card:#fff;
-      --radius:16px;
-      --sans: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    }
-
+    header, nav, main, footer, section, article, aside { display:block; }
     body{
       margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family:var(--sans);
+      background:#f4f4f4;
+      color:#111;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
     }
-
     .container{ max-width:960px; margin:0 auto; padding:0 20px; }
     .content{ max-width:780px; margin:0 auto; }
 
-    /* Skip link (a11y) */
-    .skip-link{
-      position:absolute; left:-999px; top:auto;
-      width:1px; height:1px; overflow:hidden;
+    /* Header */
+    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 0;
+      flex-wrap:wrap;
     }
-    .skip-link:focus{
-      position:static;
-      width:auto; height:auto;
-      display:inline-block;
-      margin:10px;
-      padding:10px 12px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:999px;
-      z-index:9999;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:#111;
     }
+    .brand img{ width:42px; height:auto; display:block; }
+    .wordmark{
+      font-weight:800;
+      letter-spacing:.06em;
+      white-space:nowrap;
+    }
+    nav{ display:flex; gap:16px; flex-wrap:wrap; }
+    nav a{ text-decoration:none; color:#111; font-weight:600; opacity:.92; }
+    nav a:hover{ opacity:1; }
 
+    /* Main */
     main{
-      background:var(--paper);
+      background:#fffdf8;
       padding:56px 0;
-      border-bottom:1px solid var(--line);
+      border-bottom:1px solid rgba(0,0,0,.12);
     }
 
     .crumbs{
       font-size:13px;
-      color:var(--muted);
+      opacity:.72;
       margin:0 0 14px 0;
     }
     .crumbs a{
-      color:inherit;
+      color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
+      font-weight:700;
     }
-    .crumbs a:hover{ border-bottom-color: rgba(0,0,0,.5); }
 
     article h1{
       font-size:36px;
@@ -110,22 +102,17 @@
 
     .meta{
       font-size:13px;
-      color:var(--muted);
+      opacity:.72;
       margin:0 0 22px 0;
       display:flex;
       flex-wrap:wrap;
       gap:12px;
     }
-    .meta span{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-    }
     .dot{
-      width:4px; height:4px;
-      border-radius:50%;
-      background:var(--line);
+      width:4px;height:4px;border-radius:50%;
+      background:rgba(0,0,0,.18);
       display:inline-block;
+      margin:0 6px 2px 0;
     }
 
     .lede{
@@ -137,10 +124,9 @@
     .accent-rule{
       height:2px;
       border:0;
-      background: linear-gradient(90deg, var(--accent), transparent);
+      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
       margin: 20px 0 18px;
     }
-
     .tags{
       display:flex;
       flex-wrap:wrap;
@@ -155,16 +141,16 @@
       gap:8px;
       padding: 8px 12px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background:var(--card);
+      border: 1px solid rgba(0,0,0,.12);
+      background:#fff;
       font-size: 13px;
-      color:var(--ink);
+      color:#111;
     }
     .tag::before{
       content:"";
       width:8px; height:8px;
       border-radius:999px;
-      background: var(--accent);
+      background: rgba(192,68,44,1);
       opacity:.85;
     }
 
@@ -175,22 +161,22 @@
     li{ margin:8px 0; }
 
     .callout{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
       padding:18px;
-      background:var(--card);
+      background:#fff;
       margin:28px 0;
     }
     .callout p{ margin:0; font-size:15px; opacity:.92; }
 
-    .related{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:var(--card);
+    .related, .capsule{
+      border:1px solid rgba(0,0,0,.12);
+      border-radius:16px;
+      background:#fff;
       padding:18px;
       margin:28px 0 0;
     }
-    .related .kicker{
+    .kicker{
       font-size:12px;
       letter-spacing:.08em;
       text-transform:uppercase;
@@ -198,78 +184,41 @@
       margin-bottom:8px;
       font-weight:900;
     }
-    .related p{
+    .related p, .capsule p{
       margin:0 0 10px 0;
       font-size:15px;
       opacity:.92;
     }
-    .related a{
-      color:var(--ink);
+    .related a, .capsule a{
+      color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
       font-weight:900;
     }
-    .related a:hover{ border-bottom-color: rgba(0,0,0,.5); }
 
-    /* Comfort capsule */
-    .capsule{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background:var(--card);
-      padding:18px;
-      margin:16px 0 0;
-    }
-    .capsule .kicker{
-      font-size:12px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      opacity:.75;
-      margin-bottom:8px;
-      font-weight:900;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .capsule .kicker .chip{
-      font-family:var(--mono);
-      font-size:11px;
-      padding:3px 8px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:#fffdf8;
-      opacity:.9;
-    }
-    .capsule p{
-      margin:0 0 10px 0;
-      font-size:15px;
-      opacity:.92;
-    }
-    .capsule ul{ margin:0 0 10px 18px; }
-    .capsule li{ margin:10px 0; }
-    .capsule .note{
+    .note{
       font-size:13px;
-      color:var(--muted);
-      margin:10px 0 0;
+      opacity:.72;
+      margin-top:10px;
     }
 
     .disclaimer{
       font-size:13px;
-      color:var(--muted);
+      opacity:.72;
       margin-top:22px;
     }
 
     footer{
-      background:var(--paper);
+      background:#fffdf8;
       padding:18px 0;
       font-size:13px;
-      opacity:.88;
+      opacity:.85;
     }
     footer a{
-      color:var(--ink);
+      color:#111;
       text-decoration:none;
       border-bottom:1px solid rgba(0,0,0,.25);
     }
-    footer a:hover{ border-bottom-color: rgba(0,0,0,.5); }
 
     @media (max-width:820px){
       article h1{ font-size:30px; }
@@ -279,32 +228,25 @@
 </head>
 
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- Header partial injection -->
-<div id="site-header"></div>
-<noscript>
-  <header style="background:#fffdf8;border-bottom:1px solid rgba(0,0,0,.12);">
-    <div class="container" style="padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
-      <a href="/" style="font-weight:800;letter-spacing:.06em;text-decoration:none;color:#111;white-space:nowrap;">WAP MOP SHOPPE</a>
-      <nav aria-label="Primary" style="display:flex;gap:16px;flex-wrap:wrap;">
-        <a href="/articles.html" style="text-decoration:none;color:#111;font-weight:500;">Articles</a>
-        <a href="/shoppe.html" style="text-decoration:none;color:#111;font-weight:500;">Shoppe</a>
-        <a href="/about.html" style="text-decoration:none;color:#111;font-weight:500;">About</a>
-        <a href="/disclosure.html" style="text-decoration:none;color:#111;font-weight:500;">Disclosure</a>
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="WAP MOP SHOPPE Home">
+        <img src="/assets/favicon.svg" alt="" aria-hidden="true" />
+        <span class="wordmark">WAP MOP SHOPPE</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/articles.html">Articles</a>
+        <a href="/shoppe.html">Shoppe</a>
+        <a href="/about.html">About</a>
+        <a href="/disclosure.html">Disclosure</a>
       </nav>
     </div>
-  </header>
-</noscript>
+  </div>
+</header>
 
-<script>
-  fetch("/assets/partials/header.html")
-    .then(r => r.text())
-    .then(html => { document.getElementById("site-header").innerHTML = html; })
-    .catch(() => {});
-</script>
-
-<main id="main">
+<main>
   <div class="container">
     <div class="content">
       <article>
@@ -327,7 +269,6 @@
         </p>
 
         <hr class="accent-rule" />
-
         <ul class="tags" aria-label="Tags">
           <li class="tag">Aftercare</li>
           <li class="tag">Presence</li>
@@ -341,20 +282,17 @@
         </p>
 
         <h2>Presence is a behavior</h2>
-
         <p>
           Being present after intimacy can look like:
           water within reach, a towel, a wipe, a hand on a shoulder,
           a question asked gently and received without argument.
         </p>
-
         <p>
           It can also look like space — if space is what’s wanted.
           The key is that space is offered with care, not taken as a disappearance.
         </p>
 
         <h2>Small questions that close the loop</h2>
-
         <ul>
           <li>“How’s your body?”</li>
           <li>“Anything feel sore or off?”</li>
@@ -362,7 +300,6 @@
         </ul>
 
         <h2>What absence feels like</h2>
-
         <p>
           Absence isn’t leaving the room.
           It’s leaving emotionally — turning the moment into a transaction,
@@ -376,7 +313,6 @@
           </p>
         </section>
 
-        <!-- STANDARD RELATED CARE BLOCK -->
         <aside class="related" aria-label="Related care">
           <div class="kicker">Related care</div>
           <p>
@@ -385,9 +321,8 @@
           </p>
         </aside>
 
-        <!-- STANDARD COMFORT CAPSULE (3 items max) -->
         <aside class="capsule" aria-label="Comfort capsule">
-          <div class="kicker">Comfort capsule <span class="chip">Meister approved</span></div>
+          <div class="kicker">Comfort capsule · Meister approved</div>
           <p>
             If you want a simple, low-friction “after” setup, these are practical basics.
             Nothing performative — just comfortable.
