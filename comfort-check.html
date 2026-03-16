@@ -1,1 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<title>Comfort Check | WAP MOP SHOPPE</title>
+
+<meta name="description" content="A calm tool to help identify common comfort issues — friction, irritation, dryness, and aftercare." />
+<link rel="canonical" href="https://wapmopshoppe.com/comfort-check.html" />
+
+<link rel="icon" href="/assets/figures/meister-stamp.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/figures/meister-stamp.png">
+<link rel="stylesheet" href="/assets/styles.css">
+
+<style>
+
+body{
+margin:0;
+background:#f4f4f4;
+color:#111;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+line-height:1.6;
+}
+
+.container{
+max-width:900px;
+margin:0 auto;
+padding:0 20px;
+}
+
+.content{
+max-width:720px;
+margin:0 auto;
+}
+
+header{
+background:#fffdf8;
+border-bottom:1px solid rgba(0,0,0,.12);
+}
+
+.header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 0;
+flex-wrap:wrap;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:#111;
+font-weight:800;
+letter-spacing:.06em;
+}
+
+.brand img{
+width:42px;
+}
+
+nav{
+display:flex;
+gap:16px;
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+font-weight:600;
+opacity:.92;
+}
+
+main{
+background:#fffdf8;
+padding:60px 0;
+border-bottom:1px solid rgba(0,0,0,.12);
+}
+
+h1{
+font-size:36px;
+margin-bottom:12px;
+}
+
+.lede{
+font-size:20px;
+opacity:.9;
+margin-bottom:28px;
+}
+
+.question{
+margin:32px 0;
+}
+
+button.option{
+display:block;
+width:100%;
+text-align:left;
+padding:14px 16px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid rgba(0,0,0,.15);
+background:#fff;
+cursor:pointer;
+font-size:16px;
+}
+
+button.option:hover{
+background:#f8f8f8;
+}
+
+.result{
+margin-top:30px;
+padding:20px;
+border-radius:16px;
+background:#fff;
+border:1px solid rgba(0,0,0,.12);
+display:none;
+}
+
+.result h2{
+margin-top:0;
+}
+
+.result a{
+border-bottom:1px solid rgba(0,0,0,.3);
+text-decoration:none;
+font-weight:700;
+color:#111;
+}
+
+footer{
+background:#fffdf8;
+padding:18px 0;
+font-size:13px;
+opacity:.85;
+}
+
+footer a{
+color:#111;
+text-decoration:none;
+border-bottom:1px solid rgba(0,0,0,.25);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<div class="header-inner">
+
+<a class="brand" href="/">
+<img src="/assets/figures/meister-stamp.png" alt="">
+WAP MOP SHOPPE
+</a>
+
+<nav>
+<a href="/articles.html">Articles</a>
+<a href="/shoppe.html">Shoppe</a>
+<a href="/about.html">About</a>
+<a href="/disclosure.html">Disclosure</a>
+</nav>
+
+</div>
+</div>
+</header>
+
+<main>
+<div class="container">
+<div class="content">
+
+<h1>Comfort Check</h1>
+
+<p class="lede">
+A calm little tool to help figure out what might be going on.
+</p>
+
+<div class="question">
+
+<h2>What feels closest to the issue?</h2>
+
+<button class="option" onclick="showResult('friction')">
+Friction or chafing
+</button>
+
+<button class="option" onclick="showResult('dryness')">
+Dryness during activity
+</button>
+
+<button class="option" onclick="showResult('irritation')">
+Skin feels irritated or raw
+</button>
+
+<button class="option" onclick="showResult('aftercare')">
+Just want a better aftercare routine
+</button>
+
+<button class="option" onclick="showResult('unsure')">
+Not sure — something just feels off
+</button>
+
+</div>
+
+<div id="result" class="result"></div>
+
+</div>
+</div>
+</main>
+
+<footer>
+<div class="container">
+© <span id="y"></span> WAP MOP SHOPPE ·
+<a href="/disclosure.html">Disclosure</a>
+</div>
+</footer>
+
+<script>
+
+function showResult(type){
+
+let box = document.getElementById("result");
+
+let responses = {
+
+friction: `
+<h2>This sounds like friction.</h2>
+<p>
+Friction problems usually come from heat + moisture + repetition.
+Reducing friction early prevents most irritation.
+</p>
+<p>
+Read: <a href="/articles/how-to-prevent-chafing.html">How to Prevent Chafing</a>
+</p>
+`,
+
+dryness: `
+<h2>This sounds like dryness.</h2>
+<p>
+Dry friction is one of the most common causes of discomfort.
+More lubrication and slower pacing usually solve it quickly.
+</p>
+<p>
+Related: <a href="/articles/how-to-prevent-chafing.html">Friction & Chafing Guide</a>
+</p>
+`,
+
+irritation: `
+<h2>This sounds like barrier irritation.</h2>
+<p>
+When skin gets warm and irritated, the best move is usually to
+reduce activity, keep things breathable, and let the barrier calm down.
+</p>
+<p>
+Related: <a href="/articles/laundry-as-intimate-care.html">Laundry as Intimate Care</a>
+</p>
+`,
+
+aftercare: `
+<h2>You’re thinking about aftercare.</h2>
+<p>
+Aftercare is simple: reduce moisture, reduce friction, restore calm.
+Small rituals matter more than complex routines.
+</p>
+<p>
+Explore: <a href="/shoppe/aftercare.html">Aftercare Picks</a>
+</p>
+`,
+
+unsure: `
+<h2>Start simple.</h2>
+<p>
+Most comfort issues come from friction, moisture, or irritation.
+Reducing those variables solves the majority of problems.
+</p>
+<p>
+Start here: <a href="/articles/how-to-prevent-chafing.html">Chafing Guide</a>
+</p>
+`
+
+};
+
+box.innerHTML = responses[type];
+box.style.display = "block";
+
+}
+
+document.getElementById('y').textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
