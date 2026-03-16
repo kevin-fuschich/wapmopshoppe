@@ -1,276 +1,318 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WAP MOP SHOPPE</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Thoughtful guidance on caring for bodies you’re close to — what helps, what interferes, and when to stop." />
-  <link rel="canonical" href="https://wapmopshoppe.com/" />
+<meta name="description" content="Thoughtful guidance on caring for bodies you’re close to — what helps, what interferes, and when to stop." />
+<link rel="canonical" href="https://wapmopshoppe.com/" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="WAP MOP SHOPPE" />
-  <meta property="og:title" content="WAP MOP SHOPPE" />
-  <meta property="og:description" content="Thoughtful guidance on caring for bodies you’re close to — what helps, what interferes, and when to stop." />
-  <meta property="og:url" content="https://wapmopshoppe.com/" />
-  <meta name="twitter:card" content="summary" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WAP MOP SHOPPE" />
+<meta property="og:title" content="WAP MOP SHOPPE" />
+<meta property="og:description" content="Thoughtful guidance on caring for bodies you’re close to — what helps, what interferes, and when to stop." />
+<meta property="og:url" content="https://wapmopshoppe.com/" />
+<meta name="twitter:card" content="summary" />
 
-  <link rel="icon" href="/assets/figures/meister-stamp.png" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/figures/meister-stamp.png">
-  <link rel="stylesheet" href="/assets/styles.css">
+<link rel="icon" href="/assets/figures/meister-stamp.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/figures/meister-stamp.png">
+<link rel="stylesheet" href="/assets/styles.css">
 
-  <style>
-    header, nav, main, footer, section, article, aside { display:block; }
-    body{
-      margin:0;
-      background:#f4f4f4;
-      color:#111;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-    }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
+<style>
+header, nav, main, footer, section, article, aside { display:block; }
+body{
+margin:0;
+background:#f4f4f4;
+color:#111;
+font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+line-height:1.6;
+}
+.container{ max-width:960px; margin:0 auto; padding:0 20px; }
 
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:18px 0;
-      flex-wrap:wrap;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
-      font-weight:900;
-      letter-spacing:.06em;
-    }
-    .brand img{ width:42px; height:auto; display:block; }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:600; }
+.site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
+.header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:16px;
+padding:18px 0;
+flex-wrap:wrap;
+}
 
-    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+text-decoration:none;
+color:#111;
+white-space:nowrap;
+font-weight:900;
+letter-spacing:.06em;
+}
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:28px;
-      align-items:start;
-    }
-    h1{
-      margin:0 0 14px 0;
-      font-size:44px;
-      line-height:1.03;
-      font-weight:950;
-      letter-spacing:-.015em;
-    }
-    .lede{
-      margin:0 0 18px 0;
-      font-size:20px;
-      opacity:.9;
-      max-width:740px;
-    }
-    .cta-row{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:18px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 14px;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,.18);
-      background:#fff;
-      color:#111;
-      text-decoration:none;
-      font-weight:900;
-      font-size:14px;
-    }
-    .btn.primary{
-      border-color:rgba(0,0,0,.2);
-      background: rgba(192,68,44,.10);
-    }
+.brand img{ width:42px; height:auto; display:block; }
 
-    .accent-rule{
-      height:2px;
-      border:0;
-      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 22px 0 18px;
-    }
+nav{ display:flex; gap:16px; flex-wrap:wrap; }
+nav a{ text-decoration:none; color:#111; font-weight:600; }
 
-    .card{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:18px;
-      background:#fff;
-      padding:18px;
-    }
+main{
+background:#fffdf8;
+padding:56px 0;
+border-bottom:1px solid rgba(0,0,0,.12);
+}
 
-    .prompt-card{
-      margin-top:18px;
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-    .prompt-copy{
-      max-width:540px;
-    }
-    .prompt-kicker{
-      margin:0 0 6px 0;
-      font-size:12px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      opacity:.75;
-      font-weight:900;
-    }
-    .prompt-card p{
-      margin:0;
-      font-size:15px;
-      opacity:.9;
-    }
+.hero{
+display:grid;
+grid-template-columns: 1.25fr .75fr;
+gap:28px;
+align-items:start;
+}
 
-    .meister-wrap{
-      display:flex;
-      justify-content:flex-end;
-      gap:12px;
-      align-items:flex-start;
-    }
-    .meister{
-      width:280px;
-      max-width:100%;
-      height:auto;
-      display:block;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,.08));
-    }
+h1{
+margin:0 0 14px 0;
+font-size:44px;
+line-height:1.03;
+font-weight:950;
+letter-spacing:-.015em;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap:14px;
-      margin-top:18px;
-    }
-    .tile h2{
-      margin:0 0 6px 0;
-      font-size:16px;
-      font-weight:950;
-    }
-    .tile p{
-      margin:0;
-      font-size:14px;
-      opacity:.88;
-    }
-    .tile a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-      font-weight:900;
-    }
+.lede{
+margin:0 0 18px 0;
+font-size:20px;
+opacity:.9;
+max-width:740px;
+}
 
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
+.cta-row{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:18px;
+}
 
-    @media (max-width:920px){
-      .hero{ grid-template-columns: 1fr; }
-      .meister-wrap{ justify-content:flex-start; }
-      h1{ font-size:38px; }
-      .grid{ grid-template-columns:1fr; }
-      .prompt-card{ align-items:flex-start; }
-    }
-  </style>
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 14px;
+border-radius:999px;
+border:1px solid rgba(0,0,0,.18);
+background:#fff;
+color:#111;
+text-decoration:none;
+font-weight:900;
+font-size:14px;
+}
+
+.btn.primary{
+border-color:rgba(0,0,0,.2);
+background: rgba(192,68,44,.10);
+}
+
+.accent-rule{
+height:2px;
+border:0;
+background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
+margin: 22px 0 18px;
+}
+
+.card{
+border:1px solid rgba(0,0,0,.12);
+border-radius:18px;
+background:#fff;
+padding:18px;
+}
+
+.prompt-card{
+margin-top:18px;
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.prompt-copy{ max-width:540px; }
+
+.prompt-kicker{
+margin:0 0 6px 0;
+font-size:12px;
+letter-spacing:.08em;
+text-transform:uppercase;
+opacity:.75;
+font-weight:900;
+}
+
+.prompt-card p{
+margin:0;
+font-size:15px;
+opacity:.9;
+}
+
+.meister-wrap{
+display:flex;
+justify-content:flex-end;
+gap:12px;
+align-items:flex-start;
+}
+
+.meister{
+width:280px;
+max-width:100%;
+height:auto;
+display:block;
+filter: drop-shadow(0 10px 18px rgba(0,0,0,.08));
+}
+
+.grid{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap:14px;
+margin-top:18px;
+}
+
+.tile h2{
+margin:0 0 6px 0;
+font-size:16px;
+font-weight:950;
+}
+
+.tile p{
+margin:0;
+font-size:14px;
+opacity:.88;
+}
+
+.tile a{
+color:#111;
+text-decoration:none;
+border-bottom:1px solid rgba(0,0,0,.25);
+font-weight:900;
+}
+
+footer{
+background:#fffdf8;
+padding:18px 0;
+font-size:13px;
+opacity:.85;
+}
+
+footer a{
+color:#111;
+text-decoration:none;
+border-bottom:1px solid rgba(0,0,0,.25);
+}
+
+@media (max-width:920px){
+.hero{ grid-template-columns:1fr; }
+.meister-wrap{ justify-content:flex-start; }
+h1{ font-size:38px; }
+.grid{ grid-template-columns:1fr; }
+}
+</style>
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="container">
-    <div class="header-inner">
-      <a class="brand" href="/">
-        <img src="/assets/figures/meister-stamp.png" alt="">
-        <span>WAP MOP SHOPPE</span>
-      </a>
-      <nav>
-        <a href="/articles.html">Articles</a>
-        <a href="/shoppe.html">Shoppe</a>
-        <a href="/about.html">About</a>
-        <a href="/disclosure.html">Disclosure</a>
-      </nav>
-    </div>
-  </div>
+<div class="container">
+<div class="header-inner">
+
+<a class="brand" href="/">
+<img src="/assets/figures/meister-stamp.png" alt="">
+<span>WAP MOP SHOPPE</span>
+</a>
+
+<nav>
+<a href="/articles/">Articles</a>
+<a href="/shoppe/">Shoppe</a>
+<a href="/about/">About</a>
+<a href="/disclosure/">Disclosure</a>
+</nav>
+
+</div>
+</div>
 </header>
 
 <main>
-  <div class="container">
-    <section class="hero" aria-label="Intro">
-      <div>
-        <h1>Tongue in cheek.<br>Care in full.</h1>
-        <p class="lede">
-          Thoughtful guidance on caring for bodies you’re close to —
-          what helps, what interferes, and when to stop.
-        </p>
+<div class="container">
 
-        <hr class="accent-rule">
+<section class="hero">
 
-        <div class="cta-row" aria-label="Primary actions">
-          <a class="btn primary" href="/articles.html">Read the field guide</a>
-          <a class="btn" href="/shoppe.html">Browse the Shoppe</a>
-          <a class="btn" href="/comfort-check.html">Start the Comfort Check</a>
-        </div>
+<div>
 
-        <section class="card prompt-card" aria-label="Comfort Check prompt">
-          <div class="prompt-copy">
-            <p class="prompt-kicker">Start here</p>
-            <p>
-              Not sure whether it’s friction, dryness, irritation, or just a vague “something feels off” situation?
-              Use the Comfort Check for a calm first pass.
-            </p>
-          </div>
-          <a class="btn primary" href="/comfort-check.html">Open Comfort Check</a>
-        </section>
+<h1>Tongue in cheek.<br>Care in full.</h1>
 
-        <div class="grid" aria-label="Start here">
-          <div class="card tile">
-            <h2><a href="/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a></h2>
-            <p>Balance is a range. Most “freshness” problems are interference problems.</p>
-          </div>
-          <div class="card tile">
-            <h2><a href="/articles/mouths-as-systems.html">Mouths as systems</a></h2>
-            <p>Gentle beats harsh. Comfort-first oral care that doesn’t overcorrect.</p>
-          </div>
-          <div class="card tile">
-            <h2><a href="/articles/the-best-wipes.html">The best wipes</a></h2>
-            <p>Boring on purpose. External-only cleanup without irritation loops.</p>
-          </div>
-        </div>
-      </div>
+<p class="lede">
+Thoughtful guidance on caring for bodies you’re close to —
+what helps, what interferes, and when to stop.
+</p>
 
-      <aside class="card" aria-label="Mascot">
-        <div class="meister-wrap">
-          <img class="meister" src="/assets/images/wap-mop-meister.png" alt="The WAP MOP SHOPPE mascot, arms folded, alpine apothecary style.">
-        </div>
-        <p style="margin:14px 0 0 0; font-size:14px; opacity:.88;">
-          No shame. No perfume theater. Just practical care that respects the body’s boundaries.
-        </p>
-      </aside>
-    </section>
-  </div>
+<hr class="accent-rule">
+
+<div class="cta-row">
+<a class="btn primary" href="/articles/">Read the field guide</a>
+<a class="btn" href="/shoppe/">Browse the Shoppe</a>
+<a class="btn" href="/start/">Start the Comfort Check</a>
+</div>
+
+<section class="card prompt-card">
+<div class="prompt-copy">
+<p class="prompt-kicker">Start here</p>
+<p>
+Not sure whether it’s friction, dryness, irritation, or just a vague “something feels off” situation?
+Use the Comfort Check for a calm first pass.
+</p>
+</div>
+
+<a class="btn primary" href="/start/">Open Comfort Check</a>
+</section>
+
+<div class="grid">
+
+<div class="card tile">
+<h2><a href="/articles/vaginas-as-ecosystems/">Vaginas as ecosystems</a></h2>
+<p>Balance is a range. Most “freshness” problems are interference problems.</p>
+</div>
+
+<div class="card tile">
+<h2><a href="/articles/mouths-as-systems/">Mouths as systems</a></h2>
+<p>Gentle beats harsh. Comfort-first oral care that doesn’t overcorrect.</p>
+</div>
+
+<div class="card tile">
+<h2><a href="/articles/the-best-wipes/">The best wipes</a></h2>
+<p>Boring on purpose. External-only cleanup without irritation loops.</p>
+</div>
+
+</div>
+</div>
+
+<aside class="card">
+<div class="meister-wrap">
+<img class="meister" src="/assets/images/wap-mop-meister.png" alt="">
+</div>
+
+<p style="margin:14px 0 0 0;font-size:14px;opacity:.88;">
+No shame. No perfume theater. Just practical care that respects the body’s boundaries.
+</p>
+
+</aside>
+
+</section>
+</div>
 </main>
 
 <footer>
-  <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure.html">Disclosure</a>
-  </div>
+<div class="container">
+© <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure/">Disclosure</a>
+</div>
 </footer>
 
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
+document.getElementById('y').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
