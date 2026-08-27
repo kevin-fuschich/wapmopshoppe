@@ -1,262 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aftercare is respect — WAP MOP SHOPPE</title>
-
-  <meta name="description" content="Aftercare isn’t a vibe. It’s how you close the loop — physically and emotionally — with attention, gentleness, and respect." />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css">
-
-  <style>
-    header, nav, main, footer, section, article, aside { display:block; }
-    body{
-      margin:0;
-      background:#f4f4f4;
-      color:#111;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-    }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-    .content{ max-width:780px; margin:0 auto; }
-
-    /* Header */
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:18px 0;
-    }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{
-      font-weight:800;
-      letter-spacing:.06em;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
-    }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
-
-    /* Main */
-    main{
-      background:#fffdf8;
-      padding:56px 0;
-      border-bottom:1px solid rgba(0,0,0,.12);
-    }
-
-    article h1{
-      font-size:36px;
-      line-height:1.15;
-      margin:0 0 18px 0;
-      font-weight:900;
-      letter-spacing:-.01em;
-    }
-    .lede{
-      font-size:20px;
-      opacity:.92;
-      margin:0 0 22px 0;
-    }
-
-    .accent-rule{
-      height:2px;
-      border:0;
-      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 20px 0 18px;
-    }
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin: 0 0 18px 0;
-      padding:0;
-      list-style:none;
-    }
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,.12);
-      background:#fff;
-      font-size: 13px;
-      color:#111;
-    }
-    .tag::before{
-      content:"";
-      width:8px; height:8px;
-      border-radius:999px;
-      background: rgba(192,68,44,1);
-      opacity:.85;
-    }
-
-    p{ margin:0 0 18px 0; font-size:16px; }
-    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
-
-    .callout{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      padding:18px;
-      background:#fff;
-      margin:28px 0;
-    }
-    .callout p{ margin:0; font-size:15px; opacity:.92; }
-
-    /* Standard related block */
-    .related{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:18px;
-      margin:28px 0 0;
-    }
-    .related .kicker{
-      font-size:12px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      opacity:.75;
-      margin-bottom:8px;
-      font-weight:900;
-    }
-    .related p{
-      margin:0 0 10px 0;
-      font-size:15px;
-      opacity:.92;
-    }
-    .related a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-      font-weight:900;
-    }
-
-    .meta{
-      font-size:13px;
-      opacity:.72;
-      margin-top:22px;
-    }
-
-    footer{
-      background:#fffdf8;
-      padding:18px 0;
-      font-size:13px;
-      opacity:.85;
-    }
-    footer a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-    }
-
-    @media (max-width:820px){
-      article h1{ font-size:30px; }
-      .lede{ font-size:18px; }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aftercare Is Respect | WAP MOP SHOPPE</title>
+<meta name="description" content="An investigation into post-use recovery, hygiene protocols, and treating sensitive systems with actual competence." />
+<link rel="stylesheet" href="/assets/styles.css">
 </head>
-
 <body>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="/"><img src="/assets/figures/meister-stamp.png" alt=""><span>WAP MOP SHOPPE</span></a>
+<nav>
+<a href="/articles/">Articles</a>
+<a href="/shoppe/">Shoppe</a>
+<a href="/about/">About</a>
+</nav>
+</div>
+</header>
+<main class="container section">
+<article>
+<p class="kicker">Field Report · Maintenance Systems</p>
+<h1>Aftercare Is Respect</h1>
+<p class="lede">There is a recurring phase in human activity where everyone is thoroughly invested in the main event, but the moment the activity concludes, the collective attention span drops to zero.</p>
+<hr class="accent-rule">
 
-<div id="site-header"></div>
-<script>
-  fetch("/assets/partials/header.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("site-header").innerHTML = html;
-    });
-</script>
+<p>This transition—from active use to post-use wrap-up—is where most operational errors occur.</p>
+<p>Whether dealing with sensitive personal skin care, specialized equipment, or everyday hygiene systems, how you handle the wrap-up determines how well the system functions next time.</p>
+<p>The Institute opened an investigation into aftercare, concluding with a simple principle: <em>aftercare is respect.</em></p>
 
-<main>
-  <div class="container">
-    <div class="content">
-      <article>
+<h2>FINDING 01 — Post-use cleanup is not optional admin work.</h2>
+<p>When an interaction or maintenance session wraps up, the temptation is to immediately pack things away, toss equipment aside, or skip the final rinse.</p>
+<p>That is how residue builds up, materials degrade, and minor skin sensitivities turn into major annoyances.</p>
+<p>Proper aftercare means treating tools and skin with the same intentionality you brought to the beginning of the process. If a device touches sensitive areas, it gets cleaned immediately according to material specifications. If skin undergoes friction or pressure, it gets a gentle recovery period.</p>
 
-        <h1>Aftercare is respect</h1>
+<!-- AFFILIATE INSERTION: Maintenance & Care Recommendation -->
+<div class="card" style="margin: 28px 0; background: var(--card); border: 1px solid var(--line); padding: 20px; border-radius: 12px;">
+<p class="kicker" style="margin-bottom: 6px;">The Shoppe Equipment Locker</p>
+<h3 style="margin-top: 0; font-size: 18px;">Looking for proper upkeep and maintenance gear?</h3>
+<p style="font-size: 14px; color: var(--muted); margin-bottom: 12px;">If you want to keep your kit clean, hygienic, and ready for action without compromising sensitive skin barriers, check out our recommended maintenance options on Amazon: <a href="https://amzn.to/4d8G1KP" target="_blank" rel="nofollow noopener" style="color: var(--rust); text-decoration: underline;">View Care & Maintenance Options on Amazon</a>.</p>
+<p style="font-size: 12px; color: var(--muted); margin: 0;"><em>Disclaimer: The Institute earns a small commission if you purchase through these links, helping fund our ongoing inquiries into everyday operations.</em></p>
+</div>
 
-        <p class="lede">
-          Aftercare isn’t a genre.
-          It’s how you close the loop — with attention, gentleness, and respect.
-        </p>
+<h2>FINDING 02 — Gentle restoration beats aggressive correction.</h2>
+<p>When something feels slightly off after an activity—whether it's mild skin friction, dryness, or general fatigue—the worst instinct is to overcorrect.</p>
+<p>People often panic and throw harsh antibacterial soaps, heavily fragranced lotions, or industrial scrubs at minor irritation.</p>
+<p>This is a tactical error. Sensitivity requires subtraction, not addition. Clean water, gentle pat-drying, and breathable breathing room allow tissue to recover naturally.</p>
 
-        <hr class="accent-rule">
-        <ul class="tags" aria-label="Tags">
-          <li class="tag">Aftercare</li>
-          <li class="tag">Respect</li>
-          <li class="tag">Comfort</li>
-        </ul>
+<h2>FINDING 03 — Store your gear like you respect it.</h2>
+<p>Equipment left loose in a bottom drawer, a damp bathroom corner, or a crowded toiletry bag is an equipment failure waiting to happen.</p>
+<p>Aftercare extends to storage. Clean components, thorough drying, and dedicated compartments keep your tools hygienic and prevent unnecessary microbial networking.</p>
 
-        <p>
-          A lot of people treat aftercare like a bonus —
-          something you do if you’re “that kind of person,” or if the moment was intense.
-          But aftercare is just maintenance: for bodies, for feelings, for trust.
-        </p>
-
-        <h2>Aftercare starts before anything starts</h2>
-
-        <p>
-          The simplest form of aftercare is clarity:
-          what do you want, what do you not want, and how will you check in after?
-          When people know they’ll be cared for on the other side,
-          they relax into the middle.
-        </p>
-
-        <h2>What aftercare looks like (in the real world)</h2>
-
-        <ul>
-          <li>Water, warmth, a towel, a wipe — external-only, gentle cleanup</li>
-          <li>Lowering intensity: less pressure, fewer “extras,” more breathing room</li>
-          <li>Checking in: “How’s your body? Anything feel off?”</li>
-          <li>Respecting the answer without negotiation</li>
-        </ul>
-
-        <h2>What it’s not</h2>
-
-        <ul>
-          <li>Performative cuddling that ignores discomfort</li>
-          <li>A “fix” for going too hard</li>
-          <li>A script</li>
-        </ul>
-
-        <section class="callout" aria-label="Key idea">
-          <p>
-            Aftercare is how you prove the care was real —
-            not just something you said on the way in.
-          </p>
-        </section>
-
-        <!-- STANDARD RELATED CARE BLOCK -->
-        <aside class="related" aria-label="Related care">
-          <div class="kicker">Related care</div>
-          <p>
-            Want a simple, comfort-first setup for the “after”?
-            See our short lists in <a href="/shoppe/aftercare.html">Aftercare</a>.
-          </p>
-        </aside>
-
-        <p class="meta">
-          Not medical advice. If there’s pain, tearing, persistent irritation,
-          or anything that feels wrong, get evaluated.
-        </p>
-
-      </article>
-    </div>
-  </div>
+<h3>THE MEISTER’S VERDICT</h3>
+<p>What does true aftercare look like?</p>
+<p>It looks like cleaning your tools, listening to your skin's feedback, and refusing to treat maintenance as an afterthought.</p>
+<p>Respect the system, and the system will take care of you.</p>
+<p><strong>INSPECTION STATUS: APPROVED FOR FIELD USE</strong></p>
+</article>
 </main>
-
-<footer>
-  <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure/">Disclosure</a>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-
+<footer><div class="container">© WAP MOP SHOPPE · Institute for Practical Cleanliness · <a href="/disclosure/">Affiliate disclosure</a></div></footer>
 </body>
 </html>
