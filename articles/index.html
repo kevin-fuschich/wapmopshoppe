@@ -1,386 +1,300 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Articles — WAP MOP SHOPPE</title>
-
-  <meta name="description" content="Articles on intimate care — oral, external, and after. Thoughtful guidance on what helps, what interferes, and when to stop." />
-
-  <!-- Use relative paths so this works when served from a subdirectory -->
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css">
-
-  <style>
-    header, nav, main, footer, section, article { display:block; }
-    body{
-      margin:0;
-      background:#f4f4f4;
-      color:#111;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-    }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-
-    /* Header */
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:18px 0;
-    }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand a{ display:inline-flex; align-items:center; }
-
-    /* Stamp: force display; protect from global CSS weirdness */
-    .brand img{
-      width:56px;
-      height:56px;
-      display:block;
-      object-fit:contain;
-      flex:0 0 auto;
-    }
-    .stamp-fallback{
-      width:56px;
-      height:56px;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      border:1px dashed rgba(0,0,0,.35);
-      border-radius:12px;
-      font-size:9px;
-      font-weight:900;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color: rgba(0,0,0,.65);
-      background:#fff;
-    }
-
-    .wordmark{
-      font-weight:800;
-      letter-spacing:.06em;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
-    }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
-
-    /* Main */
-    main{
-      background:#fffdf8;
-      padding:56px 0;
-      border-bottom:1px solid rgba(0,0,0,.12);
-    }
-    h1{
-      font-size:42px;
-      margin:0 0 14px 0;
-      font-weight:900;
-      letter-spacing:-.01em;
-      line-height:1.05;
-    }
-    .lede{
-      font-size:20px;
-      opacity:.9;
-      max-width:860px;
-      margin:0 0 18px 0;
-    }
-
-    .accent-rule{
-      height:2px;
-      border:0;
-      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 18px 0 22px;
-    }
-
-    /* Filters (lightweight, not interactive yet) */
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin: 0 0 18px 0;
-      padding:0;
-      list-style:none;
-    }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,.12);
-      background:#fff;
-      font-size:13px;
-      opacity:.9;
-    }
-    .chip::before{
-      content:"";
-      width:8px; height:8px;
-      border-radius:999px;
-      background: rgba(192,68,44,1);
-      opacity:.75;
-    }
-
-    /* Cards */
-    .articles{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:16px;
-    }
-    .entry{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-    }
-    .entry::after{
-      content:"";
-      position:absolute;
-      top:-44px; right:-44px;
-      width:130px; height:130px;
-      background: rgba(192,68,44,.10);
-      transform: rotate(35deg);
-    }
-
-    .title-row{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
-    }
-    .entry h2{
-      margin:0;
-      font-size:22px;
-      font-weight:900;
-      line-height:1.2;
-    }
-    .entry h2 a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-    }
-
-    .new-tag{
-      font-size:11px;
-      font-weight:900;
-      letter-spacing:.08em;
-      padding:4px 8px;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,.25);
-      background:#fff;
-      opacity:.9;
-    }
-
-    .dek{
-      margin:8px 0 10px 0;
-      font-size:15px;
-      opacity:.9;
-      max-width:820px;
-      position:relative;
-      z-index:1;
-    }
-
-    .meta{
-      font-size:13px;
-      opacity:.7;
-      position:relative;
-      z-index:1;
-    }
-
-    .links{
-      margin-top:10px;
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      position:relative;
-      z-index:1;
-    }
-    .links a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-      font-weight:900;
-      font-size:13px;
-    }
-
-    footer{
-      background:#fffdf8;
-      padding:18px 0;
-      font-size:13px;
-      opacity:.85;
-    }
-    footer a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-    }
-
-    @media (max-width:820px){
-      h1{ font-size:34px; }
-      .lede{ font-size:18px; }
-      .entry h2{ font-size:20px; }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Articles & Field Reports | WAP MOP SHOPPE</title>
+<meta name="description" content="The complete field guide and archive of investigations from the WAP MOP SHOPPE Institute for Practical Cleanliness." />
+<link rel="canonical" href="https://wapmopshoppe.com/articles/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WAP MOP SHOPPE" />
+<meta property="og:title" content="Articles & Field Reports | WAP MOP SHOPPE" />
+<meta property="og:description" content="Ordinary cleanliness. Extraordinary curiosity." />
+<meta property="og:url" content="https://wapmopshoppe.com/articles/" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="/assets/figures/meister-stamp.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/figures/meister-stamp.png">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+header, nav, main, footer, section, article, aside { display:block; }
+:root{
+  --paper:#fffdf8;
+  --paper2:#f4eadb;
+  --ink:#17130f;
+  --muted:#62584d;
+  --line:rgba(23,19,15,.14);
+  --rust:#b84c2f;
+  --green:#2f4b32;
+  --gold:#d8a23a;
+  --brown:#7a4d2a;
+  --card:#fffaf1;
+  --shadow:0 16px 34px rgba(23,19,15,.08);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper2);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+a{color:inherit}
+.container{
+  max-width:1040px;
+  margin:0 auto;
+  padding:0 20px;
+}
+.site-header{
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 0;
+  flex-wrap:wrap;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--ink);
+  white-space:nowrap;
+  font-weight:950;
+  letter-spacing:.07em;
+}
+.brand img{
+  width:42px;
+  height:auto;
+  display:block;
+}
+nav{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+nav a{
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:800;
+  font-size:14px;
+}
+main{
+  background:
+    radial-gradient(circle at 10% 0%, rgba(216,162,58,.22), transparent 34%),
+    radial-gradient(circle at 92% 8%, rgba(47,75,50,.12), transparent 32%),
+    var(--paper);
+  padding:54px 0;
+  border-bottom:1px solid var(--line);
+}
+.kicker{
+  margin:0 0 10px;
+  font-size:12px;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--rust);
+  font-weight:950;
+}
+.section-head{
+  margin-bottom:28px;
+}
+.section-head h1{
+  margin:0 0 10px;
+  font-size:clamp(36px,5vw,56px);
+  line-height:1;
+  letter-spacing:-.035em;
+}
+.section-note{
+  max-width:600px;
+  margin:0;
+  color:var(--muted);
+  font-size:17px;
+}
+.grid{
+  display:grid;
+  gap:16px;
+}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,253,248,.9);
+  padding:20px;
+  box-shadow:0 8px 20px rgba(23,19,15,.04);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.card h3{
+  margin:0 0 8px;
+  font-size:19px;
+  line-height:1.2;
+}
+.card h3 a {
+  text-decoration: none;
+}
+.card h3 a:hover {
+  text-decoration: underline;
+}
+.card p{
+  margin:0 0 16px;
+  color:var(--muted);
+  font-size:14px;
+}
+.card-link{
+  display:inline-block;
+  font-weight:950;
+  border-bottom:2px solid rgba(184,76,47,.35);
+  text-decoration:none;
+  font-size:14px;
+}
+.accent-rule{
+  height:2px;
+  border:0;
+  background:linear-gradient(90deg,var(--rust),transparent);
+  margin:24px 0;
+}
+footer{
+  background:var(--paper);
+  padding:18px 0;
+  font-size:13px;
+  color:var(--muted);
+}
+footer a{
+  text-decoration:none;
+  border-bottom:1px solid rgba(23,19,15,.25);
+}
+@media(max-width:900px){
+  .grid.three{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
-
 <body>
-
-<div id="site-header"></div>
-<script>
-  fetch("/partials/header.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("site-header").innerHTML = html;
-    });
-</script>
-
+<header class="site-header">
+<div class="container">
+<div class="header-inner">
+<a class="brand" href="/">
+<img src="/assets/figures/meister-stamp.png" alt="">
+<span>WAP MOP SHOPPE</span>
+</a>
+<nav>
+<a href="/articles/">Articles</a>
+<a href="/shoppe/">Shoppe</a>
+<a href="/start/">Comfort Check</a>
+<a href="/about/">About</a>
+<a href="/disclosure/">Disclosure</a>
+</nav>
+</div>
+</div>
+</header>
 <main>
-  <div class="container">
-    <h1>Articles</h1>
-    <p class="lede">
-      Thoughtful guidance on caring for bodies you’re close to —
-      what helps, what interferes, and when to stop.
-    </p>
+<div class="container">
+<div class="section-head">
+<p class="kicker">The Field Guide</p>
+<h1>All Articles & Field Reports</h1>
+<p class="section-note">Rigorous, mildly amused investigations into body systems, hygiene realities, and everyday equipment.</p>
+</div>
 
-    <hr class="accent-rule">
+<hr class="accent-rule">
 
-    <ul class="chips" aria-label="Topics">
-      <li class="chip">External care</li>
-      <li class="chip">Oral care</li>
-      <li class="chip">Aftercare</li>
-      <li class="chip">Ecosystems</li>
-    </ul>
+<div class="grid three">
 
-    <section class="articles" aria-label="Article list">
+<article class="card">
+<div>
+<p class="kicker">Field Report 001</p>
+<h3><a href="/articles/travel-bidet.html">Portable Water Delivery Devices for Situations That Have Gone Sideways</a></h3>
+<p>When toilet paper alone lacks ambition on the road, camping, or mid-flight.</p>
+</div>
+<a class="card-link" href="/articles/travel-bidet.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./the-best-wipes.html">The best wipes</a></h2>
-          <span class="new-tag">NEW</span>
-        </div>
-        <p class="dek">Good wipes are boring on purpose. How to choose wipes that clean externally without disrupting comfort.</p>
-        <p class="meta">External care · Aftercare</p>
-        <div class="links">
-          <a href="../shoppe/external-care.html">Related: External care</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 002</p>
+<h3><a href="/articles/tongue-scraper.html">Do You Actually Need a Tongue Scraper?</a></h3>
+<p>An investigation into tongue coatings, breath, and terrain inspection.</p>
+</div>
+<a class="card-link" href="/articles/tongue-scraper.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./vaginas-as-ecosystems.html">Vaginas as ecosystems</a></h2>
-        </div>
-        <p class="dek">Balance is a range, not a target. Most “freshness” problems are interference problems.</p>
-        <p class="meta">Ecosystems · pH · External-only</p>
-        <div class="links">
-          <a href="../shoppe/external-care.html">Related: External care</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 003</p>
+<h3><a href="/articles/towel-smell.html">Why Does Your Towel Smell Weird Even After You Wash It?</a></h3>
+<p>Fabric systems, damp environments, and laundry realities.</p>
+</div>
+<a class="card-link" href="/articles/towel-smell.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./external-means-external.html">External means external</a></h2>
-        </div>
-        <p class="dek">Most problems start when care crosses a boundary it was never meant to cross.</p>
-        <p class="meta">External care · Boundaries</p>
-        <div class="links">
-          <a href="../shoppe/external-care.html">Related: External care</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 004</p>
+<h3><a href="/articles/armpit-odor.html">Why Do Your Armpits Still Smell After You Shower?</a></h3>
+<p>Skin ecosystems, sweat glands, and why freshness sometimes returns to work too quickly.</p>
+</div>
+<a class="card-link" href="/articles/armpit-odor.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./mouths-as-systems.html">Mouths as systems</a></h2>
-        </div>
-        <p class="dek">Oral care without burn, domination, or performance theater — gentleness wins long-term.</p>
-        <p class="meta">Oral care · Comfort</p>
-        <div class="links">
-          <a href="../shoppe/oral-care.html">Related: Oral care</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 005</p>
+<h3><a href="/articles/water-bottle-slime.html">Why Does Your Water Bottle Get Slimy?</a></h3>
+<p>Hydration systems, biofilms, gaskets, and vessel maintenance.</p>
+</div>
+<a class="card-link" href="/articles/water-bottle-slime.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./aftercare-is-respect.html">Aftercare is respect</a></h2>
-        </div>
-        <p class="dek">Aftercare isn’t a genre. It’s how you close the loop — physically and emotionally.</p>
-        <p class="meta">Aftercare · Respect</p>
-        <div class="links">
-          <a href="../shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 006</p>
+<h3><a href="/articles/mustache-hygiene.html">Is Your Mustache Dirty?</a></h3>
+<p>Splash zones, difficult real estate, and mustache maintenance.</p>
+</div>
+<a class="card-link" href="/articles/mustache-hygiene.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./after-doesnt-mean-absent.html">After doesn’t mean absent</a></h2>
-        </div>
-        <p class="dek">Aftercare can be quiet and still deeply present — a check-in, a pause, a way of closing the loop.</p>
-        <p class="meta">Aftercare · Presence</p>
-        <div class="links">
-          <a href="../shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 007</p>
+<h3><a href="/articles/beard-flaking.html">Why Is the Skin Under Your Beard Flaking?</a></h3>
+<p>Facial hair, skin barriers, and dealing with unexpected winter on your face.</p>
+</div>
+<a class="card-link" href="/articles/beard-flaking.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./friction-is-information.html">Friction is information</a></h2>
-        </div>
-        <p class="dek">Discomfort isn’t something to push through. Friction tells you pressure, pace, and timing need to change.</p>
-        <p class="meta">Friction · Comfort · Pace</p>
-        <div class="links">
-          <a href="../shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 009</p>
+<h3><a href="/articles/wash-face-in-shower.html">Should You Wash Your Face in the Shower?</a></h3>
+<p>Shower operations, water temperatures, and convenient bathroom geography.</p>
+</div>
+<a class="card-link" href="/articles/wash-face-in-shower.html">Read report</a>
+</article>
 
-      <article class="entry">
-        <div class="title-row">
-          <h2><a href="./skin-as-a-system.html">Skin as a system</a></h2>
-        </div>
-        <p class="dek">Skin responds to pressure, moisture, and disturbance. Comfort is the baseline signal.</p>
-        <p class="meta">Skin · Friction · Aftercare</p>
-        <div class="links">
-          <a href="../shoppe/aftercare.html">Related: Aftercare</a>
-        </div>
-      </article>
+<article class="card">
+<div>
+<p class="kicker">Field Report 012</p>
+<h3><a href="/articles/wash-behind-ears.html">Do You Actually Need to Wash Behind Your Ears?</a></h3>
+<p>An investigation into forgotten geography, skin folds, and childhood instructions.</p>
+</div>
+<a class="card-link" href="/articles/wash-behind-ears.html">Read report</a>
+</article>
 
-    </section>
-  </div>
+</div>
+</div>
 </main>
-
 <footer>
-  <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="../disclosure/">Disclosure</a>
-  </div>
+<div class="container">
+© <span id="y"></span> WAP MOP SHOPPE · Institute for Practical Cleanliness · <a href="/disclosure/">Affiliate disclosure</a>
+</div>
 </footer>
-
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-
-  // Stamp robust loading:
-  // 1) Try relative (works when hosted in folders / local dev)
-  // 2) Fall back to absolute /wapmopshoppe/... (works when hosted at that root)
-  // 3) If still fails, show visible placeholder
-  (function(){
-    const img = document.getElementById('stamp');
-    const fallback = document.getElementById('stampFallback');
-
-    const absolute = "/wapmopshoppe/assets/figures/meister-stamp.png";
-
-    img.addEventListener("error", function onFirstError(){
-      img.removeEventListener("error", onFirstError);
-      img.addEventListener("error", function onSecondError(){
-        img.style.display = "none";
-        fallback.style.display = "inline-flex";
-      });
-      img.src = absolute;
-    });
-  })();
+document.getElementById('y').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
