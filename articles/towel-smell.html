@@ -18,7 +18,6 @@
 
 /* =========================================================
    THE DEEP TOWEL
-   Page-specific styling
    ========================================================= */
 
 .deep-towel-header {
@@ -43,7 +42,6 @@
 
 .deep-towel-lede {
   max-width: 800px;
-
   font-size: 1.2rem;
   line-height: 1.7;
 }
@@ -225,7 +223,7 @@
 
 
 /* =========================================================
-   DEEP TOWEL INFOGRAPHIC
+   INFOGRAPHIC
    ========================================================= */
 
 .deep-towel-infographic {
@@ -275,7 +273,6 @@
 
 .deep-towel-finding {
   max-width: 850px;
-
   margin: 3.25rem 0;
 }
 
@@ -285,6 +282,136 @@
 
 .deep-towel-finding p {
   line-height: 1.75;
+}
+
+
+/* =========================================================
+   EQUIPMENT CHECK
+   ========================================================= */
+
+.equipment-check {
+  position: relative;
+
+  margin: 4.5rem 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+
+  border-radius: 22px;
+  border: 1px solid rgba(23,60,55,.16);
+
+  background: #f4f0e6;
+
+  box-shadow:
+    0 14px 38px rgba(0,0,0,.08);
+}
+
+.equipment-kicker {
+  margin: 0 0 .4rem;
+
+  color: #8b6b20;
+
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.equipment-check > h2 {
+  margin: 0 0 .6rem;
+
+  color: #173c37;
+
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.equipment-intro {
+  max-width: 740px;
+
+  margin: 0 0 2rem;
+
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.equipment-item {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.4rem;
+
+  background: rgba(255,255,255,.72);
+
+  border: 1px solid rgba(23,60,55,.12);
+  border-radius: 14px;
+}
+
+.equipment-number {
+  margin-bottom: .45rem;
+
+  color: #a37a19;
+
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.equipment-item h3 {
+  margin: 0 0 .6rem;
+
+  color: #173c37;
+
+  font-size: 1.25rem;
+}
+
+.equipment-item p {
+  flex-grow: 1;
+
+  margin: 0 0 1.1rem;
+
+  line-height: 1.6;
+}
+
+.equipment-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: flex-start;
+
+  padding: .72rem 1rem;
+
+  border-radius: 8px;
+
+  background: #173c37;
+  color: #fff6df;
+
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+
+  text-decoration: none;
+}
+
+.equipment-link:hover {
+  opacity: .9;
+}
+
+.affiliate-disclosure {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+
+  border-top: 1px solid rgba(23,60,55,.14);
+
+  font-size: .78rem;
+  line-height: 1.5;
+
+  opacity: .7;
 }
 
 
@@ -337,7 +464,7 @@
    MOBILE
    ========================================================= */
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
 
   .deep-towel-video {
     margin-left: -.25rem;
@@ -357,12 +484,19 @@
 
   .deep-towel-infographic-frame {
     padding: 5px;
-
     border-radius: 13px;
   }
 
   .deep-towel-infographic img {
     border-radius: 8px;
+  }
+
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-check {
+    padding: 1.3rem;
   }
 
   .meister-verdict {
@@ -372,16 +506,11 @@
 }
 
 </style>
-
 </head>
 
 
 <body>
 
-
-<!-- =======================================================
-     SITE HEADER
-     ======================================================= -->
 
 <header class="site-header">
 
@@ -394,9 +523,7 @@
         alt=""
       >
 
-      <span>
-        WAP MOP SHOPPE
-      </span>
+      <span>WAP MOP SHOPPE</span>
 
     </a>
 
@@ -411,17 +538,14 @@
 </header>
 
 
-
-<!-- =======================================================
-     MAIN ARTICLE
-     ======================================================= -->
-
 <main class="container section">
 
 <article>
 
 
-  <!-- ARTICLE HEADER -->
+  <!-- =====================================================
+       ARTICLE HEADER
+       ===================================================== -->
 
   <header class="deep-towel-header">
 
@@ -446,7 +570,6 @@
 
 
   <hr class="accent-rule">
-
 
 
   <!-- =====================================================
@@ -489,7 +612,6 @@
 
     </div>
 
-
     <div class="video-footer">
 
       <p class="video-footer-text">
@@ -508,7 +630,6 @@
     </div>
 
   </section>
-
 
 
   <!-- =====================================================
@@ -539,7 +660,6 @@
   </section>
 
 
-
   <!-- =====================================================
        FINDING 01
        ===================================================== -->
@@ -556,7 +676,6 @@
     </p>
 
   </section>
-
 
 
   <!-- =====================================================
@@ -577,7 +696,6 @@
   </section>
 
 
-
   <!-- =====================================================
        FINDING 03
        ===================================================== -->
@@ -594,7 +712,6 @@
     </p>
 
   </section>
-
 
 
   <!-- =====================================================
@@ -615,7 +732,6 @@
   </section>
 
 
-
   <!-- =====================================================
        FINDING 05
        ===================================================== -->
@@ -633,6 +749,167 @@
 
   </section>
 
+
+  <!-- =====================================================
+       EQUIPMENT CHECK
+       ===================================================== -->
+
+  <section class="equipment-check">
+
+    <p class="equipment-kicker">
+      WAP MOP SHOPPE · Equipment Check
+    </p>
+
+    <h2>
+      Things That May Improve the Towel Situation
+    </h2>
+
+    <p class="equipment-intro">
+      The Deep Towel does not require advanced equipment.
+      It mostly requires towels that can dry, sensible laundry
+      practices and somewhere for all that moisture to go.
+      These are a few pieces of equipment that fit the assignment.
+    </p>
+
+
+    <div class="equipment-grid">
+
+
+      <!-- TOWELS -->
+
+      <div class="equipment-item">
+
+        <div class="equipment-number">
+          Equipment 01
+        </div>
+
+        <h3>
+          Towels That Can Recover
+        </h3>
+
+        <p>
+          A towel needs to absorb water without remaining a
+          damp monument to yesterday's shower. A good towel
+          should balance absorbency, comfort and the ability
+          to dry thoroughly between uses.
+        </p>
+
+        <a
+          class="equipment-link"
+          href="https://amzn.to/4zZG7hL"
+          target="_blank"
+          rel="sponsored nofollow noopener noreferrer"
+        >
+          Inspect the Towels →
+        </a>
+
+      </div>
+
+
+      <!-- DETERGENT -->
+
+      <div class="equipment-item">
+
+        <div class="equipment-number">
+          Equipment 02
+        </div>
+
+        <h3>
+          Detergent — Used Sensibly
+        </h3>
+
+        <p>
+          More detergent does not automatically produce
+          more clean. The goal is effective washing without
+          leaving behind an unnecessary layer of detergent
+          residue for the towel to carry into its next assignment.
+        </p>
+
+        <a
+          class="equipment-link"
+          href="https://amzn.to/3UDlrvV"
+          target="_blank"
+          rel="sponsored nofollow noopener noreferrer"
+        >
+          Inspect the Detergent →
+        </a>
+
+      </div>
+
+
+      <!-- DRYING RACK -->
+
+      <div class="equipment-item">
+
+        <div class="equipment-number">
+          Equipment 03
+        </div>
+
+        <h3>
+          Somewhere for the Towel to Actually Dry
+        </h3>
+
+        <p>
+          This may be the least glamorous breakthrough in
+          the entire investigation. Spread the towel out,
+          expose more surface area to moving air and give
+          the moisture somewhere to go.
+        </p>
+
+        <a
+          class="equipment-link"
+          href="https://amzn.to/4yosoiZ"
+          target="_blank"
+          rel="sponsored nofollow noopener noreferrer"
+        >
+          Inspect the Drying Rack →
+        </a>
+
+      </div>
+
+
+      <!-- DRYER BALLS -->
+
+      <div class="equipment-item">
+
+        <div class="equipment-number">
+          Equipment 04
+        </div>
+
+        <h3>
+          Dryer Balls
+        </h3>
+
+        <p>
+          A simple option for helping separate laundry during
+          the drying cycle without coating towels in traditional
+          fabric softener. Less glamorous than laboratory
+          equipment. Potentially more useful.
+        </p>
+
+        <a
+          class="equipment-link"
+          href="https://amzn.to/4gCQ9xN"
+          target="_blank"
+          rel="sponsored nofollow noopener noreferrer"
+        >
+          Inspect the Dryer Balls →
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <p class="affiliate-disclosure">
+      <strong>Affiliate disclosure:</strong>
+      Some links on this page are affiliate links. WAP MOP SHOPPE
+      may earn a commission from qualifying purchases at no
+      additional cost to you.
+    </p>
+
+  </section>
 
 
   <!-- =====================================================
@@ -661,11 +938,6 @@
 
 </main>
 
-
-
-<!-- =======================================================
-     FOOTER
-     ======================================================= -->
 
 <footer>
 
