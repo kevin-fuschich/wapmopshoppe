@@ -9,7 +9,7 @@
 
 <meta
   name="description"
-  content="The Deep Towel investigates why clean towels can develop strange smells, including moisture, bacteria, fungi, detergent residue, drying conditions, and fabric systems."
+  content="The Deep Towel investigates why clean towels can develop strange smells, including moisture, bacteria, fungi, detergent residue, drying conditions and washing-machine problems."
 >
 
 <link rel="stylesheet" href="/assets/styles.css">
@@ -30,20 +30,45 @@
 }
 
 .deep-towel-subtitle {
-  margin: 0 0 1.25rem;
-  max-width: 800px;
-
+  max-width: 820px;
+  margin: 0 0 1.2rem;
   font-size: clamp(1.25rem, 2.5vw, 1.7rem);
-  line-height: 1.3;
+  line-height: 1.35;
   font-weight: 500;
-
   opacity: .82;
 }
 
-.deep-towel-lede {
-  max-width: 800px;
-  font-size: 1.2rem;
+.report-meta {
+  max-width: 820px;
+  margin: 1.4rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #d6ae48;
+  background: rgba(214,174,72,.07);
+  font-size: .9rem;
   line-height: 1.7;
+}
+
+.report-meta strong {
+  color: #173c37;
+}
+
+.deep-towel-lede {
+  max-width: 820px;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.deep-towel-lede p {
+  margin: .25rem 0;
+}
+
+.deep-towel-lede .opening-beat {
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+.deep-towel-lede .opening-beat span {
+  display: block;
 }
 
 
@@ -53,12 +78,9 @@
 
 .deep-towel-video {
   position: relative;
-
   margin: 3rem 0;
   padding: clamp(1.2rem, 3vw, 2rem);
-
   overflow: hidden;
-
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,.09);
 
@@ -75,17 +97,13 @@
     );
 
   color: #f7f1df;
-
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.18);
+  box-shadow: 0 18px 50px rgba(0,0,0,.18);
 }
 
 .deep-towel-video::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   pointer-events: none;
 
   background-image:
@@ -101,15 +119,11 @@
 .video-label {
   position: relative;
   z-index: 1;
-
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-
   margin-bottom: .8rem;
-
   color: #e1b84f;
-
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .14em;
@@ -118,31 +132,22 @@
 
 .video-label::before {
   content: "▶";
-
   display: inline-grid;
   place-items: center;
-
   width: 28px;
   height: 28px;
-
   padding-left: 2px;
-
   border-radius: 50%;
-
   background: #e1b84f;
   color: #173632;
-
   font-size: .65rem;
 }
 
 .video-heading {
   position: relative;
   z-index: 1;
-
   margin: 0;
-
   color: #fff7df;
-
   font-size: clamp(1.75rem, 4vw, 2.8rem);
   line-height: 1.05;
 }
@@ -150,13 +155,9 @@
 .video-description {
   position: relative;
   z-index: 1;
-
   max-width: 760px;
-
   margin: .8rem 0 1.4rem;
-
   color: rgba(255,255,255,.82);
-
   font-size: 1.05rem;
   line-height: 1.6;
 }
@@ -164,54 +165,41 @@
 .video-frame {
   position: relative;
   z-index: 1;
-
   width: 100%;
   aspect-ratio: 16 / 9;
-
   overflow: hidden;
-
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,.16);
-
   background: #000;
-
-  box-shadow:
-    0 8px 28px rgba(0,0,0,.35);
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
 }
 
 .video-frame iframe {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   border: 0;
 }
 
 .video-footer {
   position: relative;
   z-index: 1;
-
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
-
   margin-top: 1rem;
 }
 
 .video-footer-text {
   margin: 0;
-
   color: rgba(255,255,255,.6);
-
   font-size: .9rem;
 }
 
 .video-youtube-link {
   color: #f4d36e;
-
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -236,227 +224,284 @@
 
 .deep-towel-infographic-frame {
   padding: 8px;
-
   background: #fff;
-
   border: 1px solid rgba(0,0,0,.12);
   border-radius: 18px;
-
-  box-shadow:
-    0 14px 38px rgba(0,0,0,.13);
+  box-shadow: 0 14px 38px rgba(0,0,0,.13);
 }
 
 .deep-towel-infographic img {
   display: block;
-
   width: 100%;
   height: auto;
-
   border-radius: 11px;
 }
 
 .deep-towel-infographic figcaption {
   margin-top: .75rem;
-
   text-align: center;
-
   font-size: .88rem;
   line-height: 1.45;
-
   opacity: .65;
 }
 
 
 /* =========================================================
-   ARTICLE FINDINGS
+   ARTICLE CONTENT
    ========================================================= */
 
-.deep-towel-finding {
+.report-section {
   max-width: 850px;
-  margin: 3.25rem 0;
+  margin: 3.5rem 0;
 }
 
-.deep-towel-finding h2 {
-  margin-bottom: .9rem;
+.report-section h2 {
+  margin-bottom: 1rem;
 }
 
-.deep-towel-finding p {
+.report-section h3 {
+  margin: 1.8rem 0 .8rem;
+}
+
+.report-section p,
+.report-section li {
   line-height: 1.75;
+}
+
+.report-section ul,
+.report-section ol {
+  padding-left: 1.4rem;
+}
+
+.deep-towel-callout {
+  max-width: 850px;
+  margin: 3.5rem 0;
+  padding: 1.6rem 1.8rem;
+  border-left: 5px solid #d6ae48;
+  background: rgba(214,174,72,.07);
+}
+
+.deep-towel-callout h2 {
+  margin-top: 0;
+}
+
+.deep-towel-callout p {
+  line-height: 1.75;
+}
+
+.deep-towel-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.deep-towel-name {
+  margin: 1.4rem 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #173c37;
 }
 
 
 /* =========================================================
-   EQUIPMENT CHECK
+   FIELD PROCEDURE
    ========================================================= */
 
-.equipment-check {
-  position: relative;
-
-  margin: 4.5rem 0;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-
-  border-radius: 22px;
-  border: 1px solid rgba(23,60,55,.16);
-
+.field-procedure {
+  max-width: 850px;
+  margin: 4rem 0;
+  padding: 2rem;
+  border-radius: 18px;
   background: #f4f0e6;
-
-  box-shadow:
-    0 14px 38px rgba(0,0,0,.08);
+  border: 1px solid rgba(23,60,55,.13);
 }
 
-.equipment-kicker {
-  margin: 0 0 .4rem;
+.field-procedure h2 {
+  margin-top: 0;
+}
 
-  color: #8b6b20;
+.procedure-step {
+  margin: 1.6rem 0;
+}
 
+.procedure-step h3 {
+  margin-bottom: .4rem;
+  color: #173c37;
+}
+
+.procedure-step p {
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   EQUIPMENT INSPECTION
+   ========================================================= */
+
+.equipment-inspection {
+  max-width: 850px;
+  margin: 4rem 0;
+}
+
+.equipment-inspection h3 {
+  margin-bottom: .35rem;
+  color: #173c37;
+}
+
+.equipment-inspection p {
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MEISTER VERDICT
+   ========================================================= */
+
+.meister-verdict {
+  max-width: 850px;
+  margin: 4.5rem 0;
+  padding: 2rem;
+  border: 2px solid #d6ae48;
+  border-radius: 18px;
+  background: rgba(214,174,72,.08);
+}
+
+.meister-verdict h2 {
+  margin-top: 0;
+  letter-spacing: .06em;
+}
+
+.meister-verdict p {
+  line-height: 1.75;
+}
+
+.inspection-status {
+  display: inline-block;
+  margin: .8rem 0;
+  padding: .5rem .8rem;
+  border-radius: 4px;
+  background: #173c37;
+  color: #fff5da;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.meister-signoff {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   EQUIPMENT LOCKER / AFFILIATE PRODUCTS
+   ========================================================= */
+
+.equipment-locker {
+  position: relative;
+  margin: 4.5rem 0 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 22px;
+  background: #173c37;
+  color: #f7f1df;
+  box-shadow: 0 16px 42px rgba(0,0,0,.15);
+}
+
+.locker-kicker {
+  margin: 0 0 .35rem;
+  color: #e1b84f;
   font-size: .78rem;
   font-weight: 800;
   letter-spacing: .14em;
   text-transform: uppercase;
 }
 
-.equipment-check > h2 {
-  margin: 0 0 .6rem;
-
-  color: #173c37;
-
+.equipment-locker > h2 {
+  margin: 0 0 .7rem;
+  color: #fff7df;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-.equipment-intro {
-  max-width: 740px;
-
-  margin: 0 0 2rem;
-
-  font-size: 1.05rem;
+.locker-intro {
+  max-width: 760px;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,.8);
   line-height: 1.65;
 }
 
-.equipment-grid {
+.locker-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 1rem;
 }
 
-.equipment-item {
+.locker-item {
   display: flex;
   flex-direction: column;
-
   padding: 1.4rem;
-
-  background: rgba(255,255,255,.72);
-
-  border: 1px solid rgba(23,60,55,.12);
   border-radius: 14px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
 }
 
-.equipment-number {
-  margin-bottom: .45rem;
-
-  color: #a37a19;
-
-  font-size: .75rem;
-  font-weight: 800;
-  letter-spacing: .13em;
-  text-transform: uppercase;
+.locker-item h3 {
+  margin: 0 0 .55rem;
+  color: #fff7df;
 }
 
-.equipment-item h3 {
-  margin: 0 0 .6rem;
-
-  color: #173c37;
-
-  font-size: 1.25rem;
-}
-
-.equipment-item p {
+.locker-item p {
   flex-grow: 1;
-
-  margin: 0 0 1.1rem;
-
+  margin: 0 0 1rem;
+  color: rgba(255,255,255,.76);
   line-height: 1.6;
 }
 
-.equipment-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
+.locker-link {
   align-self: flex-start;
-
-  padding: .72rem 1rem;
-
-  border-radius: 8px;
-
-  background: #173c37;
-  color: #fff6df;
-
+  display: inline-block;
+  padding: .7rem .95rem;
+  border-radius: 7px;
+  background: #e1b84f;
+  color: #173632;
   font-size: .82rem;
   font-weight: 800;
-  letter-spacing: .04em;
-
   text-decoration: none;
 }
 
-.equipment-link:hover {
+.locker-link:hover {
   opacity: .9;
+}
+
+.locker-future {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.locker-future h3 {
+  color: #fff7df;
+}
+
+.locker-future ul {
+  columns: 2;
+  padding-left: 1.2rem;
+  color: rgba(255,255,255,.76);
+  line-height: 1.7;
+}
+
+.evaluation-criteria {
+  color: rgba(255,255,255,.8);
+  line-height: 1.7;
 }
 
 .affiliate-disclosure {
   margin: 1.5rem 0 0;
   padding-top: 1rem;
-
-  border-top: 1px solid rgba(23,60,55,.14);
-
+  border-top: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.58);
   font-size: .78rem;
   line-height: 1.5;
-
-  opacity: .7;
-}
-
-
-/* =========================================================
-   MEISTER'S VERDICT
-   ========================================================= */
-
-.meister-verdict {
-  max-width: 850px;
-
-  margin: 4rem 0 1rem;
-  padding: 2rem;
-
-  border: 2px solid #d6ae48;
-  border-radius: 18px;
-
-  background: rgba(214,174,72,.08);
-}
-
-.meister-verdict h3 {
-  margin-top: 0;
-  margin-bottom: .75rem;
-
-  letter-spacing: .08em;
-}
-
-.meister-verdict p {
-  line-height: 1.7;
-}
-
-.inspection-status {
-  display: inline-block;
-
-  margin-top: .6rem;
-  padding: .5rem .8rem;
-
-  border-radius: 4px;
-
-  background: #173c37;
-  color: #fff5da;
-
-  font-size: .8rem;
-  font-weight: 800;
-  letter-spacing: .1em;
-  text-transform: uppercase;
 }
 
 
@@ -469,7 +514,6 @@
   .deep-towel-video {
     margin-left: -.25rem;
     margin-right: -.25rem;
-
     border-radius: 16px;
   }
 
@@ -484,22 +528,18 @@
 
   .deep-towel-infographic-frame {
     padding: 5px;
-    border-radius: 13px;
   }
 
-  .deep-towel-infographic img {
-    border-radius: 8px;
-  }
-
-  .equipment-grid {
+  .locker-grid {
     grid-template-columns: 1fr;
   }
 
-  .equipment-check {
-    padding: 1.3rem;
+  .locker-future ul {
+    columns: 1;
   }
 
-  .meister-verdict {
+  .meister-verdict,
+  .field-procedure {
     padding: 1.4rem;
   }
 
@@ -511,20 +551,12 @@
 
 <body>
 
-
 <header class="site-header">
-
   <div class="container header-inner">
 
     <a class="brand" href="/">
-
-      <img
-        src="/assets/figures/meister-stamp.png"
-        alt=""
-      >
-
+      <img src="/assets/figures/meister-stamp.png" alt="">
       <span>WAP MOP SHOPPE</span>
-
     </a>
 
     <nav>
@@ -534,7 +566,6 @@
     </nav>
 
   </div>
-
 </header>
 
 
@@ -543,395 +574,1241 @@
 <article>
 
 
-  <!-- =====================================================
-       ARTICLE HEADER
-       ===================================================== -->
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
-  <header class="deep-towel-header">
+<header class="deep-towel-header">
 
-    <p class="kicker">
-      Field Report 003 · Fabric Systems
+  <p class="kicker">
+    WAP MOP SHOPPE · Field Report 003
+  </p>
+
+  <h1 class="deep-towel-title">
+    The Deep Towel
+  </h1>
+
+  <p class="deep-towel-subtitle">
+    Why Does Your Towel Smell Weird Even After You Wash It?
+  </p>
+
+  <div class="report-meta">
+    <strong>Filed under:</strong>
+    Fabric Systems / Bathroom Operations / Things That Were Supposed to Be Clean
+    <br>
+    <strong>Inspection status:</strong>
+    Suspiciously damp
+    <br>
+    <strong>Equipment class:</strong>
+    Towels, laundering &amp; drying
+  </div>
+
+  <div class="deep-towel-lede">
+
+    <p class="opening-beat">
+      <span>You shower.</span>
+      <span>You are clean.</span>
+      <span>You reach for a clean towel.</span>
+      <span>You bury your face in it.</span>
+      <span>And there it is.</span>
+      <span><strong>The smell.</strong></span>
     </p>
 
-    <h1 class="deep-towel-title">
-      The Deep Towel
-    </h1>
-
-    <p class="deep-towel-subtitle">
-      Why does your towel smell weird even after you wash it?
+    <p>
+      Not dirty exactly.
+      <br>
+      Not wet exactly.
+      <br>
+      Something older. Something established.
     </p>
 
-    <p class="lede deep-towel-lede">
-      You shower. You are clean. You reach for a clean towel.
-      And there it is. The smell...
+    <p>
+      Your towel has developed a history.
     </p>
 
-  </header>
+    <p>
+      This can be particularly confusing because you washed the thing.
+      Detergent was involved. There may have been hot water.
+      The machine beeped. You personally transferred the towel from
+      one expensive appliance to another.
+    </p>
+
+    <p>
+      A process occurred.
+    </p>
+
+    <p>
+      And yet your towel smells like the basement of a lake house
+      nobody has opened since October.
+    </p>
+
+    <p>
+      What happened?
+    </p>
+
+    <p>
+      The Institute opened an investigation.
+    </p>
+
+  </div>
+
+</header>
+
+<hr class="accent-rule">
 
 
-  <hr class="accent-rule">
+<!-- =====================================================
+     VIDEO
+     ===================================================== -->
 
+<section class="deep-towel-video">
 
-  <!-- =====================================================
-       FEATURED VIDEO
-       ===================================================== -->
+  <div class="video-label">
+    Watch the Field Report
+  </div>
 
-  <section
-    class="deep-towel-video"
-    aria-labelledby="deep-towel-video-title"
-  >
+  <h2 class="video-heading">
+    Go Deep Into the Towel
+  </h2>
 
-    <div class="video-label">
-      Watch the Field Report
-    </div>
+  <p class="video-description">
+    Moisture. Dead skin. Body oils. Detergent residue.
+    Bacteria. Fungi. Drying time. We descend into the fibers
+    to investigate what happens between “freshly washed”
+    and “what in God's name is that smell?”
+  </p>
 
-    <h2
-      class="video-heading"
-      id="deep-towel-video-title"
+  <div class="video-frame">
+
+    <iframe
+      src="https://www.youtube.com/embed/u9We-TFJ6oc"
+      title="The Deep Towel — WAP MOP SHOPPE"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+  <div class="video-footer">
+
+    <p class="video-footer-text">
+      A WAP MOP SHOPPE field investigation.
+    </p>
+
+    <a
+      class="video-youtube-link"
+      href="https://youtu.be/u9We-TFJ6oc"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-      Go Deep Into the Towel
-    </h2>
+      Watch on YouTube ↗
+    </a>
 
-    <p class="video-description">
-      Moisture. Dead skin. Body oils. Detergent residue.
-      Bacteria. Fungi. Drying time. We descend into the fibers
-      to investigate what happens between “freshly washed”
-      and “what in God’s name is that smell?”
-    </p>
+  </div>
 
-    <div class="video-frame">
+</section>
 
-      <iframe
-        src="https://www.youtube.com/embed/u9We-TFJ6oc"
-        title="The Deep Towel — WAP MOP SHOPPE"
+
+<!-- =====================================================
+     INFOGRAPHIC
+     ===================================================== -->
+
+<section class="deep-towel-infographic">
+
+  <figure>
+
+    <div class="deep-towel-infographic-frame">
+
+      <img
+        src="/assets/images/deep-towel-infographic.jpg"
+        alt="The Deep Towel infographic showing how moisture, skin cells, body oils, bacteria and fungi accumulate in a towel between washing and reuse."
         loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-
-    </div>
-
-    <div class="video-footer">
-
-      <p class="video-footer-text">
-        A WAP MOP SHOPPE field investigation.
-      </p>
-
-      <a
-        class="video-youtube-link"
-        href="https://youtu.be/u9We-TFJ6oc"
-        target="_blank"
-        rel="noopener noreferrer"
       >
-        Watch on YouTube ↗
-      </a>
 
     </div>
 
-  </section>
+    <figcaption>
+      A closer look at what happens between the wash,
+      the first use and the next encounter.
+    </figcaption>
 
+  </figure>
 
-  <!-- =====================================================
-       INFOGRAPHIC
-       ===================================================== -->
+</section>
 
-  <section class="deep-towel-infographic">
 
-    <figure>
+<!-- =====================================================
+     FINDING 01
+     ===================================================== -->
 
-      <div class="deep-towel-infographic-frame">
+<section class="report-section">
 
-        <img
-          src="/assets/images/deep-towel-infographic.jpg"
-          alt="The Deep Towel infographic showing how a freshly washed towel accumulates moisture, skin cells, body oils, bacteria and fungi between washing and reuse."
-          loading="lazy"
-        >
+<h2>FINDING 01 — Towels have an unusually difficult job.</h2>
 
-      </div>
+<p>Consider the working conditions.</p>
 
-      <figcaption>
-        A closer look at what happens between the wash,
-        the first use and the next encounter.
-      </figcaption>
+<p>
+A bath towel is expected to absorb a significant amount of water
+from your body, along with skin cells, body oils and whatever else
+remains after bathing.
+</p>
 
-    </figure>
+<p>Then you hang it up.</p>
 
-  </section>
+<p>Hopefully.</p>
 
+<p>
+The towel now needs to release all that moisture into the
+surrounding air before you use it again.
+</p>
 
-  <!-- =====================================================
-       FINDING 01
-       ===================================================== -->
+<p>If it dries quickly, excellent.</p>
 
-  <section class="deep-towel-finding">
+<p>If it stays damp?</p>
 
-    <h2>
-      FINDING 01 — Towels have an unusually difficult job.
-    </h2>
+<p>We have conditions.</p>
 
-    <p>
-      Consider the working conditions. A bath towel is expected
-      to absorb a significant amount of water...
-    </p>
+<p>
+Warmth. Moisture. Organic material. Time.
+</p>
 
-  </section>
+<p>
+Microorganisms have reviewed this arrangement and found
+the accommodations satisfactory.
+</p>
 
+<p>
+That doesn't mean your towel immediately becomes dangerous.
+Microbes are everywhere, including on normal skin and household fabrics.
+</p>
 
-  <!-- =====================================================
-       FINDING 02
-       ===================================================== -->
+<p>
+But it does explain why a damp towel can begin smelling
+surprisingly quickly.
+</p>
 
-  <section class="deep-towel-finding">
+<p>
+The towel isn't merely a towel anymore.
+</p>
 
-    <h2>
-      FINDING 02 — The smell is usually not the towel itself.
-    </h2>
+<p><strong>It's an environment.</strong></p>
 
-    <p>
-      Cotton has very little ambition. Left alone, it generally
-      does not decide to smell like a locker room...
-    </p>
+</section>
 
-  </section>
 
+<!-- =====================================================
+     FINDING 02
+     ===================================================== -->
 
-  <!-- =====================================================
-       FINDING 03
-       ===================================================== -->
+<section class="report-section">
 
-  <section class="deep-towel-finding">
+<h2>FINDING 02 — The smell is usually not the towel itself.</h2>
 
-    <h2>
-      FINDING 03 — Washing something and getting something clean are not always the same event.
-    </h2>
+<p>Cotton has very little ambition.</p>
 
-    <p>
-      Laundry seems wonderfully binary. Dirty clothes go in.
-      Clean clothes come out...
-    </p>
+<p>
+Left alone, it generally does not decide to smell like a locker room.
+</p>
 
-  </section>
+<p>
+The odor usually comes from compounds associated with microorganisms,
+body oils, soils, and residues remaining in or on the fibers.
+</p>
 
+<p>
+Moisture allows bacteria and fungi already present on the towel
+to persist and grow.
+</p>
 
-  <!-- =====================================================
-       FINDING 04
-       ===================================================== -->
+<p>And here's the important part:</p>
 
-  <section class="deep-towel-finding">
+<p>
+A towel doesn't have to look dirty to contain all of this.
+</p>
 
-    <h2>
-      FINDING 04 — More detergent can make things worse.
-    </h2>
+<p>Fabric is three-dimensional.</p>
 
-    <p>
-      This feels unfair. Towel smells dirty. Detergent cleans
-      towels. Therefore...
-    </p>
+<p>What you see is the surface.</p>
 
-  </section>
+<p>
+What laundry has to clean is everything woven into it.
+</p>
 
+<p>The Institute refers to this as:</p>
 
-  <!-- =====================================================
-       FINDING 05
-       ===================================================== -->
+<p class="deep-towel-name">
+The Deep Towel.
+</p>
 
-  <section class="deep-towel-finding">
+</section>
 
-    <h2>
-      FINDING 05 — Fabric softener and towels have a complicated relationship.
-    </h2>
 
-    <p>
-      Fabric softener has an excellent résumé. It makes fabrics
-      feel softer...
-    </p>
+<!-- =====================================================
+     FINDING 03
+     ===================================================== -->
 
-  </section>
+<section class="report-section">
 
+<h2>
+FINDING 03 — Washing something and getting something clean
+are not always the same event.
+</h2>
 
-  <!-- =====================================================
-       EQUIPMENT CHECK
-       ===================================================== -->
+<p>Laundry seems wonderfully binary.</p>
 
-  <section class="equipment-check">
+<p>Dirty clothes go in.</p>
 
-    <p class="equipment-kicker">
-      WAP MOP SHOPPE · Equipment Check
-    </p>
+<p>Clean clothes come out.</p>
 
-    <h2>
-      Things That May Improve the Towel Situation
-    </h2>
+<p>But washing machines are systems.</p>
 
-    <p class="equipment-intro">
-      The Deep Towel does not require advanced equipment.
-      It mostly requires towels that can dry, sensible laundry
-      practices and somewhere for all that moisture to go.
-      These are a few pieces of equipment that fit the assignment.
-    </p>
+<p>
+Their performance depends on water, detergent, agitation,
+temperature, load size, rinse performance and drying.
+</p>
 
+<p>
+Change enough variables and the outcome changes.
+</p>
 
-    <div class="equipment-grid">
+<p>
+One common mistake is packing the machine too tightly.
+</p>
 
+<p>
+Your washing machine is not a suitcase.
+</p>
 
-      <!-- TOWELS -->
+<p>
+Clothes and towels need room to move so water and detergent
+can circulate through them.
+</p>
 
-      <div class="equipment-item">
+<p>
+If you've packed twelve towels into a washer with the density
+of a neutron star, detergent is not going to negotiate its way
+evenly through the load.
+</p>
 
-        <div class="equipment-number">
-          Equipment 01
-        </div>
+<p>The machine may finish.</p>
 
-        <h3>
-          Towels That Can Recover
-        </h3>
+<p>The towels may be wet.</p>
 
-        <p>
-          A towel needs to absorb water without remaining a
-          damp monument to yesterday's shower. A good towel
-          should balance absorbency, comfort and the ability
-          to dry thoroughly between uses.
-        </p>
+<p>Neither fact proves they are clean.</p>
 
-        <a
-          class="equipment-link"
-          href="https://amzn.to/4zZG7hL"
-          target="_blank"
-          rel="sponsored nofollow noopener noreferrer"
-        >
-          Inspect the Towels →
-        </a>
+</section>
 
-      </div>
 
+<!-- =====================================================
+     FINDING 04
+     ===================================================== -->
 
-      <!-- DETERGENT -->
+<section class="report-section">
 
-      <div class="equipment-item">
+<h2>FINDING 04 — More detergent can make things worse.</h2>
 
-        <div class="equipment-number">
-          Equipment 02
-        </div>
+<p>This feels unfair.</p>
 
-        <h3>
-          Detergent — Used Sensibly
-        </h3>
+<p>Towel smells dirty.</p>
 
-        <p>
-          More detergent does not automatically produce
-          more clean. The goal is effective washing without
-          leaving behind an unnecessary layer of detergent
-          residue for the towel to carry into its next assignment.
-        </p>
+<p>Detergent cleans towels.</p>
 
-        <a
-          class="equipment-link"
-          href="https://amzn.to/3UDlrvV"
-          target="_blank"
-          rel="sponsored nofollow noopener noreferrer"
-        >
-          Inspect the Detergent →
-        </a>
+<p>Therefore:</p>
 
-      </div>
+<p><strong>More detergent = more clean.</strong></p>
 
+<p>Reasonable.</p>
 
-      <!-- DRYING RACK -->
+<p>Potentially wrong.</p>
 
-      <div class="equipment-item">
+<p>
+Using excessive detergent can make rinsing more difficult
+and leave residues behind in fabric. That residue can trap soils
+and contribute to towels feeling stiff, coated or less fresh.
+</p>
 
-        <div class="equipment-number">
-          Equipment 03
-        </div>
+<p>
+Modern detergents are concentrated.
+</p>
 
-        <h3>
-          Somewhere for the Towel to Actually Dry
-        </h3>
+<p>
+The correct amount may be considerably smaller than the
+ceremonial chalice of blue liquid you remember from childhood.
+</p>
 
-        <p>
-          This may be the least glamorous breakthrough in
-          the entire investigation. Spread the towel out,
-          expose more surface area to moving air and give
-          the moisture somewhere to go.
-        </p>
+<p>
+Follow the detergent manufacturer's dosing guidance and account
+for your machine, load size, water hardness and soil level.
+</p>
 
-        <a
-          class="equipment-link"
-          href="https://amzn.to/4yosoiZ"
-          target="_blank"
-          rel="sponsored nofollow noopener noreferrer"
-        >
-          Inspect the Drying Rack →
-        </a>
+<p>
+Do not simply keep pouring until the ancestors tell you to stop.
+</p>
 
-      </div>
+</section>
 
 
-      <!-- DRYER BALLS -->
+<!-- =====================================================
+     FINDING 05
+     ===================================================== -->
 
-      <div class="equipment-item">
+<section class="report-section">
 
-        <div class="equipment-number">
-          Equipment 04
-        </div>
+<h2>
+FINDING 05 — Fabric softener and towels have a complicated relationship.
+</h2>
 
-        <h3>
-          Dryer Balls
-        </h3>
+<p>Fabric softener has an excellent résumé.</p>
 
-        <p>
-          A simple option for helping separate laundry during
-          the drying cycle without coating towels in traditional
-          fabric softener. Less glamorous than laboratory
-          equipment. Potentially more useful.
-        </p>
+<p>It makes fabrics feel softer.</p>
 
-        <a
-          class="equipment-link"
-          href="https://amzn.to/4gCQ9xN"
-          target="_blank"
-          rel="sponsored nofollow noopener noreferrer"
-        >
-          Inspect the Dryer Balls →
-        </a>
+<p>It can reduce static.</p>
 
-      </div>
+<p>It can add fragrance.</p>
 
+<p>
+Towels, however, have a specific professional responsibility:
+</p>
 
-    </div>
+<p><strong>Absorb water.</strong></p>
 
+<p>
+Many conventional liquid fabric softeners work by depositing
+lubricating compounds onto fibers. Over time, those coatings
+can reduce a towel's absorbency.
+</p>
 
-    <p class="affiliate-disclosure">
-      <strong>Affiliate disclosure:</strong>
-      Some links on this page are affiliate links. WAP MOP SHOPPE
-      may earn a commission from qualifying purchases at no
-      additional cost to you.
-    </p>
+<p>
+Dryer sheets can leave similar conditioning residues.
+</p>
 
-  </section>
+<p>
+This doesn't mean one accidental encounter with fabric softener
+destroys a towel.
+</p>
 
+<p>The towel will survive.</p>
 
-  <!-- =====================================================
-       MEISTER'S VERDICT
-       ===================================================== -->
+<p>
+But regularly coating highly absorbent fabric with substances
+designed to alter its surface is worth reconsidering.
+</p>
 
-  <section class="meister-verdict">
+<p>The Institute's position:</p>
 
-    <h3>
-      THE MEISTER'S VERDICT
-    </h3>
+<p>
+If the primary job is absorbing water, perhaps don't repeatedly
+make the fibers worse at absorbing water.
+</p>
 
-    <p>
-      Why does your clean towel smell weird? Usually because
-      something in the wash-dry-use cycle isn't quite working.
-    </p>
+</section>
 
-    <div class="inspection-status">
-      Inspection Status: Correctable Condition
-    </div>
 
-  </section>
+<!-- =====================================================
+     FINDING 06
+     ===================================================== -->
+
+<section class="report-section">
+
+<h2>FINDING 06 — The dryer cannot fix an incomplete wash.</h2>
+
+<p>Here is an important distinction.</p>
+
+<p>A dryer removes moisture.</p>
+
+<p>It is not a time machine.</p>
+
+<p>
+If odor-producing material remains in the towel after washing,
+drying may temporarily make the problem less noticeable.
+</p>
+
+<p>Then you use the towel.</p>
+
+<p>Water returns.</p>
+
+<p>Warmth returns.</p>
+
+<p>
+And the smell rises from the dead.
+</p>
+
+<p>
+This is why some towels smell perfectly acceptable when they
+come out of the dryer but become funky almost immediately
+after getting wet.
+</p>
+
+<p>
+The odor problem wasn't necessarily created during that shower.
+</p>
+
+<p><strong>You reactivated it.</strong></p>
+
+<p>
+The Institute recognizes that this sounds ominous.
+</p>
+
+<p>We stand by the wording.</p>
+
+</section>
+
+
+<!-- =====================================================
+     INCIDENT REPORT
+     ===================================================== -->
+
+<section class="deep-towel-callout">
+
+<h2>
+INCIDENT REPORT — The towel that spent six hours in the washer.
+</h2>
+
+<p>We have all done this.</p>
+
+<p>The machine finishes.</p>
+
+<p>You intend to move the laundry.</p>
+
+<p>Then life happens.</p>
+
+<p>
+Dinner.<br>
+Work.<br>
+Children.<br>
+Television.<br>
+A remarkably compelling internet investigation into whether
+a celebrity has secretly had hair plugs.
+</p>
+
+<p>Several hours later:</p>
+
+<p>The towels remain inside the closed washing machine.</p>
+
+<p>Wet.</p>
+
+<p>Warm.</p>
+
+<p>Together.</p>
+
+<p>This is not ideal.</p>
+
+<p>
+If laundry develops a musty smell while sitting wet in the washer,
+simply drying it may preserve the problem.
+</p>
+
+<p>Wash it again.</p>
+
+<p>Then dry it promptly and thoroughly.</p>
+
+<p>
+The Institute recommends setting a timer if you are the sort of
+person who routinely forgets laundry exists the moment the machine
+stops making noise.
+</p>
+
+<p>We are familiar with this condition.</p>
+
+</section>
+
+
+<!-- =====================================================
+     FINDING 07
+     ===================================================== -->
+
+<section class="report-section">
+
+<h2>FINDING 07 — Your towel hook may be an accomplice.</h2>
+
+<p>Look at how your towel hangs.</p>
+
+<p>Is it spread out?</p>
+
+<p>
+Or has it been folded over itself into a dense damp wad?
+</p>
+
+<p>Airflow matters.</p>
+
+<p>
+A towel bar allows a towel to spread out.
+</p>
+
+<p>
+A large hook can work if the towel hangs relatively open.
+</p>
+
+<p>
+A tiny hook that compresses the entire towel into one moist fist?
+</p>
+
+<p>Less ideal.</p>
+
+<p>
+The faster the towel dries, the less time moisture-loving organisms
+have to enjoy themselves.
+</p>
+
+<p>
+This becomes especially important in humid bathrooms.
+</p>
+
+<p>
+If your bathroom stays damp after showers, ventilation matters too.
+</p>
+
+<p>Run the exhaust fan.</p>
+
+<p>Open the door when appropriate.</p>
+
+<p>Let the room dry.</p>
+
+<p>Your towel is trying to accomplish something.</p>
+
+<p>Give it a chance.</p>
+
+</section>
+
+
+<!-- =====================================================
+     HOW OFTEN?
+     ===================================================== -->
+
+<section class="report-section">
+
+<h2>
+THE QUESTION EVERY HOUSEHOLD EVENTUALLY ASKS — How often should you wash bath towels?
+</h2>
+
+<p>
+There is no universal countdown clock at which a towel suddenly becomes filthy.
+</p>
+
+<p>
+How often you need to wash it depends on how quickly it dries,
+how it's stored, who is using it, humidity, skin conditions
+and other circumstances.
+</p>
+
+<p>
+But a commonly recommended rule of thumb is to wash a bath towel
+after roughly three uses, particularly if it isn't drying completely
+between uses.
+</p>
+
+<p>If a towel smells?</p>
+
+<p>Wash it.</p>
+
+<p>If it remains damp for long periods?</p>
+
+<p>Wash it more frequently.</p>
+
+<p>If multiple people are sharing it?</p>
+
+<p>First:</p>
+
+<p>Why?</p>
+
+<p>Second:</p>
+
+<p>Wash it.</p>
+
+<p>Personal towels should generally remain personal.</p>
+
+<p>
+This is not a communal hand towel at the county library.
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     FIELD PROCEDURE
+     ===================================================== -->
+
+<section class="field-procedure">
+
+<h2>FIELD PROCEDURE — How to rehabilitate a funky towel</h2>
+
+<div class="procedure-step">
+<h3>Step 1: Wash it properly.</h3>
+<p>
+Use an appropriate amount of quality detergent.
+Do not overload the machine.
+Use the warmest water permitted by the towel's care label
+and appropriate for the detergent you're using.
+</p>
+</div>
+
+<div class="procedure-step">
+<h3>Step 2: Skip the fabric softener.</h3>
+<p>
+At least while troubleshooting.
+Let the towel return to its natural profession.
+</p>
+</div>
+
+<div class="procedure-step">
+<h3>Step 3: Consider oxygen bleach when appropriate.</h3>
+<p>
+For washable towels whose care labels allow it, an oxygen-based
+bleach can help remove stains and soils.
+Follow the product directions.
+Do not improvise laundry chemistry.
+</p>
+</div>
+
+<div class="procedure-step">
+<h3>Step 4: Dry completely.</h3>
+<p>
+Not mostly.<br>
+Not "probably."<br>
+<strong>Completely.</strong>
+</p>
+</div>
+
+<div class="procedure-step">
+<h3>Step 5: Smell the towel when it gets damp again.</h3>
+<p>
+This is the real examination.
+If the smell immediately returns after the next shower,
+residues may still remain.
+Repeat the cleaning process if appropriate.
+</p>
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     VINEGAR
+     ===================================================== -->
+
+<section class="report-section">
+
+<h2>A NOTE ABOUT VINEGAR</h2>
+
+<p>The internet loves vinegar.</p>
+
+<p>Vinegar cleans windows.</p>
+
+<p>Vinegar removes scale.</p>
+
+<p>Vinegar appears in salad dressing.</p>
+
+<p>
+Therefore, according to the internet, vinegar can apparently
+repair everything from laundry to relationships.
+</p>
+
+<p>
+White vinegar is sometimes used in laundry to help address odors
+and residues.
+</p>
+
+<p>
+However, appliance manufacturers may caution against frequent
+or improper use because acids can affect certain rubber components
+over time.
+</p>
+
+<p>
+So before pouring vinegar into your washing machine because
+a lifestyle website told you to:
+</p>
+
+<p><strong>Check the machine manufacturer's instructions.</strong></p>
+
+<p>The Institute supports experimentation.</p>
+
+<p>The Institute also supports warranties.</p>
+
+</section>
+
+
+<!-- =====================================================
+     BAKING SODA
+     ===================================================== -->
+
+<section class="report-section">
+
+<h2>A NOTE ABOUT BAKING SODA</h2>
+
+<p>Baking soda has also entered the laundry mythology.</p>
+
+<p>
+It can help neutralize certain odors and alter wash-water chemistry.
+</p>
+
+<p>But again:</p>
+
+<p>It is not magic dust.</p>
+
+<p>
+Do not begin randomly combining vinegar, baking soda, bleach,
+detergent and whatever else lives beneath your kitchen sink.
+</p>
+
+<p>Cleaning products are chemicals.</p>
+
+<p>Some combinations can be ineffective.</p>
+
+<p>Others can be dangerous.</p>
+
+<p>Especially important:</p>
+
+<p>
+<strong>Never mix chlorine bleach with vinegar or other acids.</strong>
+</p>
+
+<p>
+That can release toxic chlorine gas.
+</p>
+
+<p>
+Your towel is not worth creating a chemical emergency.
+</p>
+
+<p>
+If you're using a laundry additive, follow its label.
+</p>
+
+<p>One problem at a time.</p>
+
+</section>
+
+
+<!-- =====================================================
+     FINDING 08
+     ===================================================== -->
+
+<section class="report-section">
+
+<h2>
+FINDING 08 — Sometimes the washing machine is the thing that smells.
+</h2>
+
+<p>This is an unpleasant development in the investigation.</p>
+
+<p>
+If multiple loads of supposedly clean laundry emerge smelling musty,
+inspect the machine.
+</p>
+
+<p>
+Front-loading washers in particular can retain moisture around
+door gaskets, detergent dispensers and other areas.
+</p>
+
+<p>Residue can accumulate.</p>
+
+<p>Microbial growth can occur.</p>
+
+<p>
+Then every load takes a little field trip through the problem.
+</p>
+
+<p>
+Follow your washing machine manufacturer's cleaning instructions.
+</p>
+
+<p>This may include:</p>
+
+<ul>
+<li>Cleaning the gasket.</li>
+<li>Cleaning detergent dispensers.</li>
+<li>Running a designated washer-cleaning cycle.</li>
+<li>Leaving the door open between loads when the manufacturer recommends it.</li>
+</ul>
+
+<p>
+And occasionally confronting whatever has been living beneath
+the detergent drawer.
+</p>
+
+<p>Bring courage.</p>
+
+</section>
+
+
+<!-- =====================================================
+     EQUIPMENT INSPECTION
+     ===================================================== -->
+
+<section class="equipment-inspection">
+
+<h2>EQUIPMENT INSPECTION — What actually helps towels stay fresh?</h2>
+
+<h3>A decent towel bar</h3>
+<p>
+More useful than an elaborate bathroom accessory if it allows
+the towel to dry properly.
+</p>
+
+<h3>A working exhaust fan</h3>
+<p>
+Humidity management is part of towel management.
+Bodies are systems.
+Bathrooms are also systems.
+</p>
+
+<h3>Appropriate detergent</h3>
+<p>
+Enough.<br>
+Not all of it.
+</p>
+
+<h3>Oxygen-based laundry booster</h3>
+<p>
+Potentially useful for stubborn washable loads when permitted
+by care instructions.
+</p>
+
+<h3>A washing-machine cleaner</h3>
+<p>
+Useful when the machine itself needs maintenance.
+</p>
+
+<h3>Extra towels</h3>
+<p>
+Perhaps the most sophisticated solution.
+</p>
+
+<p>
+If a towel isn't dry yet, use another towel.
+</p>
+
+<p>
+The Institute occasionally reaches conclusions of staggering complexity.
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     WHEN TO RETIRE
+     ===================================================== -->
+
+<section class="report-section">
+
+<h2>WHEN SHOULD YOU THROW A TOWEL AWAY?</h2>
+
+<p>Eventually, towels retire.</p>
+
+<p>Fibers wear.</p>
+
+<p>Edges fray.</p>
+
+<p>Absorbency declines.</p>
+
+<p>Odors can become difficult to remove.</p>
+
+<p>
+But smell alone doesn't necessarily mean a towel is finished.
+</p>
+
+<p>
+If proper washing restores it and it dries well, carry on.
+</p>
+
+<p>
+If you've repeatedly cleaned it appropriately and it still smells
+immediately after becoming damp, you may decide its active bath
+service has ended.
+</p>
+
+<p>That does not necessarily mean landfill.</p>
+
+<p>Old towels can become:</p>
+
+<ul>
+<li>Cleaning rags.</li>
+<li>Pet towels.</li>
+<li>Garage towels.</li>
+<li>Spill towels.</li>
+<li>Emergency towels.</li>
+</ul>
+
+<p>The towel has not failed.</p>
+
+<p><strong>It has been reassigned.</strong></p>
+
+</section>
+
+
+<!-- =====================================================
+     SYSTEM NOTE
+     ===================================================== -->
+
+<section class="deep-towel-callout">
+
+<h2>SYSTEM NOTE — Laundry is intimate care.</h2>
+
+<p>
+We tend to separate laundry from personal hygiene.
+</p>
+
+<p>
+One happens in the bathroom.
+</p>
+
+<p>
+The other happens in a machine.
+</p>
+
+<p>But towels touch your skin.</p>
+
+<p>Sheets touch your skin.</p>
+
+<p>Underwear touches your skin.</p>
+
+<p>Washcloths touch your skin.</p>
+
+<p>
+Clothing holds sweat, oils, microorganisms and whatever
+the outside world contributed that day.
+</p>
+
+<p>
+Laundry is therefore not merely housekeeping.
+</p>
+
+<p><strong>It's part of the system.</strong></p>
+
+<p>
+And like most systems, the boring parts matter:
+</p>
+
+<p>
+Enough detergent.<br>
+Enough water.<br>
+Enough movement.<br>
+Enough rinsing.<br>
+Enough drying.
+</p>
+
+<p>No mystical laundry rituals required.</p>
+
+</section>
+
+
+<!-- =====================================================
+     MEISTER'S VERDICT
+     ===================================================== -->
+
+<section class="meister-verdict">
+
+<h2>THE MEISTER'S VERDICT</h2>
+
+<p>Why does your clean towel smell weird?</p>
+
+<p>
+Usually because something in the wash-dry-use cycle isn't quite working.
+</p>
+
+<p>
+The towel may not be getting fully clean.
+It may contain detergent or softener residue.
+It may be sitting wet too long.
+It may not be drying completely between uses.
+Or the washing machine itself may need attention.
+</p>
+
+<p>The solution is rarely:</p>
+
+<p><strong>Make the towel smell more like lavender.</strong></p>
+
+<p>
+Fragrance can cover odor.
+It cannot negotiate with the underlying cause.
+</p>
+
+<div class="inspection-status">
+Inspection Status: Correctable Condition
+</div>
+
+<p>
+Start with the basics.
+</p>
+
+<p>
+Wash properly.<br>
+Use reasonable detergent.<br>
+Skip softener while troubleshooting.<br>
+Dry completely.<br>
+Hang the towel so air can reach it.
+</p>
+
+<p>
+And if the towel continues smelling like an abandoned summer camp
+every time it gets wet?
+</p>
+
+<p>
+Thank it for its service.
+</p>
+
+<p>
+Reassign it to the garage.
+</p>
+
+<p class="meister-signoff">
+— The Meister
+</p>
+
+</section>
+
+
+<!-- =====================================================
+     EQUIPMENT LOCKER
+     ===================================================== -->
+
+<section class="equipment-locker">
+
+<p class="locker-kicker">
+WAP MOP SHOPPE · Equipment Locker
+</p>
+
+<h2>Towel Rehabilitation Equipment</h2>
+
+<p class="locker-intro">
+The investigation suggests that towel rehabilitation is mostly
+a matter of cleaning properly, drying completely and giving moisture
+somewhere to go. The Equipment Locker contains a few items worth
+inspecting for the assignment.
+</p>
+
+
+<div class="locker-grid">
+
+
+<div class="locker-item">
+
+<h3>Quick-Drying Towels</h3>
+
+<p>
+A towel needs to absorb water and then successfully stop being wet.
+Absorbency, drying speed and durability all matter.
+</p>
+
+<a
+  class="locker-link"
+  href="https://amzn.to/4zZG7hL"
+  target="_blank"
+  rel="sponsored nofollow noopener noreferrer"
+>
+Inspect the Towels →
+</a>
+
+</div>
+
+
+<div class="locker-item">
+
+<h3>Laundry Detergent</h3>
+
+<p>
+Quality detergent used at an appropriate dose.
+The Equipment Locker does not endorse the ceremonial chalice method.
+</p>
+
+<a
+  class="locker-link"
+  href="https://amzn.to/3UDlrvV"
+  target="_blank"
+  rel="sponsored nofollow noopener noreferrer"
+>
+Inspect the Detergent →
+</a>
+
+</div>
+
+
+<div class="locker-item">
+
+<h3>Drying Rack</h3>
+
+<p>
+Not technologically impressive. Extremely good at providing
+wet fabric with surface area and airflow.
+</p>
+
+<a
+  class="locker-link"
+  href="https://amzn.to/4yosoiZ"
+  target="_blank"
+  rel="sponsored nofollow noopener noreferrer"
+>
+Inspect the Drying Rack →
+</a>
+
+</div>
+
+
+<div class="locker-item">
+
+<h3>Dryer Balls</h3>
+
+<p>
+A simple way to help separate laundry in the dryer without
+repeatedly coating towels with conventional fabric softener.
+</p>
+
+<a
+  class="locker-link"
+  href="https://amzn.to/4gCQ9xN"
+  target="_blank"
+  rel="sponsored nofollow noopener noreferrer"
+>
+Inspect the Dryer Balls →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="locker-future">
+
+<h3>Still on the Institute's inspection list</h3>
+
+<ul>
+<li>Oxygen-based laundry boosters</li>
+<li>Fragrance-free detergents</li>
+<li>Washer-cleaning tablets</li>
+<li>Towel bars</li>
+<li>Turkish towels</li>
+<li>Microfiber travel towels</li>
+<li>Breathable laundry bags</li>
+</ul>
+
+<p class="evaluation-criteria">
+<strong>Evaluation criteria:</strong>
+Cleaning / Drying Speed / Residue / Durability / Value / Ease of Use
+</p>
+
+<p class="evaluation-criteria">
+No product earns points simply for making laundry smell like an Alpine meadow.
+The Institute has been to meadows.
+Towels do not naturally smell like that.
+</p>
+
+</div>
+
+
+<p class="affiliate-disclosure">
+<strong>Affiliate disclosure:</strong>
+Some links in the Equipment Locker are affiliate links.
+WAP MOP SHOPPE may earn a commission from qualifying purchases
+at no additional cost to you.
+</p>
+
+</section>
 
 
 </article>
@@ -940,11 +1817,9 @@
 
 
 <footer>
-
   <div class="container">
     © WAP MOP SHOPPE
   </div>
-
 </footer>
 
 
