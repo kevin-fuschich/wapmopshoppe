@@ -16,6 +16,41 @@
 
 <style>
 
+/* =========================================================
+   PAGE-SPECIFIC STYLES
+   ========================================================= */
+
+.article-visual {
+  margin: 2.5rem 0 3.5rem;
+}
+
+.article-visual figure {
+  margin: 0;
+}
+
+.article-visual-frame {
+  padding: 8px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 18px;
+  box-shadow: 0 14px 38px rgba(0,0,0,.12);
+}
+
+.article-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 11px;
+}
+
+.article-visual figcaption {
+  margin-top: .75rem;
+  text-align: center;
+  font-size: .88rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
 .language-note {
   margin: 28px 0;
   padding: 20px;
@@ -119,6 +154,10 @@
 @media (max-width: 700px) {
   .global-grid {
     grid-template-columns: 1fr;
+  }
+
+  .article-visual-frame {
+    padding: 5px;
   }
 }
 
@@ -289,6 +328,33 @@ Just Latin assembling two extremely relevant pieces of information.
 <p>
 The Institute respects this efficiency.
 </p>
+
+
+<!-- =====================================================
+     ETYMOLOGY INFOGRAPHIC
+     ===================================================== -->
+
+<section class="article-visual">
+
+<figure>
+
+<div class="article-visual-frame">
+
+<img
+  src="/assets/images/cunnilingus-etymology.png"
+  alt="WAP MOP SHOPPE infographic explaining the Latin roots and historical development of the word cunnilingus."
+  loading="lazy"
+>
+
+</div>
+
+<figcaption>
+A closer look at the Latin building blocks behind one of the English language’s most formal-sounding intimate terms.
+</figcaption>
+
+</figure>
+
+</section>
 
 
 <h2>
