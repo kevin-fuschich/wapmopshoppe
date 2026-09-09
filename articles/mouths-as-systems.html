@@ -1,127 +1,410 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mouths as systems — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="The mouth isn’t a sterile surface to be scrubbed into submission. It’s a living system that responds best to balance, gentleness, and restraint." />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css">
+<meta charset="utf-8" />
 
-  <style>
-    header, nav, main, footer, section, article, aside { display:block; }
-    body{ margin:0; background:#f4f4f4; color:#111; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-    .content{ max-width:780px; margin:0 auto; }
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{ font-weight:900; letter-spacing:.06em; text-decoration:none; color:#111; white-space:nowrap; }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:600; }
-    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
-    article h1{ font-size:36px; line-height:1.15; margin:0 0 18px 0; font-weight:950; letter-spacing:-.01em; }
-    .lede{ font-size:20px; opacity:.92; margin:0 0 22px 0; }
-    .accent-rule{ height:2px; border:0; background: linear-gradient(90deg, rgba(192,68,44,1), transparent); margin: 20px 0 18px; }
-    .tags{ display:flex; flex-wrap:wrap; gap:10px; margin: 0 0 18px 0; padding:0; list-style:none; }
-    .tag{ display:inline-flex; align-items:center; gap:8px; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(0,0,0,.12); background:#fff; font-size: 13px; color:#111; }
-    .tag::before{ content:""; width:8px; height:8px; border-radius:999px; background: rgba(192,68,44,1); opacity:.85; }
-    p{ margin:0 0 18px 0; font-size:16px; }
-    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:950; }
-    .callout{ border:1px solid rgba(0,0,0,.12); border-radius:16px; padding:18px; background:#fff; margin:28px 0; }
-    .callout p{ margin:0; font-size:15px; opacity:.92; }
-    .related{ border:1px solid rgba(0,0,0,.12); border-radius:16px; background:#fff; padding:18px; margin:28px 0 0; }
-    .related .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.75; margin-bottom:8px; font-weight:950; }
-    .related p{ margin:0; font-size:15px; opacity:.92; }
-    .related a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); font-weight:950; }
-    .meta{ font-size:13px; opacity:.72; margin-top:22px; }
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
-    @media (max-width:820px){ article h1{ font-size:30px; } .lede{ font-size:18px; } }
-  </style>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<title>
+Mouths as Systems | WAP MOP SHOPPE
+</title>
+
+<meta
+  name="description"
+  content="The mouth isn’t a sterile surface to be scrubbed into submission. It’s a living system that responds best to balance, gentleness, and restraint."
+/>
+
+<link
+  rel="stylesheet"
+  href="/assets/styles.css"
+>
+
+<style>
+
+/* Article-specific additions */
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 24px;
+  padding:0;
+  list-style:none;
+}
+
+.tag {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--card);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:750;
+}
+
+.tag::before {
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--rust);
+}
+
+.callout {
+  margin:28px 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--gold);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.callout p {
+  margin:0;
+}
+
+.related {
+  margin:28px 0 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.related .kicker {
+  margin-bottom:6px;
+}
+
+.related p {
+  margin:0;
+}
+
+.related a {
+  color:var(--rust);
+  font-weight:850;
+}
+
+.meta {
+  margin-top:24px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+article ul:not(.tags) {
+  margin:0 0 22px;
+  padding-left:24px;
+}
+
+article ul:not(.tags) li {
+  margin-bottom:7px;
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<main>
-  <div class="container">
-    <div class="content">
-      <article>
-        <h1>Mouths as systems</h1>
 
-        <p class="lede">
-          Mouths aren’t sterile tools.
-          They’re living systems that balance bacteria, moisture, tissue, and friction.
-        </p>
+<header class="site-header">
 
-        <hr class="accent-rule">
-        <ul class="tags" aria-label="Tags">
-          <li class="tag">Oral care</li>
-          <li class="tag">Friction</li>
-          <li class="tag">Balance</li>
-        </ul>
+<div class="container header-inner">
 
-        <p>
-          Modern oral care often treats the mouth like a surface problem —
-          something to disinfect, deodorize, or overpower with mint.
-          But most mouths do better with less intensity, not more.
-        </p>
+<a
+  class="brand"
+  href="/"
+>
 
-        <h2>Clean is not the same as stripped</h2>
-        <p>
-          Alcohol-heavy rinses, aggressive scrubbing, and constant “freshening”
-          can irritate tissue and disrupt the microbiome that keeps the mouth comfortable.
-          Dryness, burning, or sensitivity are often signs of overcorrection.
-        </p>
+<img
+  src="/assets/figures/meister-stamp.png"
+  alt=""
+>
 
-        <h2>Saliva matters</h2>
-        <p>
-          Saliva isn’t a nuisance — it’s part of the system.
-          It protects tissue, moderates bacteria, and reduces friction.
-          Anything that dries the mouth out tends to make things worse over time.
-        </p>
+<span>
+WAP MOP SHOPPE
+</span>
 
-        <h2>What tends to help</h2>
-        <ul>
-          <li>Gentle brushing with a soft-bristle brush</li>
-          <li>Alcohol-free rinses when needed</li>
-          <li>Hydration and time between interventions</li>
-        </ul>
+</a>
 
-        <h2>What tends to interfere</h2>
-        <ul>
-          <li>High-alcohol mouthwashes</li>
-          <li>Constant flavoring and “cooling” agents</li>
-          <li>Scrubbing past the point of comfort</li>
-        </ul>
 
-        <section class="callout" aria-label="Key idea">
-          <p>Comfort is a signal. When the mouth is unhappy, it’s usually telling you to back off.</p>
-        </section>
+<nav>
 
-        <aside class="related" aria-label="Related care">
-          <div class="kicker">Related care</div>
-          <p>
-            Looking for gentle options that respect the mouth as a system?
-            See how we think about <a href="/shoppe/oral-care.html">oral care</a> in the Shoppe.
-          </p>
-        </aside>
+<a href="/articles/">
+Articles
+</a>
 
-        <p class="meta">
-          Not medical advice. Persistent pain, sores, bleeding, or sensitivity
-          should be evaluated by a dental or medical professional.
-        </p>
-      </article>
-    </div>
-  </div>
+<a href="/media/">
+Media
+</a>
+
+<a href="/shoppe/">
+Shoppe
+</a>
+
+<a href="/start/">
+Comfort Check
+</a>
+
+<a href="/about/">
+About
+</a>
+
+<a href="/disclosure/">
+Disclosure
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main class="container section">
+
+<article>
+
+
+<p class="kicker">
+Field Report · Oral Systems
+</p>
+
+
+<h1>
+Mouths as Systems
+</h1>
+
+
+<p class="lede">
+Mouths aren’t sterile tools. They’re living systems that balance bacteria, moisture, tissue, and friction.
+</p>
+
+
+<hr class="accent-rule">
+
+
+<ul
+  class="tags"
+  aria-label="Tags"
+>
+
+<li class="tag">
+Oral Care
+</li>
+
+<li class="tag">
+Friction
+</li>
+
+<li class="tag">
+Balance
+</li>
+
+</ul>
+
+
+
+<p>
+Modern oral care often treats the mouth like a surface problem—something to disinfect, deodorize, or overpower with mint.
+</p>
+
+<p>
+But most mouths do better with less intensity, not more.
+</p>
+
+
+
+<h2>
+FINDING 01 — Clean is not the same as stripped.
+</h2>
+
+<p>
+Alcohol-heavy rinses, aggressive scrubbing, and constant “freshening” can irritate tissue and disrupt the environment that helps keep the mouth comfortable.
+</p>
+
+<p>
+Dryness, burning, or sensitivity can be signs that an oral-care routine is doing too much rather than too little.
+</p>
+
+
+
+<h2>
+FINDING 02 — Saliva matters.
+</h2>
+
+<p>
+Saliva isn’t a nuisance. It is part of the system.
+</p>
+
+<p>
+It helps protect tissue, supports the mouth’s natural defenses, buffers acids, lubricates surfaces, and reduces friction.
+</p>
+
+<p>
+Anything that persistently dries the mouth out can interfere with that system.
+</p>
+
+
+
+<h2>
+FINDING 03 — What tends to help.
+</h2>
+
+<ul>
+
+<li>
+Gentle brushing with a soft-bristle toothbrush
+</li>
+
+<li>
+Appropriate fluoride toothpaste
+</li>
+
+<li>
+Alcohol-free rinses when a rinse is useful
+</li>
+
+<li>
+Hydration
+</li>
+
+<li>
+Giving irritated tissue time to recover rather than continually adding more products
+</li>
+
+</ul>
+
+
+
+<h2>
+FINDING 04 — What tends to interfere.
+</h2>
+
+<ul>
+
+<li>
+Aggressive brushing
+</li>
+
+<li>
+Repeated use of products that cause burning or excessive dryness
+</li>
+
+<li>
+Constant flavoring, cooling, or “freshening” for its own sake
+</li>
+
+<li>
+Scrubbing past the point of comfort
+</li>
+
+</ul>
+
+
+
+<section
+  class="callout"
+  aria-label="Key idea"
+>
+
+<p>
+<strong>FIELD PRINCIPLE:</strong>
+Comfort is information. If a product or routine consistently leaves your mouth irritated, dry, or painful, more intensity is not automatically the answer.
+</p>
+
+</section>
+
+
+
+<!-- =======================================================
+     SHOPPE EQUIPMENT LOCKER
+     ======================================================= -->
+
+<aside
+  class="related"
+  aria-label="Related oral care"
+>
+
+<p class="kicker">
+The Shoppe Equipment Locker
+</p>
+
+<h3>
+Looking for oral-care field equipment?
+</h3>
+
+<p>
+Tongue scrapers, soft-bristle toothbrushes, flossing tools, and other mouth-system equipment will live in the <a href="/shoppe/">Shoppe Equipment Locker</a> as recommendations are inspected and added.
+</p>
+
+</aside>
+
+
+
+<h3>
+THE MEISTER’S VERDICT
+</h3>
+
+<p>
+The mouth is not a countertop.
+</p>
+
+<p>
+It is wet, inhabited, chemically active tissue with its own protective systems. Good oral care removes what needs removing without treating the entire environment as something that must be sterilized into submission.
+</p>
+
+<p>
+Brush effectively. Clean between the teeth. Respect the tissue. Let saliva do its job.
+</p>
+
+<p>
+And if your mouth is loudly objecting to your hygiene routine, consider the possibility that it has useful information for you.
+</p>
+
+<p>
+<strong>
+INSPECTION STATUS: SYSTEM STILL OPERATIONAL
+</strong>
+</p>
+
+
+
+<p class="meta">
+This article is general educational information, not medical or dental advice. Persistent pain, sores, bleeding, dry mouth, or sensitivity should be evaluated by an appropriate dental or medical professional.
+</p>
+
+
+</article>
+
 </main>
 
+
+
 <footer>
-  <div class="container">© <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure/">Disclosure</a></div>
+
+<div class="container">
+
+© WAP MOP SHOPPE · Institute for Practical Cleanliness ·
+
+<a href="/disclosure/">
+Affiliate disclosure
+</a>
+
+</div>
+
 </footer>
 
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
 </body>
+
 </html>
