@@ -115,7 +115,9 @@ input {
 }
 
 
-/* HEADER */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .site-header {
   background:var(--paper);
@@ -163,7 +165,9 @@ nav a:hover {
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .shoppe-hero {
   background:
@@ -192,16 +196,19 @@ nav a:hover {
 
 .kicker {
   margin:0 0 10px;
+  color:var(--rust);
   font-size:12px;
   font-weight:950;
   letter-spacing:.12em;
   text-transform:uppercase;
-  color:var(--rust);
 }
 
 .shoppe-hero h1 {
   margin:0 0 18px;
-  font-size:clamp(52px,9vw,90px);
+
+  font-size:
+    clamp(52px,9vw,90px);
+
   line-height:.92;
   letter-spacing:-.055em;
 }
@@ -209,23 +216,36 @@ nav a:hover {
 .shoppe-hero-copy {
   max-width:700px;
   margin:0;
+
   color:var(--muted);
-  font-size:clamp(18px,2vw,22px);
+
+  font-size:
+    clamp(18px,2vw,22px);
+
   line-height:1.55;
 }
 
 .shoppe-hero-note {
   margin-top:24px;
   max-width:700px;
+
   padding:16px 18px;
-  border-left:4px solid var(--gold);
-  background:rgba(255,255,255,.58);
+
+  border-left:
+    4px solid var(--gold);
+
+  background:
+    rgba(255,255,255,.58);
+
   color:var(--muted);
+
   font-size:14px;
 }
 
 
-/* SECTIONS */
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 .shoppe-section {
   padding:60px 0;
@@ -242,7 +262,10 @@ nav a:hover {
 
 .section-head h2 {
   margin:0 0 10px;
-  font-size:clamp(32px,5vw,48px);
+
+  font-size:
+    clamp(32px,5vw,48px);
+
   line-height:1;
   letter-spacing:-.035em;
 }
@@ -253,22 +276,36 @@ nav a:hover {
 }
 
 
-/* PRODUCTS */
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
 
 .product-grid {
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
   gap:20px;
 }
 
 .product-card {
   overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:rgba(255,253,248,.96);
+
   display:flex;
   flex-direction:column;
-  box-shadow:0 10px 28px rgba(23,19,15,.05);
+
+  border:
+    1px solid var(--line);
+
+  border-radius:20px;
+
+  background:
+    rgba(255,253,248,.96);
+
+  box-shadow:
+    0 10px 28px rgba(23,19,15,.05);
+
   transition:
     transform .18s ease,
     box-shadow .18s ease;
@@ -276,15 +313,21 @@ nav a:hover {
 
 .product-card:hover {
   transform:translateY(-3px);
-  box-shadow:0 16px 36px rgba(23,19,15,.09);
+
+  box-shadow:
+    0 16px 36px rgba(23,19,15,.09);
 }
 
 
-/* PRODUCT IMAGE */
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
 
 .product-image-wrap {
   position:relative;
+
   aspect-ratio:1 / 1;
+
   overflow:hidden;
 
   background:
@@ -294,64 +337,60 @@ nav a:hover {
       #fffaf1
     );
 
-  border-bottom:1px solid var(--line);
+  border-bottom:
+    1px solid var(--line);
+}
+
+.product-image-wrap img {
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  display:block;
+
+  transition:
+    transform .25s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+  transform:scale(1.025);
+}
+
+.product-image-fallback {
+  position:absolute;
+  inset:0;
+
+  display:grid;
+  place-items:center;
+
+  padding:24px;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  font-size:13px;
+  font-weight:850;
+
+  z-index:0;
 }
 
 .product-image-wrap img {
   position:relative;
-  z-index:2;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.product-placeholder {
-  position:absolute;
-  inset:0;
   z-index:1;
-  display:grid;
-  place-items:center;
-  padding:26px;
-  text-align:center;
-  color:var(--muted);
-}
-
-.product-placeholder-inner {
-  max-width:220px;
-}
-
-.product-placeholder-mark {
-  display:block;
-  margin-bottom:8px;
-  color:var(--green);
-  font-size:13px;
-  font-weight:950;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-
-.product-placeholder-name {
-  display:block;
-  font-size:20px;
-  line-height:1.25;
-  font-weight:850;
-}
-
-.product-placeholder-note {
-  display:block;
-  margin-top:9px;
-  font-size:12px;
-  opacity:.7;
 }
 
 
-/* PRODUCT BODY */
+/* =========================================================
+   PRODUCT CONTENT
+   ========================================================= */
 
 .product-body {
   flex:1;
+
   display:flex;
   flex-direction:column;
+
   padding:20px;
 }
 
@@ -359,14 +398,19 @@ nav a:hover {
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   gap:10px;
+
   margin-bottom:12px;
 }
 
 .status {
   display:inline-block;
+
   padding:5px 8px;
+
   border-radius:999px;
+
   font-size:10px;
   font-weight:950;
   letter-spacing:.08em;
@@ -374,17 +418,23 @@ nav a:hover {
 }
 
 .status.coming {
-  background:rgba(216,162,58,.18);
+  background:
+    rgba(216,162,58,.18);
+
   color:#855e0b;
 }
 
 .status.sold {
-  background:rgba(184,76,47,.12);
+  background:
+    rgba(184,76,47,.12);
+
   color:var(--rust);
 }
 
 .status.unavailable {
-  background:rgba(47,75,50,.12);
+  background:
+    rgba(47,75,50,.12);
+
   color:var(--green);
 }
 
@@ -395,14 +445,18 @@ nav a:hover {
 
 .product-body h3 {
   margin:0 0 8px;
+
   font-size:21px;
   line-height:1.16;
 }
 
 .product-body > p {
   flex:1;
+
   margin:0 0 18px;
+
   color:var(--muted);
+
   font-size:14px;
   line-height:1.6;
 }
@@ -414,29 +468,96 @@ nav a:hover {
   gap:11px;
 }
 
-.product-page-pending {
-  color:var(--muted);
-  font-size:12px;
-  font-weight:800;
-}
-
 .status-button {
   border:0;
+
   border-radius:8px;
+
   padding:10px 12px;
+
   background:var(--green);
   color:#fff;
+
   font-size:12px;
   font-weight:900;
+
   cursor:pointer;
+
+  transition:
+    transform .15s ease,
+    opacity .15s ease;
 }
 
 .status-button:hover {
   opacity:.92;
+  transform:translateY(-1px);
+}
+
+.inspect-link {
+  display:inline-block;
+
+  color:var(--ink);
+
+  font-size:13px;
+  font-weight:950;
+
+  text-decoration:none;
+
+  border-bottom:
+    2px solid rgba(184,76,47,.35);
+
+  padding-bottom:2px;
+}
+
+.inspect-link:hover {
+  border-color:var(--rust);
+}
+
+.product-page-pending {
+  color:var(--muted);
+
+  font-size:12px;
+  font-weight:800;
 }
 
 
-/* FIELD LIST */
+/* =========================================================
+   FEATURED / FLAGSHIP
+   ========================================================= */
+
+.product-card.flagship {
+  border:
+    1px solid rgba(47,75,50,.34);
+
+  box-shadow:
+    0 14px 32px rgba(47,75,50,.09);
+}
+
+.flagship-label {
+  display:inline-block;
+
+  margin-left:6px;
+
+  padding:4px 7px;
+
+  border-radius:999px;
+
+  background:var(--green);
+  color:#fff;
+
+  font-size:9px;
+  font-weight:950;
+
+  letter-spacing:.08em;
+  text-transform:uppercase;
+
+  vertical-align:middle;
+}
+
+
+/* =========================================================
+   FIELD LIST
+   ========================================================= */
 
 .field-list-section {
   background:#efe2cf;
@@ -444,19 +565,32 @@ nav a:hover {
 
 .field-list-box {
   display:grid;
-  grid-template-columns:1.08fr .92fr;
+
+  grid-template-columns:
+    1.08fr .92fr;
+
   gap:36px;
   align-items:center;
+
   padding:36px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:22px;
+
   background:var(--paper);
-  box-shadow:0 16px 36px rgba(23,19,15,.06);
+
+  box-shadow:
+    0 16px 36px rgba(23,19,15,.06);
 }
 
 .field-list-box h2 {
   margin:0 0 10px;
-  font-size:clamp(30px,5vw,46px);
+
+  font-size:
+    clamp(30px,5vw,46px);
+
   line-height:1;
 }
 
@@ -478,33 +612,54 @@ nav a:hover {
 
 .field-list-form input {
   width:100%;
+
   padding:13px 14px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:9px;
+
   background:#fff;
 }
 
 .field-list-form button {
   border:0;
+
   border-radius:9px;
+
   padding:13px 16px;
+
   background:var(--rust);
   color:#fff;
+
   font-weight:950;
+
   cursor:pointer;
+}
+
+.field-list-form button[disabled] {
+  opacity:.6;
+  cursor:wait;
 }
 
 .form-note {
   margin:4px 0 0;
+
   font-size:11px;
+
   color:var(--muted);
 }
 
 .form-message {
   display:none;
+
   margin:4px 0 0;
+
   padding:10px 12px;
+
   border-radius:8px;
+
   font-size:13px;
   font-weight:750;
 }
@@ -514,17 +669,23 @@ nav a:hover {
 }
 
 .form-message.success {
-  background:rgba(47,75,50,.1);
+  background:
+    rgba(47,75,50,.1);
+
   color:var(--green);
 }
 
 .form-message.error {
-  background:rgba(184,76,47,.1);
+  background:
+    rgba(184,76,47,.1);
+
   color:var(--rust);
 }
 
 
-/* EQUIPMENT LOCKER */
+/* =========================================================
+   EQUIPMENT LOCKER
+   ========================================================= */
 
 .equipment-section {
   background:
@@ -546,70 +707,102 @@ nav a:hover {
 }
 
 .equipment-section .section-head p {
-  color:rgba(255,255,255,.72);
+  color:
+    rgba(255,255,255,.72);
 }
 
 .equipment-grid {
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
   gap:16px;
 }
 
 .equipment-card {
   padding:20px;
-  border:1px solid rgba(255,255,255,.12);
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
   border-radius:16px;
-  background:rgba(255,255,255,.07);
+
+  background:
+    rgba(255,255,255,.07);
 }
 
 .equipment-card h3 {
   margin:0 0 8px;
+
   color:#fff7df;
+
   font-size:18px;
 }
 
 .equipment-card p {
   margin:0 0 16px;
-  color:rgba(255,255,255,.7);
+
+  color:
+    rgba(255,255,255,.7);
+
   font-size:14px;
 }
 
 .equipment-link {
   display:inline-block;
+
   padding:8px 11px;
+
   border-radius:7px;
+
   background:#e4b64c;
   color:#173632;
+
   font-size:12px;
   font-weight:900;
+
   text-decoration:none;
 }
 
 .equipment-link.disabled {
-  cursor:default;
   opacity:.55;
+  cursor:default;
 }
 
 .affiliate-disclosure {
   margin-top:28px;
+
   padding-top:18px;
-  border-top:1px solid rgba(255,255,255,.14);
-  color:rgba(255,255,255,.58);
+
+  border-top:
+    1px solid rgba(255,255,255,.14);
+
+  color:
+    rgba(255,255,255,.58);
+
   font-size:12px;
+  line-height:1.55;
 }
 
 
-/* MODAL */
+/* =========================================================
+   STATUS MODAL
+   ========================================================= */
 
 .modal-backdrop {
   position:fixed;
   inset:0;
   z-index:9999;
+
   display:none;
   align-items:center;
   justify-content:center;
+
   padding:20px;
-  background:rgba(15,12,9,.74);
+
+  background:
+    rgba(15,12,9,.74);
 }
 
 .modal-backdrop.open {
@@ -620,16 +813,22 @@ nav a:hover {
   width:min(520px,100%);
   max-height:90vh;
   overflow:auto;
+
   border-radius:18px;
+
   background:var(--paper);
-  box-shadow:0 30px 80px rgba(0,0,0,.34);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.34);
 }
 
 .modal-header {
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
+
   gap:20px;
+
   padding:22px 22px 0;
 }
 
@@ -641,10 +840,19 @@ nav a:hover {
 .modal-close {
   width:38px;
   height:38px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:50%;
+
   background:#fff;
+
+  color:var(--ink);
+
   font-size:25px;
+  line-height:1;
+
   cursor:pointer;
 }
 
@@ -654,7 +862,9 @@ nav a:hover {
 
 .modal-product {
   margin:0 0 18px;
+
   color:var(--muted);
+
   font-weight:800;
 }
 
@@ -666,16 +876,22 @@ nav a:hover {
 .lookup-form label {
   font-size:12px;
   font-weight:950;
-  text-transform:uppercase;
   letter-spacing:.08em;
+  text-transform:uppercase;
 }
 
 .lookup-form input {
   width:100%;
+
   padding:13px 14px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:9px;
+
   background:#fff;
+
   font-family:monospace;
   font-size:18px;
   letter-spacing:.12em;
@@ -683,25 +899,37 @@ nav a:hover {
 
 .lookup-form button {
   border:0;
+
   border-radius:9px;
+
   padding:12px 15px;
+
   background:var(--green);
   color:#fff;
+
   font-weight:950;
+
   cursor:pointer;
 }
 
 .lookup-smallprint {
   margin:0;
+
   color:var(--muted);
+
   font-size:11px;
 }
 
 .lookup-result {
   display:none;
+
   margin-top:20px;
+
   padding:18px;
-  border-left:4px solid var(--gold);
+
+  border-left:
+    4px solid var(--gold);
+
   background:#f6eddf;
 }
 
@@ -719,17 +947,23 @@ nav a:hover {
 }
 
 .field-interest {
-  margin-top:14px;
-  font-size:12px;
+  margin-top:14px !important;
+
   color:var(--green);
-  font-weight:900;
+
+  font-size:12px;
+  font-weight:950;
 }
 
 .notify-box {
   display:none;
+
   margin-top:18px;
+
   padding-top:18px;
-  border-top:1px solid var(--line);
+
+  border-top:
+    1px solid var(--line);
 }
 
 .notify-box.show {
@@ -752,51 +986,79 @@ nav a:hover {
 
 .notify-form input {
   width:100%;
+
   padding:12px 13px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:8px;
 }
 
 .notify-form button {
   border:0;
+
   border-radius:8px;
+
   padding:11px 13px;
+
   background:var(--rust);
   color:#fff;
+
   font-weight:950;
+
   cursor:pointer;
+}
+
+.notify-form button[disabled] {
+  opacity:.6;
+  cursor:wait;
 }
 
 .notify-note {
   margin:8px 0 0;
+
   color:var(--muted);
+
   font-size:11px;
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
   background:var(--paper);
+
   padding:20px 0;
-  border-top:1px solid var(--line);
+
+  border-top:
+    1px solid var(--line);
+
   color:var(--muted);
+
   font-size:13px;
 }
 
 footer a {
   text-decoration:none;
-  border-bottom:1px solid rgba(23,19,15,.25);
+
+  border-bottom:
+    1px solid rgba(23,19,15,.25);
 }
 
 
-/* RESPONSIVE */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 @media(max-width:900px) {
 
   .product-grid,
   .equipment-grid {
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
   }
 
   .field-list-box {
@@ -830,13 +1092,20 @@ footer a {
 <body>
 
 
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
+
 <header class="site-header">
 
 <div class="container">
 
 <div class="header-inner">
 
-<a class="brand" href="/">
+<a
+  class="brand"
+  href="/"
+>
 
 <img
   src="/assets/figures/meister-stamp.png"
@@ -854,6 +1123,10 @@ WAP MOP SHOPPE
 
 <a href="/articles/">
 Articles
+</a>
+
+<a href="/media/">
+Media
 </a>
 
 <a href="/shoppe/">
@@ -882,6 +1155,10 @@ Disclosure
 
 
 
+<!-- =======================================================
+     HERO
+     ======================================================= -->
+
 <section class="shoppe-hero">
 
 <div class="container">
@@ -905,6 +1182,7 @@ than strictly necessary.
 
 </p>
 
+
 <div class="shoppe-hero-note">
 
 <strong>Inventory notice:</strong>
@@ -923,6 +1201,10 @@ under circumstances the Institute is still attempting to reconstruct.
 
 
 
+<!-- =======================================================
+     PRODUCTS
+     ======================================================= -->
+
 <section class="shoppe-section">
 
 <div class="container">
@@ -939,8 +1221,12 @@ Issued Equipment
 
 <p>
 
-Branded goods, personal care products, and field equipment
-developed under the watchful eye of the Institute.
+Personal care, field equipment, household goods,
+and other objects developed under the watchful eye
+of WAP MOP SHOPPE.
+
+Detailed product inspections are being added as
+items clear the desk.
 
 </p>
 
@@ -951,39 +1237,27 @@ developed under the watchful eye of the Institute.
 
 
 
-<!-- FIELD SOAP -->
+<!-- =====================================================
+     01 FIELD SOAP
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Field Soap
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Field Soap image unavailable.
 </div>
 
 <img
   src="/assets/images/field-soap.png"
   alt="WAP MOP SHOPPE Field Soap"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -999,18 +1273,21 @@ $9 /ea.
 
 </div>
 
+
 <h3>
 WAP MOP SHOPPE Field Soap
 </h3>
 
+
 <p>
 
 A straightforward bar for ordinary washing,
-wrapped in Institute packaging and developed
+wrapped in WAP MOP SHOPPE field packaging and developed
 with considerably less fragrance theater than
 the modern soap aisle seems to require.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1024,7 +1301,7 @@ Check Pre-Order Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1035,39 +1312,27 @@ Product page coming soon
 
 
 
-<!-- INSTITUTE TOWEL -->
+<!-- =====================================================
+     02 INSTITUTE BATH TOWEL
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Institute Bath Towel
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Bath Towel image unavailable.
 </div>
 
 <img
   src="/assets/images/institute-towel.png"
   alt="WAP MOP SHOPPE Institute Bath Towel"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1083,9 +1348,11 @@ $34 /ea.
 
 </div>
 
+
 <h3>
 Institute Bath Towel
 </h3>
+
 
 <p>
 
@@ -1094,6 +1361,7 @@ WAP MOP SHOPPE branding. Designed to dry a person
 without turning the bathroom into a merchandise booth.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1107,7 +1375,7 @@ Check Restock Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1118,47 +1386,50 @@ Product page coming soon
 
 
 
-<!-- OGWA SQUEEZE -->
+<!-- =====================================================
+     03 OGWA SEA GLASS SQUEEZE
+     ===================================================== -->
 
-<article class="product-card">
+<article class="product-card flagship">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-OGWA Sea Glass SQUEEZE
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
+<div class="product-image-fallback">
+OGWA Sea Glass SQUEEZE image unavailable.
 </div>
 
-</div>
+<a
+  href="/shoppe/ogwa-sea-glass-squeeze/"
+  aria-label="Inspect OGWA Sea Glass SQUEEZE"
+>
 
 <img
   src="/assets/images/ogwa-sea-glass-squeeze.png"
-  alt="OGWA Sea Glass SQUEEZE portable bidet bottle"
+  alt="OGWA Sea Glass SQUEEZE portable bidet bottle with Bidet Elbow Lid"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
+</a>
+
 </div>
+
 
 <div class="product-body">
 
 <div class="product-meta">
 
+<div>
+
 <span class="status coming">
 Coming Soon
 </span>
+
+<span class="flagship-label">
+Field Favorite
+</span>
+
+</div>
 
 <span class="price">
 $29 /ea.
@@ -1166,20 +1437,31 @@ $29 /ea.
 
 </div>
 
+
 <h3>
 OGWA Sea Glass SQUEEZE
 </h3>
 
+
 <p>
 
-A portable bidet bottle with a sea-glass body,
-angled elbow neck, gentle retractable douser,
+A portable bidet bottle with a sea-glass squeeze body,
+Bidet Elbow Lid, gentle retractable douser,
 and protective rubber sleeve.
+
 Water delivery for circumstances that have gone sideways.
 
 </p>
 
+
 <div class="product-actions">
+
+<a
+  class="inspect-link"
+  href="/shoppe/ogwa-sea-glass-squeeze/"
+>
+Inspect Product →
+</a>
 
 <button
   class="status-button"
@@ -1190,10 +1472,6 @@ Water delivery for circumstances that have gone sideways.
 Check Pre-Order Status
 </button>
 
-<span class="product-page-pending">
-Product page coming soon
-</span>
-
 </div>
 
 </div>
@@ -1202,39 +1480,27 @@ Product page coming soon
 
 
 
-<!-- BATH BOMB -->
+<!-- =====================================================
+     04 MUSTACHE BATH BOMB
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Mustache Bath Bomb
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Bath Bomb image unavailable.
 </div>
 
 <img
   src="/assets/images/mustache-bath-bomb.png"
   alt="WAP MOP SHOPPE Mustache Bath Bomb"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1250,9 +1516,11 @@ $8 /ea.
 
 </div>
 
+
 <h3>
 The Mustache Bath Bomb
 </h3>
+
 
 <p>
 
@@ -1261,6 +1529,7 @@ the Institute mustache. Intended for soaking,
 fizzing, and extremely serious bath operations.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1274,7 +1543,7 @@ Check Production Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1285,39 +1554,27 @@ Product page coming soon
 
 
 
-<!-- LUBRICANT -->
+<!-- =====================================================
+     05 PERSONAL LUBRICANT
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Personal Lubricant
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Personal Lubricant image unavailable.
 </div>
 
 <img
   src="/assets/images/personal-lubricant.png"
-  alt="WAP MOP SHOPPE Personal Lubricant"
+  alt="WAP MOP SHOPPE water-based personal lubricant"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1333,17 +1590,20 @@ $14 /ea.
 
 </div>
 
+
 <h3>
 WAP MOP SHOPPE Personal Lubricant
 </h3>
 
+
 <p>
 
-A cleanly designed personal lubricant concept
-built around one of the Institute's foundational
-principles: friction is information.
+A water-based personal lubricant concept built around
+one of the Shoppe's foundational observations:
+friction is information.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1357,7 +1617,7 @@ Check Pre-Order Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1368,39 +1628,27 @@ Product page coming soon
 
 
 
-<!-- MEISTER CAP -->
+<!-- =====================================================
+     06 MEISTER FIELD CAP
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Meister Field Cap
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Meister Field Cap image unavailable.
 </div>
 
 <img
   src="/assets/images/meister-field-cap.png"
-  alt="Meister Field Cap"
+  alt="WAP MOP SHOPPE Meister Field Cap"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1416,9 +1664,11 @@ $28 /ea.
 
 </div>
 
+
 <h3>
 Meister Field Cap
 </h3>
+
 
 <p>
 
@@ -1427,6 +1677,7 @@ bathroom operations, questionable towels,
 and whatever else the day produces.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1440,7 +1691,7 @@ Check Restock Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1451,39 +1702,27 @@ Product page coming soon
 
 
 
-<!-- CANELA CAP -->
+<!-- =====================================================
+     07 CANELA FIELD CAP
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Canela Field Cap
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Canela Field Cap image unavailable.
 </div>
 
 <img
   src="/assets/images/canela-field-cap.png"
-  alt="Canela Field Cap"
+  alt="WAP MOP SHOPPE Canela Field Cap bucket hat"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1499,17 +1738,20 @@ $28 /ea.
 
 </div>
 
+
 <h3>
 Canela Field Cap
 </h3>
 
+
 <p>
 
-Low-key field headwear carrying the Canela mark.
-Suitable for practical investigations and standing
-in a bathroom with a clipboard looking concerned.
+A field-ready bucket hat bearing the Canela mark.
+Designed for practical investigations, outdoor assignments,
+and competent observation of questionable circumstances.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1523,7 +1765,7 @@ Check Pre-Order Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1534,39 +1776,27 @@ Product page coming soon
 
 
 
-<!-- MUG -->
+<!-- =====================================================
+     08 PRACTICAL CLEANLINESS MUG
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Practical Cleanliness Mug
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Practical Cleanliness Mug image unavailable.
 </div>
 
 <img
   src="/assets/images/practical-cleanliness-mug.png"
   alt="WAP MOP SHOPPE Practical Cleanliness Mug"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1582,17 +1812,20 @@ $18 /ea.
 
 </div>
 
+
 <h3>
 Practical Cleanliness Mug
 </h3>
 
+
 <p>
 
-A sturdy Institute mug for coffee, tea,
-and reading entirely too much about the
-microbiology of damp household fabrics.
+A sturdy WAP MOP SHOPPE mug for coffee, tea,
+and reading entirely too much about the microbiology
+of damp household fabrics.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1606,7 +1839,7 @@ Check Production Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1617,39 +1850,27 @@ Product page coming soon
 
 
 
-<!-- PATCH SET -->
+<!-- =====================================================
+     09 PATCH SET
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Institute Patch Set
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Patch Set image unavailable.
 </div>
 
 <img
   src="/assets/images/institute-patch-set.png"
   alt="WAP MOP SHOPPE Institute Patch Set"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1665,17 +1886,20 @@ $12 /set
 
 </div>
 
+
 <h3>
 Institute Patch Set
 </h3>
 
+
 <p>
 
-Embroidered WAP MOP SHOPPE, Meister, Canela,
-and inspection-status patches for bags,
-jackets, field kits, and questionable uniforms.
+A collection of embroidered WAP MOP SHOPPE,
+Meister, Canela, and field-inspection marks
+for bags, jackets, kits, and questionable uniforms.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1689,7 +1913,7 @@ Check Pre-Order Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1700,39 +1924,27 @@ Product page coming soon
 
 
 
-<!-- TOTE -->
+<!-- =====================================================
+     10 FIELD NOTES TOTE
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Field Notes Tote
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Field Notes Tote image unavailable.
 </div>
 
 <img
   src="/assets/images/field-notes-tote.png"
   alt="WAP MOP SHOPPE Field Notes Tote"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1748,17 +1960,20 @@ $22 /ea.
 
 </div>
 
+
 <h3>
 Field Notes Tote
 </h3>
 
+
 <p>
 
-A utility tote for towels, notebooks, travel gear,
-laundry supplies, groceries, or whatever evidence
-the current investigation has produced.
+A canvas utility tote for towels, notebooks,
+travel gear, laundry supplies, groceries,
+or whatever evidence the current investigation has produced.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1772,7 +1987,7 @@ Check Restock Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1783,39 +1998,27 @@ Product page coming soon
 
 
 
-<!-- TOWEL SET -->
+<!-- =====================================================
+     11 LAUNDRY SYSTEMS TOWEL SET
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Laundry Systems Towel Set
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Laundry Systems Towel Set image unavailable.
 </div>
 
 <img
   src="/assets/images/laundry-systems-towel-set.png"
   alt="WAP MOP SHOPPE Laundry Systems Towel Set"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1831,17 +2034,20 @@ $26 /set
 
 </div>
 
+
 <h3>
 Laundry Systems Towel Set
 </h3>
 
+
 <p>
 
-A compact hand-towel and washcloth set with subtle
-Institute marks. Designed to absorb water and then,
-with proper supervision, dry again.
+A coordinated towel set with subtle WAP MOP SHOPPE marks.
+Designed to absorb water and then, with proper supervision,
+successfully become dry again.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1855,7 +2061,7 @@ Check Production Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1866,39 +2072,27 @@ Product page coming soon
 
 
 
-<!-- TRAVEL KIT -->
+<!-- =====================================================
+     12 TRAVEL HYGIENE FIELD KIT
+     ===================================================== -->
 
 <article class="product-card">
 
 <div class="product-image-wrap">
 
-<div class="product-placeholder">
-
-<div class="product-placeholder-inner">
-
-<span class="product-placeholder-mark">
-Mockup Pending
-</span>
-
-<span class="product-placeholder-name">
-Travel Hygiene Field Kit
-</span>
-
-<span class="product-placeholder-note">
-Product image coming soon.
-</span>
-
-</div>
-
+<div class="product-image-fallback">
+Travel Hygiene Field Kit image unavailable.
 </div>
 
 <img
-  src="/assets/images/travel-hygiene-kit.png"
+  src="/assets/images/travel-hygiene-field-kit.png"
   alt="WAP MOP SHOPPE Travel Hygiene Field Kit"
+  loading="lazy"
   onerror="this.style.display='none';"
 >
 
 </div>
+
 
 <div class="product-body">
 
@@ -1914,17 +2108,20 @@ $39 /kit
 
 </div>
 
+
 <h3>
 Travel Hygiene Field Kit
 </h3>
 
+
 <p>
 
-A compact travel pouch built around bathrooms,
+A compact travel system built around bathrooms,
 airplanes, hotels, campsites, unexpected situations,
 and human optimism.
 
 </p>
+
 
 <div class="product-actions">
 
@@ -1938,7 +2135,7 @@ Check Pre-Order Status
 </button>
 
 <span class="product-page-pending">
-Product page coming soon
+Inspection page pending
 </span>
 
 </div>
@@ -1956,7 +2153,9 @@ Product page coming soon
 
 
 
-<!-- FIELD LIST -->
+<!-- =======================================================
+     FIELD LIST
+     ======================================================= -->
 
 <section class="shoppe-section field-list-section">
 
@@ -1967,7 +2166,7 @@ Product page coming soon
 <div>
 
 <p class="kicker">
-Institute Communications
+WAP MOP SHOPPE Communications
 </p>
 
 <h2>
@@ -1978,7 +2177,7 @@ Join the Field List
 
 New investigations, product experiments,
 equipment drops, Shoppe developments,
-and occasional evidence from the Institute.
+and occasional evidence from the field.
 
 </p>
 
@@ -2027,7 +2226,7 @@ Add Me to the Field List →
 
 No preorder required.
 No mysterious reservation code necessary.
-Just Institute correspondence.
+Just WAP MOP SHOPPE correspondence.
 
 </p>
 
@@ -2050,7 +2249,9 @@ Just Institute correspondence.
 
 
 
-<!-- EQUIPMENT LOCKER -->
+<!-- =======================================================
+     EQUIPMENT LOCKER
+     ======================================================= -->
 
 <section class="shoppe-section equipment-section">
 
@@ -2070,7 +2271,7 @@ Useful Things We Didn't Make
 
 Real-world equipment that fits the assignment.
 Amazon affiliate recommendations will live here
-alongside the Institute's own developing product line.
+alongside WAP MOP SHOPPE's developing product line.
 
 </p>
 
@@ -2087,8 +2288,10 @@ Towels & Drying
 </h3>
 
 <p>
-Towels, racks, hooks, and equipment that helps
-wet fabric successfully stop being wet.
+
+Towels, drying racks, hooks, and equipment
+that helps wet fabric successfully stop being wet.
+
 </p>
 
 <span class="equipment-link disabled">
@@ -2105,8 +2308,10 @@ Laundry Systems
 </h3>
 
 <p>
+
 Detergent, dryer balls, washer maintenance,
 odor control, and other fabric-system equipment.
+
 </p>
 
 <span class="equipment-link disabled">
@@ -2123,8 +2328,10 @@ Travel Hygiene
 </h3>
 
 <p>
-Portable bidets, travel bottles, wipes,
+
+Portable bidets, bottles, wipes,
 pouches, and field supplies.
+
 </p>
 
 <span class="equipment-link disabled">
@@ -2141,8 +2348,10 @@ Oral Care
 </h3>
 
 <p>
+
 Tongue scrapers, toothbrush equipment,
 flossing tools, and mouth-system hardware.
+
 </p>
 
 <span class="equipment-link disabled">
@@ -2159,8 +2368,10 @@ Skin & Body
 </h3>
 
 <p>
+
 Cleansers, moisturizers, body-care equipment,
 and practical products that understand restraint.
+
 </p>
 
 <span class="equipment-link disabled">
@@ -2177,8 +2388,11 @@ Bathroom Operations
 </h3>
 
 <p>
+
 Useful equipment for airflow, storage,
-drying, organization, cleanup, and general competence.
+drying, organization, cleanup,
+and general competence.
+
 </p>
 
 <span class="equipment-link disabled">
@@ -2206,7 +2420,9 @@ at no additional cost to you.
 
 
 
-<!-- STATUS MODAL -->
+<!-- =======================================================
+     STATUS LOOKUP MODAL
+     ======================================================= -->
 
 <div
   class="modal-backdrop"
@@ -2234,6 +2450,7 @@ Pre-Order Status
 </h2>
 
 </div>
+
 
 <button
   class="modal-close"
@@ -2271,6 +2488,7 @@ Product
   name="reservation-code"
   type="text"
   inputmode="numeric"
+  autocomplete="off"
   maxlength="7"
   pattern="[0-9]{7}"
   placeholder="0000000"
@@ -2279,7 +2497,8 @@ Product
 
 <p class="lookup-smallprint">
 
-Status checks are counted as anonymous product-interest signals.
+Status checks are counted as anonymous
+product-interest signals.
 No reservation or purchase is created.
 
 </p>
@@ -2297,34 +2516,30 @@ Check Status
 >
 
 <h3>
-Reservation Not Located
+No Active Reservation Found
 </h3>
 
 <p>
 
 Code
+
 <strong
   class="lookup-code"
   id="lookup-code-display"
 >
 0000000
 </strong>
-was not found.
+
+does not match an active reservation.
 
 </p>
 
 <p>
-To be fair, no reservation codes have been issued.
+No active public preorder is associated with this item.
 </p>
 
 <p>
-You appear to be checking anyway.
-</p>
-
-<p>
-<strong>
-This has been noted.
-</strong>
+Your status check has been recorded as a product-interest signal.
 </p>
 
 <p class="field-interest">
@@ -2348,7 +2563,7 @@ Notify me if this moves.
 If this product enters production,
 opens for preorder, returns to inventory,
 or otherwise changes status,
-the Institute can let you know.
+WAP MOP SHOPPE can let you know.
 
 </p>
 
@@ -2416,7 +2631,7 @@ Notify Me →
 <p class="notify-note">
 
 This is not a preorder and does not reserve inventory.
-It tells the Institute that somebody is paying attention.
+It tells WAP MOP SHOPPE that somebody is paying attention.
 
 </p>
 
@@ -2429,6 +2644,10 @@ It tells the Institute that somebody is paying attention.
 </div>
 
 
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
 
 <footer>
 
@@ -2449,6 +2668,10 @@ Affiliate disclosure
 
 <script>
 
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
 const FIELD_LIST_ENDPOINT =
   "https://formspree.io/f/xzebyjrb";
 
@@ -2456,9 +2679,17 @@ const PRODUCT_INTEREST_ENDPOINT =
   "https://formspree.io/f/xnpqlgdl";
 
 
+/* =========================================================
+   YEAR
+   ========================================================= */
+
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
 
 const modal =
   document.getElementById("status-modal");
@@ -2511,6 +2742,9 @@ let currentStatusType = "";
 let lastTriggerButton = null;
 
 
+/* =========================================================
+   OPEN STATUS MODAL
+   ========================================================= */
 
 document
   .querySelectorAll(".status-button")
@@ -2529,11 +2763,13 @@ document
         lastTriggerButton =
           button;
 
+
         productName.textContent =
           currentProduct;
 
         modalTitle.textContent =
           currentStatusType + " Status";
+
 
         notifyProduct.value =
           currentProduct;
@@ -2541,18 +2777,26 @@ document
         notifyStatusType.value =
           currentStatusType;
 
+
         reservationInput.value = "";
 
-        lookupResult.classList.remove("show");
+        lookupResult.classList.remove(
+          "show"
+        );
 
-        notifyBox.classList.remove("show");
+        notifyBox.classList.remove(
+          "show"
+        );
 
         notifyMessage.className =
           "form-message";
 
         notifyMessage.textContent = "";
 
-        modal.classList.add("open");
+
+        modal.classList.add(
+          "open"
+        );
 
         modal.setAttribute(
           "aria-hidden",
@@ -2562,6 +2806,7 @@ document
         document.body.classList.add(
           "modal-open"
         );
+
 
         setTimeout(
           () => reservationInput.focus(),
@@ -2574,10 +2819,15 @@ document
   });
 
 
+/* =========================================================
+   CLOSE MODAL
+   ========================================================= */
 
 function closeModal() {
 
-  modal.classList.remove("open");
+  modal.classList.remove(
+    "open"
+  );
 
   modal.setAttribute(
     "aria-hidden",
@@ -2621,19 +2871,25 @@ document.addEventListener(
       event.key === "Escape" &&
       modal.classList.contains("open")
     ) {
+
       closeModal();
+
     }
 
   }
 );
 
 
+/* =========================================================
+   STATUS LOOKUP / INTEREST SIGNAL
+   ========================================================= */
 
 lookupForm.addEventListener(
   "submit",
   async event => {
 
     event.preventDefault();
+
 
     const code =
       reservationInput.value.trim();
@@ -2657,9 +2913,14 @@ lookupForm.addEventListener(
     lookupCodeDisplay.textContent =
       code;
 
-    lookupResult.classList.add("show");
 
-    notifyBox.classList.add("show");
+    lookupResult.classList.add(
+      "show"
+    );
+
+    notifyBox.classList.add(
+      "show"
+    );
 
 
     const interestData =
@@ -2725,12 +2986,16 @@ lookupForm.addEventListener(
 );
 
 
+/* =========================================================
+   PRODUCT NOTIFICATION
+   ========================================================= */
 
 notifyForm.addEventListener(
   "submit",
   async event => {
 
     event.preventDefault();
+
 
     const button =
       notifyForm.querySelector(
@@ -2742,6 +3007,12 @@ notifyForm.addEventListener(
 
     button.textContent =
       "Sending…";
+
+
+    notifyMessage.className =
+      "form-message";
+
+    notifyMessage.textContent = "";
 
 
     try {
@@ -2765,7 +3036,7 @@ notifyForm.addEventListener(
 
 
       notifyMessage.textContent =
-        "Noted. The Institute will contact you if this product moves.";
+        "Noted. We'll contact you if this product moves.";
 
       notifyMessage.className =
         "form-message success show";
@@ -2787,13 +3058,12 @@ notifyForm.addEventListener(
       notifyStatusType.value =
         savedStatus;
 
-
     }
 
     catch(error) {
 
       notifyMessage.textContent =
-        "The Institute's paperwork jammed. Please try again.";
+        "The paperwork jammed. Please try again.";
 
       notifyMessage.className =
         "form-message error show";
@@ -2813,12 +3083,16 @@ notifyForm.addEventListener(
 );
 
 
+/* =========================================================
+   FIELD LIST
+   ========================================================= */
 
 fieldListForm.addEventListener(
   "submit",
   async event => {
 
     event.preventDefault();
+
 
     const button =
       fieldListForm.querySelector(
@@ -2830,6 +3104,12 @@ fieldListForm.addEventListener(
 
     button.textContent =
       "Adding…";
+
+
+    fieldListMessage.className =
+      "form-message";
+
+    fieldListMessage.textContent = "";
 
 
     try {
@@ -2853,7 +3133,7 @@ fieldListForm.addEventListener(
 
 
       fieldListMessage.textContent =
-        "You're on the Field List. Institute correspondence authorized.";
+        "You're on the Field List. Correspondence authorized.";
 
       fieldListMessage.className =
         "form-message success show";
