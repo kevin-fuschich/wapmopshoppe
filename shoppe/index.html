@@ -1,285 +1,3235 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shoppe — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Curated products for external care, oral care, and aftercare — chosen for comfort, gentleness, and respect." />
+<meta charset="utf-8">
 
-  <!-- IMPORTANT: root-relative paths for your live domain (wapmopshoppe.com) -->
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+>
 
-  <style>
-    header, nav, main, footer, section, article { display:block; }
-    body{
-      margin:0;
-      background:#f4f4f4;
-      color:#111;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-    }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
+<title>The Shoppe | WAP MOP SHOPPE</title>
 
-    /* Header */
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:18px 0;
-    }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand a{ display:inline-flex; align-items:center; }
-    .brand img{
-      width:56px;
-      height:56px;
-      display:block;
-      object-fit:contain;
-      flex:0 0 auto;
-    }
-    .wordmark{
-      font-weight:800;
-      letter-spacing:.06em;
-      text-decoration:none;
-      color:#111;
-      white-space:nowrap;
-    }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
-    nav a[aria-current="page"]{
-      font-weight:900;
-      border-bottom:2px solid rgba(192,68,44,1);
-      padding-bottom:2px;
-    }
+<meta
+  name="description"
+  content="Browse WAP MOP SHOPPE field goods, personal care products, practical equipment, and Institute-approved gear."
+>
 
-    /* Main */
-    main{
-      background:#fffdf8;
-      padding:56px 0;
-      border-bottom:1px solid rgba(0,0,0,.12);
-    }
-    h1{
-      font-size:42px;
-      margin:0 0 14px 0;
-      font-weight:900;
-      letter-spacing:-.01em;
-      line-height:1.05;
-    }
-    .lede{
-      font-size:20px;
-      opacity:.9;
-      max-width:860px;
-      margin:0 0 18px 0;
-    }
-    .accent-rule{
-      height:2px;
-      border:0;
-      background: linear-gradient(90deg, rgba(192,68,44,1), transparent);
-      margin: 18px 0 22px;
-    }
+<link
+  rel="canonical"
+  href="https://wapmopshoppe.com/shoppe/"
+>
 
-    /* Category cards */
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
-      margin-top: 10px;
-    }
-    .card{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-      transition: transform .12s ease, box-shadow .12s ease;
-      text-decoration:none;
-      color:#111;
-      display:block;
-      min-height: 160px;
-    }
-    .card::after{
-      content:"";
-      position:absolute;
-      top:-44px; right:-44px;
-      width:130px; height:130px;
-      background: rgba(192,68,44,.10);
-      transform: rotate(35deg);
-    }
-    .card:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0,0,0,.08);
-    }
-    .card h2{
-      margin:0 0 8px 0;
-      font-size:22px;
-      font-weight:900;
-      line-height:1.2;
-      position:relative;
-      z-index:1;
-      display:inline-block;
-      border-bottom:1px solid rgba(0,0,0,.25);
-      text-decoration:none;
-    }
-    .card p{
-      margin:0 0 12px 0;
-      font-size:15px;
-      opacity:.9;
-      max-width: 46ch;
-      position:relative;
-      z-index:1;
-    }
-    .card .meta{
-      font-size:13px;
-      opacity:.7;
-      position:relative;
-      z-index:1;
-    }
-    .cta{
-      margin-top:10px;
-      display:inline-block;
-      font-weight:900;
-      font-size:13px;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-      position:relative;
-      z-index:1;
-    }
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WAP MOP SHOPPE">
+<meta property="og:title" content="The Shoppe | WAP MOP SHOPPE">
 
-    /* Simple list section */
-    .section-title{
-      margin: 34px 0 10px 0;
-      font-size:18px;
-      font-weight:900;
-      letter-spacing:.02em;
-    }
-    .note{
-      margin:0 0 10px 0;
-      font-size:14px;
-      opacity:.8;
-      max-width: 80ch;
-    }
-    .list{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      background:#fff;
-      padding:16px 18px;
-    }
-    .list a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-      font-weight:900;
-    }
+<meta
+  property="og:description"
+  content="Field goods, personal care, and practical equipment for cleaner living."
+>
 
-    footer{
-      background:#fffdf8;
-      padding:18px 0;
-      font-size:13px;
-      opacity:.85;
-    }
-    footer a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,.25);
-    }
+<meta
+  property="og:url"
+  content="https://wapmopshoppe.com/shoppe/"
+>
 
-    @media (max-width:900px){
-      .grid{ grid-template-columns:1fr; }
-    }
-    @media (max-width:820px){
-      h1{ font-size:34px; }
-      .lede{ font-size:18px; }
-      .card h2{ font-size:20px; }
-    }
-  </style>
+<meta name="twitter:card" content="summary">
+
+<link
+  rel="icon"
+  href="/assets/figures/meister-stamp.png"
+  type="image/png"
+>
+
+<link
+  rel="apple-touch-icon"
+  href="/assets/figures/meister-stamp.png"
+>
+
+<link
+  rel="stylesheet"
+  href="/assets/styles.css"
+>
+
+
+<style>
+
+:root {
+  --paper:#fffdf8;
+  --paper2:#f4eadb;
+  --ink:#17130f;
+  --muted:#62584d;
+  --line:rgba(23,19,15,.14);
+  --rust:#b84c2f;
+  --green:#2f4b32;
+  --gold:#d8a23a;
+  --brown:#7a4d2a;
+  --card:#fffaf1;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  background:var(--paper2);
+  color:var(--ink);
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  line-height:1.6;
+}
+
+body.modal-open {
+  overflow:hidden;
+}
+
+a {
+  color:inherit;
+}
+
+button,
+input {
+  font:inherit;
+}
+
+button {
+  -webkit-tap-highlight-color:transparent;
+}
+
+.container {
+  width:min(1120px, calc(100% - 40px));
+  margin:0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 0;
+  flex-wrap:wrap;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--ink);
+  white-space:nowrap;
+  font-weight:950;
+  letter-spacing:.07em;
+}
+
+.brand img {
+  width:42px;
+  height:auto;
+  display:block;
+}
+
+nav {
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+nav a {
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:800;
+  font-size:14px;
+}
+
+nav a:hover {
+  color:var(--rust);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.shoppe-hero {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(216,162,58,.28),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 8%,
+      rgba(47,75,50,.18),
+      transparent 34%
+    ),
+    var(--paper);
+
+  padding:
+    clamp(58px,8vw,96px) 0
+    clamp(48px,7vw,78px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.shoppe-hero-inner {
+  max-width:820px;
+}
+
+.kicker {
+  margin:0 0 10px;
+  font-size:12px;
+  font-weight:950;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--rust);
+}
+
+.shoppe-hero h1 {
+  margin:0 0 18px;
+
+  font-size:
+    clamp(52px,9vw,90px);
+
+  line-height:.92;
+  letter-spacing:-.055em;
+}
+
+.shoppe-hero-copy {
+  max-width:700px;
+  margin:0;
+  color:var(--muted);
+
+  font-size:
+    clamp(18px,2vw,22px);
+
+  line-height:1.55;
+}
+
+.shoppe-hero-note {
+  margin-top:24px;
+  max-width:700px;
+
+  padding:16px 18px;
+
+  border-left:
+    4px solid var(--gold);
+
+  background:
+    rgba(255,255,255,.58);
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.shoppe-section {
+  padding:60px 0;
+}
+
+.shoppe-section + .shoppe-section {
+  border-top:1px solid var(--line);
+}
+
+.section-head {
+  max-width:760px;
+  margin-bottom:30px;
+}
+
+.section-head h2 {
+  margin:0 0 10px;
+
+  font-size:
+    clamp(32px,5vw,48px);
+
+  line-height:1;
+  letter-spacing:-.035em;
+}
+
+.section-head p {
+  margin:0;
+  color:var(--muted);
+  font-size:16px;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.product-grid {
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+  gap:20px;
+}
+
+.product-card {
+  overflow:hidden;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:20px;
+
+  background:
+    rgba(255,253,248,.96);
+
+  display:flex;
+  flex-direction:column;
+
+  box-shadow:
+    0 10px 28px rgba(23,19,15,.05);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+.product-card:hover {
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 16px 36px rgba(23,19,15,.09);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE / PLACEHOLDER
+   ========================================================= */
+
+.product-image-wrap {
+  position:relative;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eee3d1,
+      #fffaf1
+    );
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+.product-image-wrap img {
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  display:block;
+}
+
+.product-placeholder {
+  position:absolute;
+  inset:0;
+  z-index:1;
+
+  display:grid;
+  place-items:center;
+
+  padding:26px;
+
+  text-align:center;
+  color:var(--muted);
+}
+
+.product-placeholder-inner {
+  max-width:220px;
+}
+
+.product-placeholder-mark {
+  display:block;
+
+  margin-bottom:8px;
+
+  color:var(--green);
+
+  font-size:13px;
+  font-weight:950;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.product-placeholder-name {
+  display:block;
+
+  font-size:20px;
+  line-height:1.25;
+  font-weight:850;
+}
+
+.product-placeholder-note {
+  display:block;
+  margin-top:9px;
+  font-size:12px;
+  opacity:.7;
+}
+
+
+/* =========================================================
+   PRODUCT CONTENT
+   ========================================================= */
+
+.product-body {
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+
+  padding:20px;
+}
+
+.product-meta {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:10px;
+
+  margin-bottom:12px;
+}
+
+.status {
+  display:inline-block;
+
+  padding:5px 8px;
+
+  border-radius:999px;
+
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.status.coming {
+  background:
+    rgba(216,162,58,.18);
+
+  color:#855e0b;
+}
+
+.status.sold {
+  background:
+    rgba(184,76,47,.12);
+
+  color:var(--rust);
+}
+
+.status.unavailable {
+  background:
+    rgba(47,75,50,.12);
+
+  color:var(--green);
+}
+
+.price {
+  color:var(--ink);
+  font-size:15px;
+  font-weight:900;
+}
+
+.product-body h3 {
+  margin:0 0 8px;
+
+  font-size:21px;
+  line-height:1.16;
+}
+
+.product-body > p {
+  flex:1;
+
+  margin:0 0 18px;
+
+  color:var(--muted);
+
+  font-size:14px;
+  line-height:1.6;
+}
+
+.product-actions {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:11px;
+}
+
+.product-page-pending {
+  display:inline-block;
+
+  color:var(--muted);
+
+  font-size:12px;
+  font-weight:800;
+}
+
+.status-button {
+  border:0;
+
+  border-radius:8px;
+
+  padding:10px 12px;
+
+  background:var(--green);
+  color:#fff;
+
+  font-size:12px;
+  font-weight:900;
+
+  cursor:pointer;
+
+  transition:
+    transform .15s ease,
+    opacity .15s ease;
+}
+
+.status-button:hover {
+  opacity:.92;
+  transform:translateY(-1px);
+}
+
+.status-button:focus-visible,
+.modal-close:focus-visible,
+.field-list-form button:focus-visible,
+.lookup-form button:focus-visible,
+.notify-form button:focus-visible {
+  outline:3px solid var(--gold);
+  outline-offset:3px;
+}
+
+
+/* =========================================================
+   FIELD LIST
+   ========================================================= */
+
+.field-list-section {
+  background:#efe2cf;
+}
+
+.field-list-box {
+  display:grid;
+
+  grid-template-columns:
+    1.08fr .92fr;
+
+  gap:36px;
+  align-items:center;
+
+  padding:36px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:22px;
+
+  background:var(--paper);
+
+  box-shadow:
+    0 16px 36px rgba(23,19,15,.06);
+}
+
+.field-list-box h2 {
+  margin:0 0 10px;
+
+  font-size:
+    clamp(30px,5vw,46px);
+
+  line-height:1;
+}
+
+.field-list-box p {
+  color:var(--muted);
+}
+
+.field-list-form {
+  display:grid;
+  gap:10px;
+}
+
+.field-list-form label {
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.field-list-form input {
+  width:100%;
+
+  padding:13px 14px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:9px;
+
+  background:#fff;
+  color:var(--ink);
+}
+
+.field-list-form button {
+  border:0;
+
+  border-radius:9px;
+
+  padding:13px 16px;
+
+  background:var(--rust);
+  color:#fff;
+
+  font-weight:950;
+
+  cursor:pointer;
+}
+
+.field-list-form button[disabled] {
+  opacity:.6;
+  cursor:wait;
+}
+
+.form-note {
+  margin:4px 0 0;
+
+  font-size:11px;
+
+  color:var(--muted);
+}
+
+.form-message {
+  display:none;
+
+  margin:4px 0 0;
+
+  padding:10px 12px;
+
+  border-radius:8px;
+
+  font-size:13px;
+  font-weight:750;
+}
+
+.form-message.show {
+  display:block;
+}
+
+.form-message.success {
+  background:
+    rgba(47,75,50,.1);
+
+  color:var(--green);
+}
+
+.form-message.error {
+  background:
+    rgba(184,76,47,.1);
+
+  color:var(--rust);
+}
+
+
+/* =========================================================
+   EQUIPMENT LOCKER
+   ========================================================= */
+
+.equipment-section {
+  background:
+    linear-gradient(
+      145deg,
+      #183b37,
+      #102a28
+    );
+
+  color:#fff7df;
+}
+
+.equipment-section .kicker {
+  color:#e4b64c;
+}
+
+.equipment-section .section-head h2 {
+  color:#fff7df;
+}
+
+.equipment-section .section-head p {
+  color:
+    rgba(255,255,255,.72);
+}
+
+.equipment-grid {
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+  gap:16px;
+}
+
+.equipment-card {
+  padding:20px;
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  border-radius:16px;
+
+  background:
+    rgba(255,255,255,.07);
+}
+
+.equipment-card h3 {
+  margin:0 0 8px;
+
+  color:#fff7df;
+
+  font-size:18px;
+}
+
+.equipment-card p {
+  margin:0 0 16px;
+
+  color:
+    rgba(255,255,255,.7);
+
+  font-size:14px;
+}
+
+.equipment-link {
+  display:inline-block;
+
+  padding:8px 11px;
+
+  border-radius:7px;
+
+  background:#e4b64c;
+  color:#173632;
+
+  font-size:12px;
+  font-weight:900;
+
+  text-decoration:none;
+}
+
+.equipment-link.disabled {
+  cursor:default;
+  opacity:.55;
+}
+
+.affiliate-disclosure {
+  margin-top:28px;
+  padding-top:18px;
+
+  border-top:
+    1px solid rgba(255,255,255,.14);
+
+  color:
+    rgba(255,255,255,.58);
+
+  font-size:12px;
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   RESERVATION MODAL
+   ========================================================= */
+
+.modal-backdrop {
+  position:fixed;
+  inset:0;
+  z-index:9999;
+
+  display:none;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  background:
+    rgba(15,12,9,.74);
+}
+
+.modal-backdrop.open {
+  display:flex;
+}
+
+.modal {
+  width:min(520px,100%);
+  max-height:90vh;
+  overflow:auto;
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  border-radius:18px;
+
+  background:var(--paper);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.34);
+}
+
+.modal-header {
+  display:flex;
+
+  justify-content:space-between;
+  align-items:flex-start;
+
+  gap:20px;
+
+  padding:
+    22px 22px 0;
+}
+
+.modal-header h2 {
+  margin:0;
+  font-size:26px;
+}
+
+.modal-close {
+  width:38px;
+  height:38px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:50%;
+
+  background:#fff;
+
+  color:var(--ink);
+
+  font-size:25px;
+  line-height:1;
+
+  cursor:pointer;
+}
+
+.modal-body {
+  padding:
+    18px 22px 24px;
+}
+
+.modal-product {
+  margin:0 0 18px;
+
+  color:var(--muted);
+
+  font-weight:800;
+}
+
+.lookup-form {
+  display:grid;
+  gap:10px;
+}
+
+.lookup-form label {
+  font-size:12px;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.lookup-form input {
+  width:100%;
+
+  padding:13px 14px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:9px;
+
+  background:#fff;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+
+  font-size:18px;
+  letter-spacing:.12em;
+}
+
+.lookup-form button {
+  border:0;
+
+  border-radius:9px;
+
+  padding:12px 15px;
+
+  background:var(--green);
+  color:#fff;
+
+  font-weight:950;
+
+  cursor:pointer;
+}
+
+.lookup-smallprint {
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:11px;
+  line-height:1.45;
+}
+
+.lookup-result {
+  display:none;
+
+  margin-top:20px;
+
+  padding:18px;
+
+  border-left:
+    4px solid var(--gold);
+
+  background:#f6eddf;
+}
+
+.lookup-result.show {
+  display:block;
+}
+
+.lookup-result h3 {
+  margin:0 0 8px;
+}
+
+.lookup-result p {
+  margin:
+    7px 0;
+}
+
+.lookup-code {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+
+  font-weight:850;
+}
+
+.field-interest {
+  margin-top:14px !important;
+
+  font-size:12px;
+
+  color:var(--green);
+}
+
+.notify-box {
+  display:none;
+
+  margin-top:18px;
+  padding-top:18px;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.notify-box.show {
+  display:block;
+}
+
+.notify-box h3 {
+  margin-top:0;
+  margin-bottom:7px;
+}
+
+.notify-box > p {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.notify-form {
+  display:grid;
+  gap:9px;
+}
+
+.notify-form input {
+  width:100%;
+
+  padding:12px 13px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:8px;
+
+  background:#fff;
+}
+
+.notify-form button {
+  border:0;
+
+  border-radius:8px;
+
+  padding:11px 13px;
+
+  background:var(--rust);
+  color:#fff;
+
+  font-weight:950;
+
+  cursor:pointer;
+}
+
+.notify-form button[disabled] {
+  opacity:.6;
+  cursor:wait;
+}
+
+.notify-note {
+  margin:8px 0 0;
+
+  color:var(--muted);
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  background:var(--paper);
+
+  padding:20px 0;
+
+  border-top:
+    1px solid var(--line);
+
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+footer a {
+  text-decoration:none;
+
+  border-bottom:
+    1px solid rgba(23,19,15,.25);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:900px) {
+
+  .product-grid,
+  .equipment-grid {
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+  }
+
+  .field-list-box {
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:640px) {
+
+  .product-grid,
+  .equipment-grid {
+    grid-template-columns:1fr;
+  }
+
+  .container {
+    width:min(100% - 30px,1120px);
+  }
+
+  .field-list-box {
+    padding:26px 20px;
+  }
+
+  .product-actions {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<div id="site-header"></div>
-<script>
-  fetch("/partials/header.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("site-header").innerHTML = html;
-    });
-</script>
 
-<main>
-  <div class="container">
-    <h1>Shoppe</h1>
-    <p class="lede">
-      Curated picks for external care, oral care, and aftercare — chosen for comfort, gentleness, and respect.
-    </p>
+<!-- =======================================================
+     HEADER
+     ======================================================= -->
 
-    <hr class="accent-rule">
+<header class="site-header">
 
-    <section aria-label="Shop categories">
-      <div class="grid">
+<div class="container">
 
-        <a class="card" href="/shoppe/external-care.html" aria-label="External care">
-          <h2>External care</h2>
-          <p>Wipes, washes, and routines that respect boundaries and avoid unnecessary interference.</p>
-          <div class="meta">Gentle • fragrance-aware • external-only</div>
-          <span class="cta">Browse external care →</span>
-        </a>
+<div class="header-inner">
 
-        <a class="card" href="/shoppe/oral-care.html" aria-label="Oral care">
-          <h2>Oral care</h2>
-          <p>Comfort-forward options for mouths as systems — no burn, no performance theater.</p>
-          <div class="meta">Comfort • saliva-friendly • irritation-aware</div>
-          <span class="cta">Browse oral care →</span>
-        </a>
+<a
+  class="brand"
+  href="/"
+>
 
-        <a class="card" href="/shoppe/aftercare.html" aria-label="Aftercare">
-          <h2>Aftercare</h2>
-          <p>Clean up, calm down, close the loop — physically and emotionally.</p>
-          <div class="meta">Soothing • friction-aware • respectful</div>
-          <span class="cta">Browse aftercare →</span>
-        </a>
+<img
+  src="/assets/figures/meister-stamp.png"
+  alt=""
+>
 
-        <a class="card" href="/shoppe/ecosystems.html" aria-label="Ecosystems">
-          <h2>Ecosystems</h2>
-          <p>Support the system. Don’t fight it. Picks that avoid the “freshness industrial complex.”</p>
-          <div class="meta">pH-conscious • minimal • interference-reducing</div>
-          <span class="cta">Browse ecosystems →</span>
-        </a>
+<span>
+WAP MOP SHOPPE
+</span>
 
-      </div>
-    </section>
+</a>
 
-    <h3 class="section-title">Start here</h3>
-    <p class="note">
-      If you’re unsure, start with the basics and read the guidance first. Most “problems” are product mismatch or overdoing it.
-      The site’s rule of thumb: <strong>external means external</strong>.
-    </p>
 
-    <div class="list">
-      <p style="margin:0;">
-        Read: <a href="/articles/external-means-external.html">External means external</a>
-        &nbsp;·&nbsp;
-        Read: <a href="/articles/vaginas-as-ecosystems.html">Vaginas as ecosystems</a>
-        &nbsp;·&nbsp;
-        Read: <a href="/articles/mouths-as-systems.html">Mouths as systems</a>
-      </p>
-    </div>
+<nav>
 
-  </div>
-</main>
+<a href="/articles/">
+Articles
+</a>
+
+<a href="/shoppe/">
+Shoppe
+</a>
+
+<a href="/start/">
+Comfort Check
+</a>
+
+<a href="/about/">
+About
+</a>
+
+<a href="/disclosure/">
+Disclosure
+</a>
+
+</nav>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- =======================================================
+     HERO
+     ======================================================= -->
+
+<section class="shoppe-hero">
+
+<div class="container">
+
+<div class="shoppe-hero-inner">
+
+<p class="kicker">
+WAP MOP SHOPPE · General Store
+</p>
+
+<h1>
+The Shoppe
+</h1>
+
+<p class="shoppe-hero-copy">
+Field goods, personal care, useful objects,
+and practical equipment for people who take
+ordinary cleanliness a little more seriously
+than strictly necessary.
+</p>
+
+<div class="shoppe-hero-note">
+
+<strong>Inventory notice:</strong>
+The Shoppe is currently being stocked.
+Availability varies. Some items are coming soon.
+Some are unavailable. Some have apparently already sold out
+under circumstances the Institute is still attempting to reconstruct.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
+     WAP MOP GOODS
+     ======================================================= -->
+
+<section class="shoppe-section">
+
+<div class="container">
+
+<div class="section-head">
+
+<p class="kicker">
+WAP MOP SHOPPE Goods
+</p>
+
+<h2>
+Issued Equipment
+</h2>
+
+<p>
+Branded goods, personal care products, and field equipment
+developed under the watchful eye of the Institute.
+Product pages and detailed inspection photography are being prepared.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- =====================================================
+     01 FIELD SOAP
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Field Soap
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/field-soap.png"
+  alt="WAP MOP SHOPPE Field Soap"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status coming">
+Coming Soon
+</span>
+
+<span class="price">
+$9 /ea.
+</span>
+
+</div>
+
+<h3>
+WAP MOP SHOPPE Field Soap
+</h3>
+
+<p>
+A straightforward bar for ordinary washing,
+wrapped in Institute packaging and developed
+with considerably less fragrance theater than
+the modern soap aisle seems to require.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="WAP MOP SHOPPE Field Soap"
+  data-status-label="Pre-Order"
+>
+Check Pre-Order Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     02 INSTITUTE TOWEL
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Institute Bath Towel
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/institute-towel.png"
+  alt="WAP MOP SHOPPE Institute Bath Towel"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status sold">
+Sold Out
+</span>
+
+<span class="price">
+$34 /ea.
+</span>
+
+</div>
+
+<h3>
+Institute Bath Towel
+</h3>
+
+<p>
+A substantial, absorbent bath towel with discreet
+WAP MOP SHOPPE branding. Designed to dry a person
+without turning the bathroom into a merchandise booth.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Institute Bath Towel"
+  data-status-label="Restock"
+>
+Check Restock Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     03 OGWA SEA GLASS SQUEEZE
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+OGWA Sea Glass SQUEEZE
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/ogwa-sea-glass-squeeze.png"
+  alt="OGWA Sea Glass SQUEEZE portable bidet bottle"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status coming">
+Coming Soon
+</span>
+
+<span class="price">
+$29 /ea.
+</span>
+
+</div>
+
+<h3>
+OGWA Sea Glass SQUEEZE
+</h3>
+
+<p>
+A portable bidet bottle with a sea-glass body,
+angled elbow neck, gentle retractable douser,
+and protective rubber sleeve.
+Water delivery for circumstances that have gone sideways.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="OGWA Sea Glass SQUEEZE"
+  data-status-label="Pre-Order"
+>
+Check Pre-Order Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     04 MUSTACHE BATH BOMB
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Mustache Bath Bomb
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/mustache-bath-bomb.png"
+  alt="WAP MOP SHOPPE Mustache Bath Bomb"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status unavailable">
+Not Available
+</span>
+
+<span class="price">
+$8 /ea.
+</span>
+
+</div>
+
+<h3>
+The Mustache Bath Bomb
+</h3>
+
+<p>
+A satisfyingly overbuilt bath bomb stamped with
+the Institute mustache. Intended for soaking,
+fizzing, and extremely serious bath operations.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="The Mustache Bath Bomb"
+  data-status-label="Production"
+>
+Check Production Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     05 PERSONAL LUBRICANT
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Personal Lubricant
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/personal-lubricant.png"
+  alt="WAP MOP SHOPPE Personal Lubricant"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status coming">
+Coming Soon
+</span>
+
+<span class="price">
+$14 /ea.
+</span>
+
+</div>
+
+<h3>
+WAP MOP SHOPPE Personal Lubricant
+</h3>
+
+<p>
+A cleanly designed personal lubricant concept
+built around one of the Institute's foundational
+principles: friction is information.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="WAP MOP SHOPPE Personal Lubricant"
+  data-status-label="Pre-Order"
+>
+Check Pre-Order Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     06 MEISTER FIELD CAP
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Meister Field Cap
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/meister-field-cap.png"
+  alt="Meister Field Cap"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status sold">
+Sold Out
+</span>
+
+<span class="price">
+$28 /ea.
+</span>
+
+</div>
+
+<h3>
+Meister Field Cap
+</h3>
+
+<p>
+Standard-issue headwear for inspecting laundry systems,
+bathroom operations, questionable towels,
+and whatever else the day produces.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Meister Field Cap"
+  data-status-label="Restock"
+>
+Check Restock Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     07 CANELA FIELD CAP
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Canela Field Cap
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/canela-field-cap.png"
+  alt="Canela Field Cap"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status coming">
+Coming Soon
+</span>
+
+<span class="price">
+$28 /ea.
+</span>
+
+</div>
+
+<h3>
+Canela Field Cap
+</h3>
+
+<p>
+Low-key field headwear carrying the Canela mark.
+Suitable for practical investigations and standing
+in a bathroom with a clipboard looking concerned.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Canela Field Cap"
+  data-status-label="Pre-Order"
+>
+Check Pre-Order Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     08 PRACTICAL CLEANLINESS MUG
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Practical Cleanliness Mug
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/practical-cleanliness-mug.png"
+  alt="WAP MOP SHOPPE Practical Cleanliness Mug"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status unavailable">
+Not Available
+</span>
+
+<span class="price">
+$18 /ea.
+</span>
+
+</div>
+
+<h3>
+Practical Cleanliness Mug
+</h3>
+
+<p>
+A sturdy Institute mug for coffee, tea,
+and reading entirely too much about the
+microbiology of damp household fabrics.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Practical Cleanliness Mug"
+  data-status-label="Production"
+>
+Check Production Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     09 INSTITUTE PATCH SET
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Institute Patch Set
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/institute-patch-set.png"
+  alt="WAP MOP SHOPPE Institute Patch Set"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status coming">
+Coming Soon
+</span>
+
+<span class="price">
+$12 /set
+</span>
+
+</div>
+
+<h3>
+Institute Patch Set
+</h3>
+
+<p>
+Embroidered WAP MOP SHOPPE, Meister, Canela,
+and inspection-status patches for bags,
+jackets, field kits, and questionable uniforms.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Institute Patch Set"
+  data-status-label="Pre-Order"
+>
+Check Pre-Order Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     10 FIELD NOTES TOTE
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Field Notes Tote
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/field-notes-tote.png"
+  alt="WAP MOP SHOPPE Field Notes Tote"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status sold">
+Sold Out
+</span>
+
+<span class="price">
+$22 /ea.
+</span>
+
+</div>
+
+<h3>
+Field Notes Tote
+</h3>
+
+<p>
+A utility tote for towels, notebooks, travel gear,
+laundry supplies, groceries, or whatever evidence
+the current investigation has produced.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Field Notes Tote"
+  data-status-label="Restock"
+>
+Check Restock Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     11 LAUNDRY SYSTEMS TOWEL SET
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Laundry Systems Towel Set
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/laundry-systems-towel-set.png"
+  alt="WAP MOP SHOPPE Laundry Systems Towel Set"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status unavailable">
+Not Available
+</span>
+
+<span class="price">
+$26 /set
+</span>
+
+</div>
+
+<h3>
+Laundry Systems Towel Set
+</h3>
+
+<p>
+A compact hand-towel and washcloth set with subtle
+Institute marks. Designed to absorb water and then,
+with proper supervision, dry again.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Laundry Systems Towel Set"
+  data-status-label="Production"
+>
+Check Production Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+
+<!-- =====================================================
+     12 TRAVEL HYGIENE FIELD KIT
+     ===================================================== -->
+
+<article class="product-card">
+
+<div class="product-image-wrap">
+
+<div class="product-placeholder">
+
+<div class="product-placeholder-inner">
+
+<span class="product-placeholder-mark">
+Mockup Pending
+</span>
+
+<span class="product-placeholder-name">
+Travel Hygiene Field Kit
+</span>
+
+<span class="product-placeholder-note">
+Product image coming soon.
+</span>
+
+</div>
+
+</div>
+
+<img
+  src="/assets/images/shoppe/travel-hygiene-kit.png"
+  alt="WAP MOP SHOPPE Travel Hygiene Field Kit"
+  onerror="this.style.display='none';"
+>
+
+</div>
+
+
+<div class="product-body">
+
+<div class="product-meta">
+
+<span class="status coming">
+Coming Soon
+</span>
+
+<span class="price">
+$39 /kit
+</span>
+
+</div>
+
+<h3>
+Travel Hygiene Field Kit
+</h3>
+
+<p>
+A compact travel pouch built around bathrooms,
+airplanes, hotels, campsites, unexpected situations,
+and human optimism.
+</p>
+
+<div class="product-actions">
+
+<button
+  class="status-button"
+  type="button"
+  data-product="Travel Hygiene Field Kit"
+  data-status-label="Pre-Order"
+>
+Check Pre-Order Status
+</button>
+
+<span class="product-page-pending">
+Product page coming soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
+     FIELD LIST
+     ======================================================= -->
+
+<section class="shoppe-section field-list-section">
+
+<div class="container">
+
+<div class="field-list-box">
+
+<div>
+
+<p class="kicker">
+Institute Communications
+</p>
+
+<h2>
+Join the Field List
+</h2>
+
+<p>
+New investigations, product experiments,
+equipment drops, Shoppe developments,
+and occasional evidence from the Institute.
+</p>
+
+</div>
+
+
+<div>
+
+<form
+  class="field-list-form"
+  id="field-list-form"
+  action="https://formspree.io/f/xzebyjrb"
+  method="POST"
+>
+
+<label for="field-email">
+Email address
+</label>
+
+<input
+  id="field-email"
+  name="email"
+  type="email"
+  autocomplete="email"
+  placeholder="you@example.com"
+  required
+>
+
+<input
+  type="hidden"
+  name="source"
+  value="WAP MOP SHOPPE Field List"
+>
+
+<input
+  type="hidden"
+  name="_subject"
+  value="New WAP MOP SHOPPE Field List Signup"
+>
+
+<button type="submit">
+Add Me to the Field List →
+</button>
+
+<p class="form-note">
+No preorder required.
+No mysterious reservation code necessary.
+Just Institute correspondence.
+</p>
+
+<div
+  class="form-message"
+  id="field-list-message"
+  role="status"
+  aria-live="polite"
+></div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
+     EQUIPMENT LOCKER
+     ======================================================= -->
+
+<section class="shoppe-section equipment-section">
+
+<div class="container">
+
+<div class="section-head">
+
+<p class="kicker">
+The Equipment Locker
+</p>
+
+<h2>
+Useful Things We Didn't Make
+</h2>
+
+<p>
+Real-world equipment that fits the assignment.
+Amazon affiliate recommendations will live here alongside
+the Institute's own developing product line.
+</p>
+
+</div>
+
+
+<div class="equipment-grid">
+
+
+<div class="equipment-card">
+
+<h3>
+Towels & Drying
+</h3>
+
+<p>
+Towels, racks, hooks, and equipment that helps
+wet fabric successfully stop being wet.
+</p>
+
+<span class="equipment-link disabled">
+Amazon picks coming soon
+</span>
+
+</div>
+
+
+<div class="equipment-card">
+
+<h3>
+Laundry Systems
+</h3>
+
+<p>
+Detergent, dryer balls, washer maintenance,
+odor control, and other fabric-system equipment.
+</p>
+
+<span class="equipment-link disabled">
+Amazon picks coming soon
+</span>
+
+</div>
+
+
+<div class="equipment-card">
+
+<h3>
+Travel Hygiene
+</h3>
+
+<p>
+Portable bidets, travel bottles, wipes,
+pouches, and field supplies.
+</p>
+
+<span class="equipment-link disabled">
+Amazon picks coming soon
+</span>
+
+</div>
+
+
+<div class="equipment-card">
+
+<h3>
+Oral Care
+</h3>
+
+<p>
+Tongue scrapers, toothbrush equipment,
+flossing tools, and mouth-system hardware.
+</p>
+
+<span class="equipment-link disabled">
+Amazon picks coming soon
+</span>
+
+</div>
+
+
+<div class="equipment-card">
+
+<h3>
+Skin & Body
+</h3>
+
+<p>
+Cleansers, moisturizers, body-care equipment,
+and practical products that understand restraint.
+</p>
+
+<span class="equipment-link disabled">
+Amazon picks coming soon
+</span>
+
+</div>
+
+
+<div class="equipment-card">
+
+<h3>
+Bathroom Operations
+</h3>
+
+<p>
+Useful equipment for airflow, storage,
+drying, organization, cleanup, and general competence.
+</p>
+
+<span class="equipment-link disabled">
+Amazon picks coming soon
+</span>
+
+</div>
+
+
+</div>
+
+
+<p class="affiliate-disclosure">
+
+<strong>Affiliate disclosure:</strong>
+Some Equipment Locker links will be Amazon affiliate links.
+WAP MOP SHOPPE may earn a commission from qualifying purchases
+at no additional cost to you.
+Recommendations remain separate from WAP MOP SHOPPE-branded goods
+and are selected because they fit the assignment.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
+     RESERVATION / STATUS LOOKUP MODAL
+     ======================================================= -->
+
+<div
+  class="modal-backdrop"
+  id="status-modal"
+  aria-hidden="true"
+>
+
+<div
+  class="modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-title"
+>
+
+<div class="modal-header">
+
+<div>
+
+<p class="kicker">
+Inventory Systems
+</p>
+
+<h2 id="modal-title">
+Pre-Order Status
+</h2>
+
+</div>
+
+
+<button
+  class="modal-close"
+  id="modal-close"
+  type="button"
+  aria-label="Close status lookup"
+>
+×
+</button>
+
+</div>
+
+
+<div class="modal-body">
+
+<p
+  class="modal-product"
+  id="modal-product-name"
+>
+Product
+</p>
+
+
+<form
+  class="lookup-form"
+  id="lookup-form"
+>
+
+<label for="reservation-code">
+7-Digit Reservation Code
+</label>
+
+<input
+  id="reservation-code"
+  name="reservation-code"
+  type="text"
+  inputmode="numeric"
+  autocomplete="off"
+  maxlength="7"
+  pattern="[0-9]{7}"
+  placeholder="0000000"
+  required
+>
+
+<p class="lookup-smallprint">
+Status checks are counted as anonymous product-interest signals.
+No reservation or purchase is created.
+</p>
+
+<button type="submit">
+Check Status
+</button>
+
+</form>
+
+
+<div
+  class="lookup-result"
+  id="lookup-result"
+>
+
+<h3>
+Reservation Not Located
+</h3>
+
+<p>
+Code
+<strong
+  class="lookup-code"
+  id="lookup-code-display"
+>
+0000000
+</strong>
+was not found.
+</p>
+
+<p>
+To be fair, no reservation codes have been issued.
+</p>
+
+<p>
+You appear to be checking anyway.
+</p>
+
+<p>
+<strong>
+This has been noted.
+</strong>
+</p>
+
+<p class="field-interest">
+FIELD INTEREST +1
+</p>
+
+</div>
+
+
+<div
+  class="notify-box"
+  id="notify-box"
+>
+
+<h3>
+Notify me if this moves.
+</h3>
+
+<p>
+If this product enters production,
+opens for preorder, returns to inventory,
+or otherwise changes status,
+the Institute can let you know.
+</p>
+
+
+<form
+  class="notify-form"
+  id="notify-form"
+  action="https://formspree.io/f/xnpqlgdl"
+  method="POST"
+>
+
+<input
+  id="notify-email"
+  name="email"
+  type="email"
+  autocomplete="email"
+  placeholder="Email address"
+  required
+>
+
+<input
+  id="notify-product"
+  name="product"
+  type="hidden"
+  value=""
+>
+
+<input
+  id="notify-status-type"
+  name="status_type"
+  type="hidden"
+  value=""
+>
+
+<input
+  name="interest_type"
+  type="hidden"
+  value="Product notification request"
+>
+
+<input
+  name="source"
+  type="hidden"
+  value="WAP MOP SHOPPE Shoppe"
+>
+
+<input
+  name="_subject"
+  type="hidden"
+  value="WAP MOP SHOPPE Product Interest"
+>
+
+<button type="submit">
+Notify Me →
+</button>
+
+<div
+  class="form-message"
+  id="notify-message"
+  role="status"
+  aria-live="polite"
+></div>
+
+</form>
+
+
+<p class="notify-note">
+This is not a preorder and does not reserve inventory.
+It tells the Institute that somebody is paying attention.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =======================================================
+     FOOTER
+     ======================================================= -->
 
 <footer>
-  <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/disclosure/">Disclosure</a>
-  </div>
+
+<div class="container">
+
+© <span id="year"></span>
+WAP MOP SHOPPE · Institute for Practical Cleanliness ·
+<a href="/disclosure/">
+Affiliate disclosure
+</a>
+
+</div>
+
 </footer>
 
+
+
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
+
+/* =========================================================
+   CONFIGURATION
+   ========================================================= */
+
+const FIELD_LIST_ENDPOINT =
+  "https://formspree.io/f/xzebyjrb";
+
+const PRODUCT_INTEREST_ENDPOINT =
+  "https://formspree.io/f/xnpqlgdl";
+
+
+/* =========================================================
+   YEAR
+   ========================================================= */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+const modal =
+  document.getElementById("status-modal");
+
+const closeButton =
+  document.getElementById("modal-close");
+
+const modalTitle =
+  document.getElementById("modal-title");
+
+const productName =
+  document.getElementById("modal-product-name");
+
+const lookupForm =
+  document.getElementById("lookup-form");
+
+const reservationInput =
+  document.getElementById("reservation-code");
+
+const lookupResult =
+  document.getElementById("lookup-result");
+
+const lookupCodeDisplay =
+  document.getElementById("lookup-code-display");
+
+const notifyBox =
+  document.getElementById("notify-box");
+
+const notifyForm =
+  document.getElementById("notify-form");
+
+const notifyProduct =
+  document.getElementById("notify-product");
+
+const notifyStatusType =
+  document.getElementById("notify-status-type");
+
+const notifyMessage =
+  document.getElementById("notify-message");
+
+const fieldListForm =
+  document.getElementById("field-list-form");
+
+const fieldListMessage =
+  document.getElementById("field-list-message");
+
+
+let currentProduct = "";
+let currentStatusType = "";
+let lastTriggerButton = null;
+
+
+/* =========================================================
+   OPEN STATUS MODAL
+   ========================================================= */
+
+document
+  .querySelectorAll(".status-button")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        currentProduct =
+          button.dataset.product || "";
+
+        currentStatusType =
+          button.dataset.statusLabel || "Product";
+
+        lastTriggerButton =
+          button;
+
+        productName.textContent =
+          currentProduct;
+
+        modalTitle.textContent =
+          currentStatusType + " Status";
+
+        notifyProduct.value =
+          currentProduct;
+
+        notifyStatusType.value =
+          currentStatusType;
+
+        reservationInput.value = "";
+
+        lookupResult.classList.remove("show");
+        notifyBox.classList.remove("show");
+
+        notifyMessage.className =
+          "form-message";
+
+        notifyMessage.textContent = "";
+
+        modal.classList.add("open");
+
+        modal.setAttribute(
+          "aria-hidden",
+          "false"
+        );
+
+        document.body.classList.add(
+          "modal-open"
+        );
+
+        setTimeout(
+          () => reservationInput.focus(),
+          60
+        );
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   CLOSE STATUS MODAL
+   ========================================================= */
+
+function closeModal() {
+
+  modal.classList.remove("open");
+
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  document.body.classList.remove(
+    "modal-open"
+  );
+
+  if (lastTriggerButton) {
+    lastTriggerButton.focus();
+  }
+
+}
+
+
+closeButton.addEventListener(
+  "click",
+  closeModal
+);
+
+
+modal.addEventListener(
+  "click",
+  event => {
+
+    if (event.target === modal) {
+      closeModal();
+    }
+
+  }
+);
+
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      event.key === "Escape" &&
+      modal.classList.contains("open")
+    ) {
+      closeModal();
+    }
+
+  }
+);
+
+
+/* =========================================================
+   RESERVATION LOOKUP
+   Every successful 7-digit lookup is sent to the
+   Product Interest Formspree endpoint.
+   No email address is required.
+   ========================================================= */
+
+lookupForm.addEventListener(
+  "submit",
+  async event => {
+
+    event.preventDefault();
+
+    const code =
+      reservationInput.value.trim();
+
+    if (!/^[0-9]{7}$/.test(code)) {
+
+      reservationInput.setCustomValidity(
+        "Please enter a 7-digit reservation code."
+      );
+
+      reservationInput.reportValidity();
+
+      reservationInput.setCustomValidity("");
+
+      return;
+    }
+
+
+    lookupCodeDisplay.textContent =
+      code;
+
+    lookupResult.classList.add("show");
+
+    notifyBox.classList.add("show");
+
+
+    /*
+      Record the interest signal quietly in Formspree.
+      The visitor has already been told that status checks
+      are counted as anonymous product-interest signals.
+    */
+
+    const interestData =
+      new FormData();
+
+    interestData.append(
+      "product",
+      currentProduct
+    );
+
+    interestData.append(
+      "status_type",
+      currentStatusType
+    );
+
+    interestData.append(
+      "reservation_code_entered",
+      code
+    );
+
+    interestData.append(
+      "interest_type",
+      "Status lookup"
+    );
+
+    interestData.append(
+      "source",
+      "WAP MOP SHOPPE Shoppe"
+    );
+
+    interestData.append(
+      "_subject",
+      "WAP MOP SHOPPE Product Status Check"
+    );
+
+
+    try {
+
+      await fetch(
+        PRODUCT_INTEREST_ENDPOINT,
+        {
+          method:"POST",
+          body:interestData,
+          headers:{
+            "Accept":"application/json"
+          }
+        }
+      );
+
+    }
+
+    catch(error) {
+
+      /*
+        The joke and page continue to work even if
+        analytics submission fails.
+      */
+
+      console.warn(
+        "Product interest signal could not be recorded.",
+        error
+      );
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   PRODUCT NOTIFICATION FORM
+   ========================================================= */
+
+notifyForm.addEventListener(
+  "submit",
+  async event => {
+
+    event.preventDefault();
+
+    const button =
+      notifyForm.querySelector(
+        'button[type="submit"]'
+      );
+
+    button.disabled = true;
+    button.textContent = "Sending…";
+
+    notifyMessage.className =
+      "form-message";
+
+    notifyMessage.textContent = "";
+
+
+    try {
+
+      const response =
+        await fetch(
+          PRODUCT_INTEREST_ENDPOINT,
+          {
+            method:"POST",
+            body:new FormData(notifyForm),
+            headers:{
+              "Accept":"application/json"
+            }
+          }
+        );
+
+
+      if (!response.ok) {
+        throw new Error(
+          "Product interest submission failed."
+        );
+      }
+
+
+      notifyMessage.textContent =
+        "Noted. The Institute will contact you if this product moves.";
+
+      notifyMessage.className =
+        "form-message success show";
+
+
+      const savedProduct =
+        currentProduct;
+
+      const savedStatus =
+        currentStatusType;
+
+
+      notifyForm.reset();
+
+
+      notifyProduct.value =
+        savedProduct;
+
+      notifyStatusType.value =
+        savedStatus;
+
+
+    }
+
+    catch(error) {
+
+      notifyMessage.textContent =
+        "The Institute's paperwork jammed. Please try again.";
+
+      notifyMessage.className =
+        "form-message error show";
+
+    }
+
+    finally {
+
+      button.disabled = false;
+      button.textContent = "Notify Me →";
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   FIELD LIST FORM
+   ========================================================= */
+
+fieldListForm.addEventListener(
+  "submit",
+  async event => {
+
+    event.preventDefault();
+
+    const button =
+      fieldListForm.querySelector(
+        'button[type="submit"]'
+      );
+
+    button.disabled = true;
+    button.textContent = "Adding…";
+
+    fieldListMessage.className =
+      "form-message";
+
+    fieldListMessage.textContent = "";
+
+
+    try {
+
+      const response =
+        await fetch(
+          FIELD_LIST_ENDPOINT,
+          {
+            method:"POST",
+            body:new FormData(fieldListForm),
+            headers:{
+              "Accept":"application/json"
+            }
+          }
+        );
+
+
+      if (!response.ok) {
+        throw new Error(
+          "Field List submission failed."
+        );
+      }
+
+
+      fieldListMessage.textContent =
+        "You're on the Field List. Institute correspondence authorized.";
+
+      fieldListMessage.className =
+        "form-message success show";
+
+
+      fieldListForm.reset();
+
+    }
+
+    catch(error) {
+
+      fieldListMessage.textContent =
+        "The communications desk appears to be unattended. Please try again.";
+
+      fieldListMessage.className =
+        "form-message error show";
+
+    }
+
+    finally {
+
+      button.disabled = false;
+
+      button.textContent =
+        "Add Me to the Field List →";
+
+    }
+
+  }
+);
+
 </script>
 
+
 </body>
+
 </html>
