@@ -1,117 +1,430 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>External means external (the boundary that fixes most “problems”) — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Most irritation starts when care crosses a boundary it was never meant to cross. External-only isn’t prudish — it’s functional." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+<meta charset="utf-8" />
 
-  <style>
-    header, nav, main, footer, section, article, aside { display:block; }
-    body{ margin:0; background:#f4f4f4; color:#111; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-    .content{ max-width:780px; margin:0 auto; }
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; white-space:nowrap; }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
-    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
-    article h1{ font-size:36px; line-height:1.15; margin:0 0 18px 0; font-weight:900; letter-spacing:-.01em; }
-    .lede{ font-size:20px; opacity:.92; margin:0 0 22px 0; }
-    .accent-rule{ height:2px; border:0; background: linear-gradient(90deg, rgba(192,68,44,1), transparent); margin: 20px 0 18px; }
-    .tags{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 18px 0; padding:0; list-style:none; }
-    .tag{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid rgba(0,0,0,.12); background:#fff; font-size:13px; color:#111; }
-    .tag::before{ content:""; width:8px; height:8px; border-radius:999px; background:rgba(192,68,44,1); opacity:.85; }
-    p{ margin:0 0 18px 0; font-size:16px; }
-    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
-    ul{ margin:0 0 18px 22px; }
-    li{ margin:0 0 8px 0; }
-    .callout{ border:1px solid rgba(0,0,0,.12); border-radius:16px; padding:18px; background:#fff; margin:28px 0; }
-    .callout p{ margin:0; font-size:15px; opacity:.92; }
-    .related{ border:1px solid rgba(0,0,0,.12); border-radius:16px; background:#fff; padding:18px; margin:28px 0 0; }
-    .related .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.75; margin-bottom:8px; font-weight:900; }
-    .related p{ margin:0 0 10px 0; font-size:15px; opacity:.92; }
-    .related a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); font-weight:900; }
-    .meta{ font-size:13px; opacity:.72; margin-top:22px; }
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
-    @media (max-width:820px){ article h1{ font-size:30px; } .lede{ font-size:18px; } }
-  </style>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<title>
+External Means External | WAP MOP SHOPPE
+</title>
+
+<meta
+  name="description"
+  content="Most irritation starts when care crosses a boundary it was never meant to cross. External-only isn’t prudish — it’s functional."
+/>
+
+<link
+  rel="stylesheet"
+  href="/assets/styles.css"
+>
+
+<style>
+
+/* Article-specific additions */
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 24px;
+  padding:0;
+  list-style:none;
+}
+
+.tag {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--card);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:750;
+}
+
+.tag::before {
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--rust);
+}
+
+.callout {
+  margin:28px 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--gold);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.callout p {
+  margin:0;
+}
+
+.related {
+  margin:28px 0 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.related .kicker {
+  margin-bottom:6px;
+}
+
+.related p {
+  margin:0;
+}
+
+.related a {
+  color:var(--rust);
+  font-weight:850;
+}
+
+.meta {
+  margin-top:24px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+article ul:not(.tags) {
+  margin:0 0 22px;
+  padding-left:24px;
+}
+
+article ul:not(.tags) li {
+  margin-bottom:7px;
+}
+
+</style>
+
 </head>
+
+
 <body>
 
 
-<main>
-  <div class="container"><div class="content">
-    <article>
-      <h1>External means external (the boundary that fixes most “problems”)</h1>
+<header class="site-header">
 
-      <p class="lede">
-        Most irritation starts when care crosses a boundary it was never meant to cross.
-        External-only isn’t prudish — it’s functional.
-      </p>
+<div class="container header-inner">
 
-      <hr class="accent-rule">
-      <ul class="tags" aria-label="Tags">
-        <li class="tag">Boundaries</li>
-        <li class="tag">External care</li>
-        <li class="tag">Ecosystems</li>
-        <li class="tag">Comfort</li>
-      </ul>
+<a
+  class="brand"
+  href="/"
+>
 
-      <p>
-        When someone says “I tried everything,” it’s often code for: “I added more products.”
-        But more products isn’t care. It’s interference.
-      </p>
+<img
+  src="/assets/figures/meister-stamp.png"
+  alt=""
+>
 
-      <h2>what external-only protects</h2>
-      <ul>
-        <li>skin barrier</li>
-        <li>comfort</li>
-        <li>the system’s ability to regulate itself</li>
-      </ul>
+<span>
+WAP MOP SHOPPE
+</span>
 
-      <section class="callout" aria-label="Key idea">
-        <p>
-          If the solution requires burning, scrubbing, or internal cleaning — it’s probably the problem.
-        </p>
-      </section>
+</a>
 
-      <h2>a simple external routine</h2>
-      <ul>
-        <li>warm water</li>
-        <li>gentle cleansing externally</li>
-        <li>pat dry</li>
-        <li>reduce friction</li>
-      </ul>
 
-      <h2>when to get evaluated</h2>
-      <p>
-        New or worsening pain, persistent burning, strong odor changes, sores, swelling,
-        or symptoms that change quickly are signals to get evaluated.
-      </p>
+<nav>
 
-      <aside class="related" aria-label="Related care">
-        <div class="kicker">Related care</div>
-        <p>
-          For calm comfort tools, see our <a href="/wapmopshoppe/shoppe/aftercare.html">aftercare</a> picks in the Shoppe.
-        </p>
-      </aside>
+<a href="/articles/">
+Articles
+</a>
 
-      <p class="meta">
-        Not medical advice. Avoid internal cleaning. If symptoms persist or change quickly, get evaluated.
-      </p>
-    </article>
-  </div></div>
+<a href="/media/">
+Media
+</a>
+
+<a href="/shoppe/">
+Shoppe
+</a>
+
+<a href="/start/">
+Comfort Check
+</a>
+
+<a href="/about/">
+About
+</a>
+
+<a href="/disclosure/">
+Disclosure
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main class="container section">
+
+<article>
+
+
+<p class="kicker">
+Field Report · Boundaries
+</p>
+
+
+<h1>
+External Means External
+</h1>
+
+
+<p class="lede">
+Most irritation starts when care crosses a boundary it was never meant to cross. External-only isn’t prudish—it’s functional.
+</p>
+
+
+<hr class="accent-rule">
+
+
+<ul
+  class="tags"
+  aria-label="Tags"
+>
+
+<li class="tag">
+Boundaries
+</li>
+
+<li class="tag">
+External Care
+</li>
+
+<li class="tag">
+Ecosystems
+</li>
+
+<li class="tag">
+Comfort
+</li>
+
+</ul>
+
+
+
+<p>
+When someone says “I tried everything,” it’s often code for: “I added more products.”
+</p>
+
+<p>
+But more products isn’t care. It’s interference.
+</p>
+
+
+
+<h2>
+FINDING 01 — External-only protects the system.
+</h2>
+
+<p>
+There are parts of the body designed to regulate themselves.
+</p>
+
+<p>
+Trying to clean beyond the external surfaces can disrupt the environment you were trying to improve in the first place.
+</p>
+
+<p>
+Keeping care external helps protect:
+</p>
+
+<ul>
+
+<li>
+The skin barrier
+</li>
+
+<li>
+Comfort
+</li>
+
+<li>
+The body’s ability to regulate its own internal environment
+</li>
+
+</ul>
+
+
+
+<section
+  class="callout"
+  aria-label="Key idea"
+>
+
+<p>
+<strong>FIELD PRINCIPLE:</strong>
+If the solution requires burning, scrubbing, or unnecessary internal cleaning, the solution may be creating the problem.
+</p>
+
+</section>
+
+
+
+<h2>
+FINDING 02 — The routine can be simple.
+</h2>
+
+<p>
+Basic external care does not require an arsenal.
+</p>
+
+<ul>
+
+<li>
+Warm water
+</li>
+
+<li>
+Gentle cleansing on external skin where needed
+</li>
+
+<li>
+Thorough rinsing
+</li>
+
+<li>
+Patting dry instead of aggressive rubbing
+</li>
+
+<li>
+Reducing unnecessary friction
+</li>
+
+</ul>
+
+<p>
+That is not an incomplete routine.
+</p>
+
+<p>
+For many people, that is the routine.
+</p>
+
+
+
+<h2>
+FINDING 03 — More intervention is not always more care.
+</h2>
+
+<p>
+Products marketed around freshness, deodorizing, tightening, balancing, or intensive cleaning can make it easy to assume that normal biology requires constant correction.
+</p>
+
+<p>
+It usually does not.
+</p>
+
+<p>
+When the body is comfortable and functioning normally, there may be very little to “fix.”
+</p>
+
+
+
+<h2>
+FINDING 04 — Know when the problem is no longer a hygiene problem.
+</h2>
+
+<p>
+New or worsening pain, persistent burning, significant odor changes, sores, swelling, unusual discharge, or symptoms that change quickly should not be treated as an invitation to clean harder.
+</p>
+
+<p>
+Those are reasons to get evaluated.
+</p>
+
+
+
+<h3>
+THE MEISTER’S VERDICT
+</h3>
+
+<p>
+Boundaries are useful.
+</p>
+
+<p>
+External skin can be washed. Internal systems generally do not need a cleaning crew dispatched after them.
+</p>
+
+<p>
+Use gentle care where care belongs. Avoid unnecessary intervention where it doesn’t.
+</p>
+
+<p>
+The body is remarkably good at maintaining systems that we resist constantly “improving.”
+</p>
+
+<p>
+<strong>
+INSPECTION STATUS: BOUNDARY ESTABLISHED
+</strong>
+</p>
+
+
+
+<aside
+  class="related"
+  aria-label="Related care"
+>
+
+<p class="kicker">
+Related Care
+</p>
+
+<h3>
+Keep the system simple
+</h3>
+
+<p>
+Read <a href="/articles/clean-isnt-sterile.html">Clean Isn’t Sterile</a> and <a href="/articles/after-doesnt-mean-absent.html">After Doesn't Mean Absent</a>, or visit the <a href="/shoppe/">Shoppe</a> for practical external-care equipment.
+</p>
+
+</aside>
+
+
+
+<p class="meta">
+This article provides general educational information and is not medical advice. Avoid unnecessary internal cleaning. New or persistent pain, burning, sores, swelling, unusual discharge, significant odor changes, or other concerning symptoms should be evaluated by an appropriate healthcare professional.
+</p>
+
+
+</article>
+
 </main>
 
-<footer><div class="container">© <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a></div></footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+
+<footer>
+
+<div class="container">
+
+© WAP MOP SHOPPE · Institute for Practical Cleanliness ·
+
+<a href="/disclosure/">
+Affiliate disclosure
+</a>
+
+</div>
+
+</footer>
+
+
 </body>
+
 </html>
