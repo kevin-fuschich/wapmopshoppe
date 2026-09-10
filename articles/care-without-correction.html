@@ -1,120 +1,422 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Care without correction — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="Care doesn’t require fixing bodies. It requires understanding what they’re already doing." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+<meta charset="utf-8" />
 
-  <style>
-    header, nav, main, footer, article, section { display:block; }
-    body{
-      margin:0; background:#f4f4f4; color:#111;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-    }
-    .container{ max-width:780px; margin:0 auto; padding:0 20px; }
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
 
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{ display:flex; justify-content:space-between; align-items:center; padding:18px 0; gap:16px; }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; }
-    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; }
-    nav{ display:flex; gap:16px; }
-    nav a{ text-decoration:none; color:#111; }
+<title>
+Care Without Correction | WAP MOP SHOPPE
+</title>
 
-    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
-    h1{ font-size:36px; margin:0 0 18px; font-weight:800; }
-    .lede{ font-size:20px; opacity:.9; margin-bottom:28px; }
-    p{ margin:0 0 18px; font-size:16px; }
-    h2{ margin:36px 0 12px; font-size:20px; font-weight:800; }
+<meta
+  name="description"
+  content="Care doesn’t require fixing bodies. It requires understanding what they’re already doing."
+/>
 
-    .callout{
-      border:1px solid rgba(0,0,0,.12);
-      border-radius:16px;
-      padding:18px;
-      background:#fff;
-      margin:28px 0;
-    }
+<link
+  rel="stylesheet"
+  href="/assets/styles.css"
+>
 
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
-  </style>
+<style>
+
+/* Article-specific additions */
+
+.callout {
+  margin:28px 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--gold);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.callout p {
+  margin:0;
+}
+
+.related {
+  margin:28px 0 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.related .kicker {
+  margin-bottom:6px;
+}
+
+.related p {
+  margin:0;
+}
+
+.related a {
+  color:var(--rust);
+  font-weight:850;
+}
+
+</style>
+
 </head>
 
+
 <body>
-<div id="site-header"></div>
-<script>
-  fetch("/assets/partials/header.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("site-header").innerHTML = html;
-    });
-</script>
 
-<main>
-  <div class="container">
-    <article>
-      <h1>Care without correction</h1>
 
-      <p class="lede">
-        A lot of modern “care” starts from the assumption that something is wrong.
-        That assumption does more damage than most people realize.
-      </p>
+<header class="site-header">
 
-      <p>
-        Correction implies failure. It frames bodies as problems to solve instead of systems to understand.
-        Once that frame is in place, everything becomes aggressive: more products, more steps,
-        more pressure to intervene.
-      </p>
+<div class="container header-inner">
 
-      <h2>Care starts with observation</h2>
+<a
+  class="brand"
+  href="/"
+>
 
-      <p>
-        Bodies are already doing something. Moisture levels fluctuate. pH shifts.
-        Sensitivity comes and goes. These are not defects — they’re signals.
-      </p>
+<img
+  src="/assets/figures/meister-stamp.png"
+  alt=""
+>
 
-      <p>
-        When care begins with listening instead of fixing, routines naturally simplify.
-        Interventions become occasional instead of constant.
-      </p>
+<span>
+WAP MOP SHOPPE
+</span>
 
-      <div class="callout">
-        <p>
-          Care doesn’t need to prove itself.
-          If it’s working, it feels quieter — not louder.
-        </p>
-      </div>
+</a>
 
-      <p>
-        This doesn’t mean “do nothing.” It means do less, on purpose.
-        Act when action helps. Stop when stopping helps more.
-      </p>
 
-      <!-- SOFT SHOPPE LINK -->
-      <section class="callout">
-        <p>
-          This way of thinking shows up in how we select items for
-          <a href="/wapmopshoppe/shoppe/" style="color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25);">
-            the Shoppe
-          </a>.
-        </p>
-      </section>
+<nav>
 
-    </article>
-  </div>
+<a href="/articles/">
+Articles
+</a>
+
+<a href="/media/">
+Media
+</a>
+
+<a href="/shoppe/">
+Shoppe
+</a>
+
+<a href="/start/">
+Comfort Check
+</a>
+
+<a href="/about/">
+About
+</a>
+
+<a href="/disclosure/">
+Disclosure
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main class="container section">
+
+<article>
+
+
+<p class="kicker">
+Field Report · Care Systems
+</p>
+
+
+<h1>
+Care Without Correction
+</h1>
+
+
+<p class="lede">
+A lot of modern “care” starts from the assumption that something is wrong. That assumption does more damage than most people realize.
+</p>
+
+
+<hr class="accent-rule">
+
+
+<p>
+Correction implies failure.
+</p>
+
+<p>
+It frames bodies as problems to solve instead of systems to understand.
+</p>
+
+<p>
+Once that frame is in place, everything becomes aggressive: more products, more steps, more pressure to intervene.
+</p>
+
+
+
+<h2>
+FINDING 01 — Care starts with observation.
+</h2>
+
+<p>
+Bodies are already doing something.
+</p>
+
+<p>
+Moisture levels fluctuate. pH shifts. Sensitivity comes and goes. Skin produces oil. Sweat appears. Hair grows. Odor changes during the day.
+</p>
+
+<p>
+These are not automatically defects.
+</p>
+
+<p>
+They are information.
+</p>
+
+
+
+<h2>
+FINDING 02 — Not every signal is a problem.
+</h2>
+
+<p>
+A body changing does not necessarily mean a body failing.
+</p>
+
+<p>
+Context matters.
+</p>
+
+<p>
+Sweat after exercise is different from a sudden unexplained odor change. Temporary sensitivity after friction is different from persistent pain. Dry skin in winter is different from a rapidly spreading rash.
+</p>
+
+<p>
+Observation helps separate normal variation from something that actually needs attention.
+</p>
+
+
+
+<section
+  class="callout"
+  aria-label="Key idea"
+>
+
+<p>
+<strong>FIELD PRINCIPLE:</strong>
+Care doesn’t need to prove itself. If it’s working, it usually feels quieter—not louder.
+</p>
+
+</section>
+
+
+
+<h2>
+FINDING 03 — Intervention should have a reason.
+</h2>
+
+<p>
+More products are not inherently more caring.
+</p>
+
+<p>
+A cleanser should have a job.
+</p>
+
+<p>
+A moisturizer should have a job.
+</p>
+
+<p>
+A grooming routine should have a job.
+</p>
+
+<p>
+If you cannot explain what a product is doing beyond “I feel like I should be using something,” that is worth examining.
+</p>
+
+
+
+<h2>
+FINDING 04 — Sometimes the best move is subtraction.
+</h2>
+
+<p>
+When skin or sensitive tissue becomes irritated, adding more interventions can make it harder to identify what is actually causing the problem.
+</p>
+
+<p>
+A simpler routine creates fewer variables.
+</p>
+
+<p>
+That might mean:
+</p>
+
+<ul>
+
+<li>
+Less fragrance
+</li>
+
+<li>
+Less scrubbing
+</li>
+
+<li>
+Fewer overlapping products
+</li>
+
+<li>
+Less frequent grooming
+</li>
+
+<li>
+Less unnecessary internal intervention
+</li>
+
+<li>
+More time for irritated skin to recover
+</li>
+
+</ul>
+
+
+
+<h2>
+FINDING 05 — “Do less” does not mean “ignore everything.”
+</h2>
+
+<p>
+Care without correction is not neglect.
+</p>
+
+<p>
+It means acting when action is useful instead of acting because normal biology makes us uncomfortable.
+</p>
+
+<p>
+Persistent pain, significant irritation, unusual discharge, sores, swelling, unexplained bleeding, major odor changes, or symptoms that continue or worsen deserve attention.
+</p>
+
+<p>
+The goal is not to avoid intervention.
+</p>
+
+<p>
+The goal is to use intervention when it actually helps.
+</p>
+
+
+
+<h2>
+FINDING 06 — Comfort is useful data.
+</h2>
+
+<p>
+A routine that repeatedly creates burning, tightness, soreness, dryness, or irritation is giving you information.
+</p>
+
+<p>
+It may not mean the product is universally bad.
+</p>
+
+<p>
+It may simply mean the product or method is wrong for your particular system.
+</p>
+
+<p>
+That is enough reason to change course.
+</p>
+
+
+
+<h3>
+THE MEISTER’S VERDICT
+</h3>
+
+<p>
+Your body is not a renovation project.
+</p>
+
+<p>
+It does not need to be continually corrected into acceptability.
+</p>
+
+<p>
+Observe first.
+</p>
+
+<p>
+Intervene when intervention helps.
+</p>
+
+<p>
+Remove variables when they are making things worse.
+</p>
+
+<p>
+And when the system is comfortable and functioning normally, consider allowing success to remain uneventful.
+</p>
+
+<p>
+<strong>
+INSPECTION STATUS: CORRECTION NOT REQUIRED
+</strong>
+</p>
+
+
+
+<aside
+  class="related"
+  aria-label="Related care"
+>
+
+<p class="kicker">
+Related Care
+</p>
+
+<h3>
+Keep care practical
+</h3>
+
+<p>
+Read <a href="/articles/performance-hygiene-is-a-lie.html">Performance Hygiene Is a Lie</a>, <a href="/articles/clean-isnt-sterile.html">Clean Isn’t Sterile</a>, and <a href="/articles/after-doesnt-mean-absent.html">After Doesn't Mean Absent</a>, or visit the <a href="/shoppe/">Shoppe</a> for practical personal-care equipment.
+</p>
+
+</aside>
+
+
+</article>
+
 </main>
 
+
+
 <footer>
-  <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
-  </div>
+
+<div class="container">
+
+© WAP MOP SHOPPE · Institute for Practical Cleanliness ·
+
+<a href="/disclosure/">
+Affiliate disclosure
+</a>
+
+</div>
+
 </footer>
 
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
 </body>
+
 </html>
