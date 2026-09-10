@@ -1,132 +1,504 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dear Shoppe: clean without hurting feelings — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="How to talk about hygiene and comfort with someone you’re close to — without shame, without accusation, and without turning it into a character judgment." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+<meta charset="utf-8" />
 
-  <style>
-    header, nav, main, footer, section, article, aside { display:block; }
-    body{ margin:0; background:#f4f4f4; color:#111; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-    .content{ max-width:780px; margin:0 auto; }
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; white-space:nowrap; }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
-    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
-    article h1{ font-size:36px; line-height:1.15; margin:0 0 18px 0; font-weight:900; letter-spacing:-.01em; }
-    .lede{ font-size:20px; opacity:.92; margin:0 0 22px 0; }
-    .accent-rule{ height:2px; border:0; background: linear-gradient(90deg, rgba(192,68,44,1), transparent); margin: 20px 0 18px; }
-    .tags{ display:flex; flex-wrap:wrap; gap:10px; margin: 0 0 18px 0; padding:0; list-style:none; }
-    .tag{ display:inline-flex; align-items:center; gap:8px; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(0,0,0,.12); background:#fff; font-size: 13px; color:#111; }
-    .tag::before{ content:""; width:8px; height:8px; border-radius:999px; background: rgba(192,68,44,1); opacity:.85; }
-    p{ margin:0 0 18px 0; font-size:16px; }
-    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
-    .callout{ border:1px solid rgba(0,0,0,.12); border-radius:16px; padding:18px; background:#fff; margin:28px 0; }
-    .callout p{ margin:0; font-size:15px; opacity:.92; }
-    .related{ border:1px solid rgba(0,0,0,.12); border-radius:16px; background:#fff; padding:18px; margin:28px 0 0; }
-    .related .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.75; margin-bottom:8px; font-weight:900; }
-    .related p{ margin:0 0 10px 0; font-size:15px; opacity:.92; }
-    .related a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); font-weight:900; }
-    .meta{ font-size:13px; opacity:.72; margin-top:22px; }
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
-    @media (max-width:820px){ article h1{ font-size:30px; } .lede{ font-size:18px; } }
-  </style>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<title>
+Dear Shoppe: Clean Without Hurting Feelings | WAP MOP SHOPPE
+</title>
+
+<meta
+  name="description"
+  content="How to talk about hygiene and comfort with someone you’re close to — without shame, without accusation, and without turning it into a character judgment."
+/>
+
+<link
+  rel="stylesheet"
+  href="/assets/styles.css"
+>
+
+<style>
+
+/* Article-specific additions */
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 24px;
+  padding:0;
+  list-style:none;
+}
+
+.tag {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--card);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:750;
+}
+
+.tag::before {
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--rust);
+}
+
+.callout {
+  margin:28px 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--gold);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.callout p {
+  margin:0;
+}
+
+.letter {
+  margin:0 0 28px;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.letter p:last-child {
+  margin-bottom:0;
+}
+
+.related {
+  margin:28px 0 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.related .kicker {
+  margin-bottom:6px;
+}
+
+.related p {
+  margin:0;
+}
+
+.related a {
+  color:var(--rust);
+  font-weight:850;
+}
+
+.meta {
+  margin-top:24px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+article ul:not(.tags) {
+  margin:0 0 22px;
+  padding-left:24px;
+}
+
+article ul:not(.tags) li {
+  margin-bottom:7px;
+}
+
+</style>
+
 </head>
+
 
 <body>
 
 
-<main>
-  <div class="container">
-    <div class="content">
-      <article>
-        <h1>Dear Shoppe: I want to be clean, but I don’t want to hurt anyone’s feelings</h1>
+<header class="site-header">
 
-        <p class="lede">
-          Hygiene conversations go sideways when they turn into character judgments.
-          Here’s how to talk about comfort and care without shame.
-        </p>
+<div class="container header-inner">
 
-        <hr class="accent-rule">
-        <ul class="tags" aria-label="Tags">
-          <li class="tag">Aftercare</li>
-          <li class="tag">Respect</li>
-          <li class="tag">Communication</li>
-          <li class="tag">Comfort</li>
-        </ul>
+<a
+  class="brand"
+  href="/"
+>
 
-        <p>
-          <strong>Dear Shoppe,</strong><br>
-          I’m close to someone I care about. Sometimes there’s a smell or taste that throws me off.
-          I don’t want to shame them or make them feel gross — but I also don’t want to ignore my own body’s reactions.
-          What do I do?
-        </p>
+<img
+  src="/assets/figures/meister-stamp.png"
+  alt=""
+>
 
-        <h2>First: remove the accusation</h2>
-        <p>
-          Smell and taste aren’t morality. They’re information: sweat, timing, diet, stress, soap residue, fabric, hormones,
-          or a system that’s currently irritated.
-        </p>
+<span>
+WAP MOP SHOPPE
+</span>
 
-        <h2>Lead with “us,” not “you”</h2>
-        <p>
-          The cleanest approach is collaborative:
-          “Can we do a quick reset together?” or “Can we do a rinse / wipe / water break before we keep going?”
-          You’re not naming a flaw. You’re building a ritual.
-        </p>
+</a>
 
-        <section class="callout" aria-label="Words that work">
-          <p>
-            Try: “I want this to feel good for both of us. Can we do a quick comfort reset?”
-          </p>
-        </section>
 
-        <h2>Make it specific and physical</h2>
-        <ul>
-          <li>“Can we grab water?”</li>
-          <li>“Want a warm washcloth?”</li>
-          <li>“Want to freshen up together?”</li>
-          <li>“Can we slow down for a second?”</li>
-        </ul>
+<nav>
 
-        <h2>If something seems truly off</h2>
-        <p>
-          If the smell is new, strong, fishy, painful, or paired with itching/burning,
-          treat it as a health signal — not a hygiene issue. Encourage evaluation without drama.
-        </p>
+<a href="/articles/">
+Articles
+</a>
 
-        <aside class="related" aria-label="Related care">
-          <div class="kicker">Related care</div>
-          <p>
-            Want a simple “reset kit” approach — wipes, towels, water, and aftercare basics?
-            See our <a href="/wapmopshoppe/shoppe/aftercare.html">aftercare</a> picks in the Shoppe.
-          </p>
-        </aside>
+<a href="/media/">
+Media
+</a>
 
-        <p class="meta">
-          Not medical advice. Avoid shame. If symptoms persist, get evaluated.
-          Comfort and respect matter more than “freshness.”
-        </p>
-      </article>
-    </div>
-  </div>
+<a href="/shoppe/">
+Shoppe
+</a>
+
+<a href="/start/">
+Comfort Check
+</a>
+
+<a href="/about/">
+About
+</a>
+
+<a href="/disclosure/">
+Disclosure
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main class="container section">
+
+<article>
+
+
+<p class="kicker">
+Dear Shoppe · Comfort &amp; Communication
+</p>
+
+
+<h1>
+I Want to Be Clean, but I Don’t Want to Hurt Anyone’s Feelings
+</h1>
+
+
+<p class="lede">
+Hygiene conversations go sideways when they turn into character judgments. Here’s how to talk about comfort and care without shame.
+</p>
+
+
+<hr class="accent-rule">
+
+
+<ul
+  class="tags"
+  aria-label="Tags"
+>
+
+<li class="tag">
+Aftercare
+</li>
+
+<li class="tag">
+Respect
+</li>
+
+<li class="tag">
+Communication
+</li>
+
+<li class="tag">
+Comfort
+</li>
+
+</ul>
+
+
+
+<section
+  class="letter"
+  aria-label="Reader question"
+>
+
+<p>
+<strong>Dear Shoppe,</strong>
+</p>
+
+<p>
+I’m close to someone I care about. Sometimes there’s a smell or taste that throws me off.
+</p>
+
+<p>
+I don’t want to shame them or make them feel gross—but I also don’t want to ignore my own body’s reactions.
+</p>
+
+<p>
+What do I do?
+</p>
+
+</section>
+
+
+
+<h2>
+FINDING 01 — Remove the accusation.
+</h2>
+
+<p>
+Smell and taste are not morality.
+</p>
+
+<p>
+They are information.
+</p>
+
+<p>
+Sweat, time, diet, stress, product residue, clothing, normal body chemistry, and irritation can all change what somebody smells or tastes like.
+</p>
+
+<p>
+The useful conversation is about what would make the moment more comfortable—not whether somebody has somehow failed a cleanliness test.
+</p>
+
+
+
+<h2>
+FINDING 02 — Lead with “us,” not “you.”
+</h2>
+
+<p>
+A collaborative request usually lands very differently from a diagnosis.
+</p>
+
+<p>
+“Can we do a quick reset?” is not the same sentence as “You need to clean yourself.”
+</p>
+
+<p>
+One creates a shared ritual.
+</p>
+
+<p>
+The other creates a defendant.
+</p>
+
+
+
+<section
+  class="callout"
+  aria-label="Words that work"
+>
+
+<p class="kicker">
+Words That Work
+</p>
+
+<p>
+“I want this to feel good for both of us. Can we do a quick comfort reset?”
+</p>
+
+</section>
+
+
+
+<h2>
+FINDING 03 — Make the request specific and physical.
+</h2>
+
+<p>
+Vague language leaves a lot of room for somebody to imagine the worst.
+</p>
+
+<p>
+A concrete request is easier to understand and easier to say yes to.
+</p>
+
+<ul>
+
+<li>
+“Can we grab some water?”
+</li>
+
+<li>
+“Want a warm washcloth?”
+</li>
+
+<li>
+“Want to freshen up together?”
+</li>
+
+<li>
+“Can we slow down for a second?”
+</li>
+
+<li>
+“Can we rinse off and come back?”
+</li>
+
+</ul>
+
+
+
+<h2>
+FINDING 04 — A reset does not need to become a production.
+</h2>
+
+<p>
+A comfort reset can be extremely ordinary.
+</p>
+
+<p>
+Water. A clean towel. A gentle external wash if needed. A bathroom break. Fresh underwear. A little time.
+</p>
+
+<p>
+You do not need to transform the moment into an emergency sanitation drill.
+</p>
+
+<p>
+The purpose is comfort, not erasure.
+</p>
+
+
+
+<h2>
+FINDING 05 — Your reaction matters too.
+</h2>
+
+<p>
+Being kind does not mean pretending you are comfortable when you are not.
+</p>
+
+<p>
+Attraction, smell, taste, touch, and physical comfort are all part of intimacy.
+</p>
+
+<p>
+You are allowed to notice what your body is telling you.
+</p>
+
+<p>
+The responsibility is in how you communicate that information.
+</p>
+
+
+
+<h2>
+FINDING 06 — Know when the conversation changes.
+</h2>
+
+<p>
+A noticeable change in odor does not automatically mean anything is wrong.
+</p>
+
+<p>
+But a new or persistent strong odor—especially when paired with pain, burning, itching, sores, unusual discharge, or other symptoms—can be worth medical evaluation.
+</p>
+
+<p>
+At that point, the useful response is concern rather than criticism.
+</p>
+
+
+
+<h3>
+THE MEISTER’S VERDICT
+</h3>
+
+<p>
+You can ask for comfort without assigning blame.
+</p>
+
+<p>
+You can notice smell without turning somebody into “the smelly person.”
+</p>
+
+<p>
+And you can interrupt an intimate moment without turning the interruption into a referendum on attraction.
+</p>
+
+<p>
+Keep the language practical. Make the reset mutual when it makes sense. Protect the other person’s dignity without pretending your own experience does not matter.
+</p>
+
+<p>
+The goal is not perfect freshness.
+</p>
+
+<p>
+The goal is two people who still want to be close after the conversation.
+</p>
+
+<p>
+<strong>
+INSPECTION STATUS: HANDLE WITH RESPECT
+</strong>
+</p>
+
+
+
+<aside
+  class="related"
+  aria-label="Related care"
+>
+
+<p class="kicker">
+Related Care
+</p>
+
+<h3>
+Keep the conversation human
+</h3>
+
+<p>
+Read <a href="/articles/odor-is-information.html">Odor Is Information</a>, <a href="/articles/how-to-wash-after-sex.html">How to Wash After Sex</a>, and <a href="/articles/aftercare-is-respect.html">Aftercare Is Respect</a>, or visit the <a href="/shoppe/">Shoppe</a> for practical aftercare equipment.
+</p>
+
+</aside>
+
+
+
+<p class="meta">
+This article provides general educational information and relationship guidance, not medical advice. Persistent or concerning changes in odor, pain, burning, itching, sores, unusual discharge, or other symptoms should be evaluated by an appropriate healthcare professional.
+</p>
+
+
+</article>
+
 </main>
 
+
+
 <footer>
-  <div class="container">
-    © <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a>
-  </div>
+
+<div class="container">
+
+© WAP MOP SHOPPE · Institute for Practical Cleanliness ·
+
+<a href="/disclosure/">
+Affiliate disclosure
+</a>
+
+</div>
+
 </footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+
 </body>
+
 </html>
