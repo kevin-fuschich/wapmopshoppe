@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<title>
+The Cunnilingus Quiz | WAP MOP SHOPPE
+</title>
+
+<meta
+  name="description"
+  content="Ten questions about cunnilingus, anatomy, language, biology, hygiene, sexual health, and the surprisingly complicated systems involved."
+/>
+
+<link
+  rel="stylesheet"
+  href="/assets/styles.css"
+>
+
+<style>
+
+/* =========================================================
+   CUNNILINGUS QUIZ
+   ========================================================= */
+
+.quiz-shell {
+  max-width:760px;
+}
+
+.quiz-intro {
+  margin-bottom:30px;
+}
+
+.quiz-note {
+  margin:18px 0 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.quiz-panel {
+  margin:30px 0 0;
+  padding:26px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--card);
+}
+
+.quiz-progress {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.quiz-progress-text {
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.quiz-score {
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  font-weight:750;
+}
+
+.progress-track {
+  width:100%;
+  height:6px;
+  margin:0 0 26px;
+  overflow:hidden;
+  border-radius:999px;
+  background:var(--line);
+}
+
+.progress-bar {
+  width:10%;
+  height:100%;
+  background:var(--rust);
+  transition:width .25s ease;
+}
+
+.quiz-question {
+  margin:0 0 22px;
+  font-size:25px;
+  line-height:1.25;
+}
+
+.quiz-options {
+  display:grid;
+  gap:10px;
+}
+
+.quiz-option {
+  width:100%;
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+  color:var(--ink);
+  font:inherit;
+  font-weight:700;
+  line-height:1.4;
+  text-align:left;
+  cursor:pointer;
+  transition:
+    border-color .15s ease,
+    background .15s ease,
+    transform .15s ease;
+}
+
+.quiz-option:hover {
+  border-color:var(--rust);
+}
+
+.quiz-option:focus-visible,
+.quiz-next:focus-visible,
+.quiz-restart:focus-visible {
+  outline:3px solid var(--gold);
+  outline-offset:3px;
+}
+
+.quiz-option[disabled] {
+  cursor:default;
+  opacity:1;
+}
+
+.quiz-option.correct {
+  border-color:var(--rust);
+  background:rgba(192,68,44,.08);
+}
+
+.quiz-option.incorrect {
+  border-style:dashed;
+  opacity:.72;
+}
+
+.quiz-feedback {
+  display:none;
+  margin:24px 0 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--gold);
+  border-radius:10px;
+  background:#fff;
+}
+
+.quiz-feedback.show {
+  display:block;
+}
+
+.quiz-feedback-status {
+  margin:0 0 8px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.quiz-feedback p:last-child {
+  margin-bottom:0;
+}
+
+.quiz-actions {
+  display:none;
+  margin-top:20px;
+}
+
+.quiz-actions.show {
+  display:flex;
+}
+
+.quiz-next,
+.quiz-restart {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:11px 16px;
+  border:0;
+  border-radius:8px;
+  background:var(--rust);
+  color:#fff;
+  font:inherit;
+  font-weight:850;
+  cursor:pointer;
+}
+
+.quiz-result {
+  display:none;
+}
+
+.quiz-result.show {
+  display:block;
+}
+
+.result-score {
+  margin:6px 0 14px;
+  font-size:48px;
+  font-weight:900;
+  line-height:1;
+}
+
+.result-status {
+  display:inline-block;
+  margin:10px 0 24px;
+  padding:8px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+
+.result-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px;
+}
+
+.result-links a {
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  padding:10px 14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+  color:var(--ink);
+  font-weight:850;
+  text-decoration:none;
+}
+
+.quiz-disclaimer {
+  margin-top:28px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+@media(max-width:640px) {
+
+  .quiz-panel {
+    padding:20px;
+  }
+
+  .quiz-question {
+    font-size:21px;
+  }
+
+  .quiz-progress {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .result-score {
+    font-size:40px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+<div class="container header-inner">
+
+<a
+  class="brand"
+  href="/"
+>
+
+<img
+  src="/assets/figures/meister-stamp.png"
+  alt=""
+>
+
+<span>
+WAP MOP SHOPPE
+</span>
+
+</a>
+
+
+<nav>
+
+<a href="/articles/">
+Articles
+</a>
+
+<a href="/media/">
+Media
+</a>
+
+<a href="/shoppe/">
+Shoppe
+</a>
+
+<a href="/start/">
+Comfort Check
+</a>
+
+<a href="/about/">
+About
+</a>
+
+<a href="/disclosure/">
+Disclosure
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main class="container section">
+
+<article class="quiz-shell">
+
+
+<div class="quiz-intro">
+
+<p class="kicker">
+Field Examination · Mouth Systems / Vulvar Systems
+</p>
+
+<h1>
+The Cunnilingus Quiz
+</h1>
+
+<p class="lede">
+How much do you actually know about the anatomy, language, biology, hygiene, and health surrounding cunnilingus?
+</p>
+
+<hr class="accent-rule">
+
+<p>
+This is not a test of talent.
+</p>
+
+<p>
+Nobody will ask for a demonstration.
+</p>
+
+<p>
+It is ten questions about an activity humans have been practicing considerably longer than they have been accurately naming the anatomy involved.
+</p>
+
+<p>
+Some answers are straightforward.
+</p>
+
+<p>
+Some are less obvious.
+</p>
+
+<p>
+The objective is simple: finish knowing more than you did when you started.
+</p>
+
+<p class="quiz-note">
+10 questions · Immediate explanations · No practical examination required
+</p>
+
+</div>
+
+
+
+<section
+  id="quizPanel"
+  class="quiz-panel"
+  aria-live="polite"
+>
+
+<div id="quizQuestionView">
+
+<div class="quiz-progress">
+
+<p
+  id="progressText"
+  class="quiz-progress-text"
+>
+Question 1 of 10
+</p>
+
+<p
+  id="scoreText"
+  class="quiz-score"
+>
+Score: 0
+</p>
+
+</div>
+
+<div
+  class="progress-track"
+  aria-hidden="true"
+>
+
+<div
+  id="progressBar"
+  class="progress-bar"
+></div>
+
+</div>
+
+
+<h2
+  id="questionText"
+  class="quiz-question"
+>
+</h2>
+
+
+<div
+  id="options"
+  class="quiz-options"
+>
+</div>
+
+
+<div
+  id="feedback"
+  class="quiz-feedback"
+>
+
+<p
+  id="feedbackStatus"
+  class="quiz-feedback-status"
+>
+</p>
+
+<p id="feedbackText">
+</p>
+
+</div>
+
+
+<div
+  id="quizActions"
+  class="quiz-actions"
+>
+
+<button
+  id="nextButton"
+  class="quiz-next"
+  type="button"
+>
+Next Question →
+</button>
+
+</div>
+
+</div>
+
+
+
+<div
+  id="quizResult"
+  class="quiz-result"
+>
+
+<p class="kicker">
+Field Examination Complete
+</p>
+
+<h2>
+Inspection Results
+</h2>
+
+<p
+  id="resultScore"
+  class="result-score"
+>
+</p>
+
+<p id="resultMessage">
+</p>
+
+<p
+  id="resultStatus"
+  class="result-status"
+>
+</p>
+
+<button
+  id="restartButton"
+  class="quiz-restart"
+  type="button"
+>
+Take It Again
+</button>
+
+
+<div class="result-links">
+
+<a href="/articles/cunnilingus-who-named-it-that/">
+Read: Cunnilingus — Who Named It That?
+</a>
+
+<a href="/articles/">
+Explore Field Reports
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<p class="quiz-disclaimer">
+This quiz is for general educational purposes and is not medical advice. Questions involving sexually transmitted infections, symptoms, or sexual health are intended as general health information; individual concerns should be discussed with an appropriate healthcare professional.
+</p>
+
+
+</article>
+
+</main>
+
+
+
+<footer>
+
+<div class="container">
+
+© WAP MOP SHOPPE · Institute for Practical Cleanliness ·
+
+<a href="/disclosure/">
+Affiliate disclosure
+</a>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+(() => {
+
+const questions = [
+
+{
+  question:
+    "Which description of the clitoris is anatomically most accurate?",
+
+  answers: [
+    "It is only the small visible structure above the urethral opening.",
+    "It is a larger erectile organ with both external and internal structures.",
+    "It is another name for the vaginal opening.",
+    "It is a gland whose main function is producing lubrication."
+  ],
+
+  correct: 1,
+
+  explanation:
+    "The visible glans is only part of the clitoris. The organ also includes internal erectile structures such as the body and crura. What can be seen externally is only a portion of the full anatomy."
+},
+
+
+{
+  question:
+    "The word “cunnilingus” comes most directly from Latin roots referring to what?",
+
+  answers: [
+    "The vulva and licking.",
+    "The tongue and kissing.",
+    "Pleasure and touching.",
+    "The mouth and tasting."
+  ],
+
+  correct: 0,
+
+  explanation:
+    "The word is generally traced to Latin cunnus, referring to the vulva, and lingere, meaning “to lick.” The name is therefore considerably more literal than it sounds."
+},
+
+
+{
+  question:
+    "Which structure belongs to the vulva rather than the vagina?",
+
+  answers: [
+    "The cervix.",
+    "The labia minora.",
+    "The vaginal canal.",
+    "The uterine cavity."
+  ],
+
+  correct: 1,
+
+  explanation:
+    "The labia minora are part of the vulva, the external genital anatomy. The vagina is the internal muscular canal. They are related geography, but they are not interchangeable terms."
+},
+
+
+{
+  question:
+    "Which statement about the clitoris is true?",
+
+  answers: [
+    "The visible glans is the entire organ.",
+    "Its primary biological role is urine flow.",
+    "Much of its erectile structure extends internally.",
+    "It is located inside the vaginal canal."
+  ],
+
+  correct: 2,
+
+  explanation:
+    "Much of the clitoris is internal. Its structures extend beneath the surface and include erectile tissue that becomes engorged during sexual arousal."
+},
+
+
+{
+  question:
+    "Some sexually transmitted infections (STIs) can spread during cunnilingus even when there is no penetration. Which statement is most accurate?",
+
+  answers: [
+    "No penetration means there is no STI risk.",
+    "Only bacterial infections can spread through oral sex.",
+    "Oral-genital contact can transmit certain STIs.",
+    "Brushing your teeth immediately beforehand prevents transmission."
+  ],
+
+  correct: 2,
+
+  explanation:
+    "Oral-genital contact can transmit certain sexually transmitted infections, including infections such as herpes, gonorrhea, syphilis, and HPV. Risk varies by infection and circumstances, but penetration is not required for transmission."
+},
+
+
+{
+  question:
+    "Which infection can be transmitted from the mouth to genital tissue through oral-genital contact?",
+
+  answers: [
+    "Herpes simplex virus.",
+    "A urinary tract infection.",
+    "Bacterial vaginosis.",
+    "A yeast infection."
+  ],
+
+  correct: 0,
+
+  explanation:
+    "Herpes simplex virus can spread through oral-genital contact. Oral HSV-1, for example, can cause genital herpes after transmission from the mouth."
+},
+
+
+{
+  question:
+    "Which statement about natural vulvar scent is most accurate?",
+
+  answers: [
+    "Any detectable scent means hygiene is inadequate.",
+    "Healthy vulvar tissue should have no scent whatsoever.",
+    "A mild natural scent can be normal, while a new strong change may deserve attention.",
+    "Fragranced products are necessary to maintain a healthy scent."
+  ],
+
+  correct: 2,
+
+  explanation:
+    "Genital tissue can have a normal natural scent. What is often more useful medically is a significant new change, especially when it occurs with symptoms such as unusual discharge, itching, burning, or pain."
+},
+
+
+{
+  question:
+    "Why can routine vaginal douching or internal washing be counterproductive?",
+
+  answers: [
+    "It can disrupt the normal vaginal microbial environment.",
+    "It permanently decreases vaginal lubrication.",
+    "It causes the clitoris to lose sensitivity.",
+    "It prevents normal menstrual flow."
+  ],
+
+  correct: 0,
+
+  explanation:
+    "The vagina normally maintains its own internal environment. Douching can disturb that environment and alter the organisms that normally live there. Ordinary hygiene generally focuses on gentle external care."
+},
+
+
+{
+  question:
+    "Which statement about vaginal lubrication is most accurate?",
+
+  answers: [
+    "It is a perfect measurement of sexual desire.",
+    "Healthy people produce essentially the same amount every time.",
+    "Variation can be influenced by hormones, medications, stress, arousal, and other factors.",
+    "Needing additional lubricant automatically indicates a medical problem."
+  ],
+
+  correct: 2,
+
+  explanation:
+    "Lubrication varies between people and between situations. Hormones, medications, stress, arousal, menopause, hydration, and other factors can influence it. Physical lubrication and subjective desire also do not always match perfectly."
+},
+
+
+{
+  question:
+    "Which statement best describes good comfort communication during oral sex?",
+
+  answers: [
+    "Silence reliably means everything feels good.",
+    "A partner should follow one proven method without interruption.",
+    "Feedback about comfort, pressure, or stopping is useful information.",
+    "Talking about comfort usually means something has already gone wrong."
+  ],
+
+  correct: 2,
+
+  explanation:
+    "Bodies and preferences vary. Feedback gives partners useful information about comfort and boundaries. A short check-in is not evidence that the moment failed; it is one of the ways people keep the moment working."
+}
+
+];
+
+
+const questionText = document.getElementById("questionText");
+const options = document.getElementById("options");
+
+const progressText =
+  document.getElementById("progressText");
+
+const progressBar =
+  document.getElementById("progressBar");
+
+const scoreText =
+  document.getElementById("scoreText");
+
+const feedback =
+  document.getElementById("feedback");
+
+const feedbackStatus =
+  document.getElementById("feedbackStatus");
+
+const feedbackText =
+  document.getElementById("feedbackText");
+
+const quizActions =
+  document.getElementById("quizActions");
+
+const nextButton =
+  document.getElementById("nextButton");
+
+const quizQuestionView =
+  document.getElementById("quizQuestionView");
+
+const quizResult =
+  document.getElementById("quizResult");
+
+const resultScore =
+  document.getElementById("resultScore");
+
+const resultMessage =
+  document.getElementById("resultMessage");
+
+const resultStatus =
+  document.getElementById("resultStatus");
+
+const restartButton =
+  document.getElementById("restartButton");
+
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+
+
+function renderQuestion() {
+
+  answered = false;
+
+  const item =
+    questions[currentQuestion];
+
+  questionText.textContent =
+    item.question;
+
+  progressText.textContent =
+    `Question ${currentQuestion + 1} of ${questions.length}`;
+
+  scoreText.textContent =
+    `Score: ${score}`;
+
+  progressBar.style.width =
+    `${((currentQuestion + 1) / questions.length) * 100}%`;
+
+  options.innerHTML = "";
+
+  feedback.classList.remove("show");
+  quizActions.classList.remove("show");
+
+
+  item.answers.forEach((answer,index) => {
+
+    const button =
+      document.createElement("button");
+
+    button.type =
+      "button";
+
+    button.className =
+      "quiz-option";
+
+    button.textContent =
+      answer;
+
+    button.addEventListener(
+      "click",
+      () => selectAnswer(index)
+    );
+
+    options.appendChild(button);
+
+  });
+
+}
+
+
+
+function selectAnswer(selectedIndex) {
+
+  if(answered) return;
+
+  answered = true;
+
+  const item =
+    questions[currentQuestion];
+
+  const buttons =
+    [...options.querySelectorAll(".quiz-option")];
+
+  const isCorrect =
+    selectedIndex === item.correct;
+
+
+  if(isCorrect) {
+
+    score++;
+
+    feedbackStatus.textContent =
+      "Correct";
+
+  } else {
+
+    feedbackStatus.textContent =
+      "Not Quite";
+
+  }
+
+
+  buttons.forEach((button,index) => {
+
+    button.disabled = true;
+
+    if(index === item.correct) {
+      button.classList.add("correct");
+    }
+
+    if(
+      index === selectedIndex &&
+      index !== item.correct
+    ) {
+      button.classList.add("incorrect");
+    }
+
+  });
+
+
+  feedbackText.textContent =
+    item.explanation;
+
+  feedback.classList.add("show");
+
+  quizActions.classList.add("show");
+
+  scoreText.textContent =
+    `Score: ${score}`;
+
+
+  if(
+    currentQuestion ===
+    questions.length - 1
+  ) {
+
+    nextButton.textContent =
+      "See Inspection Results →";
+
+  } else {
+
+    nextButton.textContent =
+      "Next Question →";
+
+  }
+
+}
+
+
+
+function nextQuestion() {
+
+  if(!answered) return;
+
+
+  if(
+    currentQuestion <
+    questions.length - 1
+  ) {
+
+    currentQuestion++;
+
+    renderQuestion();
+
+    document
+      .getElementById("quizPanel")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+  } else {
+
+    showResults();
+
+  }
+
+}
+
+
+
+function showResults() {
+
+  quizQuestionView.style.display =
+    "none";
+
+  quizResult.classList.add("show");
+
+  resultScore.textContent =
+    `${score} / ${questions.length}`;
+
+
+  let message =
+    "";
+
+  let status =
+    "";
+
+
+  if(score === 10) {
+
+    message =
+      "Full marks. The Examination Desk has no further questions at this time.";
+
+    status =
+      "INSPECTION STATUS: FIELD KNOWLEDGE EXCEPTIONAL";
+
+  }
+
+  else if(score >= 8) {
+
+    message =
+      "You appear to know considerably more about cunnilingus than the average bathroom wall.";
+
+    status =
+      "INSPECTION STATUS: FIELD KNOWLEDGE CONFIRMED";
+
+  }
+
+  else if(score >= 6) {
+
+    message =
+      "Solid operating knowledge. Several details remain available for further investigation.";
+
+    status =
+      "INSPECTION STATUS: GENERALLY INFORMED";
+
+  }
+
+  else if(score >= 4) {
+
+    message =
+      "There are gaps in the file, but this is why the Institute maintains an Examination Desk.";
+
+    status =
+      "INSPECTION STATUS: ADDITIONAL READING ADVISED";
+
+  }
+
+  else {
+
+    message =
+      "An unexpectedly productive examination. You now know several things you did not know ten questions ago.";
+
+    status =
+      "INSPECTION STATUS: INVESTIGATION CONTINUES";
+
+  }
+
+
+  resultMessage.textContent =
+    message;
+
+  resultStatus.textContent =
+    status;
+
+
+  document
+    .getElementById("quizPanel")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+}
+
+
+
+function restartQuiz() {
+
+  currentQuestion = 0;
+  score = 0;
+  answered = false;
+
+  quizResult.classList.remove("show");
+
+  quizQuestionView.style.display =
+    "";
+
+  renderQuestion();
+
+
+  document
+    .getElementById("quizPanel")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+}
+
+
+
+nextButton.addEventListener(
+  "click",
+  nextQuestion
+);
+
+restartButton.addEventListener(
+  "click",
+  restartQuiz
+);
+
+
+renderQuestion();
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
