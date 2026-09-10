@@ -1,121 +1,560 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The “pH balance” myth (and what actually helps) — WAP MOP SHOPPE</title>
 
-  <meta name="description" content="pH isn’t a vibe you buy. Most “balance” problems are interference problems. What helps is gentle, external-only care and less friction." />
-  <link rel="icon" href="/wapmopshoppe/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/wapmopshoppe/assets/styles.css">
+<meta charset="utf-8" />
 
-  <style>
-    header, nav, main, footer, section, article, aside { display:block; }
-    body{ margin:0; background:#f4f4f4; color:#111; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
-    .container{ max-width:960px; margin:0 auto; padding:0 20px; }
-    .content{ max-width:780px; margin:0 auto; }
-    .site-header{ background:#fffdf8; border-bottom:1px solid rgba(0,0,0,.12); }
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 0; }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ width:56px; height:auto; display:block; }
-    .wordmark{ font-weight:800; letter-spacing:.06em; text-decoration:none; color:#111; white-space:nowrap; }
-    nav{ display:flex; gap:16px; flex-wrap:wrap; }
-    nav a{ text-decoration:none; color:#111; font-weight:500; }
-    main{ background:#fffdf8; padding:56px 0; border-bottom:1px solid rgba(0,0,0,.12); }
-    article h1{ font-size:36px; line-height:1.15; margin:0 0 18px 0; font-weight:900; letter-spacing:-.01em; }
-    .lede{ font-size:20px; opacity:.92; margin:0 0 22px 0; }
-    .accent-rule{ height:2px; border:0; background: linear-gradient(90deg, rgba(192,68,44,1), transparent); margin:20px 0 18px; }
-    .tags{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 18px 0; padding:0; list-style:none; }
-    .tag{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid rgba(0,0,0,.12); background:#fff; font-size:13px; color:#111; }
-    .tag::before{ content:""; width:8px; height:8px; border-radius:999px; background:rgba(192,68,44,1); opacity:.85; }
-    p{ margin:0 0 18px 0; font-size:16px; }
-    h2{ margin:36px 0 12px 0; font-size:20px; font-weight:900; }
-    ul{ margin:0 0 18px 22px; }
-    li{ margin:0 0 8px 0; }
-    .callout{ border:1px solid rgba(0,0,0,.12); border-radius:16px; padding:18px; background:#fff; margin:28px 0; }
-    .callout p{ margin:0; font-size:15px; opacity:.92; }
-    .related{ border:1px solid rgba(0,0,0,.12); border-radius:16px; background:#fff; padding:18px; margin:28px 0 0; }
-    .related .kicker{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; opacity:.75; margin-bottom:8px; font-weight:900; }
-    .related p{ margin:0 0 10px 0; font-size:15px; opacity:.92; }
-    .related a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); font-weight:900; }
-    .meta{ font-size:13px; opacity:.72; margin-top:22px; }
-    footer{ background:#fffdf8; padding:18px 0; font-size:13px; opacity:.85; }
-    footer a{ color:#111; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.25); }
-    @media (max-width:820px){ article h1{ font-size:30px; } .lede{ font-size:18px; } }
-  </style>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+
+<title>
+The “pH Balance” Myth (and What Actually Helps) | WAP MOP SHOPPE
+</title>
+
+<meta
+  name="description"
+  content="pH is real biology, but “pH balance” marketing often oversimplifies it. A practical guide to external care, irritation, fragrance, friction, and when symptoms need evaluation."
+/>
+
+<link
+  rel="stylesheet"
+  href="/assets/styles.css"
+>
+
+<style>
+
+/* Article-specific additions */
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:0 0 24px;
+  padding:0;
+  list-style:none;
+}
+
+.tag {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 11px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--card);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:750;
+}
+
+.tag::before {
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--rust);
+}
+
+.callout {
+  margin:28px 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--gold);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.callout p {
+  margin:0;
+}
+
+.related {
+  margin:28px 0 0;
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--card);
+}
+
+.related .kicker {
+  margin-bottom:6px;
+}
+
+.related p {
+  margin:0;
+}
+
+.related a {
+  color:var(--rust);
+  font-weight:850;
+}
+
+.meta {
+  margin-top:24px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+article ul:not(.tags) {
+  margin:0 0 22px;
+  padding-left:24px;
+}
+
+article ul:not(.tags) li {
+  margin-bottom:7px;
+}
+
+</style>
+
 </head>
+
+
 <body>
 
 
+<header class="site-header">
 
-<main>
-  <div class="container"><div class="content">
-    <article>
-      <h1>The “pH balance” myth (and what actually helps)</h1>
+<div class="container header-inner">
 
-      <p class="lede">
-        pH isn’t a vibe you buy.
-        Most “balance” problems are interference problems — too many products, too much friction, too much fear.
-      </p>
+<a
+  class="brand"
+  href="/"
+>
 
-      <hr class="accent-rule">
-      <ul class="tags" aria-label="Tags">
-        <li class="tag">Ecosystems</li>
-        <li class="tag">External care</li>
-        <li class="tag">Boundaries</li>
-        <li class="tag">Comfort</li>
-      </ul>
+<img
+  src="/assets/figures/meister-stamp.png"
+  alt=""
+>
 
-      <p>
-        “Balance” marketing makes it sound like your body is failing a chemistry test.
-        In reality, most discomfort stories start with a routine that crosses boundaries.
-      </p>
+<span>
+WAP MOP SHOPPE
+</span>
 
-      <h2>what usually interferes</h2>
-      <ul>
-        <li>strong fragrance</li>
-        <li>over-washing and scrubbing</li>
-        <li>internal cleaning</li>
-        <li>tight fabric + heat</li>
-        <li>friction without enough lubrication</li>
-      </ul>
+</a>
 
-      <section class="callout" aria-label="Key idea">
-        <p>
-          If the “solution” burns or tingles, it’s not balancing — it’s irritating.
-        </p>
-      </section>
 
-      <h2>what actually helps</h2>
-      <ul>
-        <li>gentle external-only care</li>
-        <li>less product, less drama</li>
-        <li>breathable fabric</li>
-        <li>comfort-first pacing</li>
-        <li>time</li>
-      </ul>
+<nav>
 
-      <h2>when to get evaluated</h2>
-      <p>
-        New or worsening pain, strong odor changes, sores, swelling, or persistent burning are signals to get evaluated.
-        Don’t try to “balance” your way out of symptoms.
-      </p>
+<a href="/articles/">
+Articles
+</a>
 
-      <aside class="related" aria-label="Related care">
-        <div class="kicker">Related care</div>
-        <p>
-          Want a calm external-only routine? See our <a href="/wapmopshoppe/shoppe/external-care.html">external care</a> picks in the Shoppe.
-        </p>
-      </aside>
+<a href="/media/">
+Media
+</a>
 
-      <p class="meta">
-        Not medical advice. Avoid internal cleaning. If symptoms persist, get evaluated.
-      </p>
-    </article>
-  </div></div>
+<a href="/shoppe/">
+Shoppe
+</a>
+
+<a href="/start/">
+Comfort Check
+</a>
+
+<a href="/about/">
+About
+</a>
+
+<a href="/disclosure/">
+Disclosure
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main class="container section">
+
+<article>
+
+
+<p class="kicker">
+Field Report · Ecosystems
+</p>
+
+
+<h1>
+The “pH Balance” Myth (and What Actually Helps)
+</h1>
+
+
+<p class="lede">
+pH is real biology. “pH balanced” is also excellent marketing. The trouble starts when those two facts get treated as the same thing.
+</p>
+
+
+<hr class="accent-rule">
+
+
+<ul
+  class="tags"
+  aria-label="Tags"
+>
+
+<li class="tag">
+Ecosystems
+</li>
+
+<li class="tag">
+External Care
+</li>
+
+<li class="tag">
+Boundaries
+</li>
+
+<li class="tag">
+Comfort
+</li>
+
+</ul>
+
+
+
+<p>
+“Balance” marketing has a way of making the human body sound like it is constantly one bottle away from failing a chemistry exam.
+</p>
+
+<p>
+A wash promises to restore balance. A wipe promises to maintain balance. A spray promises to protect balance.
+</p>
+
+<p>
+Eventually you begin to wonder how the body survived before the personal-care aisle became involved.
+</p>
+
+
+
+<h2>
+FINDING 01 — pH is real.
+</h2>
+
+<p>
+Let’s get one thing out of the way: pH itself is not a myth.
+</p>
+
+<p>
+Different parts of the body maintain different chemical environments. Vaginal pH, for example, is normally acidic during much of the reproductive years, and that environment is connected to the organisms that normally live there.
+</p>
+
+<p>
+Skin also has its own mildly acidic surface environment.
+</p>
+
+<p>
+So yes, chemistry matters.
+</p>
+
+<p>
+What becomes questionable is the idea that every normal variation requires a consumer product to “rebalance” it.
+</p>
+
+
+
+<h2>
+FINDING 02 — Internal and external are not interchangeable.
+</h2>
+
+<p>
+The vulva is external anatomy.
+</p>
+
+<p>
+The vagina is internal anatomy.
+</p>
+
+<p>
+They are not the same environment, and they do not require the same kind of care.
+</p>
+
+<p>
+The vagina generally regulates its own internal environment. Routine douching or internal washing is unnecessary and can disrupt that environment.
+</p>
+
+<p>
+External skin can be washed gently.
+</p>
+
+<p>
+That boundary solves a surprising amount of confusion.
+</p>
+
+
+
+<section
+  class="callout"
+  aria-label="Key idea"
+>
+
+<p>
+<strong>FIELD PRINCIPLE:</strong>
+A product saying “pH balanced” does not automatically mean your body needs it.
+</p>
+
+</section>
+
+
+
+<h2>
+FINDING 03 — Irritation can masquerade as a “balance problem.”
+</h2>
+
+<p>
+Burning, dryness, tenderness, itching, or general discomfort can have many causes.
+</p>
+
+<p>
+Sometimes the culprit is not a mysterious pH failure.
+</p>
+
+<p>
+Sometimes the system has simply been irritated.
+</p>
+
+<p>
+Common variables include:
+</p>
+
+<ul>
+
+<li>
+Strong fragrance
+</li>
+
+<li>
+Over-washing
+</li>
+
+<li>
+Aggressive scrubbing
+</li>
+
+<li>
+Internal cleaning
+</li>
+
+<li>
+Repeated product changes
+</li>
+
+<li>
+Tight clothing and trapped moisture
+</li>
+
+<li>
+Friction
+</li>
+
+</ul>
+
+<p>
+Adding another corrective product to irritated tissue can make troubleshooting considerably harder.
+</p>
+
+
+
+<h2>
+FINDING 04 — “Tingling” is not evidence of successful chemistry.
+</h2>
+
+<p>
+Cooling, warming, tingling, and intense fragrance can create a strong sensation that something is happening.
+</p>
+
+<p>
+Something is happening.
+</p>
+
+<p>
+That does not mean the thing happening is “balance.”
+</p>
+
+<p>
+If a product consistently causes burning, stinging, redness, or discomfort, your skin is providing more useful information than the front of the bottle.
+</p>
+
+
+
+<h2>
+FINDING 05 — What actually helps is usually less dramatic.
+</h2>
+
+<p>
+For ordinary external care, the useful baseline is remarkably uneventful:
+</p>
+
+<ul>
+
+<li>
+Gentle washing of external skin
+</li>
+
+<li>
+Warm rather than aggressively hot water
+</li>
+
+<li>
+Products your skin tolerates
+</li>
+
+<li>
+Thorough rinsing
+</li>
+
+<li>
+Less unnecessary fragrance if you are sensitive
+</li>
+
+<li>
+Breathable clothing when heat and moisture are causing problems
+</li>
+
+<li>
+Adequate lubrication when friction is part of the issue
+</li>
+
+<li>
+Time for irritated skin to recover
+</li>
+
+</ul>
+
+<p>
+Less product can sometimes produce more useful information because there are fewer variables to blame.
+</p>
+
+
+
+<h2>
+FINDING 06 — A real pH change can also be health information.
+</h2>
+
+<p>
+This is where the “pH is fake” version of the argument goes too far.
+</p>
+
+<p>
+Changes in the vaginal environment can occur with conditions such as bacterial vaginosis and other infections.
+</p>
+
+<p>
+That is not something to diagnose from a bottle label or fix by repeatedly trying over-the-counter “balancing” products.
+</p>
+
+<p>
+If symptoms are significant or persistent, the question is no longer “Which wash should I buy?”
+</p>
+
+<p>
+The question is “What is causing this?”
+</p>
+
+
+
+<h2>
+FINDING 07 — Know when to stop troubleshooting in the bathroom.
+</h2>
+
+<p>
+New or persistent strong odor, unusual discharge, significant itching, burning, pain, sores, swelling, bleeding, or discomfort that keeps returning deserves evaluation.
+</p>
+
+<p>
+Those symptoms can have causes that require actual diagnosis.
+</p>
+
+<p>
+Do not try to “balance” your way out of a problem that needs medical attention.
+</p>
+
+
+
+<h3>
+THE MEISTER’S VERDICT
+</h3>
+
+<p>
+pH exists.
+</p>
+
+<p>
+The marketing department did not invent chemistry.
+</p>
+
+<p>
+It did, however, discover that the word “balance” fits beautifully on a bottle.
+</p>
+
+<p>
+Your body usually does not need constant chemical supervision.
+</p>
+
+<p>
+Keep routine care gentle and external. Pay attention to irritation. Reduce unnecessary variables. And when something genuinely changes, treat it as health information rather than evidence that you failed to purchase the correct scented liquid.
+</p>
+
+<p>
+<strong>
+INSPECTION STATUS: CHEMISTRY CONFIRMED, THEATER REDUCED
+</strong>
+</p>
+
+
+
+<aside
+  class="related"
+  aria-label="Related care"
+>
+
+<p class="kicker">
+Related Care
+</p>
+
+<h3>
+Keep the ecosystem simple
+</h3>
+
+<p>
+Read <a href="/articles/external-means-external.html">External Means External</a>, <a href="/articles/clean-isnt-sterile.html">Clean Isn’t Sterile</a>, and <a href="/articles/odor-is-information.html">Odor Is Information</a>, or visit the <a href="/shoppe/">Shoppe</a> for practical external-care equipment.
+</p>
+
+</aside>
+
+
+
+<p class="meta">
+This article provides general educational information and is not medical advice. Avoid unnecessary internal cleaning. Persistent or concerning changes in odor, discharge, itching, burning, pain, sores, swelling, bleeding, or other symptoms should be evaluated by an appropriate healthcare professional.
+</p>
+
+
+</article>
+
 </main>
 
-<footer><div class="container">© <span id="y"></span> WAP MOP SHOPPE · <a href="/wapmopshoppe/disclosure/">Disclosure</a></div></footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+
+<footer>
+
+<div class="container">
+
+© WAP MOP SHOPPE · Institute for Practical Cleanliness ·
+
+<a href="/disclosure/">
+Affiliate disclosure
+</a>
+
+</div>
+
+</footer>
+
+
 </body>
+
 </html>
