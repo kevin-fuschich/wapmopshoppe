@@ -48,94 +48,59 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 .exam-wrap {
   margin:36px 0 0;
-
   border:3px solid var(--green);
   border-radius:20px;
-
   background:#fffdf8;
-
-  box-shadow:
-    0 24px 50px rgba(23,19,15,.16);
+  box-shadow:0 24px 50px rgba(23,19,15,.16);
 }
-
 
 .exam-header {
   position:relative;
-
   overflow:hidden;
-
   padding:26px 30px;
-
   border-radius:16px 16px 0 0;
-
   background:var(--green);
-
   color:#fff;
 }
 
-
 .exam-header::after {
   content:"?";
-
   position:absolute;
-
   right:-10px;
   top:-65px;
-
   font-size:200px;
-
   font-weight:950;
-
   line-height:1;
-
   color:rgba(255,255,255,.05);
-
   pointer-events:none;
 }
-
 
 .exam-label {
   position:relative;
   z-index:1;
-
   margin:0 0 6px;
-
   color:var(--gold);
-
   font-size:11px;
-
   font-weight:950;
-
   letter-spacing:.15em;
-
   text-transform:uppercase;
 }
-
 
 .exam-title {
   position:relative;
   z-index:1;
-
   margin:0;
-
   color:#fff;
-
   font-size:clamp(30px,5vw,44px);
-
   line-height:1;
-
   letter-spacing:-.035em;
 }
-
 
 .exam-sub {
   position:relative;
   z-index:1;
-
   margin:10px 0 0;
-
-  color:rgba(255,255,255,.72);
-
+  color:rgba(255,255,255,.74);
   font-size:13px;
 }
 
@@ -148,86 +113,50 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   padding:30px;
 }
 
-
-/* =========================================================
-   PROGRESS
-   ========================================================= */
-
 .quiz-progress {
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
   gap:16px;
-
   margin-bottom:12px;
 }
 
-
 .quiz-progress-text {
   margin:0;
-
   color:var(--rust);
-
   font-size:12px;
-
   font-weight:950;
-
   letter-spacing:.09em;
-
   text-transform:uppercase;
 }
 
-
 .quiz-score {
   margin:0;
-
   color:var(--muted);
-
   font-size:12px;
-
   font-weight:850;
 }
 
-
 .progress-track {
   width:100%;
-
   height:8px;
-
   margin:0 0 28px;
-
   overflow:hidden;
-
   border-radius:999px;
-
   background:rgba(23,19,15,.1);
 }
-
 
 .progress-bar {
   width:10%;
   height:100%;
-
   background:var(--rust);
-
   transition:width .25s ease;
 }
 
-
-/* =========================================================
-   QUESTION
-   ========================================================= */
-
 .quiz-question {
   margin:0 0 24px;
-
   color:var(--ink);
-
   font-size:clamp(23px,4vw,30px);
-
   line-height:1.22;
 }
 
@@ -241,28 +170,27 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   gap:12px;
 }
 
-
 .quiz-option {
-  width:100%;
+  -webkit-appearance:none;
+  appearance:none;
 
+  display:block;
+  width:100%;
   min-height:60px;
 
   padding:15px 18px;
 
   border:2px solid rgba(23,19,15,.14);
-
   border-radius:11px;
 
   background:#fff;
-
   color:var(--ink);
 
+  -webkit-text-fill-color:var(--ink);
+
   font:inherit;
-
   font-size:15px;
-
   font-weight:750;
-
   line-height:1.4;
 
   text-align:left;
@@ -270,28 +198,17 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   cursor:pointer;
 }
 
-
 .quiz-option:hover {
   border-color:var(--rust);
 }
 
-
-.quiz-option[disabled] {
-  cursor:default;
-  opacity:1;
-}
-
-
 .quiz-option.correct {
   border-color:var(--green);
-
   background:rgba(47,75,50,.1);
 }
 
-
 .quiz-option.incorrect {
   border-color:var(--rust);
-
   background:rgba(184,76,47,.08);
 }
 
@@ -301,70 +218,82 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
    ========================================================= */
 
 .advance-area {
-  margin:24px 0 0;
-}
+  margin:28px 0 0;
+  padding:18px;
 
-
-.advance-label {
-  margin:0 0 8px;
-
-  color:var(--muted);
-
-  font-size:11px;
-
-  font-weight:900;
-
-  letter-spacing:.08em;
-
-  text-transform:uppercase;
-}
-
-
-.quiz-next {
-  display:block;
-
-  width:100%;
-
-  min-height:64px;
-
-  padding:16px 20px;
-
-  border:0;
-
-  border-radius:10px;
+  border-radius:14px;
 
   background:var(--rust);
 
+  box-shadow:
+    0 10px 24px rgba(23,19,15,.15);
+}
+
+.advance-label {
+  margin:0 0 10px;
+
   color:#fff;
+  -webkit-text-fill-color:#fff;
 
-  font:inherit;
-
-  font-size:18px;
-
+  font-size:11px;
   font-weight:950;
 
-  letter-spacing:.035em;
-
-  cursor:pointer;
-
-  box-shadow:
-    0 8px 18px rgba(184,76,47,.2);
+  letter-spacing:.1em;
+  text-align:center;
+  text-transform:uppercase;
 }
 
+.quiz-next {
+  -webkit-appearance:none !important;
+  appearance:none !important;
 
-.quiz-next:disabled {
-  background:#d8d1c8;
+  display:block !important;
 
-  color:#756d64;
+  width:100% !important;
+  min-height:66px !important;
 
-  box-shadow:none;
+  margin:0 !important;
 
-  cursor:not-allowed;
+  padding:16px 20px !important;
+
+  border:3px solid #fff !important;
+  border-radius:10px !important;
+
+  background:#fff !important;
+
+  color:var(--green) !important;
+  -webkit-text-fill-color:var(--green) !important;
+
+  opacity:1 !important;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif !important;
+
+  font-size:18px !important;
+  font-weight:950 !important;
+
+  letter-spacing:.03em !important;
+
+  text-align:center !important;
+
+  cursor:pointer !important;
 }
 
+.quiz-next:hover {
+  transform:translateY(-1px);
+}
 
-.quiz-next:not(:disabled):hover {
-  filter:brightness(1.05);
+.quiz-next:focus-visible,
+.quiz-option:focus-visible,
+.quiz-restart:focus-visible {
+  outline:4px solid var(--gold);
+  outline-offset:3px;
 }
 
 
@@ -380,19 +309,15 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   padding:22px;
 
   border:1px solid var(--line);
-
   border-left:6px solid var(--gold);
-
   border-radius:12px;
 
   background:var(--card);
 }
 
-
 .quiz-feedback.show {
   display:block;
 }
-
 
 .quiz-feedback-status {
   margin:0 0 8px;
@@ -400,14 +325,11 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   color:var(--rust);
 
   font-size:13px;
-
   font-weight:950;
 
   letter-spacing:.1em;
-
   text-transform:uppercase;
 }
-
 
 .quiz-feedback p:last-child {
   margin-bottom:0;
@@ -422,75 +344,55 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   display:none;
 }
 
-
 .quiz-result.show {
   display:block;
 }
 
-
 .result-kicker {
   margin:0 0 6px;
-
   color:var(--rust);
-
   font-size:12px;
-
   font-weight:950;
-
   letter-spacing:.1em;
-
   text-transform:uppercase;
 }
 
-
 .quiz-result h2 {
   margin:0 0 14px;
-
   font-size:clamp(30px,5vw,44px);
-
   line-height:1;
 }
-
 
 .result-score {
   margin:18px 0 12px;
-
   color:var(--green);
-
   font-size:clamp(54px,10vw,78px);
-
   font-weight:950;
-
   line-height:1;
 }
-
 
 .result-status {
   display:inline-block;
 
   margin:14px 0 26px;
-
   padding:9px 12px;
 
   border:2px solid var(--green);
-
   border-radius:999px;
 
   color:var(--green);
 
   font-size:12px;
-
   font-weight:950;
-
   letter-spacing:.06em;
 }
 
-
 .quiz-restart {
+  -webkit-appearance:none;
+  appearance:none;
+
   display:inline-flex;
-
   align-items:center;
-
   justify-content:center;
 
   min-height:48px;
@@ -498,60 +400,42 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   padding:12px 18px;
 
   border:0;
-
   border-radius:8px;
 
   background:var(--rust);
 
   color:#fff;
+  -webkit-text-fill-color:#fff;
 
   font:inherit;
-
   font-weight:950;
 
   cursor:pointer;
 }
 
-
 .result-links {
   display:flex;
-
   flex-wrap:wrap;
-
   gap:10px;
-
   margin-top:22px;
 }
 
-
 .result-links a {
   display:inline-flex;
-
   align-items:center;
-
   min-height:44px;
-
   padding:10px 14px;
-
   border:1px solid var(--line);
-
   border-radius:8px;
-
   background:#fff;
-
   color:var(--ink);
-
   font-weight:850;
-
   text-decoration:none;
 }
 
-
 .quiz-disclaimer {
   margin-top:28px;
-
   color:var(--muted);
-
   font-size:13px;
 }
 
@@ -576,9 +460,13 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
     min-height:62px;
   }
 
+  .advance-area {
+    padding:14px;
+  }
+
   .quiz-next {
-    min-height:66px;
-    font-size:17px;
+    min-height:68px !important;
+    font-size:17px !important;
   }
 
 }
@@ -595,10 +483,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 <div class="container header-inner">
 
-<a
-  class="brand"
-  href="/"
->
+<a class="brand" href="/">
 
 <img
   src="/assets/figures/meister-stamp.png"
@@ -614,29 +499,17 @@ WAP MOP SHOPPE
 
 <nav>
 
-<a href="/articles/">
-Articles
-</a>
+<a href="/articles/">Articles</a>
 
-<a href="/media/">
-Media
-</a>
+<a href="/media/">Media</a>
 
-<a href="/shoppe/">
-Shoppe
-</a>
+<a href="/shoppe/">Shoppe</a>
 
-<a href="/start/">
-Comfort Check
-</a>
+<a href="/start/">Comfort Check</a>
 
-<a href="/about/">
-About
-</a>
+<a href="/about/">About</a>
 
-<a href="/disclosure/">
-Disclosure
-</a>
+<a href="/disclosure/">Disclosure</a>
 
 </nav>
 
@@ -763,8 +636,6 @@ Score: 0
 
 
 
-<!-- ALWAYS VISIBLE -->
-
 <div
   id="advanceArea"
   class="advance-area"
@@ -774,16 +645,15 @@ Score: 0
   id="advanceLabel"
   class="advance-label"
 >
-Select one answer above.
+SELECT AN ANSWER, THEN CONTINUE
 </p>
 
 <button
   id="nextButton"
   class="quiz-next"
   type="button"
-  disabled
 >
-CHOOSE AN ANSWER FIRST
+SELECT AN ANSWER FIRST
 </button>
 
 </div>
@@ -1175,14 +1045,12 @@ function renderQuestion() {
   feedback.classList.remove("show");
 
 
-  nextButton.disabled = true;
-
   nextButton.textContent =
-    "CHOOSE AN ANSWER FIRST";
+    "SELECT AN ANSWER FIRST";
 
 
   advanceLabel.textContent =
-    "Select one answer above.";
+    "SELECT AN ANSWER, THEN CONTINUE";
 
 
   item.answers.forEach((answer,index) => {
@@ -1254,9 +1122,6 @@ function selectAnswer(selectedIndex) {
 
   buttons.forEach((button,index) => {
 
-    button.disabled = true;
-
-
     if(index === item.correct) {
 
       button.classList.add("correct");
@@ -1273,6 +1138,10 @@ function selectAnswer(selectedIndex) {
 
     }
 
+
+    button.style.pointerEvents =
+      "none";
+
   });
 
 
@@ -1287,9 +1156,6 @@ function selectAnswer(selectedIndex) {
     `Score: ${score}`;
 
 
-  nextButton.disabled = false;
-
-
   if(
     currentQuestion ===
     questions.length - 1
@@ -1299,7 +1165,7 @@ function selectAnswer(selectedIndex) {
       "SEE RESULTS →";
 
     advanceLabel.textContent =
-      "Final answer recorded.";
+      "FINAL ANSWER RECORDED";
 
   } else {
 
@@ -1307,7 +1173,7 @@ function selectAnswer(selectedIndex) {
       "NEXT QUESTION →";
 
     advanceLabel.textContent =
-      "Answer recorded. Continue when ready.";
+      "ANSWER RECORDED · CONTINUE";
 
   }
 
@@ -1327,7 +1193,14 @@ function selectAnswer(selectedIndex) {
 
 function nextQuestion() {
 
-  if(!answered) return;
+  if(!answered) {
+
+    advanceLabel.textContent =
+      "CHOOSE ONE OF THE ANSWERS ABOVE FIRST";
+
+    return;
+
+  }
 
 
   if(
