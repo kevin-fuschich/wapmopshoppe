@@ -24,9 +24,20 @@ Articles & Field Reports | WAP MOP SHOPPE
   href="https://wapmopshoppe.com/articles/"
 >
 
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="WAP MOP SHOPPE" />
-<meta property="og:title" content="Articles & Field Reports | WAP MOP SHOPPE" />
+<meta
+  property="og:type"
+  content="website"
+/>
+
+<meta
+  property="og:site_name"
+  content="WAP MOP SHOPPE"
+/>
+
+<meta
+  property="og:title"
+  content="Articles & Field Reports | WAP MOP SHOPPE"
+/>
 
 <meta
   property="og:description"
@@ -38,7 +49,10 @@ Articles & Field Reports | WAP MOP SHOPPE
   content="https://wapmopshoppe.com/articles/"
 >
 
-<meta name="twitter:card" content="summary" />
+<meta
+  name="twitter:card"
+  content="summary"
+/>
 
 <link
   rel="icon"
@@ -446,60 +460,125 @@ main {
    FIELD EXAMINATION
    ========================================================= */
 
-.quiz-feature {
+.quiz-feature-link {
 
   grid-column:1 / -1;
+
+  display:block;
+
+  margin:10px 0 22px;
+
+  color:#fff;
+
+  text-decoration:none;
+
+}
+
+
+.quiz-feature {
+
+  position:relative;
+
+  overflow:hidden;
 
   display:grid;
 
   grid-template-columns:
-    minmax(0,1.45fr)
-    minmax(220px,.55fr);
+    minmax(0,1.5fr)
+    minmax(210px,.5fr);
 
-  gap:28px;
+  gap:32px;
 
   align-items:center;
 
-  margin:4px 0 14px;
-
-  padding:28px;
+  padding:34px;
 
   border:
-    1px solid rgba(47,75,50,.28);
+    3px solid var(--green);
 
   border-radius:18px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(47,75,50,.09),
-      rgba(216,162,58,.12),
-      rgba(255,253,248,.96)
-    );
+  background:var(--green);
+
+  color:#fff;
 
   box-shadow:
-    0 10px 24px rgba(23,19,15,.05);
+    0 18px 36px rgba(23,19,15,.15);
+
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease;
+
+}
+
+
+.quiz-feature-link:hover .quiz-feature {
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 22px 44px rgba(23,19,15,.2);
+
+}
+
+
+.quiz-feature-link:focus-visible {
+
+  outline:
+    4px solid var(--gold);
+
+  outline-offset:5px;
+
+  border-radius:18px;
+
+}
+
+
+.quiz-feature::after {
+
+  content:"?";
+
+  position:absolute;
+
+  right:-15px;
+
+  bottom:-95px;
+
+  font-size:260px;
+
+  font-weight:950;
+
+  line-height:1;
+
+  color:
+    rgba(255,255,255,.045);
+
+  pointer-events:none;
 
 }
 
 
 .quiz-feature .kicker {
 
-  color:var(--green);
+  margin-bottom:8px;
+
+  color:var(--gold);
 
 }
 
 
 .quiz-feature h2 {
 
-  margin:0 0 10px;
+  margin:0 0 12px;
+
+  color:#fff;
 
   font-size:
-    clamp(27px,4vw,38px);
+    clamp(32px,5vw,48px);
 
-  line-height:1.05;
+  line-height:1;
 
-  letter-spacing:-.025em;
+  letter-spacing:-.035em;
 
 }
 
@@ -508,32 +587,67 @@ main {
 
   max-width:650px;
 
-  margin:0 0 14px;
+  margin:0 0 16px;
 
-  color:var(--muted);
+  color:
+    rgba(255,255,255,.82);
+
+  font-size:16px;
 
 }
 
 
 .quiz-feature strong {
 
-  color:var(--ink);
+  color:#fff;
+
+}
+
+
+.quiz-cta {
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-top:6px;
+
+  padding:13px 19px;
+
+  border-radius:8px;
+
+  background:var(--rust);
+
+  color:#fff;
+
+  font-size:15px;
+
+  font-weight:950;
+
+  letter-spacing:.02em;
 
 }
 
 
 .quiz-stamp {
 
-  padding:22px;
+  position:relative;
+
+  z-index:1;
+
+  padding:24px 18px;
 
   border:
-    1px dashed rgba(47,75,50,.45);
+    2px dashed rgba(255,255,255,.45);
 
   border-radius:14px;
 
   text-align:center;
 
-  transform:rotate(1deg);
+  transform:
+    rotate(1.5deg);
 
 }
 
@@ -549,13 +663,13 @@ main {
 
   margin-bottom:8px;
 
-  color:var(--green);
+  color:var(--gold);
 
   font-size:11px;
 
   font-weight:950;
 
-  letter-spacing:.12em;
+  letter-spacing:.14em;
 
   text-transform:uppercase;
 
@@ -564,58 +678,25 @@ main {
 
 .quiz-stamp .big {
 
-  color:var(--ink);
+  color:#fff;
 
-  font-size:24px;
+  font-size:27px;
 
   font-weight:950;
 
-  line-height:1.1;
+  line-height:1.05;
 
 }
 
 
 .quiz-stamp .sub {
 
-  margin-top:8px;
+  margin-top:10px;
 
-  color:var(--muted);
+  color:
+    rgba(255,255,255,.7);
 
   font-size:12px;
-
-}
-
-
-.quiz-button {
-
-  display:inline-flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  margin-top:4px;
-
-  padding:11px 16px;
-
-  border-radius:8px;
-
-  background:var(--rust);
-
-  color:#fff;
-
-  font-size:14px;
-
-  font-weight:950;
-
-  text-decoration:none;
-
-}
-
-
-.quiz-button:hover {
-
-  text-decoration:none;
 
 }
 
@@ -681,11 +762,21 @@ footer a {
 
   }
 
-  .quiz-feature {
+  .quiz-feature-link {
 
     grid-column:auto;
 
+  }
+
+  .quiz-feature {
+
     grid-template-columns:1fr;
+
+  }
+
+  .quiz-stamp {
+
+    display:none;
 
   }
 
@@ -790,7 +881,7 @@ hygiene realities, language, personal care, and everyday equipment.
 
 
 <!-- =====================================================
-     NEWEST ARTICLE
+     NEWEST
      ===================================================== -->
 
 <article class="card newest">
@@ -833,12 +924,18 @@ Read report
      CUNNILINGUS QUIZ
      ===================================================== -->
 
+<a
+  class="quiz-feature-link"
+  href="/quiz/cunnilingus/"
+  aria-label="Take the Cunnilingus Quiz"
+>
+
 <section class="quiz-feature">
 
 <div>
 
 <p class="kicker">
-Field Examination · New
+New · Field Examination
 </p>
 
 <h2>
@@ -846,25 +943,24 @@ The Cunnilingus Quiz
 </h2>
 
 <p>
-The word was only the beginning.
-Test what you actually know about the anatomy,
-language, biology, hygiene, and sexual health
-surrounding cunnilingus.
+Think you know the subject?
+</p>
+
+<p>
+Ten questions covering anatomy, language, biology,
+hygiene, and sexual health — including a few things
+you probably won't learn from the article.
 </p>
 
 <p>
 <strong>
-10 questions. Immediate explanations.
-No practical examination required.
+10 QUESTIONS · IMMEDIATE ANSWERS · KNOWLEDGE ONLY
 </strong>
 </p>
 
-<a
-  class="quiz-button"
-  href="/quiz/cunnilingus/"
->
-Take the Cunnilingus Quiz →
-</a>
+<span class="quiz-cta">
+TAKE THE QUIZ →
+</span>
 
 </div>
 
@@ -884,12 +980,14 @@ EXAMINATION
 </span>
 
 <span class="sub">
-Knowledge assessment only.
+No practical demonstration required.
 </span>
 
 </div>
 
 </section>
+
+</a>
 
 
 
@@ -906,9 +1004,11 @@ Field Report 001
 </p>
 
 <h3>
+
 <a href="/articles/travel-bidet.html">
 Portable Water Delivery Devices for Situations That Have Gone Sideways
 </a>
+
 </h3>
 
 <p>
@@ -918,7 +1018,10 @@ camping, or mid-flight.
 
 </div>
 
-<a class="card-link" href="/articles/travel-bidet.html">
+<a
+  class="card-link"
+  href="/articles/travel-bidet.html"
+>
 Read report
 </a>
 
@@ -926,7 +1029,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 002 -->
+<!-- =====================================================
+     FIELD REPORT 002
+     ===================================================== -->
 
 <article class="card">
 
@@ -937,9 +1042,11 @@ Field Report 002
 </p>
 
 <h3>
+
 <a href="/articles/tongue-scraper.html">
 Do You Actually Need a Tongue Scraper?
 </a>
+
 </h3>
 
 <p>
@@ -949,7 +1056,10 @@ breath, and terrain inspection.
 
 </div>
 
-<a class="card-link" href="/articles/tongue-scraper.html">
+<a
+  class="card-link"
+  href="/articles/tongue-scraper.html"
+>
 Read report
 </a>
 
@@ -957,7 +1067,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 003 -->
+<!-- =====================================================
+     FIELD REPORT 003
+     ===================================================== -->
 
 <article class="card">
 
@@ -968,9 +1080,11 @@ Field Report 003
 </p>
 
 <h3>
+
 <a href="/articles/towel-smell.html">
 Why Does Your Towel Smell Weird Even After You Wash It?
 </a>
+
 </h3>
 
 <p>
@@ -980,7 +1094,10 @@ and laundry realities.
 
 </div>
 
-<a class="card-link" href="/articles/towel-smell.html">
+<a
+  class="card-link"
+  href="/articles/towel-smell.html"
+>
 Read report
 </a>
 
@@ -988,7 +1105,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 004 -->
+<!-- =====================================================
+     FIELD REPORT 004
+     ===================================================== -->
 
 <article class="card">
 
@@ -999,9 +1118,11 @@ Field Report 004
 </p>
 
 <h3>
+
 <a href="/articles/armpit-odor.html">
 Why Do Your Armpits Still Smell After You Shower?
 </a>
+
 </h3>
 
 <p>
@@ -1011,7 +1132,10 @@ and why freshness sometimes returns to work too quickly.
 
 </div>
 
-<a class="card-link" href="/articles/armpit-odor.html">
+<a
+  class="card-link"
+  href="/articles/armpit-odor.html"
+>
 Read report
 </a>
 
@@ -1019,7 +1143,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 005 -->
+<!-- =====================================================
+     FIELD REPORT 005
+     ===================================================== -->
 
 <article class="card">
 
@@ -1030,9 +1156,11 @@ Field Report 005
 </p>
 
 <h3>
+
 <a href="/articles/water-bottle-slime.html">
 Why Does Your Water Bottle Get Slimy?
 </a>
+
 </h3>
 
 <p>
@@ -1042,7 +1170,10 @@ and vessel maintenance.
 
 </div>
 
-<a class="card-link" href="/articles/water-bottle-slime.html">
+<a
+  class="card-link"
+  href="/articles/water-bottle-slime.html"
+>
 Read report
 </a>
 
@@ -1050,7 +1181,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 006 -->
+<!-- =====================================================
+     FIELD REPORT 006
+     ===================================================== -->
 
 <article class="card">
 
@@ -1061,9 +1194,11 @@ Field Report 006
 </p>
 
 <h3>
+
 <a href="/articles/mustache-hygiene.html">
 Is Your Mustache Dirty?
 </a>
+
 </h3>
 
 <p>
@@ -1073,7 +1208,10 @@ and mustache maintenance.
 
 </div>
 
-<a class="card-link" href="/articles/mustache-hygiene.html">
+<a
+  class="card-link"
+  href="/articles/mustache-hygiene.html"
+>
 Read report
 </a>
 
@@ -1081,7 +1219,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 007 -->
+<!-- =====================================================
+     FIELD REPORT 007
+     ===================================================== -->
 
 <article class="card">
 
@@ -1092,9 +1232,11 @@ Field Report 007
 </p>
 
 <h3>
+
 <a href="/articles/beard-flaking.html">
 Why Is the Skin Under Your Beard Flaking?
 </a>
+
 </h3>
 
 <p>
@@ -1104,7 +1246,10 @@ and dealing with unexpected winter on your face.
 
 </div>
 
-<a class="card-link" href="/articles/beard-flaking.html">
+<a
+  class="card-link"
+  href="/articles/beard-flaking.html"
+>
 Read report
 </a>
 
@@ -1112,7 +1257,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 009 -->
+<!-- =====================================================
+     FIELD REPORT 009
+     ===================================================== -->
 
 <article class="card">
 
@@ -1123,9 +1270,11 @@ Field Report 009
 </p>
 
 <h3>
+
 <a href="/articles/wash-face-in-shower.html">
 Should You Wash Your Face in the Shower?
 </a>
+
 </h3>
 
 <p>
@@ -1135,7 +1284,10 @@ and convenient bathroom geography.
 
 </div>
 
-<a class="card-link" href="/articles/wash-face-in-shower.html">
+<a
+  class="card-link"
+  href="/articles/wash-face-in-shower.html"
+>
 Read report
 </a>
 
@@ -1143,7 +1295,9 @@ Read report
 
 
 
-<!-- FIELD REPORT 012 -->
+<!-- =====================================================
+     FIELD REPORT 012
+     ===================================================== -->
 
 <article class="card">
 
@@ -1154,9 +1308,11 @@ Field Report 012
 </p>
 
 <h3>
+
 <a href="/articles/wash-behind-ears.html">
 Do You Actually Need to Wash Behind Your Ears?
 </a>
+
 </h3>
 
 <p>
@@ -1166,7 +1322,10 @@ skin folds, and childhood instructions.
 
 </div>
 
-<a class="card-link" href="/articles/wash-behind-ears.html">
+<a
+  class="card-link"
+  href="/articles/wash-behind-ears.html"
+>
 Read report
 </a>
 
@@ -1174,341 +1333,871 @@ Read report
 
 
 
-<!-- CORE SYSTEMS -->
+<!-- =====================================================
+     CORE SYSTEMS
+     ===================================================== -->
 
 <article class="card">
+
 <div>
-<p class="kicker">Case File</p>
-<h3><a href="/articles/mouths-as-systems.html">Mouth Systems</a></h3>
+
+<p class="kicker">
+Case File
+</p>
+
+<h3>
+
+<a href="/articles/mouths-as-systems.html">
+Mouth Systems
+</a>
+
+</h3>
+
 <p>
 Breath, brushing, tongue care, rinsing,
 and why harsh does not always mean better.
 </p>
+
 </div>
-<a class="card-link" href="/articles/mouths-as-systems.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/mouths-as-systems.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Case File</p>
-<h3><a href="/articles/laundry-as-intimate-care.html">Laundry as Intimate Care</a></h3>
+
+<p class="kicker">
+Case File
+</p>
+
+<h3>
+
+<a href="/articles/laundry-as-intimate-care.html">
+Laundry as Intimate Care
+</a>
+
+</h3>
+
 <p>
 Towels, underwear, sheets, detergent,
 and the quiet hygiene work clothing performs.
 </p>
+
 </div>
-<a class="card-link" href="/articles/laundry-as-intimate-care.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/laundry-as-intimate-care.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">System Note</p>
-<h3><a href="/articles/body-wash-sensitive-skin.html">Body Wash for Sensitive Skin</a></h3>
+
+<p class="kicker">
+System Note
+</p>
+
+<h3>
+
+<a href="/articles/body-wash-sensitive-skin.html">
+Body Wash for Sensitive Skin
+</a>
+
+</h3>
+
 <p>
 Gentle care, fewer scent theatrics,
 and fewer reasons for your skin to file a complaint.
 </p>
+
 </div>
-<a class="card-link" href="/articles/body-wash-sensitive-skin.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/body-wash-sensitive-skin.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">System Note</p>
-<h3><a href="/articles/aftercare-is-respect.html">Aftercare is Respect</a></h3>
+
+<p class="kicker">
+System Note
+</p>
+
+<h3>
+
+<a href="/articles/aftercare-is-respect.html">
+Aftercare is Respect
+</a>
+
+</h3>
+
 <p>
 Cleanup, comfort, communication,
 and products that belong outside the body.
 </p>
+
 </div>
-<a class="card-link" href="/articles/aftercare-is-respect.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/aftercare-is-respect.html"
+>
+Read article
+</a>
+
 </article>
 
 
 
-<!-- PRINCIPLES & GUIDES -->
+<!-- =====================================================
+     PRINCIPLES & GUIDES
+     ===================================================== -->
 
 <article class="card">
+
 <div>
-<p class="kicker">Institute Principle</p>
-<h3><a href="/articles/friction-is-information.html">Friction is Information</a></h3>
+
+<p class="kicker">
+Institute Principle
+</p>
+
+<h3>
+
+<a href="/articles/friction-is-information.html">
+Friction is Information
+</a>
+
+</h3>
+
 <p>
 Understanding when your skin is trying
 to tell you to stop scrubbing.
 </p>
+
 </div>
-<a class="card-link" href="/articles/friction-is-information.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/friction-is-information.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Institute Principle</p>
-<h3><a href="/articles/clean-isnt-sterile.html">Clean Isn't Sterile</a></h3>
+
+<p class="kicker">
+Institute Principle
+</p>
+
+<h3>
+
+<a href="/articles/clean-isnt-sterile.html">
+Clean Isn't Sterile
+</a>
+
+</h3>
+
 <p>
 Embracing the microbiome instead of waging
 chemical warfare on your own body.
 </p>
+
 </div>
-<a class="card-link" href="/articles/clean-isnt-sterile.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/clean-isnt-sterile.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Institute Principle</p>
-<h3><a href="/articles/odor-is-information.html">Odor is Information</a></h3>
+
+<p class="kicker">
+Institute Principle
+</p>
+
+<h3>
+
+<a href="/articles/odor-is-information.html">
+Odor is Information
+</a>
+
+</h3>
+
 <p>
 Decoding what your body's chemistry
 is trying to communicate.
 </p>
+
 </div>
-<a class="card-link" href="/articles/odor-is-information.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/odor-is-information.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Boundaries</p>
-<h3><a href="/articles/external-means-external.html">External Means External</a></h3>
+
+<p class="kicker">
+Boundaries
+</p>
+
+<h3>
+
+<a href="/articles/external-means-external.html">
+External Means External
+</a>
+
+</h3>
+
 <p>
 A firm boundary guide for washing,
 rinsing, and product placement.
 </p>
+
 </div>
-<a class="card-link" href="/articles/external-means-external.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/external-means-external.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Grooming Guide</p>
-<h3><a href="/articles/how-to-shave-without-irritation.html">How to Shave Without Irritation</a></h3>
+
+<p class="kicker">
+Grooming Guide
+</p>
+
+<h3>
+
+<a href="/articles/how-to-shave-without-irritation.html">
+How to Shave Without Irritation
+</a>
+
+</h3>
+
 <p>
 Techniques for managing friction,
 razor burn, and sensitive skin boundaries.
 </p>
+
 </div>
-<a class="card-link" href="/articles/how-to-shave-without-irritation.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/how-to-shave-without-irritation.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Grooming Guide</p>
-<h3><a href="/articles/how-to-groom-pubic-hair-for-men.html">How to Groom Pubic Hair</a></h3>
+
+<p class="kicker">
+Grooming Guide
+</p>
+
+<h3>
+
+<a href="/articles/how-to-groom-pubic-hair-for-men.html">
+How to Groom Pubic Hair
+</a>
+
+</h3>
+
 <p>
 Practical navigation for sensitive areas
 without unnecessary drama.
 </p>
+
 </div>
-<a class="card-link" href="/articles/how-to-groom-pubic-hair-for-men.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/how-to-groom-pubic-hair-for-men.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Grooming Guide</p>
-<h3><a href="/articles/prevent-razor-bumps-sensitive-areas.html">Prevent Razor Bumps in Sensitive Areas</a></h3>
+
+<p class="kicker">
+Grooming Guide
+</p>
+
+<h3>
+
+<a href="/articles/prevent-razor-bumps-sensitive-areas.html">
+Prevent Razor Bumps in Sensitive Areas
+</a>
+
+</h3>
+
 <p>
 Stopping friction loops and skin complaints
 before they start.
 </p>
+
 </div>
-<a class="card-link" href="/articles/prevent-razor-bumps-sensitive-areas.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/prevent-razor-bumps-sensitive-areas.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Intimate Care</p>
-<h3><a href="/articles/how-to-wash-after-sex.html">How to Wash After Sex</a></h3>
+
+<p class="kicker">
+Intimate Care
+</p>
+
+<h3>
+
+<a href="/articles/how-to-wash-after-sex.html">
+How to Wash After Sex
+</a>
+
+</h3>
+
 <p>
 Low-friction, external-only care routines
 that respect your barrier.
 </p>
+
 </div>
-<a class="card-link" href="/articles/how-to-wash-after-sex.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/how-to-wash-after-sex.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Intimate Care</p>
-<h3><a href="/articles/prevent-chafing-during-sex.html">Prevent Chafing During Sex</a></h3>
+
+<p class="kicker">
+Intimate Care
+</p>
+
+<h3>
+
+<a href="/articles/prevent-chafing-during-sex.html">
+Prevent Chafing During Sex
+</a>
+
+</h3>
+
 <p>
 Practical preparation for friction management
 and sustained comfort.
 </p>
+
 </div>
-<a class="card-link" href="/articles/prevent-chafing-during-sex.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/prevent-chafing-during-sex.html"
+>
+Read article
+</a>
+
 </article>
 
 
 
-<!-- DEAR SHOPPE -->
+<!-- =====================================================
+     DEAR SHOPPE
+     ===================================================== -->
 
 <article class="card">
+
 <div>
-<p class="kicker">Dear Shoppe</p>
-<h3><a href="/articles/dear-shoppe-scented-soap.html">My partner uses scented soap. Help.</a></h3>
+
+<p class="kicker">
+Dear Shoppe
+</p>
+
+<h3>
+
+<a href="/articles/dear-shoppe-scented-soap.html">
+My partner uses scented soap. Help.
+</a>
+
+</h3>
+
 <p>
 A calm answer to a common bathroom diplomacy issue.
 </p>
+
 </div>
-<a class="card-link" href="/articles/dear-shoppe-scented-soap.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/dear-shoppe-scented-soap.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Dear Shoppe</p>
-<h3><a href="/articles/dear-shoppe-clean-without-hurt-feelings.html">Cleaning Without Hurt Feelings</a></h3>
+
+<p class="kicker">
+Dear Shoppe
+</p>
+
+<h3>
+
+<a href="/articles/dear-shoppe-clean-without-hurt-feelings.html">
+Cleaning Without Hurt Feelings
+</a>
+
+</h3>
+
 <p>
 Navigating hygiene conversations
 with partners respectfully.
 </p>
+
 </div>
-<a class="card-link" href="/articles/dear-shoppe-clean-without-hurt-feelings.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/dear-shoppe-clean-without-hurt-feelings.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Dear Shoppe</p>
-<h3><a href="/articles/dear-shoppe-oral-anxiety.html">Oral Care Anxiety</a></h3>
+
+<p class="kicker">
+Dear Shoppe
+</p>
+
+<h3>
+
+<a href="/articles/dear-shoppe-oral-anxiety.html">
+Oral Care Anxiety
+</a>
+
+</h3>
+
 <p>
 Addressing common worries about breath,
 teeth, and systems.
 </p>
+
 </div>
-<a class="card-link" href="/articles/dear-shoppe-oral-anxiety.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/dear-shoppe-oral-anxiety.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Dear Shoppe</p>
-<h3><a href="/articles/dear-shoppe-partner-wants-hairless.html">When a Partner Wants You Hairless</a></h3>
+
+<p class="kicker">
+Dear Shoppe
+</p>
+
+<h3>
+
+<a href="/articles/dear-shoppe-partner-wants-hairless.html">
+When a Partner Wants You Hairless
+</a>
+
+</h3>
+
 <p>
 Balancing personal sovereignty
 with relationship expectations.
 </p>
+
 </div>
-<a class="card-link" href="/articles/dear-shoppe-partner-wants-hairless.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/dear-shoppe-partner-wants-hairless.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Dear Shoppe</p>
-<h3><a href="/articles/dear-shoppe-stop-before-hurts.html">Stop Before It Hurts</a></h3>
+
+<p class="kicker">
+Dear Shoppe
+</p>
+
+<h3>
+
+<a href="/articles/dear-shoppe-stop-before-hurts.html">
+Stop Before It Hurts
+</a>
+
+</h3>
+
 <p>
 Recognizing when hygiene routines cross
 the line into punishment.
 </p>
+
 </div>
-<a class="card-link" href="/articles/dear-shoppe-stop-before-hurts.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/dear-shoppe-stop-before-hurts.html"
+>
+Read article
+</a>
+
 </article>
 
 
 
-<!-- INVESTIGATIONS -->
+<!-- =====================================================
+     INVESTIGATIONS
+     ===================================================== -->
 
 <article class="card">
+
 <div>
-<p class="kicker">Investigation</p>
-<h3><a href="/articles/ph-balance-myth.html">The pH Balance Myth</a></h3>
+
+<p class="kicker">
+Investigation
+</p>
+
+<h3>
+
+<a href="/articles/ph-balance-myth.html">
+The pH Balance Myth
+</a>
+
+</h3>
+
 <p>
 Separating marketing theatrics
 from actual biological chemistry.
 </p>
+
 </div>
-<a class="card-link" href="/articles/ph-balance-myth.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/ph-balance-myth.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Investigation</p>
-<h3><a href="/articles/is-vibration-bad-for-sensitivity.html">Is Vibration Bad for Sensitivity?</a></h3>
+
+<p class="kicker">
+Investigation
+</p>
+
+<h3>
+
+<a href="/articles/is-vibration-bad-for-sensitivity.html">
+Is Vibration Bad for Sensitivity?
+</a>
+
+</h3>
+
 <p>
 An objective look at mechanical stimulation
 and nerve adaptation.
 </p>
+
 </div>
-<a class="card-link" href="/articles/is-vibration-bad-for-sensitivity.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/is-vibration-bad-for-sensitivity.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Investigation</p>
-<h3><a href="/articles/performance-hygiene-is-a-lie.html">Performance Hygiene is a Lie</a></h3>
+
+<p class="kicker">
+Investigation
+</p>
+
+<h3>
+
+<a href="/articles/performance-hygiene-is-a-lie.html">
+Performance Hygiene is a Lie
+</a>
+
+</h3>
+
 <p>
 Why scrubbing until you squeak
 is an industrial marketing fiction.
 </p>
+
 </div>
-<a class="card-link" href="/articles/performance-hygiene-is-a-lie.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/performance-hygiene-is-a-lie.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Investigation</p>
-<h3><a href="/articles/care-without-correction.html">Care Without Correction</a></h3>
+
+<p class="kicker">
+Investigation
+</p>
+
+<h3>
+
+<a href="/articles/care-without-correction.html">
+Care Without Correction
+</a>
+
+</h3>
+
 <p>
 Maintaining your body because you respect it,
 not because you're broken.
 </p>
+
 </div>
-<a class="card-link" href="/articles/care-without-correction.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/care-without-correction.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Investigation</p>
-<h3><a href="/articles/after-doesnt-mean-absent.html">After Doesn't Mean Absent</a></h3>
+
+<p class="kicker">
+Investigation
+</p>
+
+<h3>
+
+<a href="/articles/after-doesnt-mean-absent.html">
+After Doesn't Mean Absent
+</a>
+
+</h3>
+
 <p>
 Understanding what remains on the skin
 after a thorough wash.
 </p>
+
 </div>
-<a class="card-link" href="/articles/after-doesnt-mean-absent.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/after-doesnt-mean-absent.html"
+>
+Read article
+</a>
+
 </article>
 
 
 
-<!-- EQUIPMENT GUIDES -->
+<!-- =====================================================
+     EQUIPMENT GUIDES
+     ===================================================== -->
 
 <article class="card">
+
 <div>
-<p class="kicker">Equipment Guide</p>
-<h3><a href="/articles/best-aftercare-towels.html">The Best Aftercare Towels</a></h3>
+
+<p class="kicker">
+Equipment Guide
+</p>
+
+<h3>
+
+<a href="/articles/best-aftercare-towels.html">
+The Best Aftercare Towels
+</a>
+
+</h3>
+
 <p>
 Selecting textiles that dry skin
 without acting like sandpaper.
 </p>
+
 </div>
-<a class="card-link" href="/articles/best-aftercare-towels.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/best-aftercare-towels.html"
+>
+Read article
+</a>
+
 </article>
 
 
+
 <article class="card">
+
 <div>
-<p class="kicker">Equipment Guide</p>
-<h3><a href="/articles/best-unscented-moisturizers-external.html">Best Unscented Moisturizers for External Care</a></h3>
+
+<p class="kicker">
+Equipment Guide
+</p>
+
+<h3>
+
+<a href="/articles/best-unscented-moisturizers-external.html">
+Best Unscented Moisturizers for External Care
+</a>
+
+</h3>
+
 <p>
 Barrier-friendly hydration
 without scent theatrics.
 </p>
+
 </div>
-<a class="card-link" href="/articles/best-unscented-moisturizers-external.html">Read article</a>
+
+<a
+  class="card-link"
+  href="/articles/best-unscented-moisturizers-external.html"
+>
+Read article
+</a>
+
 </article>
 
 
