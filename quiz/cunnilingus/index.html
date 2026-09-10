@@ -31,90 +31,239 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
    ========================================================= */
 
 .quiz-shell {
-  max-width:760px;
+  max-width:820px;
 }
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
 
 .quiz-intro {
   margin-bottom:30px;
 }
 
 .quiz-note {
-  margin:18px 0 0;
+  margin:20px 0 0;
   color:var(--muted);
   font-size:14px;
+  font-weight:700;
 }
 
-.quiz-panel {
-  margin:30px 0 0;
-  padding:26px;
-  border:1px solid var(--line);
-  border-radius:14px;
-  background:var(--card);
+
+/* =========================================================
+   EXAMINATION MODULE
+   ========================================================= */
+
+.exam-wrap {
+  margin:34px 0 0;
+  border-radius:20px;
+  overflow:hidden;
+
+  border:
+    3px solid var(--green);
+
+  box-shadow:
+    0 22px 48px rgba(23,19,15,.16);
 }
+
+
+/* =========================================================
+   EXAM HEADER
+   ========================================================= */
+
+.exam-header {
+  position:relative;
+  overflow:hidden;
+
+  padding:24px 28px;
+
+  background:var(--green);
+  color:#fff;
+}
+
+.exam-header::after {
+  content:"?";
+  position:absolute;
+  right:-12px;
+  top:-55px;
+
+  font-size:190px;
+  line-height:1;
+  font-weight:950;
+
+  color:rgba(255,255,255,.05);
+
+  pointer-events:none;
+}
+
+.exam-label {
+  position:relative;
+  z-index:1;
+
+  margin:0 0 5px;
+
+  color:var(--gold);
+
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.exam-title {
+  position:relative;
+  z-index:1;
+
+  margin:0;
+
+  color:#fff;
+
+  font-size:
+    clamp(28px,5vw,42px);
+
+  line-height:1;
+
+  letter-spacing:-.03em;
+}
+
+.exam-sub {
+  position:relative;
+  z-index:1;
+
+  margin:10px 0 0;
+
+  color:
+    rgba(255,255,255,.72);
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   QUESTION AREA
+   ========================================================= */
+
+.quiz-panel {
+  padding:30px;
+
+  background:#fffdf8;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
 
 .quiz-progress {
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   gap:16px;
-  margin-bottom:20px;
+
+  margin-bottom:14px;
 }
 
 .quiz-progress-text {
   margin:0;
-  color:var(--muted);
+
+  color:var(--rust);
+
   font-size:12px;
-  font-weight:850;
-  letter-spacing:.08em;
+  font-weight:950;
+
+  letter-spacing:.09em;
+
   text-transform:uppercase;
 }
 
 .quiz-score {
   margin:0;
+
   color:var(--muted);
+
   font-size:12px;
-  font-weight:750;
+  font-weight:850;
 }
 
 .progress-track {
   width:100%;
-  height:6px;
-  margin:0 0 26px;
+  height:8px;
+
+  margin:0 0 28px;
+
   overflow:hidden;
+
   border-radius:999px;
-  background:var(--line);
+
+  background:rgba(23,19,15,.1);
 }
 
 .progress-bar {
   width:10%;
   height:100%;
+
   background:var(--rust);
+
   transition:width .25s ease;
 }
 
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
 .quiz-question {
-  margin:0 0 22px;
-  font-size:25px;
-  line-height:1.25;
+  margin:0 0 24px;
+
+  color:var(--ink);
+
+  font-size:
+    clamp(23px,4vw,30px);
+
+  line-height:1.22;
 }
+
+
+/* =========================================================
+   ANSWERS
+   ========================================================= */
 
 .quiz-options {
   display:grid;
-  gap:10px;
+  gap:12px;
 }
 
 .quiz-option {
+  position:relative;
+
   width:100%;
-  padding:14px 16px;
-  border:1px solid var(--line);
-  border-radius:10px;
+
+  min-height:58px;
+
+  padding:15px 18px;
+
+  border:
+    2px solid rgba(23,19,15,.14);
+
+  border-radius:11px;
+
   background:#fff;
+
   color:var(--ink);
+
   font:inherit;
-  font-weight:700;
+
+  font-size:15px;
+  font-weight:750;
+
   line-height:1.4;
+
   text-align:left;
+
   cursor:pointer;
+
   transition:
     border-color .15s ease,
     background .15s ease,
@@ -123,38 +272,65 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 .quiz-option:hover {
   border-color:var(--rust);
+  transform:translateY(-1px);
 }
 
 .quiz-option:focus-visible,
 .quiz-next:focus-visible,
 .quiz-restart:focus-visible {
-  outline:3px solid var(--gold);
+  outline:
+    4px solid var(--gold);
+
   outline-offset:3px;
 }
 
 .quiz-option[disabled] {
   cursor:default;
+  transform:none;
   opacity:1;
 }
 
+
+/* correct answer */
+
 .quiz-option.correct {
-  border-color:var(--rust);
-  background:rgba(192,68,44,.08);
+  border-color:var(--green);
+
+  background:
+    rgba(47,75,50,.09);
 }
 
+
+/* selected incorrect */
+
 .quiz-option.incorrect {
-  border-style:dashed;
-  opacity:.72;
+  border-color:var(--rust);
+
+  background:
+    rgba(184,76,47,.07);
 }
+
+
+/* =========================================================
+   FEEDBACK
+   ========================================================= */
 
 .quiz-feedback {
   display:none;
-  margin:24px 0 0;
-  padding:20px;
-  border:1px solid var(--line);
-  border-left:4px solid var(--gold);
-  border-radius:10px;
-  background:#fff;
+
+  margin:26px 0 0;
+
+  padding:22px;
+
+  border:
+    1px solid var(--line);
+
+  border-left:
+    6px solid var(--gold);
+
+  border-radius:12px;
+
+  background:var(--card);
 }
 
 .quiz-feedback.show {
@@ -163,9 +339,14 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 .quiz-feedback-status {
   margin:0 0 8px;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.08em;
+
+  color:var(--rust);
+
+  font-size:13px;
+  font-weight:950;
+
+  letter-spacing:.1em;
+
   text-transform:uppercase;
 }
 
@@ -173,102 +354,243 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   margin-bottom:0;
 }
 
+
+/* =========================================================
+   NEXT QUESTION ACTION
+   ========================================================= */
+
 .quiz-actions {
   display:none;
-  margin-top:20px;
+
+  margin-top:18px;
+
+  padding:18px;
+
+  border-radius:12px;
+
+  background:var(--green);
+
+  text-align:center;
 }
 
 .quiz-actions.show {
-  display:flex;
+  display:block;
 }
 
-.quiz-next,
-.quiz-restart {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:44px;
-  padding:11px 16px;
+.next-instruction {
+  margin:0 0 10px;
+
+  color:
+    rgba(255,255,255,.72);
+
+  font-size:12px;
+
+  font-weight:800;
+
+  letter-spacing:.06em;
+
+  text-transform:uppercase;
+}
+
+.quiz-next {
+  width:100%;
+
+  min-height:54px;
+
+  padding:14px 20px;
+
   border:0;
-  border-radius:8px;
+
+  border-radius:9px;
+
   background:var(--rust);
+
   color:#fff;
+
   font:inherit;
-  font-weight:850;
+
+  font-size:16px;
+
+  font-weight:950;
+
+  letter-spacing:.02em;
+
   cursor:pointer;
 }
 
+.quiz-next:hover {
+  filter:brightness(1.06);
+}
+
+
+/* =========================================================
+   RESULTS
+   ========================================================= */
+
 .quiz-result {
   display:none;
+
+  padding:10px 0 4px;
 }
 
 .quiz-result.show {
   display:block;
 }
 
+.result-kicker {
+  margin:0 0 6px;
+
+  color:var(--rust);
+
+  font-size:12px;
+
+  font-weight:950;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+}
+
+.quiz-result h2 {
+  margin:0 0 14px;
+
+  font-size:
+    clamp(30px,5vw,44px);
+
+  line-height:1;
+}
+
 .result-score {
-  margin:6px 0 14px;
-  font-size:48px;
-  font-weight:900;
+  margin:18px 0 12px;
+
+  color:var(--green);
+
+  font-size:
+    clamp(54px,10vw,78px);
+
+  font-weight:950;
+
   line-height:1;
 }
 
 .result-status {
   display:inline-block;
-  margin:10px 0 24px;
-  padding:8px 11px;
-  border:1px solid var(--line);
+
+  margin:14px 0 26px;
+
+  padding:9px 12px;
+
+  border:
+    2px solid var(--green);
+
   border-radius:999px;
-  background:#fff;
+
+  color:var(--green);
+
   font-size:12px;
-  font-weight:900;
+  font-weight:950;
+
   letter-spacing:.06em;
+}
+
+.quiz-restart {
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  min-height:48px;
+
+  padding:12px 18px;
+
+  border:0;
+
+  border-radius:8px;
+
+  background:var(--rust);
+
+  color:#fff;
+
+  font:inherit;
+
+  font-weight:950;
+
+  cursor:pointer;
 }
 
 .result-links {
   display:flex;
   flex-wrap:wrap;
-  gap:12px;
-  margin-top:24px;
+
+  gap:10px;
+
+  margin-top:22px;
 }
 
 .result-links a {
   display:inline-flex;
+
   align-items:center;
+
   min-height:44px;
+
   padding:10px 14px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:8px;
+
   background:#fff;
+
   color:var(--ink);
+
   font-weight:850;
+
   text-decoration:none;
 }
 
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
 .quiz-disclaimer {
   margin-top:28px;
+
   color:var(--muted);
+
   font-size:13px;
 }
 
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media(max-width:640px) {
 
-  .quiz-panel {
-    padding:20px;
+  .exam-header {
+    padding:22px 20px;
   }
 
-  .quiz-question {
-    font-size:21px;
+  .quiz-panel {
+    padding:22px 18px;
   }
 
   .quiz-progress {
     align-items:flex-start;
     flex-direction:column;
+
     gap:4px;
   }
 
-  .result-score {
-    font-size:40px;
+  .quiz-option {
+    min-height:62px;
+  }
+
+  .quiz-actions {
+    padding:14px;
   }
 
 }
@@ -341,6 +663,10 @@ Disclosure
 <article class="quiz-shell">
 
 
+<!-- =====================================================
+     PAGE INTRO
+     ===================================================== -->
+
 <div class="quiz-intro">
 
 <p class="kicker">
@@ -352,7 +678,8 @@ The Cunnilingus Quiz
 </h1>
 
 <p class="lede">
-How much do you actually know about the anatomy, language, biology, hygiene, and health surrounding cunnilingus?
+How much do you actually know about the anatomy, language,
+biology, hygiene, and health surrounding cunnilingus?
 </p>
 
 <hr class="accent-rule">
@@ -366,19 +693,19 @@ Nobody will ask for a demonstration.
 </p>
 
 <p>
-It is ten questions about an activity humans have been practicing considerably longer than they have been accurately naming the anatomy involved.
+It is ten questions about an activity humans have been
+practicing considerably longer than they have been accurately
+naming the anatomy involved.
 </p>
 
 <p>
 Some answers are straightforward.
-</p>
-
-<p>
 Some are less obvious.
 </p>
 
 <p>
-The objective is simple: finish knowing more than you did when you started.
+The objective is simple:
+<strong>finish knowing more than you did when you started.</strong>
 </p>
 
 <p class="quiz-note">
@@ -389,13 +716,46 @@ The objective is simple: finish knowing more than you did when you started.
 
 
 
+<!-- =====================================================
+     EXAMINATION
+     ===================================================== -->
+
 <section
-  id="quizPanel"
-  class="quiz-panel"
-  aria-live="polite"
+  class="exam-wrap"
+  aria-label="Cunnilingus Field Examination"
 >
 
+
+<div class="exam-header">
+
+<p class="exam-label">
+WAP MOP SHOPPE · Examination Desk
+</p>
+
+<h2 class="exam-title">
+FIELD EXAMINATION
+</h2>
+
+<p class="exam-sub">
+Knowledge assessment only. Clipboard optional.
+</p>
+
+</div>
+
+
+
+<div
+  id="quizPanel"
+  class="quiz-panel"
+>
+
+
+<!-- =====================================================
+     QUESTION VIEW
+     ===================================================== -->
+
 <div id="quizQuestionView">
+
 
 <div class="quiz-progress">
 
@@ -415,6 +775,7 @@ Score: 0
 
 </div>
 
+
 <div
   class="progress-track"
   aria-hidden="true"
@@ -428,11 +789,13 @@ Score: 0
 </div>
 
 
+
 <h2
   id="questionText"
   class="quiz-question"
 >
 </h2>
+
 
 
 <div
@@ -442,9 +805,11 @@ Score: 0
 </div>
 
 
+
 <div
   id="feedback"
   class="quiz-feedback"
+  aria-live="polite"
 >
 
 <p
@@ -459,31 +824,42 @@ Score: 0
 </div>
 
 
+
 <div
   id="quizActions"
   class="quiz-actions"
 >
+
+<p class="next-instruction">
+Answer recorded · Continue the examination
+</p>
 
 <button
   id="nextButton"
   class="quiz-next"
   type="button"
 >
-Next Question →
+NEXT QUESTION →
 </button>
 
 </div>
 
+
 </div>
 
 
 
+<!-- =====================================================
+     RESULTS
+     ===================================================== -->
+
 <div
   id="quizResult"
   class="quiz-result"
+  aria-live="polite"
 >
 
-<p class="kicker">
+<p class="result-kicker">
 Field Examination Complete
 </p>
 
@@ -506,12 +882,14 @@ Inspection Results
 >
 </p>
 
+<br>
+
 <button
   id="restartButton"
   class="quiz-restart"
   type="button"
 >
-Take It Again
+TAKE IT AGAIN
 </button>
 
 
@@ -529,12 +907,18 @@ Explore Field Reports
 
 </div>
 
+
+</div>
+
 </section>
 
 
 
 <p class="quiz-disclaimer">
-This quiz is for general educational purposes and is not medical advice. Questions involving sexually transmitted infections, symptoms, or sexual health are intended as general health information; individual concerns should be discussed with an appropriate healthcare professional.
+This quiz is for general educational purposes and is not medical advice.
+Questions involving sexually transmitted infections, symptoms, or sexual
+health are intended as general health information; individual concerns
+should be discussed with an appropriate healthcare professional.
 </p>
 
 
@@ -564,7 +948,9 @@ Affiliate disclosure
 
 (() => {
 
+
 const questions = [
+
 
 {
   question:
@@ -577,7 +963,7 @@ const questions = [
     "It is a gland whose main function is producing lubrication."
   ],
 
-  correct: 1,
+  correct:1,
 
   explanation:
     "The visible glans is only part of the clitoris. The organ also includes internal erectile structures such as the body and crura. What can be seen externally is only a portion of the full anatomy."
@@ -595,7 +981,7 @@ const questions = [
     "The mouth and tasting."
   ],
 
-  correct: 0,
+  correct:0,
 
   explanation:
     "The word is generally traced to Latin cunnus, referring to the vulva, and lingere, meaning “to lick.” The name is therefore considerably more literal than it sounds."
@@ -613,7 +999,7 @@ const questions = [
     "The uterine cavity."
   ],
 
-  correct: 1,
+  correct:1,
 
   explanation:
     "The labia minora are part of the vulva, the external genital anatomy. The vagina is the internal muscular canal. They are related geography, but they are not interchangeable terms."
@@ -631,7 +1017,7 @@ const questions = [
     "It is located inside the vaginal canal."
   ],
 
-  correct: 2,
+  correct:2,
 
   explanation:
     "Much of the clitoris is internal. Its structures extend beneath the surface and include erectile tissue that becomes engorged during sexual arousal."
@@ -649,7 +1035,7 @@ const questions = [
     "Brushing your teeth immediately beforehand prevents transmission."
   ],
 
-  correct: 2,
+  correct:2,
 
   explanation:
     "Oral-genital contact can transmit certain sexually transmitted infections, including infections such as herpes, gonorrhea, syphilis, and HPV. Risk varies by infection and circumstances, but penetration is not required for transmission."
@@ -667,7 +1053,7 @@ const questions = [
     "A yeast infection."
   ],
 
-  correct: 0,
+  correct:0,
 
   explanation:
     "Herpes simplex virus can spread through oral-genital contact. Oral HSV-1, for example, can cause genital herpes after transmission from the mouth."
@@ -685,7 +1071,7 @@ const questions = [
     "Fragranced products are necessary to maintain a healthy scent."
   ],
 
-  correct: 2,
+  correct:2,
 
   explanation:
     "Genital tissue can have a normal natural scent. What is often more useful medically is a significant new change, especially when it occurs with symptoms such as unusual discharge, itching, burning, or pain."
@@ -703,7 +1089,7 @@ const questions = [
     "It prevents normal menstrual flow."
   ],
 
-  correct: 0,
+  correct:0,
 
   explanation:
     "The vagina normally maintains its own internal environment. Douching can disturb that environment and alter the organisms that normally live there. Ordinary hygiene generally focuses on gentle external care."
@@ -721,7 +1107,7 @@ const questions = [
     "Needing additional lubricant automatically indicates a medical problem."
   ],
 
-  correct: 2,
+  correct:2,
 
   explanation:
     "Lubrication varies between people and between situations. Hormones, medications, stress, arousal, menopause, hydration, and other factors can influence it. Physical lubrication and subjective desire also do not always match perfectly."
@@ -739,17 +1125,22 @@ const questions = [
     "Talking about comfort usually means something has already gone wrong."
   ],
 
-  correct: 2,
+  correct:2,
 
   explanation:
     "Bodies and preferences vary. Feedback gives partners useful information about comfort and boundaries. A short check-in is not evidence that the moment failed; it is one of the ways people keep the moment working."
 }
 
+
 ];
 
 
-const questionText = document.getElementById("questionText");
-const options = document.getElementById("options");
+
+const questionText =
+  document.getElementById("questionText");
+
+const options =
+  document.getElementById("options");
 
 const progressText =
   document.getElementById("progressText");
@@ -794,8 +1185,11 @@ const restartButton =
   document.getElementById("restartButton");
 
 
+
 let currentQuestion = 0;
+
 let score = 0;
+
 let answered = false;
 
 
@@ -804,49 +1198,64 @@ function renderQuestion() {
 
   answered = false;
 
+
   const item =
     questions[currentQuestion];
+
 
   questionText.textContent =
     item.question;
 
+
   progressText.textContent =
     `Question ${currentQuestion + 1} of ${questions.length}`;
+
 
   scoreText.textContent =
     `Score: ${score}`;
 
+
   progressBar.style.width =
     `${((currentQuestion + 1) / questions.length) * 100}%`;
 
+
   options.innerHTML = "";
 
+
   feedback.classList.remove("show");
+
   quizActions.classList.remove("show");
 
 
-  item.answers.forEach((answer,index) => {
+  item.answers.forEach(
+    (answer,index) => {
 
-    const button =
-      document.createElement("button");
+      const button =
+        document.createElement("button");
 
-    button.type =
-      "button";
 
-    button.className =
-      "quiz-option";
+      button.type =
+        "button";
 
-    button.textContent =
-      answer;
 
-    button.addEventListener(
-      "click",
-      () => selectAnswer(index)
-    );
+      button.className =
+        "quiz-option";
 
-    options.appendChild(button);
 
-  });
+      button.textContent =
+        answer;
+
+
+      button.addEventListener(
+        "click",
+        () => selectAnswer(index)
+      );
+
+
+      options.appendChild(button);
+
+    }
+  );
 
 }
 
@@ -856,13 +1265,17 @@ function selectAnswer(selectedIndex) {
 
   if(answered) return;
 
+
   answered = true;
+
 
   const item =
     questions[currentQuestion];
 
+
   const buttons =
     [...options.querySelectorAll(".quiz-option")];
+
 
   const isCorrect =
     selectedIndex === item.correct;
@@ -875,7 +1288,9 @@ function selectAnswer(selectedIndex) {
     feedbackStatus.textContent =
       "Correct";
 
-  } else {
+  }
+
+  else {
 
     feedbackStatus.textContent =
       "Not Quite";
@@ -883,30 +1298,44 @@ function selectAnswer(selectedIndex) {
   }
 
 
-  buttons.forEach((button,index) => {
+  buttons.forEach(
+    (button,index) => {
 
-    button.disabled = true;
+      button.disabled = true;
 
-    if(index === item.correct) {
-      button.classList.add("correct");
+
+      if(index === item.correct) {
+
+        button.classList.add(
+          "correct"
+        );
+
+      }
+
+
+      if(
+        index === selectedIndex &&
+        index !== item.correct
+      ) {
+
+        button.classList.add(
+          "incorrect"
+        );
+
+      }
+
     }
-
-    if(
-      index === selectedIndex &&
-      index !== item.correct
-    ) {
-      button.classList.add("incorrect");
-    }
-
-  });
+  );
 
 
   feedbackText.textContent =
     item.explanation;
 
+
   feedback.classList.add("show");
 
   quizActions.classList.add("show");
+
 
   scoreText.textContent =
     `Score: ${score}`;
@@ -918,14 +1347,26 @@ function selectAnswer(selectedIndex) {
   ) {
 
     nextButton.textContent =
-      "See Inspection Results →";
-
-  } else {
-
-    nextButton.textContent =
-      "Next Question →";
+      "SEE INSPECTION RESULTS →";
 
   }
+
+  else {
+
+    nextButton.textContent =
+      "NEXT QUESTION →";
+
+  }
+
+
+  setTimeout(() => {
+
+    feedback.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+  },150);
 
 }
 
@@ -943,16 +1384,20 @@ function nextQuestion() {
 
     currentQuestion++;
 
+
     renderQuestion();
 
+
     document
-      .getElementById("quizPanel")
+      .querySelector(".exam-header")
       .scrollIntoView({
         behavior:"smooth",
         block:"start"
       });
 
-  } else {
+  }
+
+  else {
 
     showResults();
 
@@ -967,17 +1412,17 @@ function showResults() {
   quizQuestionView.style.display =
     "none";
 
+
   quizResult.classList.add("show");
+
 
   resultScore.textContent =
     `${score} / ${questions.length}`;
 
 
-  let message =
-    "";
+  let message = "";
 
-  let status =
-    "";
+  let status = "";
 
 
   if(score === 10) {
@@ -990,6 +1435,7 @@ function showResults() {
 
   }
 
+
   else if(score >= 8) {
 
     message =
@@ -999,6 +1445,7 @@ function showResults() {
       "INSPECTION STATUS: FIELD KNOWLEDGE CONFIRMED";
 
   }
+
 
   else if(score >= 6) {
 
@@ -1010,6 +1457,7 @@ function showResults() {
 
   }
 
+
   else if(score >= 4) {
 
     message =
@@ -1019,6 +1467,7 @@ function showResults() {
       "INSPECTION STATUS: ADDITIONAL READING ADVISED";
 
   }
+
 
   else {
 
@@ -1034,12 +1483,13 @@ function showResults() {
   resultMessage.textContent =
     message;
 
+
   resultStatus.textContent =
     status;
 
 
   document
-    .getElementById("quizPanel")
+    .querySelector(".exam-header")
     .scrollIntoView({
       behavior:"smooth",
       block:"start"
@@ -1052,19 +1502,24 @@ function showResults() {
 function restartQuiz() {
 
   currentQuestion = 0;
+
   score = 0;
+
   answered = false;
+
 
   quizResult.classList.remove("show");
 
+
   quizQuestionView.style.display =
     "";
+
 
   renderQuestion();
 
 
   document
-    .getElementById("quizPanel")
+    .querySelector(".exam-header")
     .scrollIntoView({
       behavior:"smooth",
       block:"start"
@@ -1079,6 +1534,7 @@ nextButton.addEventListener(
   nextQuestion
 );
 
+
 restartButton.addEventListener(
   "click",
   restartQuiz
@@ -1086,6 +1542,7 @@ restartButton.addEventListener(
 
 
 renderQuestion();
+
 
 })();
 
