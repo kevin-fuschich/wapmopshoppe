@@ -26,10 +26,6 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 <style>
 
-/* =========================================================
-   QUIZ PAGE
-   ========================================================= */
-
 .quiz-shell {
   max-width:820px;
 }
@@ -47,13 +43,11 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 
 /* =========================================================
-   EXAMINATION OBJECT
+   EXAMINATION
    ========================================================= */
 
 .exam-wrap {
   margin:36px 0 0;
-
-  overflow:hidden;
 
   border:3px solid var(--green);
   border-radius:20px;
@@ -65,10 +59,6 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 }
 
 
-/* =========================================================
-   EXAM HEADER
-   ========================================================= */
-
 .exam-header {
   position:relative;
 
@@ -76,17 +66,20 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   padding:26px 30px;
 
+  border-radius:16px 16px 0 0;
+
   background:var(--green);
 
   color:#fff;
 }
+
 
 .exam-header::after {
   content:"?";
 
   position:absolute;
 
-  right:-15px;
+  right:-10px;
   top:-65px;
 
   font-size:200px;
@@ -95,11 +88,11 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   line-height:1;
 
-  color:
-    rgba(255,255,255,.05);
+  color:rgba(255,255,255,.05);
 
   pointer-events:none;
 }
+
 
 .exam-label {
   position:relative;
@@ -118,6 +111,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   text-transform:uppercase;
 }
 
+
 .exam-title {
   position:relative;
   z-index:1;
@@ -126,13 +120,13 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   color:#fff;
 
-  font-size:
-    clamp(30px,5vw,44px);
+  font-size:clamp(30px,5vw,44px);
 
   line-height:1;
 
   letter-spacing:-.035em;
 }
+
 
 .exam-sub {
   position:relative;
@@ -140,8 +134,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   margin:10px 0 0;
 
-  color:
-    rgba(255,255,255,.72);
+  color:rgba(255,255,255,.72);
 
   font-size:13px;
 }
@@ -172,6 +165,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   margin-bottom:12px;
 }
 
+
 .quiz-progress-text {
   margin:0;
 
@@ -186,6 +180,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   text-transform:uppercase;
 }
 
+
 .quiz-score {
   margin:0;
 
@@ -195,6 +190,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   font-weight:850;
 }
+
 
 .progress-track {
   width:100%;
@@ -207,19 +203,17 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   border-radius:999px;
 
-  background:
-    rgba(23,19,15,.1);
+  background:rgba(23,19,15,.1);
 }
+
 
 .progress-bar {
   width:10%;
-
   height:100%;
 
   background:var(--rust);
 
-  transition:
-    width .25s ease;
+  transition:width .25s ease;
 }
 
 
@@ -232,8 +226,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   color:var(--ink);
 
-  font-size:
-    clamp(23px,4vw,30px);
+  font-size:clamp(23px,4vw,30px);
 
   line-height:1.22;
 }
@@ -245,9 +238,9 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 .quiz-options {
   display:grid;
-
   gap:12px;
 }
+
 
 .quiz-option {
   width:100%;
@@ -256,8 +249,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   padding:15px 18px;
 
-  border:
-    2px solid rgba(23,19,15,.14);
+  border:2px solid rgba(23,19,15,.14);
 
   border-radius:11px;
 
@@ -276,49 +268,103 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   text-align:left;
 
   cursor:pointer;
-
-  transition:
-    border-color .15s ease,
-    background .15s ease,
-    transform .15s ease;
 }
+
 
 .quiz-option:hover {
   border-color:var(--rust);
-
-  transform:
-    translateY(-1px);
 }
 
-.quiz-option:focus-visible,
-.quiz-next:focus-visible,
-.quiz-restart:focus-visible {
-  outline:
-    4px solid var(--gold);
-
-  outline-offset:3px;
-}
 
 .quiz-option[disabled] {
   cursor:default;
-
   opacity:1;
-
-  transform:none;
 }
+
 
 .quiz-option.correct {
   border-color:var(--green);
 
-  background:
-    rgba(47,75,50,.1);
+  background:rgba(47,75,50,.1);
 }
+
 
 .quiz-option.incorrect {
   border-color:var(--rust);
 
-  background:
-    rgba(184,76,47,.08);
+  background:rgba(184,76,47,.08);
+}
+
+
+/* =========================================================
+   ADVANCEMENT
+   ========================================================= */
+
+.advance-area {
+  margin:24px 0 0;
+}
+
+
+.advance-label {
+  margin:0 0 8px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+}
+
+
+.quiz-next {
+  display:block;
+
+  width:100%;
+
+  min-height:64px;
+
+  padding:16px 20px;
+
+  border:0;
+
+  border-radius:10px;
+
+  background:var(--rust);
+
+  color:#fff;
+
+  font:inherit;
+
+  font-size:18px;
+
+  font-weight:950;
+
+  letter-spacing:.035em;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 18px rgba(184,76,47,.2);
+}
+
+
+.quiz-next:disabled {
+  background:#d8d1c8;
+
+  color:#756d64;
+
+  box-shadow:none;
+
+  cursor:not-allowed;
+}
+
+
+.quiz-next:not(:disabled):hover {
+  filter:brightness(1.05);
 }
 
 
@@ -329,24 +375,24 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 .quiz-feedback {
   display:none;
 
-  margin:26px 0 0;
+  margin:22px 0 0;
 
   padding:22px;
 
-  border:
-    1px solid var(--line);
+  border:1px solid var(--line);
 
-  border-left:
-    6px solid var(--gold);
+  border-left:6px solid var(--gold);
 
   border-radius:12px;
 
   background:var(--card);
 }
 
+
 .quiz-feedback.show {
   display:block;
 }
+
 
 .quiz-feedback-status {
   margin:0 0 8px;
@@ -362,97 +408,9 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   text-transform:uppercase;
 }
 
+
 .quiz-feedback p:last-child {
   margin-bottom:0;
-}
-
-
-/* =========================================================
-   PERMANENT ADVANCEMENT BAR
-   ========================================================= */
-
-.advance-wrap {
-  position:sticky;
-
-  bottom:12px;
-
-  z-index:20;
-
-  margin-top:26px;
-
-  padding:12px;
-
-  border:
-    1px solid rgba(255,255,255,.15);
-
-  border-radius:14px;
-
-  background:var(--green);
-
-  box-shadow:
-    0 14px 30px rgba(23,19,15,.22);
-}
-
-.advance-label {
-  margin:0 0 8px;
-
-  color:
-    rgba(255,255,255,.68);
-
-  font-size:10px;
-
-  font-weight:900;
-
-  letter-spacing:.1em;
-
-  text-align:center;
-
-  text-transform:uppercase;
-}
-
-.quiz-next {
-  width:100%;
-
-  min-height:58px;
-
-  padding:15px 20px;
-
-  border:0;
-
-  border-radius:9px;
-
-  background:var(--rust);
-
-  color:#fff;
-
-  font:inherit;
-
-  font-size:17px;
-
-  font-weight:950;
-
-  letter-spacing:.03em;
-
-  cursor:pointer;
-
-  transition:
-    opacity .15s ease,
-    transform .15s ease;
-}
-
-.quiz-next:hover:not(:disabled) {
-  transform:
-    translateY(-1px);
-}
-
-.quiz-next:disabled {
-  background:
-    rgba(255,255,255,.13);
-
-  color:
-    rgba(255,255,255,.58);
-
-  cursor:not-allowed;
 }
 
 
@@ -462,13 +420,13 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
 .quiz-result {
   display:none;
-
-  padding:6px 0 4px;
 }
+
 
 .quiz-result.show {
   display:block;
 }
+
 
 .result-kicker {
   margin:0 0 6px;
@@ -484,27 +442,28 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   text-transform:uppercase;
 }
 
+
 .quiz-result h2 {
   margin:0 0 14px;
 
-  font-size:
-    clamp(30px,5vw,44px);
+  font-size:clamp(30px,5vw,44px);
 
   line-height:1;
 }
+
 
 .result-score {
   margin:18px 0 12px;
 
   color:var(--green);
 
-  font-size:
-    clamp(54px,10vw,78px);
+  font-size:clamp(54px,10vw,78px);
 
   font-weight:950;
 
   line-height:1;
 }
+
 
 .result-status {
   display:inline-block;
@@ -513,8 +472,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   padding:9px 12px;
 
-  border:
-    2px solid var(--green);
+  border:2px solid var(--green);
 
   border-radius:999px;
 
@@ -526,6 +484,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   letter-spacing:.06em;
 }
+
 
 .quiz-restart {
   display:inline-flex;
@@ -553,6 +512,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   cursor:pointer;
 }
 
+
 .result-links {
   display:flex;
 
@@ -563,6 +523,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   margin-top:22px;
 }
 
+
 .result-links a {
   display:inline-flex;
 
@@ -572,8 +533,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   padding:10px 14px;
 
-  border:
-    1px solid var(--line);
+  border:1px solid var(--line);
 
   border-radius:8px;
 
@@ -587,10 +547,6 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 }
 
 
-/* =========================================================
-   DISCLAIMER
-   ========================================================= */
-
 .quiz-disclaimer {
   margin-top:28px;
 
@@ -599,10 +555,6 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
   font-size:13px;
 }
 
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
 
 @media(max-width:640px) {
 
@@ -616,9 +568,7 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
 
   .quiz-progress {
     align-items:flex-start;
-
     flex-direction:column;
-
     gap:4px;
   }
 
@@ -626,8 +576,9 @@ The Cunnilingus Quiz | WAP MOP SHOPPE
     min-height:62px;
   }
 
-  .advance-wrap {
-    bottom:8px;
+  .quiz-next {
+    min-height:66px;
+    font-size:17px;
   }
 
 }
@@ -719,20 +670,15 @@ biology, hygiene, and health surrounding cunnilingus?
 
 <p>
 This is not a test of talent.
-</p>
-
-<p>
 Nobody will ask for a demonstration.
 </p>
 
 <p>
-It is ten questions about an activity humans have been
-practicing considerably longer than they have been accurately
-naming the anatomy involved.
+Ten questions. Each answer comes with an explanation.
 </p>
 
 <p>
-The objective is simple:
+The objective:
 <strong>finish knowing more than you did when you started.</strong>
 </p>
 
@@ -744,11 +690,7 @@ The objective is simple:
 
 
 
-<section
-  class="exam-wrap"
-  aria-label="Cunnilingus Field Examination"
->
-
+<section class="exam-wrap">
 
 <div class="exam-header">
 
@@ -796,10 +738,7 @@ Score: 0
 </div>
 
 
-<div
-  class="progress-track"
-  aria-hidden="true"
->
+<div class="progress-track">
 
 <div
   id="progressBar"
@@ -813,15 +752,40 @@ Score: 0
 <h2
   id="questionText"
   class="quiz-question"
->
-</h2>
+></h2>
 
 
 
 <div
   id="options"
   class="quiz-options"
+></div>
+
+
+
+<!-- ALWAYS VISIBLE -->
+
+<div
+  id="advanceArea"
+  class="advance-area"
 >
+
+<p
+  id="advanceLabel"
+  class="advance-label"
+>
+Select one answer above.
+</p>
+
+<button
+  id="nextButton"
+  class="quiz-next"
+  type="button"
+  disabled
+>
+CHOOSE AN ANSWER FIRST
+</button>
+
 </div>
 
 
@@ -835,36 +799,9 @@ Score: 0
 <p
   id="feedbackStatus"
   class="quiz-feedback-status"
->
-</p>
+></p>
 
-<p id="feedbackText">
-</p>
-
-</div>
-
-
-
-<div
-  id="advanceWrap"
-  class="advance-wrap"
->
-
-<p
-  id="advanceLabel"
-  class="advance-label"
->
-Choose an answer above
-</p>
-
-<button
-  id="nextButton"
-  class="quiz-next"
-  type="button"
-  disabled
->
-SELECT AN ANSWER TO CONTINUE
-</button>
+<p id="feedbackText"></p>
 
 </div>
 
@@ -876,7 +813,6 @@ SELECT AN ANSWER TO CONTINUE
 <div
   id="quizResult"
   class="quiz-result"
-  aria-live="polite"
 >
 
 <p class="result-kicker">
@@ -890,17 +826,14 @@ Inspection Results
 <p
   id="resultScore"
   class="result-score"
->
-</p>
+></p>
 
-<p id="resultMessage">
-</p>
+<p id="resultMessage"></p>
 
 <p
   id="resultStatus"
   class="result-status"
->
-</p>
+></p>
 
 <br>
 
@@ -953,10 +886,7 @@ should be discussed with an appropriate healthcare professional.
 <div class="container">
 
 © WAP MOP SHOPPE · Institute for Practical Cleanliness ·
-
-<a href="/disclosure/">
-Affiliate disclosure
-</a>
+<a href="/disclosure/">Affiliate disclosure</a>
 
 </div>
 
@@ -1022,7 +952,7 @@ const questions = [
   correct:1,
 
   explanation:
-    "The labia minora are part of the vulva, the external genital anatomy. The vagina is the internal muscular canal. They are related geography, but they are not interchangeable terms."
+    "The labia minora are part of the vulva, the external genital anatomy. The vagina is the internal muscular canal."
 },
 
 
@@ -1058,7 +988,7 @@ const questions = [
   correct:2,
 
   explanation:
-    "Oral-genital contact can transmit certain sexually transmitted infections, including infections such as herpes, gonorrhea, syphilis, and HPV. Risk varies by infection and circumstances, but penetration is not required for transmission."
+    "Oral-genital contact can transmit certain sexually transmitted infections, including herpes, gonorrhea, syphilis, and HPV. Penetration is not required."
 },
 
 
@@ -1094,7 +1024,7 @@ const questions = [
   correct:2,
 
   explanation:
-    "Genital tissue can have a normal natural scent. What is often more useful medically is a significant new change, especially when it occurs with symptoms such as unusual discharge, itching, burning, or pain."
+    "Genital tissue can have a normal natural scent. A significant new change, especially with unusual discharge, itching, burning, or pain, may deserve medical attention."
 },
 
 
@@ -1112,7 +1042,7 @@ const questions = [
   correct:0,
 
   explanation:
-    "The vagina normally maintains its own internal environment. Douching can disturb that environment and alter the organisms that normally live there. Ordinary hygiene generally focuses on gentle external care."
+    "The vagina normally maintains its own internal environment. Douching can disturb that environment. Ordinary hygiene generally focuses on gentle external care."
 },
 
 
@@ -1130,7 +1060,7 @@ const questions = [
   correct:2,
 
   explanation:
-    "Lubrication varies between people and between situations. Hormones, medications, stress, arousal, menopause, hydration, and other factors can influence it. Physical lubrication and subjective desire also do not always match perfectly."
+    "Lubrication varies. Hormones, medications, stress, arousal, menopause, hydration, and other factors can influence it. Physical lubrication and subjective desire do not always match."
 },
 
 
@@ -1148,7 +1078,7 @@ const questions = [
   correct:2,
 
   explanation:
-    "Bodies and preferences vary. Feedback gives partners useful information about comfort and boundaries. A short check-in is not evidence that the moment failed; it is one of the ways people keep the moment working."
+    "Bodies and preferences vary. Feedback gives partners useful information about comfort and boundaries."
 }
 
 
@@ -1186,6 +1116,9 @@ const nextButton =
 const advanceLabel =
   document.getElementById("advanceLabel");
 
+const advanceArea =
+  document.getElementById("advanceArea");
+
 const quizQuestionView =
   document.getElementById("quizQuestionView");
 
@@ -1207,9 +1140,7 @@ const restartButton =
 
 
 let currentQuestion = 0;
-
 let score = 0;
-
 let answered = false;
 
 
@@ -1217,7 +1148,6 @@ let answered = false;
 function renderQuestion() {
 
   answered = false;
-
 
   const item =
     questions[currentQuestion];
@@ -1248,42 +1178,40 @@ function renderQuestion() {
   nextButton.disabled = true;
 
   nextButton.textContent =
-    "SELECT AN ANSWER TO CONTINUE";
+    "CHOOSE AN ANSWER FIRST";
 
 
   advanceLabel.textContent =
-    "Choose an answer above";
+    "Select one answer above.";
 
 
-  item.answers.forEach(
-    (answer,index) => {
+  item.answers.forEach((answer,index) => {
 
-      const button =
-        document.createElement("button");
-
-
-      button.type =
-        "button";
+    const button =
+      document.createElement("button");
 
 
-      button.className =
-        "quiz-option";
+    button.type =
+      "button";
 
 
-      button.textContent =
-        answer;
+    button.className =
+      "quiz-option";
 
 
-      button.addEventListener(
-        "click",
-        () => selectAnswer(index)
-      );
+    button.textContent =
+      answer;
 
 
-      options.appendChild(button);
+    button.addEventListener(
+      "click",
+      () => selectAnswer(index)
+    );
 
-    }
-  );
+
+    options.appendChild(button);
+
+  });
 
 }
 
@@ -1316,9 +1244,7 @@ function selectAnswer(selectedIndex) {
     feedbackStatus.textContent =
       "Correct";
 
-  }
-
-  else {
+  } else {
 
     feedbackStatus.textContent =
       "Not Quite";
@@ -1326,34 +1252,28 @@ function selectAnswer(selectedIndex) {
   }
 
 
-  buttons.forEach(
-    (button,index) => {
+  buttons.forEach((button,index) => {
 
-      button.disabled = true;
-
-
-      if(index === item.correct) {
-
-        button.classList.add(
-          "correct"
-        );
-
-      }
+    button.disabled = true;
 
 
-      if(
-        index === selectedIndex &&
-        index !== item.correct
-      ) {
+    if(index === item.correct) {
 
-        button.classList.add(
-          "incorrect"
-        );
-
-      }
+      button.classList.add("correct");
 
     }
-  );
+
+
+    if(
+      index === selectedIndex &&
+      index !== item.correct
+    ) {
+
+      button.classList.add("incorrect");
+
+    }
+
+  });
 
 
   feedbackText.textContent =
@@ -1376,32 +1296,30 @@ function selectAnswer(selectedIndex) {
   ) {
 
     nextButton.textContent =
-      "SEE INSPECTION RESULTS →";
+      "SEE RESULTS →";
 
     advanceLabel.textContent =
-      "Final answer recorded";
+      "Final answer recorded.";
 
-  }
-
-  else {
+  } else {
 
     nextButton.textContent =
       "NEXT QUESTION →";
 
     advanceLabel.textContent =
-      "Answer recorded · Continue below";
+      "Answer recorded. Continue when ready.";
 
   }
 
 
   setTimeout(() => {
 
-    feedback.scrollIntoView({
+    advanceArea.scrollIntoView({
       behavior:"smooth",
       block:"center"
     });
 
-  },120);
+  },100);
 
 }
 
@@ -1419,7 +1337,6 @@ function nextQuestion() {
 
     currentQuestion++;
 
-
     renderQuestion();
 
 
@@ -1430,9 +1347,7 @@ function nextQuestion() {
         block:"start"
       });
 
-  }
-
-  else {
+  } else {
 
     showResults();
 
@@ -1456,7 +1371,6 @@ function showResults() {
 
 
   let message = "";
-
   let status = "";
 
 
@@ -1470,7 +1384,6 @@ function showResults() {
 
   }
 
-
   else if(score >= 8) {
 
     message =
@@ -1480,7 +1393,6 @@ function showResults() {
       "INSPECTION STATUS: FIELD KNOWLEDGE CONFIRMED";
 
   }
-
 
   else if(score >= 6) {
 
@@ -1492,7 +1404,6 @@ function showResults() {
 
   }
 
-
   else if(score >= 4) {
 
     message =
@@ -1503,11 +1414,10 @@ function showResults() {
 
   }
 
-
   else {
 
     message =
-      "An unexpectedly productive examination. You now know several things you did not know ten questions ago.";
+      "You now know several things you did not know ten questions ago.";
 
     status =
       "INSPECTION STATUS: INVESTIGATION CONTINUES";
@@ -1537,9 +1447,7 @@ function showResults() {
 function restartQuiz() {
 
   currentQuestion = 0;
-
   score = 0;
-
   answered = false;
 
 
