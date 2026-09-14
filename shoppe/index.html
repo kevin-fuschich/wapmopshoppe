@@ -51,7 +51,7 @@
 
 <link
   rel="stylesheet"
-  href="/assets/styles.css?v=20260914b"
+  href="/assets/styles.css?v=20260914c"
 >
 
 
@@ -1084,6 +1084,21 @@ footer a {
 
 }
 
+
+/* Shoppe sorting and filtering */
+.shoppe-controls{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:12px;align-items:end;margin:0 0 14px;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.shoppe-controls label{display:grid;gap:6px;font-size:12px;font-weight:900;letter-spacing:.04em}
+.shoppe-controls select{width:100%;min-height:44px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font:inherit;font-size:14px}
+.shoppe-controls select:focus-visible,.shoppe-reset:focus-visible{outline:3px solid var(--rust);outline-offset:2px}
+.shoppe-control-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:0 0 20px;color:var(--muted);font-size:13px}
+.shoppe-control-footer p{margin:0}
+.shoppe-reset{padding:6px 0;border:0;border-bottom:2px solid var(--rust);background:transparent;color:var(--ink);font:inherit;font-weight:900;cursor:pointer}
+.shoppe-sort-note{margin:0 0 18px;color:var(--muted);font-size:13px}
+.shoppe-empty{grid-column:1/-1;margin:8px 0 0;color:var(--muted)}
+.product-card[hidden],.shoppe-sort-note[hidden],.shoppe-empty[hidden]{display:none}
+@media(max-width:850px){.shoppe-controls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.shoppe-controls{grid-template-columns:1fr}}
+
 </style>
 
 </head>
@@ -1194,28 +1209,53 @@ items clear the desk.
 </div>
 
 
-<div class="product-grid">
+<div class="shoppe-controls" role="group" aria-label="Find products">
+  <label for="shoppe-sort">Sort by
+    <select id="shoppe-sort">
+      <option value="default">Shoppe order</option>
+      <option value="price-low">Price: low to high</option>
+      <option value="price-high">Price: high to low</option>
+      <option value="name">Name: A–Z</option>
+      <option value="picks">Popularity (Shoppe picks)</option>
+    </select>
+  </label>
+  <label for="shoppe-category">Category
+    <select id="shoppe-category">
+      <option value="all">All categories</option>
+      <option value="care">Personal care</option>
+      <option value="home">Home &amp; laundry</option>
+      <option value="gear">Wear &amp; carry</option>
+      <option value="travel">Travel</option>
+      <option value="games">Games</option>
+    </select>
+  </label>
+  <label for="shoppe-price">Price
+    <select id="shoppe-price">
+      <option value="all">All prices</option>
+      <option value="under25">Under $25</option>
+      <option value="25to49">$25–$49</option>
+      <option value="50plus">$50 and up</option>
+    </select>
+  </label>
+  <label for="shoppe-status">Availability
+    <select id="shoppe-status">
+      <option value="all">All statuses</option>
+      <option value="coming">Coming soon</option>
+      <option value="sold">Sold out</option>
+      <option value="unavailable">Not available</option>
+    </select>
+  </label>
+</div>
+<div class="shoppe-control-footer">
+  <p id="shoppe-result-count" role="status" aria-live="polite">13 products</p>
+  <button class="shoppe-reset" id="shoppe-reset" type="button">Clear filters</button>
+</div>
+<p class="shoppe-sort-note" id="shoppe-sort-note" hidden>“Popularity” is the Shoppe’s editorial picks order; sales and visitor rankings aren’t available.</p>
+
+<div class="product-grid" id="shoppe-product-grid">
 
 <!-- WAP MOP SHOPPE MAHJONG SET -->
-<article class="product-card flagship">
-  <div class="product-image-wrap">
-    <div class="product-image-fallback">Mahjong set image unavailable.</div>
-    <a href="/shoppe/mahjong-set/" aria-label="Inspect WAP MOP SHOPPE Mahjong Set">
-      <img src="/assets/images/wap-mop-shoppe-mahjong-set.png" alt="Concept rendering of WAP MOP SHOPPE mahjong set with a green case and custom lips, toothbrush, and moisture-drop tile suits" loading="lazy" onerror="this.style.display='none';">
-    </a>
-  </div>
-  <div class="product-body">
-    <div class="product-meta">
-      <span class="status sold">SOLD OUT</span>
-      <span class="price">$499</span>
-    </div>
-    <h3>WAP MOP SHOPPE Mahjong Set</h3>
-    <p>A mahjong set with a field-guide sense of humor: lips for craks, toothbrushes for bams, moisture drops for dots, and a dark green case stamped with the Shoppe mark. Familiar game, entirely different tile vocabulary.</p>
-    <div class="product-actions">
-      <a class="inspect-link" href="/shoppe/mahjong-set/">Inspect Product →</a>
-    </div>
-  </div>
-</article>
+
 
 
 
@@ -1225,7 +1265,7 @@ items clear the desk.
      01 FIELD SOAP
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="care" data-pick-rank="3">
 
 <div class="product-image-wrap">
 
@@ -1300,7 +1340,7 @@ Inspection page pending
      02 INSTITUTE BATH TOWEL
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="home" data-pick-rank="2">
 
 <div class="product-image-wrap">
 
@@ -1374,7 +1414,7 @@ Inspection page pending
      03 OGWA SEA GLASS SQUEEZE
      ===================================================== -->
 
-<article class="product-card flagship">
+<article class="product-card flagship" data-category="travel" data-pick-rank="1">
 
 <div class="product-image-wrap">
 
@@ -1468,7 +1508,7 @@ Check Pre-Order Status
      04 MUSTACHE BATH BOMB
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="care" data-pick-rank="11">
 
 <div class="product-image-wrap">
 
@@ -1542,7 +1582,7 @@ Inspection page pending
      05 PERSONAL LUBRICANT
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="care" data-pick-rank="4">
 
 <div class="product-image-wrap">
 
@@ -1616,7 +1656,7 @@ Inspection page pending
      06 MEISTER FIELD CAP
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="gear" data-pick-rank="5">
 
 <div class="product-image-wrap">
 
@@ -1690,7 +1730,7 @@ Inspection page pending
      07 CANELA FIELD CAP
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="gear" data-pick-rank="8">
 
 <div class="product-image-wrap">
 
@@ -1764,7 +1804,7 @@ Inspection page pending
      08 PRACTICAL CLEANLINESS MUG
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="home" data-pick-rank="10">
 
 <div class="product-image-wrap">
 
@@ -1838,7 +1878,7 @@ Inspection page pending
      09 PATCH SET
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="gear" data-pick-rank="9">
 
 <div class="product-image-wrap">
 
@@ -1912,7 +1952,7 @@ Inspection page pending
      10 FIELD NOTES TOTE
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="gear" data-pick-rank="7">
 
 <div class="product-image-wrap">
 
@@ -1986,7 +2026,7 @@ Inspection page pending
      11 LAUNDRY SYSTEMS TOWEL SET
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="home" data-pick-rank="12">
 
 <div class="product-image-wrap">
 
@@ -2060,7 +2100,7 @@ Inspection page pending
      12 TRAVEL HYGIENE FIELD KIT
      ===================================================== -->
 
-<article class="product-card">
+<article class="product-card" data-category="travel" data-pick-rank="6">
 
 <div class="product-image-wrap">
 
@@ -2129,6 +2169,27 @@ Inspection page pending
 </article>
 
 
+<article class="product-card flagship" data-category="games" data-pick-rank="13">
+  <div class="product-image-wrap">
+    <div class="product-image-fallback">Mahjong set image unavailable.</div>
+    <a href="/shoppe/mahjong-set/" aria-label="Inspect WAP MOP SHOPPE Mahjong Set">
+      <img src="/assets/images/wap-mop-shoppe-mahjong-set.png" alt="Concept rendering of WAP MOP SHOPPE mahjong set with a green case and custom lips, toothbrush, and moisture-drop tile suits" loading="lazy" onerror="this.style.display='none';">
+    </a>
+  </div>
+  <div class="product-body">
+    <div class="product-meta">
+      <span class="status sold">SOLD OUT</span>
+      <span class="price">$499</span>
+    </div>
+    <h3>WAP MOP SHOPPE Mahjong Set</h3>
+    <p>A mahjong set with a field-guide sense of humor: lips for craks, toothbrushes for bams, moisture drops for dots, and a dark green case stamped with the Shoppe mark. Familiar game, entirely different tile vocabulary.</p>
+    <div class="product-actions">
+      <a class="inspect-link" href="/shoppe/mahjong-set/">Inspect Product →</a>
+    </div>
+  </div>
+</article>
+
+  <p class="shoppe-empty" id="shoppe-empty" hidden>No products match those filters. Try another combination.</p>
 </div>
 
 </div>
@@ -2649,6 +2710,61 @@ Affiliate disclosure
 </footer>
 
 
+
+
+<script>
+/* Shoppe controls preserve the published card order until a visitor sorts. */
+(() => {
+  const grid = document.getElementById("shoppe-product-grid");
+  const sort = document.getElementById("shoppe-sort");
+  const category = document.getElementById("shoppe-category");
+  const price = document.getElementById("shoppe-price");
+  const availability = document.getElementById("shoppe-status");
+  const result = document.getElementById("shoppe-result-count");
+  const note = document.getElementById("shoppe-sort-note");
+  const empty = document.getElementById("shoppe-empty");
+  const cards = Array.from(grid.querySelectorAll(".product-card"));
+
+  const amount = card => Number((card.querySelector(".price").textContent.match(/\$([\d,.]+)/) || [])[1]?.replace(/,/g, "") || 0);
+  const index = new Map(cards.map((card, i) => [card, i]));
+
+  function render() {
+    let visible = cards.filter(card => {
+      const n = amount(card);
+      return (category.value === "all" || card.dataset.category === category.value) &&
+        (availability.value === "all" || card.querySelector(".status").classList.contains(availability.value)) &&
+        (price.value === "all" ||
+          (price.value === "under25" && n < 25) ||
+          (price.value === "25to49" && n >= 25 && n < 50) ||
+          (price.value === "50plus" && n >= 50));
+    });
+
+    visible.sort((a, b) => {
+      if (sort.value === "price-low") return amount(a) - amount(b) || index.get(a) - index.get(b);
+      if (sort.value === "price-high") return amount(b) - amount(a) || index.get(a) - index.get(b);
+      if (sort.value === "name") return a.querySelector("h3").textContent.trim().localeCompare(b.querySelector("h3").textContent.trim());
+      if (sort.value === "picks") return Number(a.dataset.pickRank) - Number(b.dataset.pickRank);
+      return index.get(a) - index.get(b);
+    });
+
+    cards.forEach(card => { card.hidden = !visible.includes(card); });
+    grid.append(...visible);
+    result.textContent = visible.length + " of " + cards.length + " products";
+    note.hidden = sort.value !== "picks";
+    empty.hidden = visible.length !== 0;
+  }
+
+  [sort, category, price, availability].forEach(control => control.addEventListener("change", render));
+  document.getElementById("shoppe-reset").addEventListener("click", () => {
+    sort.value = "default";
+    category.value = "all";
+    price.value = "all";
+    availability.value = "all";
+    render();
+  });
+  render();
+})();
+</script>
 
 <script>
 
