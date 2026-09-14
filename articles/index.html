@@ -457,6 +457,87 @@ main {
 
 
 /* =========================================================
+   CROSSWORD FEATURE
+   ========================================================= */
+
+.crossword-feature-link{
+  grid-column:1 / -1;
+  display:block;
+  margin:10px 0 6px;
+  color:#fff;
+  text-decoration:none;
+}
+
+.crossword-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(170px,.5fr);
+  gap:28px;
+  align-items:center;
+  padding:32px;
+  border:3px solid #733b2b;
+  border-radius:18px;
+  background:linear-gradient(135deg,#733b2b,#9d5133);
+  color:#fff;
+  box-shadow:0 18px 36px rgba(23,19,15,.14);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+
+.crossword-feature-link:hover .crossword-feature{
+  transform:translateY(-3px);
+  box-shadow:0 22px 44px rgba(23,19,15,.2);
+}
+
+.crossword-feature-link:focus-visible{
+  outline:4px solid var(--gold);
+  outline-offset:5px;
+  border-radius:18px;
+}
+
+.crossword-feature .kicker{color:#f5d687;}
+.crossword-feature .new-label{background:#f5d687;color:#44251b;}
+.crossword-feature h2{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:clamp(30px,5vw,46px);
+  line-height:1.05;
+  letter-spacing:-.035em;
+}
+.crossword-feature p:not(.kicker){
+  max-width:620px;
+  margin:0 0 18px;
+  color:rgba(255,255,255,.86);
+  font-size:16px;
+}
+.crossword-cta{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:8px;
+  background:#f5d687;
+  color:#44251b;
+  font-weight:950;
+}
+.crossword-stamp{
+  padding:22px 14px;
+  border:2px dashed rgba(255,255,255,.55);
+  border-radius:14px;
+  text-align:center;
+  transform:rotate(2deg);
+}
+.crossword-stamp span{display:block;}
+.crossword-stamp-label,.crossword-stamp-small{
+  color:#f5d687;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.12em;
+}
+.crossword-stamp-big{
+  margin:8px 0;
+  font-size:clamp(38px,6vw,64px);
+  font-weight:950;
+  line-height:.9;
+}
+
+/* =========================================================
    FIELD EXAMINATION
    ========================================================= */
 
@@ -762,6 +843,14 @@ footer a {
 
   }
 
+  .crossword-feature{
+    grid-template-columns:1fr;
+  }
+
+  .crossword-stamp{
+    display:none;
+  }
+
   .quiz-feature-link {
 
     grid-column:auto;
@@ -942,14 +1031,21 @@ Read report
 <a class="card-link" href="/articles/laundry-product-still-has-to-clean.html">Read the take</a>
 </article>
 
-<article class="card">
+<a class="crossword-feature-link" href="/quiz/cunnilingus-crossword/" aria-label="Play Other Words for Cunnilingus: the crossword">
+<section class="crossword-feature">
 <div>
-<p class="kicker">Field Examination · Crossword <span class="new-label">NEW</span></p>
-<h3><a href="/quiz/cunnilingus-crossword/">Other Words for Cunnilingus</a></h3>
-<p>Eight entries across three registers and several languages. No practical exam required.</p>
+<p class="kicker">Field Examination · Playable Crossword <span class="new-label">NEW</span></p>
+<h2>Other Words for Cunnilingus</h2>
+<p>One technical term. Eight intersecting alternatives and neighboring expressions: English slang, borrowed words, and a few distinctions worth learning.</p>
+<span class="crossword-cta">PLAY THE CROSSWORD →</span>
 </div>
-<a class="card-link" href="/quiz/cunnilingus-crossword/">Play crossword</a>
-</article>
+<div class="crossword-stamp" aria-hidden="true">
+<span class="crossword-stamp-label">WAP MOP SHOPPE</span>
+<span class="crossword-stamp-big">8<br>CLUES</span>
+<span class="crossword-stamp-small">ONE PLAYABLE GRID</span>
+</div>
+</section>
+</a>
 
 
 <!-- =====================================================
