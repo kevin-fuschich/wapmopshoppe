@@ -27,11 +27,17 @@
 .checklist li::marker{color:var(--rust);font-weight:950;}
 .product-list{columns:2;column-gap:34px;}
 .product-list li{break-inside:avoid;margin-bottom:10px;}
+.related-investigations{margin:34px 0;padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--card);}
+.related-investigations h2{margin-top:0;}
+.related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.related-link{display:block;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);text-decoration:none;font-weight:900;line-height:1.25;}
+.related-link span{display:block;margin-top:6px;color:var(--muted);font-size:13px;font-weight:600;line-height:1.4;}
+.related-link:hover{text-decoration:underline;text-decoration-color:var(--rust);text-decoration-thickness:2px;}
 .sources{margin-top:38px;padding-top:26px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);}
 .sources li{margin-bottom:10px;}
 .sources a{color:var(--rust);font-weight:800;}
 .dateline{margin:-8px 0 26px;color:var(--muted);font-size:13px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;}
-@media(max-width:700px){.product-list{columns:1;}}
+@media(max-width:700px){.product-list{columns:1;}.related-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -106,6 +112,8 @@
 
 <p>A preservative is not decorative chemistry. It is part of the product’s safety system.</p>
 
+<p>That distinction also runs through <a href="/articles/clean-isnt-sterile.html">Clean Isn’t Sterile</a>: controlling harmful contamination is not the same thing as trying to erase every microorganism from a living or manufactured system.</p>
+
 <p>That does not mean every preservative is automatically appropriate for every person or every formula. It does mean the broad internet equation—<em>preservative equals bad, preservative-free equals pure</em>—ignores why preservation exists. Removing a disliked ingredient does not remove the need to control bacteria, yeast, and mold. The formulation still has to solve the problem somehow.</p>
 
 <aside class="field-note">
@@ -141,6 +149,16 @@
 <p>A useful product is not defined by the moral reputation of its ingredients. It is defined by whether the whole system performs safely: formulation, manufacturing, packaging, storage, instructions, and use.</p>
 
 <p>The right response is neither complacency nor a bathroom purge. Check the actual products. Respect the recall boundary. Replace what matches. Leave unrelated soap alone.</p>
+
+<section class="related-investigations" aria-labelledby="soap-related-title">
+<h2 id="soap-related-title">Related investigations</h2>
+<div class="related-grid">
+<a class="related-link" href="/articles/ingredient-list-not-whole-story.html">Your Ingredient List May Not Be the Whole Story<span>What labels disclose, what laboratory testing detects, and why those are not always identical.</span></a>
+<a class="related-link" href="/articles/clean-isnt-sterile.html">Clean Isn’t Sterile<span>The Institute’s boundary between useful cleanliness and biological warfare.</span></a>
+<a class="related-link" href="/articles/water-bottle-slime.html">Why Does Your Water Bottle Get Slimy?<span>Another water-based system where moisture, surfaces, and time create an unexpected habitat.</span></a>
+<a class="related-link" href="/articles/body-wash-sensitive-skin.html">Body Wash for Sensitive Skin<span>Choosing a cleanser that performs its job without turning sensation into theater.</span></a>
+</div>
+</section>
 
 <section class="verdict">
 <h2>The Meister’s verdict</h2>
