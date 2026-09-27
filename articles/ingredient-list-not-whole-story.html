@@ -28,11 +28,17 @@
 .split h2{margin-top:0;}
 .verdict{background:var(--green);color:#fff;border-color:var(--green);}
 .verdict h2,.verdict p{color:#fff;}
+.related-investigations{margin:34px 0;padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--card);}
+.related-investigations h2{margin-top:0;}
+.related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.related-link{display:block;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);text-decoration:none;font-weight:900;line-height:1.25;}
+.related-link span{display:block;margin-top:6px;color:var(--muted);font-size:13px;font-weight:600;line-height:1.4;}
+.related-link:hover{text-decoration:underline;text-decoration-color:var(--rust);text-decoration-thickness:2px;}
 .sources{margin-top:38px;padding-top:26px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);}
 .sources li{margin-bottom:10px;}
 .sources a{color:var(--rust);font-weight:800;}
 .dateline{margin:-8px 0 26px;color:var(--muted);font-size:13px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;}
-@media(max-width:760px){.number-grid,.split{grid-template-columns:1fr;}}
+@media(max-width:760px){.number-grid,.split,.related-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -119,7 +125,7 @@
 <li><strong>Composite ingredients:</strong> “Fragrance” or “parfum” may stand for a mixture rather than disclose each component individually.</li>
 <li><strong>Raw-material impurities:</strong> A supplier may provide an ingredient that carries trace compounds the final brand did not intentionally add.</li>
 <li><strong>Manufacturing:</strong> Processing equipment, storage, or cross-contact can introduce substances.</li>
-<li><strong>Packaging:</strong> Components can migrate from plastic, liners, pumps, adhesives, or other materials.</li>
+<li><strong>Packaging:</strong> Components can migrate from plastic, liners, pumps, adhesives, or other materials. The Shoppe examines that boundary more closely in <a href="/articles/what-about-bpas.html">What About BPAs?</a></li>
 <li><strong>Degradation and reaction:</strong> Ingredients can break down or react with one another over time, creating compounds that were not poured into the original batch as separate ingredients.</li>
 <li><strong>Mislabeling or adulteration:</strong> A substance may be intentionally used without adequate disclosure or a claim may simply be wrong.</li>
 </ul>
@@ -160,6 +166,16 @@
 <p>Ingredient sourcing matters. Manufacturing controls matter. Packaging matters. Stability matters. Nontargeted testing can reveal what a recipe and supplier paperwork miss. A useful regulatory system should distinguish trivial trace detection from meaningful exposure while still holding direct claims to account.</p>
 
 <p>The burden cannot rest entirely on the person comparing lotion bottles beneath fluorescent store lighting. The label exists because the consumer does not own the laboratory.</p>
+
+<section class="related-investigations" aria-labelledby="ingredient-related-title">
+<h2 id="ingredient-related-title">Related investigations</h2>
+<div class="related-grid">
+<a class="related-link" href="/articles/can-hand-soap-be-dirty.html">Can Hand Soap Be Dirty?<span>A current recall shows what happens when the product’s safety system fails.</span></a>
+<a class="related-link" href="/articles/what-about-bpas.html">What About BPAs?<span>Packaging, plastics, and the difference between a useful question and a universal panic.</span></a>
+<a class="related-link" href="/articles/did-we-invent-more-places-to-be-embarrassed.html">Did We Invent More Places to Be Embarrassed?<span>How the personal-care market turns ordinary bodies into expanding product territory.</span></a>
+<a class="related-link" href="/articles/clean-isnt-sterile.html">Clean Isn’t Sterile<span>Why effective care does not require treating the body like a contaminated surface.</span></a>
+</div>
+</section>
 
 <section class="verdict">
 <h2>The Meister’s verdict</h2>
