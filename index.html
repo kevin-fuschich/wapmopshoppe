@@ -544,6 +544,29 @@ footer a{
   }
 }
 
+
+/* =========================================================
+   FIELD EXERCISES
+   ========================================================= */
+.field-exercises{display:grid;gap:18px}
+.crossword-feature-link,.quiz-feature-link{display:block;color:#fff;text-decoration:none}
+.crossword-feature,.quiz-feature{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(190px,.5fr);gap:28px;align-items:center;padding:32px;border-radius:18px;box-shadow:0 18px 36px rgba(23,19,15,.14);transition:transform .18s ease,box-shadow .18s ease}
+.crossword-feature{border:3px solid #733b2b;background:linear-gradient(135deg,#733b2b,#9d5133)}
+.quiz-feature{position:relative;overflow:hidden;border:3px solid var(--green);background:var(--green)}
+.crossword-feature-link:hover .crossword-feature,.quiz-feature-link:hover .quiz-feature{transform:translateY(-3px);box-shadow:0 22px 44px rgba(23,19,15,.2)}
+.crossword-feature-link:focus-visible,.quiz-feature-link:focus-visible{outline:4px solid var(--gold);outline-offset:5px;border-radius:18px}
+.crossword-feature .kicker,.quiz-feature .kicker{color:#f5d687}
+.crossword-feature h2,.quiz-feature h2{margin:0 0 12px;color:#fff;font-size:clamp(30px,5vw,46px);line-height:1.05;letter-spacing:-.035em}
+.crossword-feature p:not(.kicker),.quiz-feature p:not(.kicker){max-width:650px;margin:0 0 16px;color:rgba(255,255,255,.86);font-size:16px}
+.crossword-cta,.quiz-cta{display:inline-block;margin-top:4px;padding:12px 18px;border-radius:8px;background:#f5d687;color:#44251b;font-weight:950}
+.quiz-cta{background:var(--rust);color:#fff}
+.crossword-stamp,.quiz-stamp{position:relative;z-index:1;padding:22px 14px;border:2px dashed rgba(255,255,255,.55);border-radius:14px;text-align:center;transform:rotate(2deg)}
+.crossword-stamp span,.quiz-stamp span{display:block}
+.crossword-stamp-label,.crossword-stamp-small,.quiz-stamp .small{color:#f5d687;font-size:11px;font-weight:950;letter-spacing:.12em}
+.crossword-stamp-big{margin:8px 0;font-size:clamp(38px,6vw,64px);font-weight:950;line-height:.9}
+.quiz-stamp .big{color:#fff;font-size:27px;font-weight:950;line-height:1.05}.quiz-stamp .sub{margin-top:10px;color:rgba(255,255,255,.7);font-size:12px}
+@media(max-width:900px){.crossword-feature,.quiz-feature{grid-template-columns:1fr}.crossword-stamp,.quiz-stamp{display:none}}
+
 </style>
 </head>
 
@@ -785,6 +808,53 @@ footer a{
 
 </section>
 
+
+
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Field Exercises</p>
+      <h2>Crosswords, examinations, and other avoidable tests</h2>
+      <p class="section-note">The Institute has determined that reading alone is insufficient. No practical demonstration is required.</p>
+    </div>
+
+    <div class="field-exercises">
+      <a class="crossword-feature-link" href="/quiz/cunnilingus-crossword/" aria-label="Play Mouths, Mustaches and More: the crossword">
+        <section class="crossword-feature">
+          <div>
+            <p class="kicker">Playable Crossword</p>
+            <h2>Mouths, Mustaches &amp; More</h2>
+            <p>Twelve intersecting answers from the Shoppe’s world: mouths, mustaches, bidets, and the anatomy in between.</p>
+            <span class="crossword-cta">PLAY THE CROSSWORD →</span>
+          </div>
+          <div class="crossword-stamp" aria-hidden="true">
+            <span class="crossword-stamp-label">WAP MOP SHOPPE</span>
+            <span class="crossword-stamp-big">12<br>CLUES</span>
+            <span class="crossword-stamp-small">ONE PLAYABLE GRID</span>
+          </div>
+        </section>
+      </a>
+
+      <a class="quiz-feature-link" href="/quiz/cunnilingus/" aria-label="Take the Cunnilingus Quiz">
+        <section class="quiz-feature">
+          <div>
+            <p class="kicker">Field Examination</p>
+            <h2>The Cunnilingus Quiz</h2>
+            <p>Ten questions covering anatomy, language, biology, hygiene, and sexual health—including a few things you probably won’t learn from the article.</p>
+            <p><strong>10 QUESTIONS · IMMEDIATE ANSWERS · KNOWLEDGE ONLY</strong></p>
+            <span class="quiz-cta">TAKE THE QUIZ →</span>
+          </div>
+          <div class="quiz-stamp" aria-hidden="true">
+            <span class="small">WAP MOP SHOPPE</span>
+            <span class="big">FIELD<br>EXAMINATION</span>
+            <span class="sub">No practical demonstration required.</span>
+          </div>
+        </section>
+      </a>
+    </div>
+  </div>
+</section>
 
 
 <section class="section">
