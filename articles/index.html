@@ -871,6 +871,19 @@ footer a {
 
 }
 
+/* FIELD GUIDE FILTERS */
+.archive-tools{margin:26px 0 24px;padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,253,248,.92)}
+.archive-tools label{display:block;margin-bottom:8px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.archive-search{display:block;width:100%;padding:13px 15px;border:1px solid rgba(23,19,15,.25);border-radius:10px;background:white;color:var(--ink);font:inherit;font-size:16px}
+.archive-search:focus-visible,.archive-filters button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.archive-filters{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.archive-filters button{border:1px solid rgba(47,75,50,.3);background:transparent;color:var(--green);border-radius:99px;padding:8px 13px;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+.archive-filters button[aria-pressed="true"]{background:var(--green);color:white}
+.archive-count{font-size:13px;color:var(--muted);margin:15px 0 0}
+.archive-empty{display:none;padding:25px 0;color:var(--muted);font-weight:700}
+.archive-empty.is-visible{display:block}
+[hidden]{display:none!important}
+
 </style>
 
 </head>
@@ -922,6 +935,23 @@ hygiene realities, language, personal care, and everyday equipment.
 </div>
 
 
+
+<section class="archive-tools" aria-label="Find articles">
+<label for="archive-search">Find a field report</label>
+<input id="archive-search" class="archive-search" type="search" placeholder="Search titles, topics or descriptions…" autocomplete="off">
+<div class="archive-filters" role="group" aria-label="Filter by topic">
+<button type="button" data-filter="all" aria-pressed="true">All articles</button>
+<button type="button" data-filter="culture" aria-pressed="false">Culture &amp; Curiosities</button>
+<button type="button" data-filter="hygiene" aria-pressed="false">Hygiene &amp; Odor</button>
+<button type="button" data-filter="skin" aria-pressed="false">Skin &amp; Grooming</button>
+<button type="button" data-filter="intimate" aria-pressed="false">Intimate Care</button>
+<button type="button" data-filter="mouth" aria-pressed="false">Oral Care</button>
+<button type="button" data-filter="laundry" aria-pressed="false">Laundry &amp; Equipment</button>
+</div>
+<p class="archive-count" id="archive-count" aria-live="polite"></p>
+<p class="archive-empty" id="archive-empty">No articles match. Try another word or topic.</p>
+</section>
+
 <hr class="accent-rule">
 
 
@@ -936,10 +966,10 @@ hygiene realities, language, personal care, and everyday equipment.
 
 <!-- THE MUSTACHE FILES -->
 
-<article class="card newest"><div><p class="kicker">The Mustache Files · Let's do mustache stuff. <span class="new-label">NEW</span></p><h3><a href="/articles/great-mustache-disappearances.html">The Great Mustache Disappearances</a></h3><p>Alex Trebek, Burt Reynolds and Tom Selleck: three famous upper lips that went unexpectedly bare, with before-and-after photo sources.</p></div><a class="card-link" href="/articles/great-mustache-disappearances.html">Inspect the disappearances</a></article>
-<article class="card newest"><div><p class="kicker">The Mustache Files · Let's do mustache stuff. <span class="new-label">NEW</span></p><h3><a href="/articles/worlds-most-unreasonable-mustaches.html">The World's Most Unreasonable Mustaches</a></h3><p>Guinness records, fourteen feet of facial hair, and the problems of upper-lip infrastructure.</p></div><a class="card-link" href="/articles/worlds-most-unreasonable-mustaches.html">Inspect the records</a></article>
-<article class="card newest"><div><p class="kicker">The Mustache Files · Let's do mustache stuff. <span class="new-label">NEW</span></p><h3><a href="/articles/competitive-mustaching.html">Competitive Mustaching Is a Real Sport. There Are Judges.</a></h3><p>World championships, wax, category rules, and the regulation of unauthorized cheek hair.</p></div><a class="card-link" href="/articles/competitive-mustaching.html">Inspect the competition</a></article>
-<article class="card newest">
+<article class="card newest" data-topic="culture"><div><p class="kicker">The Mustache Files · Let's do mustache stuff. <span class="new-label">NEW</span></p><h3><a href="/articles/great-mustache-disappearances.html">The Great Mustache Disappearances</a></h3><p>Alex Trebek, Burt Reynolds and Tom Selleck: three famous upper lips that went unexpectedly bare, with before-and-after photo sources.</p></div><a class="card-link" href="/articles/great-mustache-disappearances.html">Inspect the disappearances</a></article>
+<article class="card newest" data-topic="culture"><div><p class="kicker">The Mustache Files · Let's do mustache stuff. <span class="new-label">NEW</span></p><h3><a href="/articles/worlds-most-unreasonable-mustaches.html">The World's Most Unreasonable Mustaches</a></h3><p>Guinness records, fourteen feet of facial hair, and the problems of upper-lip infrastructure.</p></div><a class="card-link" href="/articles/worlds-most-unreasonable-mustaches.html">Inspect the records</a></article>
+<article class="card newest" data-topic="culture"><div><p class="kicker">The Mustache Files · Let's do mustache stuff. <span class="new-label">NEW</span></p><h3><a href="/articles/competitive-mustaching.html">Competitive Mustaching Is a Real Sport. There Are Judges.</a></h3><p>World championships, wax, category rules, and the regulation of unauthorized cheek hair.</p></div><a class="card-link" href="/articles/competitive-mustaching.html">Inspect the competition</a></article>
+<article class="card newest" data-topic="skin">
 <div>
 <p class="kicker">Field Guide · Wound &amp; Jewelry Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/piercing-cleanliness-aftercare-etiquette.html">The Piercing Is Not a Tiny Doorknob</a></h3>
@@ -949,7 +979,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="intimate">
 <div>
 <p class="kicker">Body Systems · Sexual Fluids <span class="new-label">NEW</span></p>
 <h3><a href="/articles/is-squirting-real.html">Is Squirting Real? Yes. The Argument Is About What It Is.</a></h3>
@@ -959,7 +989,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="mouth">
 <div>
 <p class="kicker">Field Guide · Mouth Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/mouthwash-truths.html">Mouthwash Truths: What the Bottle Can—and Cannot—Do</a></h3>
@@ -969,7 +999,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="intimate">
 <div>
 <p class="kicker">Field Guide · Sexual Aftercare <span class="new-label">NEW</span></p>
 <h3><a href="/articles/what-to-do-after-cunnilingus.html">Right After Cunnilingus: Rinse, Don’t Scrub</a></h3>
@@ -979,7 +1009,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="skin">
 <div>
 <p class="kicker">Current Inspection · ShowerTok <span class="new-label">NEW</span></p>
 <h3><a href="/articles/double-cleansing-body-shower.html">Clean Twice, Irritate Once?</a></h3>
@@ -989,7 +1019,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="culture">
 <div>
 <p class="kicker">Current Study · Scent &amp; Value <span class="new-label">NEW</span></p>
 <h3><a href="/articles/fresh-laundry-scent-secondhand-value.html">The Smell of Clean Is Worth Money</a></h3>
@@ -999,7 +1029,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="culture">
 <div>
 <p class="kicker">The Shoppe’s Take · Bougie Basics <span class="new-label">NEW</span></p>
 <h3><a href="/articles/luxury-cleaning-products-fashion.html">Your Dish Soap Has a Creative Director Now</a></h3>
@@ -1009,7 +1039,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="culture">
 <div>
 <p class="kicker">Current Inspection · Fragrance Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/joe-jonas-five-rows-cologne.html">Five Rows Back Is Not a Sillage Goal</a></h3>
@@ -1019,7 +1049,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="hygiene">
 <div>
 <p class="kicker">Body Systems · Scent &amp; Memory <span class="new-label">NEW</span></p>
 <h3><a href="/articles/your-nose-keeps-receipts.html">Your Nose Keeps Receipts</a></h3>
@@ -1029,7 +1059,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="hygiene">
 <div>
 <p class="kicker">Field Guide · Odor Awareness <span class="new-label">NEW</span></p>
 <h3><a href="/articles/you-are-the-last-person-to-know-you-smell.html">You’re the Last Person to Know You Smell</a></h3>
@@ -1038,7 +1068,7 @@ hygiene realities, language, personal care, and everyday equipment.
 <a class="card-link" href="/articles/you-are-the-last-person-to-know-you-smell.html">Check the equipment</a>
 </article>
 
-<article class="card newest">
+<article class="card newest" data-topic="culture">
 <div>
 <p class="kicker">Current Inspection · Dating Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/pheromone-maxxing-new-excuse-to-be-dirty.html">A New Excuse to Be Dirty—and Not the Good Dirty</a></h3>
@@ -1048,7 +1078,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="culture">
 <div>
 <p class="kicker">The Shoppe’s Take · Attraction Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/internet-two-plans-for-your-smell.html">The Internet Has Two Plans for Your Smell</a></h3>
@@ -1058,7 +1088,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="hygiene">
 <div>
 <p class="kicker">Equipment Guide · Odor Camouflage <span class="new-label">NEW</span></p>
 <h3><a href="/articles/masking-body-odor-best-sprays.html">Masking BO: The Best Camo Sprays and Squirts</a></h3>
@@ -1068,7 +1098,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="culture">
 <div>
 <p class="kicker">Field Report · Costume Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/fursuit-cleanliness-and-care.html">Furries and Cleanliness: What the Suit Knows</a></h3>
@@ -1078,7 +1108,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="mouth">
 <div>
 <p class="kicker">Claim Under Inspection · HPV &amp; Oral Health <span class="new-label">NEW</span></p>
 <h3><a href="/articles/there-is-still-no-pap-smear-for-the-throat.html">There Is Still No Pap Smear for the Throat</a></h3>
@@ -1088,7 +1118,7 @@ hygiene realities, language, personal care, and everyday equipment.
 </article>
 
 
-<article class="card newest">
+<article class="card newest" data-topic="hygiene">
 <div>
 <p class="kicker">The Shoppe’s Take · Product Transparency <span class="new-label">NEW</span></p>
 <h3><a href="/articles/ingredient-list-not-whole-story.html">Your Ingredient List May Not Be the Whole Story</a></h3>
@@ -1097,7 +1127,7 @@ hygiene realities, language, personal care, and everyday equipment.
 <a class="card-link" href="/articles/ingredient-list-not-whole-story.html">Read the investigation</a>
 </article>
 
-<article class="card newest">
+<article class="card newest" data-topic="hygiene">
 <div>
 <p class="kicker">Current Inspection · Product Safety <span class="new-label">NEW</span></p>
 <h3><a href="/articles/can-hand-soap-be-dirty.html">Can Hand Soap Be Dirty?</a></h3>
@@ -1108,7 +1138,7 @@ hygiene realities, language, personal care, and everyday equipment.
 
 
 
-<article class="card newest">
+<article class="card newest" data-topic="intimate">
 <div>
 <p class="kicker">The Shoppe’s Take · Opinion <span class="new-label">NEW</span></p>
 <h3><a href="/articles/cunnilingus-is-not-a-masculinity-test.html">Cunnilingus Is Not a Masculinity Test</a></h3>
@@ -1117,7 +1147,7 @@ hygiene realities, language, personal care, and everyday equipment.
 <a class="card-link" href="/articles/cunnilingus-is-not-a-masculinity-test.html">Read the take</a>
 </article>
 
-<article class="card">
+<article class="card" data-topic="skin">
 <div>
 <p class="kicker">Care Guide · Piercings <span class="new-label">NEW</span></p>
 <h3><a href="/articles/piercing-cleanliness-and-etiquette.html">Piercings Need Care, Not Commentary</a></h3>
@@ -1130,7 +1160,7 @@ hygiene realities, language, personal care, and everyday equipment.
      LANGUAGE REPORT
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="culture">
 
 <div>
 
@@ -1169,7 +1199,7 @@ Read report
      THE SHOPPE'S TAKE + CROSSWORD
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="culture">
 <div>
 <p class="kicker">The Shoppe's Take · Opinion <span class="new-label">NEW</span></p>
 <h3><a href="/articles/did-we-invent-more-places-to-be-embarrassed.html">Did We Invent More Places to Be Embarrassed?</a></h3>
@@ -1178,7 +1208,7 @@ Read report
 <a class="card-link" href="/articles/did-we-invent-more-places-to-be-embarrassed.html">Read the take</a>
 </article>
 
-<article class="card">
+<article class="card" data-topic="laundry">
 <div>
 <p class="kicker">The Shoppe's Take · Opinion <span class="new-label">NEW</span></p>
 <h3><a href="/articles/laundry-product-still-has-to-clean.html">A Laundry Product Still Has to Clean Laundry</a></h3>
@@ -1279,7 +1309,7 @@ No practical demonstration required.
      NEW FABRIC & EQUIPMENT REPORTS
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="laundry">
 <div>
 <p class="kicker">Field Report · Fabric Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/gym-shirt-smells-after-washing.html">Why Does Your Gym Shirt Smell Clean Until You Wear It?</a></h3>
@@ -1288,7 +1318,7 @@ No practical demonstration required.
 <a class="card-link" href="/articles/gym-shirt-smells-after-washing.html">Read report</a>
 </article>
 
-<article class="card">
+<article class="card" data-topic="laundry">
 <div>
 <p class="kicker">Field Report · Equipment Systems <span class="new-label">NEW</span></p>
 <h3><a href="/articles/why-your-gym-bag-smells.html">Why Does Your Gym Bag Smell?</a></h3>
@@ -1302,7 +1332,7 @@ No practical demonstration required.
      FIELD REPORT 001
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="laundry">
 
 <div>
 
@@ -1340,7 +1370,7 @@ Read report
      FIELD REPORT 002
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="mouth">
 
 <div>
 
@@ -1378,7 +1408,7 @@ Read report
      FIELD REPORT 003
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="laundry">
 
 <div>
 
@@ -1416,7 +1446,7 @@ Read report
      FIELD REPORT 004
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="hygiene">
 
 <div>
 
@@ -1454,7 +1484,7 @@ Read report
      FIELD REPORT 005
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="hygiene">
 
 <div>
 
@@ -1492,7 +1522,7 @@ Read report
      FIELD REPORT 006
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -1530,7 +1560,7 @@ Read report
      FIELD REPORT 007
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -1568,7 +1598,7 @@ Read report
      FIELD REPORT 009
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -1606,7 +1636,7 @@ Read report
      FIELD REPORT 012
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="hygiene">
 
 <div>
 
@@ -1644,7 +1674,7 @@ Read report
      CORE SYSTEMS
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="mouth">
 
 <div>
 
@@ -1678,7 +1708,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="laundry">
 
 <div>
 
@@ -1712,7 +1742,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -1746,7 +1776,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -1784,7 +1814,7 @@ Read article
      PRINCIPLES & GUIDES
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -1818,7 +1848,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -1852,7 +1882,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="hygiene">
 
 <div>
 
@@ -1886,7 +1916,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -1920,7 +1950,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -1954,7 +1984,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -1988,7 +2018,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -2022,7 +2052,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2056,7 +2086,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2094,7 +2124,7 @@ Read article
      DEAR SHOPPE
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="hygiene">
 
 <div>
 
@@ -2127,7 +2157,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2161,7 +2191,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="mouth">
 
 <div>
 
@@ -2195,7 +2225,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2229,7 +2259,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2267,7 +2297,7 @@ Read article
      INVESTIGATIONS
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2301,7 +2331,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2335,7 +2365,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="hygiene">
 
 <div>
 
@@ -2369,7 +2399,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -2403,7 +2433,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 
 <div>
 
@@ -2441,7 +2471,7 @@ Read article
      EQUIPMENT GUIDES
      ===================================================== -->
 
-<article class="card">
+<article class="card" data-topic="laundry">
 
 <div>
 
@@ -2475,7 +2505,7 @@ Read article
 
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 
 <div>
 
@@ -2511,7 +2541,7 @@ Read article
 
 <!-- ADDITIONAL FIELD GUIDE ARTICLES -->
 
-<article class="card">
+<article class="card" data-topic="skin">
 <div>
 <p class="kicker">Face Systems</p>
 <h3><a href="/articles/do-you-need-beard-oil.html">Do You Actually Need Beard Oil?</a></h3>
@@ -2521,7 +2551,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 <div>
 <p class="kicker">Intimate Care</p>
 <h3><a href="/articles/external-means-external-boundary.html">External Means External: Boundaries</a></h3>
@@ -2531,7 +2561,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="mouth">
 <div>
 <p class="kicker">Oral Systems</p>
 <h3><a href="/articles/oral-care-anxiety.html">Oral Care Anxiety</a></h3>
@@ -2541,7 +2571,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 <div>
 <p class="kicker">Skin Systems</p>
 <h3><a href="/articles/skin-as-a-system.html">Skin as a System</a></h3>
@@ -2551,7 +2581,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="skin">
 <div>
 <p class="kicker">Intimate Care</p>
 <h3><a href="/articles/stop-exfoliating-your-genitals.html">Stop Exfoliating Your Genitals</a></h3>
@@ -2561,7 +2591,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="laundry">
 <div>
 <p class="kicker">Equipment Guide</p>
 <h3><a href="/articles/the-best-wipes.html">The Best Wipes</a></h3>
@@ -2571,7 +2601,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 <div>
 <p class="kicker">Intimate Care</p>
 <h3><a href="/articles/tight-is-often-friction.html">“Tight” Is Often Friction</a></h3>
@@ -2581,7 +2611,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="laundry">
 <div>
 <p class="kicker">Grooming Guide</p>
 <h3><a href="/articles/trimmer-hygiene-cleaning.html">Trimmer Hygiene and Cleaning</a></h3>
@@ -2591,7 +2621,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 <div>
 <p class="kicker">Intimate Care</p>
 <h3><a href="/articles/use-lube-without-irritation.html">How to Use Lube Without Irritation</a></h3>
@@ -2601,7 +2631,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 <div>
 <p class="kicker">Body Systems</p>
 <h3><a href="/articles/vaginas-as-ecosystems.html">Vaginas as Ecosystems</a></h3>
@@ -2611,7 +2641,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 <div>
 <p class="kicker">Materials Investigation</p>
 <h3><a href="/articles/what-about-bpas.html">Should I Worry About BPA in My Toys?</a></h3>
@@ -2621,7 +2651,7 @@ Read article
 </article>
 
 
-<article class="card">
+<article class="card" data-topic="intimate">
 <div>
 <p class="kicker">Intimate Care</p>
 <h3><a href="/articles/when-burning-means-stop.html">When Burning Means Stop</a></h3>
@@ -2659,6 +2689,37 @@ Affiliate disclosure
 
 document.getElementById('y').textContent =
   new Date().getFullYear();
+
+
+(function(){
+  const input=document.getElementById('archive-search');
+  const cards=Array.from(document.querySelectorAll('.grid.three > article.card'));
+  const buttons=Array.from(document.querySelectorAll('.archive-filters button'));
+  const count=document.getElementById('archive-count');
+  const empty=document.getElementById('archive-empty');
+  const features=Array.from(document.querySelectorAll('.grid.three > .crossword-feature-link, .grid.three > .quiz-feature-link'));
+  let topic='all';
+  function update(){
+    const query=input.value.trim().toLocaleLowerCase();
+    let visible=0;
+    cards.forEach(card=>{
+      const matchesTopic=topic==='all'||card.dataset.topic===topic;
+      const matchesQuery=!query||card.textContent.toLocaleLowerCase().includes(query);
+      card.hidden=!(matchesTopic&&matchesQuery);
+      if(!card.hidden)visible++;
+    });
+    features.forEach(feature=>{feature.hidden=topic!=='all'||!!query;});
+    count.textContent='Showing '+visible+' of '+cards.length+' articles';
+    empty.classList.toggle('is-visible',visible===0);
+  }
+  buttons.forEach(button=>button.addEventListener('click',()=>{
+    topic=button.dataset.filter;
+    buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    update();
+  }));
+  input.addEventListener('input',update);
+  update();
+})();
 
 </script>
 
