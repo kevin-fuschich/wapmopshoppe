@@ -567,6 +567,30 @@ footer a{
 .quiz-stamp .big{color:#fff;font-size:27px;font-weight:950;line-height:1.05}.quiz-stamp .sub{margin-top:10px;color:rgba(255,255,255,.7);font-size:12px}
 @media(max-width:900px){.crossword-feature,.quiz-feature{grid-template-columns:1fr}.crossword-stamp,.quiz-stamp{display:none}}
 
+/* THE COSMIC BODY: RECURRING EDITORIAL FEATURE */
+.cosmic-home{position:relative;overflow:hidden;isolation:isolate;border:1px solid #594963;border-radius:23px;background:radial-gradient(circle at 85% 7%,rgba(151,115,163,.40),transparent 33%),radial-gradient(circle at 8% 100%,rgba(135,77,115,.28),transparent 39%),#251f39;color:#fff9ee;box-shadow:0 18px 36px rgba(30,22,39,.13);padding:36px 38px}
+.cosmic-home::before{content:"✦   ✧   ✦   ✧   ✦";position:absolute;right:22px;top:12px;color:#dfb977;letter-spacing:19px;font-size:20px;opacity:.75;pointer-events:none}
+.cosmic-home-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:38px;align-items:center}
+.cosmic-home .kicker{color:#f3ce8a}
+.cosmic-home h2{color:#fff9ee;font-size:clamp(34px,5vw,55px);line-height:1.02;letter-spacing:-.045em;margin:10px 0 18px}
+.cosmic-home .cosmic-sub{color:#eee0e5;font-size:18px;line-height:1.55;max-width:570px;margin:0 0 22px}
+.cosmic-actions{display:flex;flex-wrap:wrap;gap:12px}
+.cosmic-actions a{display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:12px 17px;min-height:44px;text-decoration:none;border-radius:99px;font-weight:900;font-size:14px}
+.cosmic-actions .cosmic-primary{background:#f3d294;color:#2a2036}
+.cosmic-actions .cosmic-secondary{border:1px solid rgba(255,255,255,.48);color:#fff9ee}
+.cosmic-actions a:hover{filter:brightness(1.08)}
+.cosmic-actions a:focus-visible{outline:3px solid #f3d294;outline-offset:4px}
+.cosmic-issue{border:1px solid rgba(247,217,166,.40);padding:25px 22px;background:rgba(15,10,27,.28);border-radius:17px}
+.cosmic-orbit{position:relative;width:136px;height:136px;margin:0 auto 18px;border:1px solid rgba(246,207,146,.7);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cosmic-orbit::before,.cosmic-orbit::after{content:"";position:absolute;border:1px solid rgba(246,207,146,.35);border-radius:50%;inset:12px}.cosmic-orbit::after{inset:27px}
+.cosmic-moon{font-size:68px;line-height:1;color:#f8dba1}
+.cosmic-issue .issue-label{color:#f4cc88;font-size:11px;text-transform:uppercase;letter-spacing:.13em;font-weight:950;margin:0 0 8px}
+.cosmic-issue h3{font-size:21px;line-height:1.15;color:#fff9ee;margin:0 0 10px}
+.cosmic-issue p{font-size:14px;color:#e6d9df;line-height:1.5;margin:0}
+.cosmic-footnote{color:#dbcede;font-size:12px;margin:16px 0 0}
+@media(max-width:760px){.cosmic-home{padding:28px 23px}.cosmic-home-grid{grid-template-columns:1fr;gap:25px}.cosmic-issue{display:grid;grid-template-columns:75px 1fr;align-items:center;column-gap:18px}.cosmic-orbit{width:70px;height:70px;margin:0;grid-row:span 3}.cosmic-moon{font-size:40px}.cosmic-orbit::before{inset:7px}.cosmic-orbit::after{inset:14px}}
+@media(max-width:560px){.cosmic-actions{flex-direction:column}.cosmic-actions a{width:100%}}
+
 </style>
 </head>
 
@@ -701,6 +725,33 @@ footer a{
 
 </section>
 
+
+
+<!-- THE COSMIC BODY: RECURRING EDITORIAL FEATURE -->
+<section class="section" aria-labelledby="cosmic-body-title">
+  <div class="container">
+    <div class="cosmic-home">
+      <div class="cosmic-home-grid">
+        <div>
+          <p class="kicker">New editorial series · The Cosmic Body</p>
+          <h2 id="cosmic-body-title">Is My Vagina in Retrograde?</h2>
+          <p class="cosmic-sub">Mercury is innocent. Probably. Where vaginal ecosystems, menstrual cycles and celestial speculation collide—without mistaking a horoscope for medical advice.</p>
+          <div class="cosmic-actions">
+            <a class="cosmic-primary" href="/articles/is-my-vagina-in-retrograde.html">Read the investigation</a>
+            <a class="cosmic-secondary" href="/articles/cosmic-body-horoscope-december-2026.html">Explore the horoscope</a>
+          </div>
+          <p class="cosmic-footnote">The stars entertain. Biology supplies the evidence.</p>
+        </div>
+        <aside class="cosmic-issue" aria-label="First monthly horoscope issue">
+          <div class="cosmic-orbit" aria-hidden="true"><span class="cosmic-moon">☾</span></div>
+          <p class="issue-label">Inaugural issue · December 2026</p>
+          <h3>Your Ecosystem Has Other Plans</h3>
+          <p>Twelve zodiac forecasts. One grounded Cycle Almanac. Absolutely no medically predictive planets.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section class="section">
